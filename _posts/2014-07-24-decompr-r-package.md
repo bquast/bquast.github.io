@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "decompr R package"
-description: ""
+title: decompr R package
+description: 
 category: 
 tags: []
 ---
