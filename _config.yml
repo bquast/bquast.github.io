@@ -7,7 +7,7 @@ permalink:        pretty
 
 # Setup
 title:            bquast.github.io
-tagline:          R visualisations, R packages, and Development Economics
+tagline:          R, Git and replicable Development Economics
 description:      'nothing here yet'
 url:              http://bquast.github.io
 baseurl:          '/'
