@@ -1,11 +1,7 @@
 ---
 layout: post
-title: "First Post"
-description: "some thoughts on this blog"
-category: 
-tags: [meta, R, git]
+title: First Post
 ---
-{% include JB/setup %}
 The purpose of this blog is to list output from my day-to-day work.
 My work mainly consists of tinkering with R.
 I am a 27 year old PhD Candidate in Development Economics at The Graduate Institute in Geneva,
