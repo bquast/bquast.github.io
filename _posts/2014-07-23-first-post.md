@@ -20,6 +20,3 @@ and verify the implmentations of the mathematical and statistical algorithms emp
 
 After all this noble talk of reproducability I should of course point out that at this point I have exactly zero published papers,
 let alone people trying replicate my work.
-
-{% include social_media.html %}
-
