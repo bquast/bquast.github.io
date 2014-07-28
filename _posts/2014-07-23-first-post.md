@@ -1,6 +1,7 @@
 ---
 layout: post
 title: First Post
+permalink: first-post
 ---
 The purpose of this blog is to list output from my day-to-day work.
 My work mainly consists of tinkering with R.
