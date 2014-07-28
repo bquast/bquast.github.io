@@ -5,9 +5,9 @@ title: About
 
 Bastiaan Quast
 
-- PhD Candidate Development Economics, The Graduate Institute, Geneva
-- Research Assistant, Centre for Finance and Development, Geneva
-- Research Assistant, Centre on Conflict, Development, and Peacebuilding
+- PhD Candidate [Development Economics](http://graduateinstitute.ch/home/study/academicdepartments/international-economics/studying-economics/PhD_dvlpm_economics.html), [The Graduate Institute, Geneva](http://graduateinstitute.ch/)
+- Research Assistant, [Centre for Finance and Development, Geneva](http://graduateinstitute.ch/cfd)
+- Research Assistant, Centre on [Conflict, Development, and Peacebuilding](http://graduateinstitute.ch/ccdp)
 
 From The Netherlands, living in Geneva.
 Interested in development economics, IT, open-source & open content.
@@ -23,8 +23,10 @@ which applies the **Wang-Wei-Zhu** and **Kung-Fu** algorithms for **export decom
 Working on a [wikibook](https://en.wikibooks.org/wiki/KoBo_Toolbox) on the [Kobo Toolbox](http://www.kobotoolbox.org/),
 which is an open-source survey software suite (android) designed for conditions with limited access to internet, electricity, etc.
 
-Together with the KoBo designeds from the **Harvard Humanitarian Initiative**,
-we conducted a baseline study in **Conakry** (Guinea) as part of a [police reform project **police de proximite**](http://www.coginta.org/uploads/documents/16054bef85057f42b00451190c0b6cc5effbab38.pdf).
+Together with the KoBo Toolbox designers from the **Harvard Humanitarian Initiative**,
+we (with [Cogtina](http://coginta.org/)) conducted a baseline study in **Conakry** (Guinea) as part of a [police reform project **police de proximite**](http://www.coginta.org/uploads/documents/16054bef85057f42b00451190c0b6cc5effbab38.pdf).
+
+Also, with Coginta, conducted a [security and police perceptions study](http://www.geneve.ch/police/doc/statistiques/diagnostic-local-securite-2013.pdf) together with the Geneva police.
 
 Also working on an [**impact evaluation**](https://github.com/bquast/Gender-Child-Growth) of the lowering of
 the male **state-pension eligibiliy age** in **South Africa** (from 65 to 60),
