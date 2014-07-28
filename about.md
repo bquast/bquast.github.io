@@ -1,7 +1,8 @@
 ---
 layout: page
-title: Bastiaan Quast
+title: About
 ---
+Bastiaan Quast
 
 - PhD Candidate [Development Economics](http://graduateinstitute.ch/home/study/academicdepartments/international-economics/studying-economics/PhD_dvlpm_economics.html), [The Graduate Institute, Geneva](http://graduateinstitute.ch/)
 - Research Assistant, [Centre for Finance and Development, Geneva](http://graduateinstitute.ch/cfd)
