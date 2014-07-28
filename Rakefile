@@ -69,6 +69,8 @@ task :post do
     post.puts "category: #{category}"
     post.puts "tags: #{tags}"
     post.puts "---"
+	post.puts "{% include social_media.html %}"
+	post.puts "{% include comments.html %}"
   end
 end # task :post
 
