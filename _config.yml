@@ -6,7 +6,7 @@ highlighter:         true
 permalink:        pretty
 
 # Setup
-title:            bquast.github.io
+title:            Bastiaan Quast
 tagline:          R, Git and replicable Development Economics
 description:      'nothing here yet'
 url:              http://bquast.github.io
