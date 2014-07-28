@@ -22,4 +22,4 @@ After all this noble talk of reproducability I should of course point out that a
 let alone people trying replicate my work.
 
 {% include social_media.html %}
-{% include comments.html %}
+
