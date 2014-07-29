@@ -38,7 +38,9 @@ iris %>%
                                        label = 'Point Opacity'),
                fill = ~Species) %>%
   # now add smoothers per species and colour them
-  layer_smooths(span = input_slider(0.5, 1, 0.5, label = 'Species Models'), fill = ~Species, se=TRUE) %>%
+  layer_smooths(span = input_slider(0.5, 1, 0.5,
+                                    label = 'Species Models'),
+                fill = ~Species, se=TRUE) %>%
   # add new labels
   add_axis("x", title = "Sepal Width") %>%
   add_axis("y", title = "Sepal Length") %>%
@@ -89,9 +91,12 @@ shinyUI(fluidPage(
       sliderInput('species.span', 'Individual Models', 0.5, 1, value = 0.5),
       sliderInput("size", "Point Size", 10, 200, value = 50),
       sliderInput('opacity', "Point Opacity", 0, 1, value = 0.5),
-      p('The controls can be used the wigglyness of the general model, as well as the models fitted for each species. Thereby seeing if separate models are needed.
-        Furthermore, the size and opacity of the points plotted can be adjusted to most effectively communicate the results of the model comparison.
-        ')
+      p('The controls can be used the wigglyness of the general model,
+        as well as the models fitted for each species.
+        Thereby seeing if separate models are needed.
+        Furthermore, the size and opacity of the points plotted
+        can be adjusted to most effectively communicate the results
+        of the model comparison.')
     ),
     
     # Main panel
