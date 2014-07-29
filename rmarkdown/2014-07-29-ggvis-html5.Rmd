@@ -13,7 +13,7 @@ and a [HTML5 **static** presentation](http://bquast.github.io/Iris-Presentation)
 
 The code in the presentation is most straight forward, it uses only ggvis code for the interactivity.
 
-```{r}
+```{r, message=FALSE}
 # load the ggvis package
 library(ggvis)
 

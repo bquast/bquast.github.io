@@ -14,49 +14,14 @@ and a [HTML5 **static** presentation](http://bquast.github.io/Iris-Presentation)
 The code in the presentation is most straight forward, it uses only ggvis code for the interactivity.
 
 
-{% highlight r %}
+{% highlight r linenos %}
 # load the ggvis package
 library(ggvis)
-{% endhighlight %}
 
-
-
-{% highlight text linenos %}
-## The ggvis API is currently rapidly evolving. We strongly recommend that you do not rely on this for production, but feel free to explore. If you encounter a clear bug, please file a minimal reproducible example at https://github.com/rstudio/ggvis/issues. For questions and other discussion, please use https://groups.google.com/group/ggvis.
-## 
-## Attaching package: 'ggvis'
-## 
-## The following object is masked from 'package:stats':
-## 
-##     filter
-{% endhighlight %}
-
-
-
-{% highlight r %}
 # load the dplyr package
 # for use of magrittr pipe: %>%
 library(dplyr)
-{% endhighlight %}
 
-
-
-{% highlight text linenos %}
-## 
-## Attaching package: 'dplyr'
-## 
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-## 
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-{% endhighlight %}
-
-
-
-{% highlight r linenos %}
 # lazyload the dataset and pass it to
 iris %>%
   # the ggvis function, now set the axis
@@ -86,7 +51,7 @@ iris %>%
 
 
 
-{% highlight text linenos %}
+{% highlight text %}
 ## Error: bind_shiny() must be run inside a shiny app.
 {% endhighlight %}
 
