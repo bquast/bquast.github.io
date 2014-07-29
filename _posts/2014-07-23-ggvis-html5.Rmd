@@ -11,19 +11,38 @@ The span can be adjusted in order to see if we need to model the sepal ratio per
 There is also an [HTML5 **dynamic** presentation](http://bquast.shinyapps.io/Iris-Presentation) ([code](https://github.com/bquast/Iris-Presentation/blob/master/dynamic.Rmd) )
 and a [HTML5 **static** presentation](http://bquast.github.io/Iris-Presentation), both build using **rmarkdown v2**.
 
-The code in the 
+The code in the presentation is most straight forward, it uses only ggvis code for the interactivity.
 
 ```{r}
+# load the ggvis package
+library(ggvis)
+
+# load the dplyr package
+# for use of magrittr pipe: %>%
+library(dplyr)
+
+# lazyload the dataset and pass it to
 iris %>%
+  # the ggvis function, now set the axis
   ggvis(~Sepal.Width, ~Sepal.Length) %>%
-  layer_smooths(span = input_slider(0.5, 1, 0.5, label = 'General Model'), se = TRUE) %>%
+  # add the smoother for all points
+  layer_smooths(span = input_slider(0.5, 1, 0.5,
+                                    label = 'General Model'),
+                se = TRUE) %>%
+  # now group by species
   group_by(Species) %>%
-  layer_points(size := input_slider(10, 200, 50, label = 'Point Size'),
-  opacity := input_slider(0.5, 1, 0.5, label = 'Point Opacity'), fill = ~Species) %>%
+  # add points per species and colour them
+  layer_points(size := input_slider(10, 200, 50,
+                                    label = 'Point Size'),
+               opacity := input_slider(0.5, 1, 0.5,
+                                       label = 'Point Opacity'),
+               fill = ~Species) %>%
+  # now add smoothers per species and colour them
   layer_smooths(span = input_slider(0.5, 1, 0.5, label = 'Species Models'), fill = ~Species, se=TRUE) %>%
+  # add new labels
   add_axis("x", title = "Sepal Width") %>%
   add_axis("y", title = "Sepal Length") %>%
-  bind_shiny("ggvis", "ggvis_ui"
-             )
+  # finally declare as shiny object
+  bind_shiny("ggvis", "ggvis_ui")
 ```
 
