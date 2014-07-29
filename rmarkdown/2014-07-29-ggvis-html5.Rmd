@@ -63,7 +63,7 @@ runtime: shiny
 ---
 ```
 
-The standalone shiny app ([repository](https://github.com/bquast/Iris-App)) slightly more complex in the sense that the input widgets are shiny code (which is actually very similar).
+The standalone shiny app ([repository](https://github.com/bquast/Iris-App)) is slightly more complex in the sense that the input widgets are created using shiny code (which is actually very similar).
 
 The **ui.R** looks like this:
 
