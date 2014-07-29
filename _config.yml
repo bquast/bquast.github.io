@@ -22,3 +22,5 @@ version:          1.0.0
 
 github:
   repo:           https://github.com/bquast/bquast.github.io
+
+exclude:          [rmarkdown]
