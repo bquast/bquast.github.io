@@ -46,3 +46,17 @@ iris %>%
   bind_shiny("ggvis", "ggvis_ui")
 ```
 
+As you can see, running the code through knitr produces an error message. If we want to correctly parse the slidy graph in slides, we need to specify the **runtime** as such:
+
+```
+---
+title: 'Iris: Sepal-Ratio Modeling'
+author: "Bastiaan Quast"
+date: "Thursday, July 18, 2014"
+output:
+  ioslides_presentation:
+    keep_md: yes
+    transition: faster
+runtime: shiny
+---
+```
