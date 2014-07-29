@@ -1,0 +1,36 @@
+---
+layout: post
+title: ggvis, shiny, and HTML5 slides
+permalink: ggvis-shiny-html5-slides
+---
+[Sepal-Modeling](http://bquast.shinyapps.io/Iris-App) is a **shiny app**,
+which uses **ggvis** to fit LOESS smoothers on the sepal ratios of the **iris** dataset.
+There are separate smoothers  for every species, as well as a general smoother for all observations.
+The span can be adjusted in order to see if we need to model the sepal ratio per species or jointly.
+
+There is also an [HTML5 **dynamic** presentation](http://bquast.shinyapps.io/Iris-Presentation) ([code](https://github.com/bquast/Iris-Presentation/blob/master/dynamic.Rmd) )
+and a [HTML5 **static** presentation](http://bquast.github.io/Iris-Presentation), both build using **rmarkdown v2**.
+
+The code in the 
+
+
+{% highlight r %}
+iris %>%
+  ggvis(~Sepal.Width, ~Sepal.Length) %>%
+  layer_smooths(span = input_slider(0.5, 1, 0.5, label = 'General Model'), se = TRUE) %>%
+  group_by(Species) %>%
+  layer_points(size := input_slider(10, 200, 50, label = 'Point Size'),
+  opacity := input_slider(0.5, 1, 0.5, label = 'Point Opacity'), fill = ~Species) %>%
+  layer_smooths(span = input_slider(0.5, 1, 0.5, label = 'Species Models'), fill = ~Species, se=TRUE) %>%
+  add_axis("x", title = "Sepal Width") %>%
+  add_axis("y", title = "Sepal Length") %>%
+  bind_shiny("ggvis", "ggvis_ui"
+             )
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Error: could not find function "%>%"
+{% endhighlight %}
+
