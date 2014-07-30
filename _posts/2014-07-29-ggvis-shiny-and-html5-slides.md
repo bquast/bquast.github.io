@@ -55,7 +55,7 @@ iris %>%
 ## Error: bind_shiny() must be run inside a shiny app.
 {% endhighlight %}
 
-As you can see, running the code through knitr produces an error message. If we want to correctly parse the slidy graph in slides, we need to specify the **runtime** in the **YAML** frontend as such:
+As you can see, running the code through knitr produces an error message. If we want to correctly parse the slidy graph in slides, we need to specify the **runtime** in the **YAML** front matter as such:
 
 ```
 ---
