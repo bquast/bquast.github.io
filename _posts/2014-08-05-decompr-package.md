@@ -55,7 +55,7 @@ data(wiod)
 
 # explore the data
 dim(intermediate.demand) # (2 + GN + totals) x (2 + GN)
-```
+{% endhighlight %}
 
 {% highlight text %}
 ## [1] 1445 1437
