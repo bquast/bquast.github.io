@@ -95,12 +95,16 @@ shinyUI(fluidPage(
     # Sidebar panel
     sidebarPanel(
       h3('Controls'),
-      sliderInput('general.span', 'General Model', 0.5, 1, value=0.5),
-      sliderInput('species.span', 'Individual Models',
+      sliderInput('general.span',
+                  'General Model',
+                  0.5, 1, value=0.5),
+      sliderInput('species.span',
+                  'Individual Models',
                   0.5, 1, value = 0.5),
       sliderInput("size", "Point Size", 10, 200, value = 50),
       sliderInput('opacity', "Point Opacity", 0, 1, value = 0.5),
-      p('The controls can be used the wigglyness of the general model,
+      p('The controls can be used to adjust
+        the wigglyness of the general model,
         as well as the models fitted for each species.
         Thereby seeing if separate models are needed.
         Furthermore, the size and opacity of the points plotted
