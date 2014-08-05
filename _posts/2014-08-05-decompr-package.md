@@ -26,12 +26,12 @@ Installation
 **WARNING**, decompr is still in beta testing, feel free to try it an please report and [issues here](https://github.com/bquast/decompr/issues).
 
 
-```r
+{% highlight r linenos %}
 # install.packages("devtools")
 devtools::install_github("bquast/decompr")
-```
+{% endhighlight %}
 
-```
+{% highlight text %}
 ## Installing github repo decompr/master from bquast
 ## Downloading master.zip from https://github.com/bquast/decompr/archive/master.zip
 ## Installing package from /tmp/RtmpQV7Eon/master.zip
@@ -41,12 +41,12 @@ devtools::install_github("bquast/decompr")
 ##   '/tmp/RtmpQV7Eon/devtoolsdbc9385f39/decompr-master'  \
 ##   --library='/home/bquast/R/x86_64-pc-linux-gnu-library/3.1'  \
 ##   --install-tests
-```
+{% endhighlight %}
 
 Usage
 --------------------------------------
 
-```r
+{% highlight r linenos %}
 # load the package
 library(decompr)
 
@@ -57,23 +57,23 @@ data(wiod)
 dim(intermediate.demand) # (2 + GN + totals) x (2 + GN)
 ```
 
-```
+{% highlight text %}
 ## [1] 1445 1437
-```
+{% endhighlight %}
 
-```r
+{% highlight r linenos %}
 dim(final.demand)        # (2 + GN + totals) x (2 + G*5)
-```
+{% endhighlight %}
 
-```
+{% highlight text %}
 ## [1] 1445  207
-```
+{% endhighlight %}
 
-```r
+{% highlight r linenos %}
 intermediate.demand[1:40,1:40]
-```
+{% endhighlight %}
 
-```
+{% highlight text %}
 ##     V1  V2   V3    V4    V5  V6  V7   V8   V9   V10  V11  V12  V13   V14
 ## 1           AUS   AUS   AUS AUS AUS  AUS  AUS   AUS  AUS  AUS  AUS   AUS
 ## 2            c1    c2    c3  c4  c5   c6   c7    c8   c9  c10  c11   c12
@@ -197,13 +197,13 @@ intermediate.demand[1:40,1:40]
 ## 38    0     0     0     0     0    0    0    0   0 2885   1 3538
 ## 39    0     0     0     0     0    0    0    0   0   13  59   27
 ## 40    0     0     0     0     0    0    0    0   0  493   3 2342
-```
+{% endhighlight %}
 
-```r
+{% highlight r linenos %}
 final.demand[1:40,1:10]
-```
+{% endhighlight %}
 
-```
+{% highlight text %}
 ##     V1  V2     V3  V4    V5     V6    V7   V8  V9 V10
 ## 1             AUS AUS   AUS    AUS   AUS  AUT AUT AUT
 ## 2             c37 c38   c39    c41   c42  c37 c38 c39
@@ -245,47 +245,47 @@ final.demand[1:40,1:10]
 ## 38 AUT  c1      3   0     0      0     0 3372   0 140
 ## 39 AUT  c2      0   0     0      0     0  210   0   8
 ## 40 AUT  c3     59   0     0      0     0 8338   0  24
-```
+{% endhighlight %}
 
-```r
+{% highlight r linenos %}
 # use the direct approach
 # run the WWZ decomposition
 wwz <- decomp(intermediate.demand, final.demand, method='wwz')
 wwz[1:5,1:5]
-```
+{% endhighlight %}
 
-```
+{% highlight text %}
 ##              DVA_FIN    DVA_INT DVA_INTrexI1 DVA_INTrexF DVA_INTrexI2
 ## AUS.c1.AUS 0.0000000  0.0000000    0.0000000   0.0000000   0.00000000
 ## AUS.c1.AUT 0.9111762  0.4625102    0.0688806   0.3571779   0.01550494
 ## AUS.c1.BEL 7.2894098 28.9449226   18.6913782  67.9672390   5.61451475
 ## AUS.c1.BGR 0.0000000  0.0000000    0.0000000   0.0000000   0.00000000
 ## AUS.c1.BRA 0.0000000  1.3342108    0.2012988   0.2497688   0.03264660
-```
+{% endhighlight %}
 
-```r
+{% highlight r linenos %}
 # run the Kung Fu decomposition
 kf  <- decomp(intermediate.demand, final.demand, method='kung.fu')
 kf[1:5,1:5]
-```
+{% endhighlight %}
 
-```
+{% highlight text %}
 ##             AUS.c1       AUS.c2     AUS.c3     AUS.c4     AUS.c5
 ## AUS.c1 9008.838928 2.073470e+02 3403.21235 106.006923  28.764122
 ## AUS.c2  176.309989 1.167310e+05  378.83615  23.238096   6.361119
 ## AUS.c3  113.768875 1.156293e+02 6157.58321   8.113164   2.197657
 ## AUS.c4    7.173890 3.905584e+01   17.93670 596.007379   8.606622
 ## AUS.c5    1.562337 8.343463e+00    3.85944   6.893088 117.474862
-```
+{% endhighlight %}
 
-```r
+{% highlight r linenos %}
 # or use the step-by-step approach
 # create intermediate object (class decompr)
 decompr.object <- load.tables(intermediate.demand, final.demand)
 str(decompr.object)
-```
+{% endhighlight %}
 
-```
+{% highlight text %}
 ## List of 31
 ##  $ Exp      : num [1:1435, 1:1435] 13898 0 0 0 0 ...
 ##  $ Vhat     : num [1:1435, 1:1435] 0.57 0 0 0 0 ...
@@ -364,37 +364,37 @@ str(decompr.object)
 ##  $ z1       : chr [1:41, 1:1435] "AUS.c1" "AUS.c1" "AUS.c1" "AUS.c1" ...
 ##  $ z2       : chr [1:42] "AUS" "AUT" "BEL" "BGR" ...
 ##  - attr(*, "class")= chr "decompr"
-```
+{% endhighlight %}
 
-```r
+{% highlight r linenos %}
 # run the WWZ decomposition on the decompr object
 wwz <- wwz(decompr.object)
 wwz[1:5,1:5]
-```
+{% endhighlight %}
 
-```
+{% highlight text %}
 ##              DVA_FIN    DVA_INT DVA_INTrexI1 DVA_INTrexF DVA_INTrexI2
 ## AUS.c1.AUS 0.0000000  0.0000000    0.0000000   0.0000000   0.00000000
 ## AUS.c1.AUT 0.9111762  0.4625102    0.0688806   0.3571779   0.01550494
 ## AUS.c1.BEL 7.2894098 28.9449226   18.6913782  67.9672390   5.61451475
 ## AUS.c1.BGR 0.0000000  0.0000000    0.0000000   0.0000000   0.00000000
 ## AUS.c1.BRA 0.0000000  1.3342108    0.2012988   0.2497688   0.03264660
-```
+{% endhighlight %}
 
-```r
+{% highlight r linenos %}
 # run the Kung Fu decomposition on the decompr object
 kf  <- kung.fu(decompr.object)
 kf[1:5,1:5]
-```
+{% endhighlight %}
 
-```
+{% highlight text %}
 ##             AUS.c1       AUS.c2     AUS.c3     AUS.c4     AUS.c5
 ## AUS.c1 9008.838928 2.073470e+02 3403.21235 106.006923  28.764122
 ## AUS.c2  176.309989 1.167310e+05  378.83615  23.238096   6.361119
 ## AUS.c3  113.768875 1.156293e+02 6157.58321   8.113164   2.197657
 ## AUS.c4    7.173890 3.905584e+01   17.93670 596.007379   8.606622
 ## AUS.c5    1.562337 8.343463e+00    3.85944   6.893088 117.474862
-```
+{% endhighlight %}
 
 
 Credit
