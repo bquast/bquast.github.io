@@ -32,7 +32,8 @@ GitHub [describes how to do this](https://help.github.com/articles/tips-for-conf
 
 After this has been configured, you need to create a [CNAME record](http://en.wikipedia.org/wiki/CNAME_record) in your repository, GitHub can also [help you with this](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages).
 
-At this point, both the registar as well as GitHub pages are aware of your custom URL, the last them is to make jekyll aware of this, which will do in the global options.
+At this point, both the registar and GitHub Pages are aware of your custom URL,
+the last step is to also make jekyll aware of this, which will do in the global options.
 
 
 ## Global options
