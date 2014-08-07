@@ -39,7 +39,7 @@ the last step is to also make jekyll aware of this, which will do in the global 
 ## Global options
 
 As I mentioned in [yesterday's post](/jeyll-blog), general setting can be set in the `_config.yml` file.
-The contents of the file depend on the theme defaults, but they will generally look very similar.
+The exact contents of this file depend on the theme defaults, but they will generally look very similar.
 In my case the file looks like this.
 
 ```
@@ -81,7 +81,7 @@ The main things you will want to edit in the `_config` file are:
     * url
 * github repo
 
-The last line instructs jekyll not to look in the rmarkdown folder for content.
+The last line of the `_config.yml` file instructs jekyll not to look in the `rmarkdown` folder for content.
 I use this folder for [rmarkdown](http://rmarkdown.rstudio.com/) files,
 which are rendered to markdown and then added to my posts folder.
 This enables me to always have access to the source files,
