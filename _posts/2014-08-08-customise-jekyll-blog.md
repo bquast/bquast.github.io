@@ -2,13 +2,14 @@
 layout: post
 title: How to customise a jekyll blog?
 permalink: customise-jekyll-blog
-published: false
 ---
 
 In [yesterday's post](/jeyll-blog) I described how to setup I set up a basic jekyll blog [using Github Pages](https://pages.github.com/).
 In this post I will describe in more detail how I set up this blog,
 with the customisations that I added to it.
 Most of the idea I used [Joshua Lande's blog](http://joshualande.com/), which he describes in [this post](http://joshualande.com/jekyll-github-pages-poole/).
+This post describes a lot of helpful customisations such as adding an archive, the disqus platform for comments,
+as well as twitter plug. I followed most of his suggestions, with a few minor changes, which I describe below.
 
 
 ## Theme
@@ -17,7 +18,7 @@ Johsua Lande uses the [poole theme](https://github.com/poole/poole), of which I 
 
 
 ## Custom domain
-If you intend to link a custom domain to your site then this should be your very first step. In my case I registered the `http://qua.st/`. I registerd this because it is nice and short, and the domain TLD `.st` relatively well know, which means people won't forget or remember wrongly to quickly.
+If you intend to link a custom domain to your site then this should be your very first step. In my case I registered the `http://qua.st/`. I registerd this because it is nice and short, and the domain TLD `.st` relatively well know, which means people won't forget or remember wrongly too quickly.
 
 The most important thing is obviously to registerd your custom domain with a domain registar, this will depend on things such as your choise of TLD, the country you live in etc.
 
@@ -61,20 +62,53 @@ github:
 
 exclude:          [rmarkdown]
 ```
+The main things you will want to edit in the config files are:
 
+* title
+* tagline
+* description
+* url
+* author
+    * name
+    * url
+* github repo
 
+The last line instructs jekyll not to look in the rmarkdown folder for content.
+I use this folder for [rmarkdown](http://rmarkdown.rstudio.com/) files,
+which are rendered to markdown and then added to my posts folder.
+This enables me to always have access to the source files,
+without having jekyll add them to the webpage.
 
-Archive
+## Social media
+Joshua Lande describes how he adds a twitter plug to his page, I used the same method.
+In addition, I added a Google+ plug as well. The code for suggesting a Google+ post is:
 
 ```
----
-layout: page
-title: Archive
----
-
-## Blog Posts
-
-{% for post in site.posts %}
-  * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url }})
-{% endfor %}
+<a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" target="_blank">
+  Google+
+</a>
 ```
+
+The complete social media code can be seen [here](https://github.com/bquast/bquast.github.io/blob/master/_includes/social_media.html).
+Unfortunately Google+ doesnot allow you to add yourself to you post,
+which means that you will not be informed if someone post your article to Google+ unless they manually tag you.
+
+In order to automatically add this to every post I added it to the [_layouts/post.html](https://github.com/bquast/bquast.github.io/blob/master/_layouts/post.html) template.
+
+By adding the line:
+
+```
+  {% include social_media.html %}
+```
+
+I addition to this, I added the disqus code here also (in stead of to the default page, like Joshua Lande does).
+
+```
+  {% include comments.html %}
+```
+
+Lastly, I added a couple of links to other profiles on the web such as [ORCID](http://orcid.org/0000-0002-2951-3577), [GitHub](https://github.com/bquast/), [Google+](https://plus.google.com/+BastiaanQuast), and [Twitter](https://twitter.com/baquast) to sidebar directly into the HTML code. The reason for adding it here is that I wanted those external page to open in a new tab/window, which HTML can do using `taget="_blank"`, but markdown does not seem to allow.
+
+The fact that jekyll does not allow this is also my main frustration with it, since I think articles should like to helpful resources as much as possible, however, having the links open in the same tab drives away your visitors. If anybody has an idea of how to fix this, I would be very grateful.
+
+
