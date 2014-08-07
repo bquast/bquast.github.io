@@ -30,7 +30,7 @@ this will depend on things such as your choice of TLD, the country you live in e
 Once you have done this, the next step is to setup an `ALIAS`, `ANAME`, or `A` file at your registar,
 GitHub [describes how to do this](https://help.github.com/articles/tips-for-configuring-an-a-record-with-your-dns-provider).
 
-After this has been configured, you need to create a [CNAME record](http://en.wikipedia.org/wiki/CNAME_record) in your repository, GitHub can also [help you with this]((https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages).
+After this has been configured, you need to create a [CNAME record](http://en.wikipedia.org/wiki/CNAME_record) in your repository, GitHub can also [help you with this](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages).
 
 At this point, both the registar as well as GitHub pages are aware of your custom URL, the last them is to make jekyll aware of this, which will do in the global options.
 
