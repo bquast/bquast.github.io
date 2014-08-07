@@ -43,6 +43,7 @@ It helps you organise different iterations of code files (such as your markdown 
 Git also allows you to store a copy of (all versions) of your files on a **remote** server.
 Git**hub** is a service which allows you to store your files on their servers.
 In the context of jekyll sites, git is mostly used as a easy method to upload and update your posts and pages.
+The functionality whereby Github hosts your repository as a website is called [Github Pages](https://pages.github.com/).
 
 ## Setting up jekyll
 As I mentioned above, this site is hosted on Github, which automatically runs jekyll on the repository
