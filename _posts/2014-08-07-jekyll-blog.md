@@ -55,9 +55,3 @@ The second step is now to add all the files that jekyll expect there to be. The 
 If you now access the domain **username**.github.**io**, you will find your website there.
 
 At this point you need to start configuring your website. Basic global options can be configured in the `_config.yml` file. Example posts can be found in the `_post` folder, and advanced layout and colour options can be edited by editing the `.css` files in the `css` folder.
-
-
-
-
-
-
