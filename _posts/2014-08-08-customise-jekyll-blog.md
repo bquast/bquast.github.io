@@ -8,7 +8,7 @@ In [yesterday's post](/jeyll-blog) I described how to setup I set up a basic jek
 In this post I will describe in more detail how I set up this blog,
 with the customisations that I added to it.
 Most of the ideas I used come from [Joshua Lande's blog](http://joshualande.com/), which he describes in [this post](http://joshualande.com/jekyll-github-pages-poole/).
-This post lays out a few very useful customisations such as,
+This post lays out a few very useful customisations, such as,
 adding an archive, the disqus platform for comments, as well as a twitter plug.
 I followed most of his suggestions, with a few minor changes, which I describe below.
 
@@ -38,7 +38,8 @@ At this point, both the registar as well as GitHub pages are aware of your custo
 ## Global options
 
 As I mentioned in [yesterday's post](/jeyll-blog), general setting can be set in the `_config.yml` file.
-The contents of the file are dependent on the theme default, but they will generally look very similar. In my case the file looks like this.
+The contents of the file depend on the theme defaults, but they will generally look very similar.
+In my case the file looks like this.
 
 ```
 # Dependencies
@@ -68,7 +69,7 @@ github:
 
 exclude:          [rmarkdown]
 ```
-The main things you will want to edit in the config files are:
+The main things you will want to edit in the `_config` file are:
 
 * title
 * tagline
@@ -94,14 +95,13 @@ In addition, I added a Google+ plug as well. The code for suggesting a Google+ p
   Google+
 </a>
 ```
-
-The complete social media code can be seen [here](https://github.com/bquast/bquast.github.io/blob/master/_includes/social_media.html).
 Unfortunately Google+ doesnot allow you to add yourself to you post,
 which means that you will not be informed if someone post your article to Google+ unless they manually tag you.
 
-In order to automatically add this to every post I added it to the [_layouts/post.html](https://github.com/bquast/bquast.github.io/blob/master/_layouts/post.html) template.
+The complete social media code can be seen [here](https://github.com/bquast/bquast.github.io/blob/master/_includes/social_media.html).
 
-By adding the line:
+In order to automatically add this to every post I added it to the [_layouts/post.html](https://github.com/bquast/bquast.github.io/blob/master/_layouts/post.html) template,
+by adding the following code.
 
 ```
   {% include social_media.html %}
@@ -113,7 +113,9 @@ I addition to this, I added the disqus code here also (in stead of to the defaul
   {% include comments.html %}
 ```
 
-Lastly, I added a couple of links to other profiles on the web such as [ORCID](http://orcid.org/0000-0002-2951-3577), [GitHub](https://github.com/bquast/), [Google+](https://plus.google.com/+BastiaanQuast), and [Twitter](https://twitter.com/baquast) to sidebar directly into the HTML code. The reason for adding it here is that I wanted those external page to open in a new tab/window, which HTML can do using `taget="_blank"`, but markdown does not seem to allow.
+This makes sure that the disqus comment stream is added beneath every post, but not to the main page.
+
+Lastly, I added a couple of links to other profiles on the web such as [ORCID](http://orcid.org/0000-0002-2951-3577), [GitHub](https://github.com/bquast/), [Google+](https://plus.google.com/+BastiaanQuast), and [Twitter](https://twitter.com/baquast) to sidebar. I added these directly into the HTML code, the reason for this, is that I wanted those external pages to open in a new tab/window, which HTML can do using `taget="_blank"`, but markdown does not seem to allow.
 
 The fact that jekyll does not allow this is also my main frustration with it, since I think articles should like to helpful resources as much as possible, however, having the links open in the same tab drives away your visitors. If anybody has an idea of how to fix this, I would be very grateful.
 
