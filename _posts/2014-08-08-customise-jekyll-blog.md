@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to customise a jekyll blog?
+title: How to customise a jekyll blog
 permalink: customise-jekyll-blog
 ---
 
