@@ -8,6 +8,8 @@ Bastiaan Quast
 - Research Assistant, [Centre for Finance and Development, Geneva](http://graduateinstitute.ch/home/research/centresandprogrammes/cfd/about-us/research-team.html)
 - Research Assistant, Centre on [Conflict, Development, and Peacebuilding](http://graduateinstitute.ch/home/research/centresandprogrammes/ccdp/who-we-are/staff/bastiaan-quast.html)
 
+![Bastiaan Quast](http://gravatar.com/avatar/9f979d814c18db7e759b64ca8a52953d?s=400)
+
 From The Netherlands, living in Geneva.
 Interested in development economics, IT, open-source & open content.
 Hates typing on smartphones, 3DSecureCode systems for online payments,
