@@ -120,4 +120,6 @@ Lastly, I added a couple of links to other profiles on the web such as [ORCID](h
 
 The fact that jekyll does not allow this is also my main frustration with it, since I think articles should like to helpful resources as much as possible, however, having the links open in the same tab drives away your visitors. If anybody has an idea of how to fix this, I would be very grateful.
 
+EDIT: there is a way to open external links in a new tab using javascript, see the second answer to [this StackOverflow question](http://stackoverflow.com/questions/4425198/markdown-target-blank/8000171).
+
 
