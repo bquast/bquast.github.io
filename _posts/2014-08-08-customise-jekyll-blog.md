@@ -4,7 +4,7 @@ title: How to customise a jekyll blog
 permalink: customise-jekyll-blog
 ---
 
-In [yesterday's post](/jeyll-blog) I described how to setup I set up a basic jekyll blog [using Github Pages](https://pages.github.com/).
+In [yesterday's post](/jekyll-blog) I described how to setup I set up a basic jekyll blog [using Github Pages](https://pages.github.com/).
 In this post I will describe in more detail how I set up this blog,
 with the customisations that I added to it.
 Most of the ideas I used come from [Joshua Lande's blog](http://joshualande.com/), which he describes in [this post](http://joshualande.com/jekyll-github-pages-poole/).
