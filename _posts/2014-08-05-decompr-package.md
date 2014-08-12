@@ -23,7 +23,7 @@ The output when using the WWZ algorithm is a matrix with dimensions **GNGx19**. 
 
 Installation
 --------------------------------------
-**WARNING**, decompr is still in beta testing, feel free to try it an please report and [issues here](https://github.com/bquast/decompr/issues).
+**WARNING**, decompr is still in beta testing, feel free to try it and please report any [issues here](https://github.com/bquast/decompr/issues).
 
 
 {% highlight r linenos %}
