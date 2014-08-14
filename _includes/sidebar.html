@@ -25,6 +25,10 @@
       {% endif %}
     {% endfor %}
 
+      <a class="sidebar-nav-item" href="/atom.xml" target="_blank">RSS Feed</a>
+
+      <p></p>
+
     {% for page in site.profiles_list %}
       <a class="sidebar-nav-item" href="{{ page[1]  }}">{{ page[0] }}</a>
     {% endfor %}
