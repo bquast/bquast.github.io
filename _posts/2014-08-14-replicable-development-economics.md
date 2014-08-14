@@ -6,7 +6,7 @@ published: false
 ---
 
 The tagline of this blog says something **replicable development economics using R and git**.
-So far, I have posted gimicks on new R tools such as shiny, rmarkdown, and my own package.
+So far, I have posted gimmicks on new R tools such as shiny, rmarkdown, and my own package.
 Also, I have posted on how to use Git, Github, and Jekyll to write a website/blog.
 However, I have never brought the two together and how this features into creating replicable research.
 
