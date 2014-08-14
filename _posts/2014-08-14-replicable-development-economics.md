@@ -2,7 +2,7 @@
 layout: post
 title: Replicable Development Economics
 permalink: replicable-development-economics
-published: true
+published: false
 ---
 
 The tagline of this blog says something **replicable development economics using R and git**.
