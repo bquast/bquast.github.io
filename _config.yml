@@ -25,7 +25,9 @@ github:
 
 exclude:          [rmarkdown]
 
-pages_list:       
-  About: '/about'
-  Archive: '/archive'
-  Feed: '/atom.xml'
+profiles_list:
+  Feed:    '/atom.xml'
+  decompr: 'http://qua.st/decompr'
+  ORCID:   'http://orcid.org/0000-0002-2951-3577'
+  GitHub:  'http://twitter.com/baquast'
+  Google+: '+https://plus.google.com/+BastiaanQuast'
