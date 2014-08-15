@@ -27,9 +27,13 @@ which will really cement your understanding what control is and how to use Git t
 
 Delving into the belly of the beast
 --------------------------------------
-On a day to day basis, you will not need more than a few git commands. Once you have mastered the basics, there is thsu not that much more to learn which will be useful for you analysis.
+On a day to day basis, you will not need more than a few git commands.
+Once you have mastered the basics,
+there is not that much more to learn which will be useful for you analysis.
 
-With R however, it is a different story altogether, this is something that is both much more expansive, as well as constantly evolving. I am adding a few more resources which might come in handy for acquiring a deeper understanding of R.
+With R however, it is a different story altogether, R is both much more expansive,
+as well as constantly evolving.
+For this reason I am adding a few more resources which might come in handy for acquiring a deeper understanding of R.
 
 John D. Cook also has a guide called [R programming for those coming from other languages](http://www.johndcook.com/R_language_for_programmers.html).
 
