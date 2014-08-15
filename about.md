@@ -16,13 +16,6 @@ Bastiaan Quast, from The Netherlands, living in Geneva, 27 years old.
 </center>
 
 
-Interested in development economics, IT, open-source & open content.
-Hates typing on smartphones, 3DSecureCode systems for online payments,
-lack of bikelanes in Geneva (compared to home).
-Has no musical talent or rhythm in general.
-Would like to be better at programming, but generally to disorganised to be good at it.
-Reasonably good with **Linux**, **R** and **LaTeX**.
-
 Research
 -----------------
 Together with the **KoBo Toolbox** designers from the **Harvard Humanitarian Initiative**,
@@ -48,6 +41,13 @@ which applies the **Wang-Wei-Zhu** and **Kung-Fu** algorithms for **export decom
 
 Other
 -----------------
+Interested in development economics, IT, open-source & open content.
+Hates typing on smartphones, 3DSecureCode systems for online payments,
+lack of bikelanes in Geneva (compared to home).
+Has no musical talent or rhythm in general.
+Would like to be better at programming, but generally to disorganised to be good at it.
+Reasonably good with **Linux**, **R** and **LaTeX**.
+
 Sometimes working on a [wikibook](https://en.wikibooks.org/wiki/KoBo_Toolbox) on the [Kobo Toolbox](http://www.kobotoolbox.org/),
 which is an open-source survey software suite (android) designed for conditions with limited access to internet, electricity, etc.
 
