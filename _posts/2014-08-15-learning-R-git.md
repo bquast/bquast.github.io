@@ -7,18 +7,23 @@ permalink: learing-R-git
 In [yesterday's post](/replicable-development-economics) I discussed some of the principles I use to make my work replicable and - to an extend - reproducible.
 In this post I want to collect some resources which I think will be very helpful in getting a grasp of the basics of R and Git.
 
+R
+----------------------
 An easy way to start with R without having to install it is using the online tutorial
 [Try R by Code School](http://tryr.codeschool.com/).
 
 After you have completed this tutorial, have a look at the [Datacamp R tutorial](https://www.datacamp.com/).
 
-If want try an learn something about R on the go, you might want to have a look at [R instructor](https://play.google.com/store/apps/details?id=appinventor.ai_RInstructor.R2) (Android). For iOS there is [an implementation of the R programming language](https://itunes.apple.com/us/app/r-programming-language/id540809637), which will give you the ability to run R on your iOS device.
+If want try an learn something about R on the go, you might want to have a look at [R instructor](https://play.google.com/store/apps/details?id=appinventor.ai_RInstructor.R2) (Android).
+
+If you are on iOS, there is
+[an implementation of the R programming language](https://itunes.apple.com/us/app/r-programming-language/id540809637),
+which will give you the ability to run R on your iOS device.
 
 If you have internet access but do not hav R installed, then you might want to try [R fiddle](http://www.r-fiddle.org/), which gives you an online (mobile friendly) environment to execute R code.
 
-
-
-
+Git
+---------------------------------
 An easy way to start with Git without having to install it using the online tuturial
 [Try Git by Code School](https://try.github.io/) (notice that this site is hosted on Github pages).
 
