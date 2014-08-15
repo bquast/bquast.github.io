@@ -12,6 +12,6 @@ Currently
 
 Previously
 ---------------
-- Teaching Assistant, [The Graduate Institute, Geneva](http://graduateinstitute.ch/), [see more teaching](/teaching)
+- Teaching Assistant, [The Graduate Institute, Geneva](http://graduateinstitute.ch/) ([more teaching](/teaching))
 
 [more about me](/about)
