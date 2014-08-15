@@ -7,6 +7,7 @@ permalink: learing-R-git
 In [yesterday's post](/replicable-development-economics) I discussed some of the principles I use to make my work replicable and - to an extend - reproducible.
 In this post I want to collect some resources which I think will be very helpful in getting a grasp of the basics of R and Git.
 
+
 R
 ----------------------
 An easy way to start with R without having to install it is using the online tutorial
@@ -22,6 +23,7 @@ which will give you the ability to run R on your iOS device.
 
 If you have internet access but do not hav R installed, then you might want to try [R fiddle](http://www.r-fiddle.org/), which gives you an online (mobile friendly) environment to execute R code.
 
+
 Git
 ---------------------------------
 An easy way to start with Git without having to install it using the online tuturial
@@ -30,8 +32,9 @@ An easy way to start with Git without having to install it using the online tutu
 After having completed this tutorial, you might want to have a look at this cool [Git Branching Game](http://pcottle.github.io/learnGitBranching/),
 which will really cement your understanding what control is and how to use Git to manage it.
 
-Delving into the belly of the beast
---------------------------------------
+
+Delving into the belly of the beast (R)
+----------------------------------------
 On a day to day basis, you will not need more than a few git commands.
 Once you have mastered the basics,
 there is not that much more to learn which will be useful for you analysis.
