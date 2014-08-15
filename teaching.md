@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research
+title: Teaching
 ---
 
 In the first semester of the academic year 2013-2014 I was a teaching assitant at The Graduate Institute in Geneva.
