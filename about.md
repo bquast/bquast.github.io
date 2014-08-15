@@ -3,17 +3,19 @@ layout: page
 title: About Me
 ---
 
-Bastiaan Quast
+Bastiaan Quast, from The Netherlands, living in Geneva, 27 years old.
 
 - PhD Candidate [Development Economics](http://graduateinstitute.ch/home/study/academicdepartments/international-economics/studying-economics/PhD_dvlpm_economics.html), [The Graduate Institute, Geneva](http://graduateinstitute.ch/)
 - Research Assistant, [Centre for Finance and Development, Geneva](http://graduateinstitute.ch/home/research/centresandprogrammes/cfd/about-us/research-team.html)
 - Research Assistant, Centre on [Conflict, Development, and Peacebuilding](http://graduateinstitute.ch/home/research/centresandprogrammes/ccdp/who-we-are/staff/bastiaan-quast.html)
 
+[more employment](/employment)
+
 <center>
 ![Bastiaan Quast](http://gravatar.com/avatar/9f979d814c18db7e759b64ca8a52953d?s=400)
 </center>
 
-From The Netherlands, living in Geneva.
+
 Interested in development economics, IT, open-source & open content.
 Hates typing on smartphones, 3DSecureCode systems for online payments,
 lack of bikelanes in Geneva (compared to home).
