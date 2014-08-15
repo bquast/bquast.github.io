@@ -21,7 +21,18 @@ If you are on iOS, there is
 [an implementation of the R programming language](https://itunes.apple.com/us/app/r-programming-language/id540809637),
 which will give you the ability to run R on your iOS device.
 
-If you have internet access but do not hav R installed, then you might want to try [R fiddle](http://www.r-fiddle.org/), which gives you an online (mobile friendly) environment to execute R code.
+If you have internet access but do not hav R installed, then you might want to try [R fiddle](http://www.r-fiddle.org/),
+which gives you an online (mobile friendly) environment to execute R code.
+
+If you want to start using R for serious work but don't know how to get started,
+consider using a **G**raphical **U**ser **I**nterface (GUI) for R.
+The advantage of this is that you can click through the dialogues and understand your process,
+the program then simply outputs both the results, as well as the underlying code used to produce these result.
+Reading the code produced by the GUI is a very easy way to learn new methods.
+
+A good GUI for constructing plots and graphics is [GrapheR](http://cran.r-project.org/web/packages/GrapheR/vignettes/manual_en.pdf).
+
+A more general purpose GUI (as in, it also does modelling) is [Rcmdr](http://socserv.mcmaster.ca/jfox/Misc/Rcmdr/).
 
 
 Git
@@ -48,3 +59,11 @@ Famous mathamatician [John D. Cook](http://www.johndcook.com/) also has a guide 
 
 Once you have become quite familiar with R and want to really learn some more fundamental topics,
 then have a look at [Hadley Wickam](http://had.co.nz/)'s [Advanced R](http://adv-r.had.co.nz/).
+
+
+RStudio
+-----------------------------
+I am mentioning this R tool last, but it is by far the most important R tool.
+[RStudio](http://www.rstudio.com/) is an **I**ntegrated **D**evelopment **E**nvironment (IDE),
+which is used by almost all professional R users.
+The developers at RStudio are also very much at the forefront of developing new R packages, such knitr, rmarkdown, shiny, etc.
