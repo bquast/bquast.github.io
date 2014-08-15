@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Learning R and Git
-permalink: learing-R-git
+permalink: learning-R-git
 ---
 
 In [yesterday's post](/replicable-development-economics) I discussed some of the principles I use to make my work replicable and - to an extend - reproducible.
