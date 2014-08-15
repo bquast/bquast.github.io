@@ -43,6 +43,8 @@ With R however, it is a different story altogether, R is both much more expansiv
 as well as constantly evolving.
 For this reason I am adding a few more resources which might come in handy for acquiring a deeper understanding of R.
 
-John D. Cook also has a guide called [R programming for those coming from other languages](http://www.johndcook.com/R_language_for_programmers.html).
+Famous mathamatician [John D. Cook](http://www.johndcook.com/) also has a guide called
+[R programming for those coming from other languages](http://www.johndcook.com/R_language_for_programmers.html).
 
-Once you have become quite familiar with R and want to really learn some more fundamental topics, then have a look at [Hadley Wickam](http://had.co.nz/)'s [Advanced R](http://adv-r.had.co.nz/).
+Once you have become quite familiar with R and want to really learn some more fundamental topics,
+then have a look at [Hadley Wickam](http://had.co.nz/)'s [Advanced R](http://adv-r.had.co.nz/).
