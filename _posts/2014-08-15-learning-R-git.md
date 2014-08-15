@@ -10,7 +10,7 @@ In this post I want to collect some resources which I think will be very helpful
 An easy way to start with R without having to install it is using the online tutorial
 [Try R by Code School](http://tryr.codeschool.com/).
 
-After you have completed this tutorial,
+After you have completed this tutorial, have a look at the [Datacamp R tutorial](https://www.datacamp.com/).
 
 If want try an learn something about R on the go, you might want to have a look at [R instructor](https://play.google.com/store/apps/details?id=appinventor.ai_RInstructor.R2) (Android). For iOS there is [an implementation of the R programming language](https://itunes.apple.com/us/app/r-programming-language/id540809637), which will give you the ability to run R on your iOS device.
 
