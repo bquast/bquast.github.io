@@ -2,6 +2,7 @@
 layout: page
 title: About Me
 ---
+
 Bastiaan Quast
 
 - PhD Candidate [Development Economics](http://graduateinstitute.ch/home/study/academicdepartments/international-economics/studying-economics/PhD_dvlpm_economics.html), [The Graduate Institute, Geneva](http://graduateinstitute.ch/)
