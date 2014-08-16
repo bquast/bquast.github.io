@@ -6,7 +6,7 @@ published: false
 ---
 As Friday was a holiday in Switzerland, my girlfriend and I decided to go to Paris for the weekend.
 Besides a covoiturage (car share) and AirBnB,
-we used the Parisian bike share program called [Vélib'](http://www.velib.paris) (.paris? very quick adoption),
+we used the Parisian bike share program called [Vélib](http://www.velib.paris) (.paris? very quick adoption),
 which is a contraction of **vel**o, meaning bicycle and **lib**re, which means free as in **free speech**.
 
 From an economic perspective, there are many interesting innovations about modern bike share programs.
