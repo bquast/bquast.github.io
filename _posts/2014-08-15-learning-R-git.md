@@ -26,8 +26,8 @@ which gives you an online (mobile friendly) environment to execute R code.
 
 If you want to start using R for serious work but don't know how to get started,
 consider using a **G**raphical **U**ser **I**nterface (GUI) for R.
-The advantage of this is that you can click through the dialogues and understand your process,
-the program then simply outputs both the results, as well as the underlying code used to produce these result.
+The advantage of this is that you can click through the dialogues, which is an easy process.
+The program then simply outputs both the results, as well as the underlying code used to produce these result.
 Reading the code produced by the GUI is a very easy way to learn new methods.
 
 A good GUI for constructing plots and graphics is [GrapheR](http://cran.r-project.org/web/packages/GrapheR/vignettes/manual_en.pdf).
