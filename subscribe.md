@@ -14,7 +14,6 @@ title: Subscribe
 <form action="//qua.us8.list-manage.com/subscribe/post?u=fb64e80d1936ce4bcee35dc0f&amp;id=714c1f672f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 	<label for="mce-EMAIL">Subscribe to my mailing list</label>
 	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
     <div style="position: absolute; left: -5000px;"><input type="text" name="b_fb64e80d1936ce4bcee35dc0f_714c1f672f" tabindex="-1" value=""></div>
     <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
 </form>
