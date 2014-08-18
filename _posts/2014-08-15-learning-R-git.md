@@ -68,3 +68,13 @@ I am mentioning this R tool last, but it is by far the most important R tool.
 [RStudio](http://www.rstudio.com/) is an **I**ntegrated **D**evelopment **E**nvironment (IDE),
 which is used by almost all professional R users.
 The developers at RStudio are also very much at the forefront of developing new R packages, such knitr, rmarkdown, shiny, etc.
+
+
+Data Science specialisation
+-----------------------------
+As mentioned above the online learning platform [Coursera](https://www.coursera.org/) has a collection of courses called the [Data Science Specialisation](https://www.coursera.org/specialization/jhudatascience/1).
+
+I recently finished the specialisation, which consists of nine courses and a capstone project (not available yet).
+
+The courses are tought by the Johns Hopkins School of Public Health Biostatistics department and have a heavy relience on R(Studio).
+Thematically, the courses focus on public health case studies, but the lessons translate well to other fields.
