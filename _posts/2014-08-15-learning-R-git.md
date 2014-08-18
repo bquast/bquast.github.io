@@ -4,7 +4,7 @@ title: Learning R and Git
 permalink: learning-R-git
 ---
 
-In [yesterday's post](/replicable-development-economics) I discussed some of the principles I use to make my work replicable and - to an extend - reproducible.
+In [yesterday's post](/replicable-development-economics) I discussed some of the principles I use to make my work replicable and - to an extent - reproducible.
 In this post I want to collect some resources which I think will be very helpful in getting a grasp of the basics of R and Git.
 
 
@@ -13,7 +13,8 @@ R
 An easy way to start with R without having to install it is using the online tutorial
 [Try R by Code School](http://tryr.codeschool.com/).
 
-After you have completed this tutorial, have a look at the [Datacamp R tutorial](https://www.datacamp.com/).
+After you have completed this tutorial, have a look at the [Datacamp R tutorial](https://www.datacamp.com/courses/introduction-to-r).
+There is also a [companion course](https://www.datacamp.com/courses/data-analysis-and-statistical-inference_mine-cetinkaya-rundel-by-datacamp) to the [Coursera](https://www.coursera.org/) [Data Science](https://www.coursera.org/specialization/jhudatascience/1) specialisation (more on this later).
 
 If want try an learn something about R on the go, you might want to have a look at [R instructor](https://play.google.com/store/apps/details?id=appinventor.ai_RInstructor.R2) (Android).
 
