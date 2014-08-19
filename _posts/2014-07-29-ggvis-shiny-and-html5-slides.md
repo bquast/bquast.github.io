@@ -3,6 +3,8 @@ layout: post
 title: ggvis, shiny, and HTML5 slides
 permalink: ggvis-shiny-html5-slides
 ---
+[ggvis](ggvis.rstudio.com) is wonderful new tool to create interactive graphics, which was build with Shiny apps in mind. In this post I will go over how you can create a Shiny app using ggvis and incorporating the 'app' in an rmarkdown slideshow (interactively).
+
 [Sepal-Modeling](http://bquast.shinyapps.io/Iris-App) is a **shiny app** ([repo](https://github.com/bquast/Iris-App)),
 which uses **ggvis** to fit LOESS smoothers on the sepal ratios of the **iris** dataset.
 There are separate smoothers  for every species, as well as a general smoother for all observations.
