@@ -176,3 +176,8 @@ shinyServer(
 
     })
 {% endhighlight %}
+
+As you can see the app code is very similar but slightly different, the widgets (i.e. user adjustable parameters) are coded somewhat differently.
+By having a separate interface and backend file, the app designer has a bit more freedom in terms of layout.
+
+As you can see, it is very easy to build a small interactive plot and embed that plot in an interactive presentation that you can host on shinyapps.
