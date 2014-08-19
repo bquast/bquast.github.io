@@ -3,15 +3,15 @@ layout: post
 title: ggvis, shiny, and HTML5 slides
 permalink: ggvis-shiny-html5-slides
 ---
-[ggvis](ggvis.rstudio.com) is wonderful new tool to create interactive graphics, which was build with Shiny apps in mind. In this post I will go over how you can create a Shiny app using ggvis and incorporating the 'app' in an rmarkdown slideshow (interactively).
+[ggvis](http://ggvis.rstudio.com) is wonderful new tool to create interactive graphics, which was build with [Shiny apps](http://shiny.rstudio.com/) in mind. In this post I will go over how you can create a Shiny app using ggvis and incorporating the 'app' in an rmarkdown slideshow (interactively).
 
 [Sepal-Modeling](http://bquast.shinyapps.io/Iris-App) is a **shiny app** ([repo](https://github.com/bquast/Iris-App)),
 which uses **ggvis** to fit LOESS smoothers on the sepal ratios of the **iris** dataset.
 There are separate smoothers  for every species, as well as a general smoother for all observations.
-The span can be adjusted in order to see if we need to model the sepal ratio per species or jointly.
+The span can be adjusted in order to see if we need to model the sepal ratio per species or if we can just model it jointly.
 
 The [HTML5 **dynamic** presentation](http://bquast.shinyapps.io/Iris-Presentation) ([code](https://github.com/bquast/Iris-Presentation/blob/master/dynamic.Rmd) )
-and a [HTML5 **static** presentation](http://bquast.github.io/Iris-Presentation) ([code](https://github.com/bquast/Iris-Presentation/blob/master/static.Rmd)), both build using **rmarkdown v2**.
+and a [HTML5 **static** presentation](http://bquast.github.io/Iris-Presentation) ([code](https://github.com/bquast/Iris-Presentation/blob/master/static.Rmd)) are both build using **rmarkdown v2**.
 The code in the presentation is most straight forward, it uses only ggvis code for the interactivity.
 
 
