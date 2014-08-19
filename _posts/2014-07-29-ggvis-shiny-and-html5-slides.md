@@ -10,9 +10,8 @@ which uses **ggvis** to fit LOESS smoothers on the sepal ratios of the **iris** 
 There are separate smoothers  for every species, as well as a general smoother for all observations.
 The span can be adjusted in order to see if we need to model the sepal ratio per species or jointly.
 
-There is also an [HTML5 **dynamic** presentation](http://bquast.shinyapps.io/Iris-Presentation) ([code](https://github.com/bquast/Iris-Presentation/blob/master/dynamic.Rmd) )
+The [HTML5 **dynamic** presentation](http://bquast.shinyapps.io/Iris-Presentation) ([code](https://github.com/bquast/Iris-Presentation/blob/master/dynamic.Rmd) )
 and a [HTML5 **static** presentation](http://bquast.github.io/Iris-Presentation) ([code](https://github.com/bquast/Iris-Presentation/blob/master/static.Rmd)), both build using **rmarkdown v2**.
-
 The code in the presentation is most straight forward, it uses only ggvis code for the interactivity.
 
 
