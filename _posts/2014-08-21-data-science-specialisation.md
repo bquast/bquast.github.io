@@ -50,7 +50,7 @@ Resources
 ----------------
 If you are interested in taking courses for the specialisation then you should have a look at theses resources which might be helpful.
 
-* [THIS BLOG!!! ;-)](http://qua.st/)
+* [THIS BLOG!!! ;-)](http://qua.st)
 * [Community material](http://datasciencespecialization.github.io/)
 * [Datacamp course](https://www.datacamp.com/courses/data-analysis-and-statistical-inference_mine-cetinkaya-rundel-by-datacamp)
 * [The SWIRL stats R package](http://swirlstats.com/)
