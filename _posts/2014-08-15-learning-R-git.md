@@ -16,6 +16,12 @@ An easy way to start with R without having to install it is using the online tut
 After you have completed this tutorial, have a look at the [Datacamp R tutorial](https://www.datacamp.com/courses/introduction-to-r).
 There is also a [companion course](https://www.datacamp.com/courses/data-analysis-and-statistical-inference_mine-cetinkaya-rundel-by-datacamp) to the [Coursera](https://www.coursera.org/) [Data Science](https://www.coursera.org/specialization/jhudatascience/1) specialisation (more on this later).
 
+For you have previously done quantitative work in excell, then have a look at [How to Transition from Excel to R](https://districtdatalabs.silvrback.com/intro-to-r-for-microsoft-excel-users).
+
+
+
+moRe
+----------------------
 If want try an learn something about R on the go, you might want to have a look at [R instructor](https://play.google.com/store/apps/details?id=appinventor.ai_RInstructor.R2) (Android).
 
 If you are on iOS, there is
@@ -45,7 +51,7 @@ After having completed this tutorial, you might want to have a look at this cool
 which will really cement your understanding what control is and how to use Git to manage it.
 
 
-Delving into the belly of the beast (R)
+moRe still
 ----------------------------------------
 On a day to day basis, you will not need more than a few git commands.
 Once you have mastered the basics,
