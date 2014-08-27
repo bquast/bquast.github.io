@@ -23,7 +23,6 @@ The output when using the WWZ algorithm is a matrix with dimensions **GNGx19**. 
 Installation
 ------------
 
-**WARNING**, decompr is in an extremely early stage of development. The API will still change.
 
 ``` {.r}
 # install.packages("devtools")
