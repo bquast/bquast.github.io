@@ -1,10 +1,10 @@
-decompr
-=======
+----
+-layout: post
+-title: The decompr package
+-permalink: decompr-package
+----
 
-Bastiaan Quast, <bquast@gmail.com>
-----------------------------------
-
-An R package that implements Export Decomposition using the Wang-Wei-Zhu (Wang, Wei, and Zhu 2013) and source decomposition algorithms.
+I am proud to announce the beta version of the [decompr](http://qua.st/decompr/) **R package**. The package implements Export Decomposition using the Wang-Wei-Zhu (Wang, Wei, and Zhu 2013) and Kung-Fu (Mehrotra, Kung, and Grosky 1990) algorithms. It comes with a sample data set from the [WIOD project](http://www.wiod.org/), and has its own [mini site](http://qua.st/decompr).
 
 Inputs
 ------
@@ -24,7 +24,7 @@ Installation
 ------------
 
 
-``` {.r}
+{% highlight r linenos %}
 # install.packages("devtools")
 devtools::install_github("bquast/decompr")
 ```
@@ -38,7 +38,7 @@ devtools::install_github("bquast/decompr")
 Usage
 -----
 
-``` {.r}
+{% highlight r linenos %}
 # load the package
 library(decompr)
 
@@ -47,19 +47,19 @@ data(wiod)
 
 # explore the data
 dim(intermediate_demand) # (2 + GN + totals) x (2 + GN)
-```
+{% endhighlight %}
 
     ## [1] 255 247
 
-``` {.r}
+{% highlight r linenos %}
 dim(final_demand)        # (2 + GN + totals) x (2 + G*5)
-```
+{% endhighlight %}
 
     ## [1] 247  37
 
-``` {.r}
+{% highlight r linenos %}
 intermediate_demand[1:40,1:40]
-```
+{% endhighlight %}
 
     ##           V1  V2        V3        V4        V5        V6        V7
     ## 1                Euro-zone Euro-zone Euro-zone Euro-zone Euro-zone
@@ -308,9 +308,9 @@ intermediate_demand[1:40,1:40]
     ## 39        18         0      309     3956      304
     ## 40        57         0     8909      118    38313
 
-``` {.r}
+{% highlight r linenos %}
 final_demand[1:40,1:10]
-```
+{% endhighlight %}
 
     ##           V1  V2        V3        V4        V5        V6        V7
     ## 1                Euro-zone Euro-zone Euro-zone Euro-zone Euro-zone
@@ -395,12 +395,12 @@ final_demand[1:40,1:10]
     ## 39     4342        6       91
     ## 40   129956       24      195
 
-``` {.r}
+{% highlight r linenos %}
 # use the direct approach
 # run the WWZ decomposition
 wwz <- decomp(intermediate_demand, final_demand, method='wwz')
 wwz[1:5,1:5]
-```
+{% endhighlight %}
 
     ##                        DVA_FIN DVA_INT DVA_INTrexI1 DVA_INTrexF
     ## Euro-zone.c1.Euro-zone     0.0     0.0         0.00        0.00
@@ -415,11 +415,11 @@ wwz[1:5,1:5]
     ## Euro-zone.c1.China           12.077
     ## Euro-zone.c1.East Asia        2.459
 
-``` {.r}
-# run the Kung Fu decomposition
+{% highlight r linenos %}
+# run the source decomposition
 source  <- decomp(intermediate_demand, final_demand, method='source')
 source[1:5,1:5]
-```
+{% endhighlight %}
 
     ##              Euro-zone.c1 Euro-zone.c2 Euro-zone.c3 Euro-zone.c4
     ## Euro-zone.c1    23803.980      14.3808      17353.8        512.2
@@ -434,12 +434,13 @@ source[1:5,1:5]
     ## Euro-zone.c4       277.22
     ## Euro-zone.c5     10071.56
 
-``` {.r}
+
+{% highlight r linenos %}
 # or use the step-by-step approach
 # create intermediate object (class decompr)
 decompr_object <- load_tables(intermediate_demand, final_demand)
 str(decompr_object)
-```
+{% endhighlight %}
 
     ## List of 31
     ##  $ Exp      : num [1:245, 1:245] 43807 0 0 0 0 ...
@@ -520,11 +521,11 @@ str(decompr_object)
     ##  $ z2       : chr [1:8] "Euro-zone" "Other EU" "NAFTA" "China" ...
     ##  - attr(*, "class")= chr "decompr"
 
-``` {.r}
+{% highlight r linenos %}
 # run the WWZ decomposition on the decompr object
 wwz <- wwz(decompr_object)
 wwz[1:5,1:5]
-```
+{% endhighlight %}
 
     ##                        DVA_FIN DVA_INT DVA_INTrexI1 DVA_INTrexF
     ## Euro-zone.c1.Euro-zone     0.0     0.0         0.00        0.00
@@ -539,11 +540,12 @@ wwz[1:5,1:5]
     ## Euro-zone.c1.China           12.077
     ## Euro-zone.c1.East Asia        2.459
 
-``` {.r}
-# run the Kung Fu decomposition on the decompr object
+
+{% highlight r linenos %}
+# run the source decomposition on the decompr object
 source  <- kung_fu(decompr_object)
 source[1:5,1:5]
-```
+{% endhighlight %}
 
     ##              Euro-zone.c1 Euro-zone.c2 Euro-zone.c3 Euro-zone.c4
     ## Euro-zone.c1    23803.980      14.3808      17353.8        512.2
