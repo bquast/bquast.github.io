@@ -27,7 +27,7 @@ Installation
 {% highlight r linenos %}
 # install.packages("devtools")
 devtools::install_github("bquast/decompr")
-```
+{% endhighlight %}
 
     ## Downloading github repo bquast/decompr@master
     ## Installing decompr
