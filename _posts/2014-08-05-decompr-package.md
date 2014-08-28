@@ -22,11 +22,18 @@ The output when using the WWZ algorithm is a matrix with dimensions **GNGx19**. 
 
 Installation
 ------------
+You can install the latest **stable** version from CRAN.
+
+{% highlight r linenos %}
+install.packages("decompr")
+{% endhighlight %}
+
+You can install the latest **development** version from GitHub using the `devtools` package.
 
 
 {% highlight r linenos %}
-# install.packages("devtools")
-devtools::install_github("bquast/decompr")
+library(devtools)
+install_github("decompr", "bquast")
 {% endhighlight %}
 
     ## Downloading github repo bquast/decompr@master
