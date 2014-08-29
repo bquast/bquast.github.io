@@ -23,8 +23,6 @@ library(devtools)
 install_github("decompr", "bquast")
 {% endhighlight %}
 
-The first priority is to improve the linear algebra so that decomposition will be less time consuming.
-
 
 Credit
 ------
