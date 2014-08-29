@@ -14,6 +14,17 @@ install.packages("decompr")
 
 The version published contains several updates, most importantly, I used a [regional input-output table](http://www.wiod.org/new_site/database/riots.htm) from the [WIOD project](http://www.wiod.org/), which is substantially smaller and makes the decompositions significantly faster.
 
+I will continue to update the package, the first priority is to improve the linear algebra so that decomposition will be less time consuming.
+
+You can install the latest **development** version from GitHub using the `devtools` package.
+
+{% highlight r linenos %}
+library(devtools)
+install_github("decompr", "bquast")
+{% endhighlight %}
+
+The first priority is to improve the linear algebra so that decomposition will be less time consuming.
+
 
 Credit
 ------
