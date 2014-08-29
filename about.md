@@ -41,8 +41,10 @@ Formerly a Teaching Assitant at The Graduate Institute, teaching statistics in w
 
 Software
 -----------------
-Has a working (but as of yet unsubmitted) [R package called decompr](https://qua.st/decompr),
-which applies the **Wang-Wei-Zhu** and **Kung-Fu** algorithms for **export decomposition**.
+I have developed an [R package called decompr](https://qua.st/decompr),
+which applies the **Wang-Wei-Zhu** and **source decomposition** algorithms.
+
+The package is [available on CRAN](http://cran.r-project.org/web/packages/decompr/index.html).
 
 [...more software](/software)
 
