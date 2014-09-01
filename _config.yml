@@ -7,8 +7,8 @@ permalink:        pretty
 
 # Setup
 title:            Bastiaan Quast
-tagline:          R, Git and replicable Development Economics
-description:      'A personal blog about making Development Economics replicable using R and Git'
+tagline:          replicable Development Economics using R and Git 
+description:      'A personal blog about replicable Development Economics using R and Git'
 url:              http://qua.st/
 baseurl:          '/'
 paginate:         5
