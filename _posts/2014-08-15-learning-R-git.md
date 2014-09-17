@@ -28,7 +28,7 @@ If you are on iOS, there is
 [an implementation of the R programming language](https://itunes.apple.com/us/app/r-programming-language/id540809637),
 which will give you the ability to run R on your iOS device.
 
-If you have internet access but do not hav R installed, then you might want to try [R fiddle](http://www.r-fiddle.org/),
+If you have internet access but do not have R installed, then you might want to try [R fiddle](http://www.r-fiddle.org/),
 which gives you an online (mobile friendly) environment to execute R code.
 
 If you want to start using R for serious work but don't know how to get started,
