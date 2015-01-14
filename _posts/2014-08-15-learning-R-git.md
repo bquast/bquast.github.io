@@ -16,7 +16,7 @@ An easy way to start with R without having to install it is using the online tut
 After you have completed this tutorial, have a look at the [Datacamp R tutorial](https://www.datacamp.com/courses/introduction-to-r).
 There is also a [companion course](https://www.datacamp.com/courses/data-analysis-and-statistical-inference_mine-cetinkaya-rundel-by-datacamp) to the [Coursera](https://www.coursera.org/) [Data Science](https://www.coursera.org/specialization/jhudatascience/1) specialisation (more on this later).
 
-For you have previously done quantitative work in excell, then have a look at [How to Transition from Excel to R](https://districtdatalabs.silvrback.com/intro-to-r-for-microsoft-excel-users).
+For those of you have previously done quantitative work in excel, then have a look at [How to Transition from Excel to R](https://districtdatalabs.silvrback.com/intro-to-r-for-microsoft-excel-users).
 
 
 
@@ -44,7 +44,7 @@ A more general purpose GUI (as in, it also does modelling) is [Rcmdr](http://soc
 
 Git
 ---------------------------------
-An easy way to start with Git without having to install it using the online tuturial
+An easy way to start with Git without having to install it using the online tutorial
 [Try Git by Code School](https://try.github.io/) (notice that this site is hosted on Github pages).
 
 After having completed this tutorial, you might want to have a look at this cool [Git Branching Game](http://pcottle.github.io/learnGitBranching/),
@@ -82,5 +82,5 @@ As mentioned above the online learning platform [Coursera](https://www.coursera.
 
 I recently finished the specialisation, which consists of nine courses and a capstone project (not available yet).
 
-The courses are tought by the Johns Hopkins School of Public Health Biostatistics department and have a heavy relience on R(Studio).
+The courses are taught by the Johns Hopkins School of Public Health Biostatistics department and have a heavy relience on R(Studio).
 Thematically, the courses focus on public health case studies, but the lessons translate well to other fields.
