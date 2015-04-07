@@ -3,7 +3,7 @@ layout: page
 title: About Me
 ---
 
-Bastiaan Quast, from The Netherlands, living in Geneva, 27 years old.
+Bastiaan Quast, from The Netherlands, living in Geneva, 28 years old.
 
 - PhD Candidate [Development Economics](http://graduateinstitute.ch/home/study/academicdepartments/international-economics/studying-economics/PhD_dvlpm_economics.html), [The Graduate Institute, Geneva](http://graduateinstitute.ch/)
 - Research Assistant, [Centre for Finance and Development, Geneva](http://graduateinstitute.ch/home/research/centresandprogrammes/cfd/about-us/research-team.html)
@@ -41,10 +41,7 @@ Formerly a Teaching Assitant at The Graduate Institute, teaching statistics in w
 
 Software
 -----------------
-I have developed an [R package called decompr](https://qua.st/decompr),
-which applies the **Wang-Wei-Zhu** and **source decomposition** algorithms.
-
-The package is [available on CRAN](http://cran.r-project.org/web/packages/decompr/index.html).
+I have developed the R packages [decompr](https://qua.st/decompr) ([CRAN](http://cran.r-project.org/web/packages/decompr/)) and gvc ([CRAN](http://cran.r-project.org/web/packages/gvc/index.html)) which can be used for the **Wang-Wei-Zhu** and **Leontief decomposition** algorithms and futher analysis of Global Value chains.
 
 [...more software](/software)
 
