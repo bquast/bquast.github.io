@@ -2,7 +2,7 @@
 
 title:            Site Title
 locale:           en_US
-url:              
+url:              http://qua.st/
 
 
 # Jekyll configuration
@@ -26,7 +26,7 @@ kramdown:
 
 # Site owner
 owner:
-  name: Your Name
+  name: Bastiaan Quast
   avatar: bio-photo.jpg
   bio: "Describe your self."
   email: 
