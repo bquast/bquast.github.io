@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Research
-modified: 2015-05-22T15:07:02.362000-04:00
+modified: 2015-05-2T15:07:02.362000-04:00
 image:
   feature: sample-image-3.jpg
   credit: WeGraphics
