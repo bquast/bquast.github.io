@@ -1,33 +1,60 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
-encoding:         UTF-8
+# Site wide configuration
 
-# Permalinks
-permalink:        pretty
+title:            Site Title
+locale:           en_US
+url:              
 
-# Setup
-title:            Bastiaan Quast
-tagline:          Replicable Development Economics using R and Git 
-description:      'A personal blog about Replicable Development Economics using R and Git'
-url:              http://qua.st/
-baseurl:          '/'
-paginate:         5
 
-author:
-  name:           'Bastiaan Quast'
-  url:            https://twitter.com/baquast
+# Jekyll configuration
 
-# Custom vars
-version:          1.0.0
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
 
-github:
-  repo:           https://github.com/bquast/bquast.github.io
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
 
-exclude:          [rmarkdown]
 
-profiles_list:
-  ORCID:   'http://orcid.org/0000-0002-2951-3577'
-  GitHub:  'http://github.com/bquast'
-  Google+: 'https://plus.google.com/+BastiaanQuast'
-  Twitter: 'https://twitter.com/baquast'
+# Site owner
+owner:
+  name: Your Name
+  avatar: bio-photo.jpg
+  bio: "Describe your self."
+  email: 
+  disqus-shortname: 
+  twitter: #username
+  facebook: #username
+  google:
+    plus: #username
+    analytics: 
+    verify: 
+    ad-client: 
+    ad-slot: 
+  bing-verify: 
+  github: #username
+  stackoverflow: #http://stackoverflow.com/users/123456/username
+  linkedin: #username
+  xing: #username
+  instagram: #username
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
