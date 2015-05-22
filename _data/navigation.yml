@@ -1,13 +1,20 @@
 # Site navigation links
 
-- title: About
+- title: About Me
   url: /about/
 
-- title: Sample Posts
+- title: Blog Posts
   url: /posts/
 
-- title: Theme Setup
-  url: /theme-setup/
+- title: Research
+  url: /research/
 
-- title: Made Mistakes
-  url: http://mademistakes.com
+- title: Software
+  url: /software/
+  
+-  title: Publications
+   url: /publications/
+  
+-  title: Teaching
+   url: /teaching/
+   
