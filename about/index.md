@@ -25,7 +25,7 @@ Bastiaan Quast, from The Netherlands, living in Geneva, 28 years old.
 Research
 -----------------
 I am currently working on the second phase field study of the impact of the
-[Initiative Nationale pour le Développement Humain (Moroccan National Initiative for Human Development)](http://www.indh.gov.ma/index.php/en/)
+[Initiative Nationale pour le Developpement Humain (Moroccan National Initiative for Human Development)](http://www.indh.gov.ma/index.php/en/)
 on social cohesion in supported communes.
 Together with [CFD Director](http://graduateinstitute.ch/home/research/centresandprogrammes/cfd.html)
 [Jean-Louis Arcand](https://en.wikipedia.org/wiki/Jean-Louis_Arcand),
