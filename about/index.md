@@ -17,10 +17,6 @@ Bastiaan Quast, from The Netherlands, living in Geneva, 28 years old.
 
 [...more employment](/employment)
 
-<center>
-![Bastiaan Quast](http://gravatar.com/avatar/9f979d814c18db7e759b64ca8a52953d?s=400)
-</center>
-
 
 Research
 -----------------
