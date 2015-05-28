@@ -1,6 +1,6 @@
 ---
 layout: post
-title: decompr  on CRAN
+title: decompr on CRAN
 permalink: decompr-cran
 ---
 
@@ -19,8 +19,8 @@ I will continue to update the package, the first priority is to improve the line
 You can install the latest **development** version from GitHub using the `devtools` package.
 
 {% highlight r linenos %}
-library(devtools)
-install_github("decompr", "bquast")
+if (!require('devtools')) install.packages('devtools')
+devtools::install_github("bquast/decompr")
 {% endhighlight %}
 
 
