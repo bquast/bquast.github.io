@@ -141,7 +141,7 @@ or
     ##  [9,]    9   18  666
 
 
-The [diagonals](http://cran.r-project.org/?package=diagonals) package can now be install directly from `R` using:
+The [diagonals](http://cran.r-project.org/?package=diagonals) package now [available on CRAN](/diagonals-cran) and can therefore be install directly from inside `R` using:
 
     install.packages("diagonals")
 
