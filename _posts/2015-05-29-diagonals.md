@@ -1,6 +1,6 @@
 ---
 layout: post
-title: diagonals package on CRAN
+title: introducing diagonals
 permalink: diagonals
 ---
 
@@ -13,13 +13,5 @@ A new R package **diagonals** is now available on CRAN. The package implements s
 
 The **diagonals** package can now be install directly from **R** using:
 
-{% highlight r linenos %}
-install.packages("diagonals")
-{% endhighlight %}
+    install.packages("diagonals")
 
-In addition to this, a **development version** is available on GitHub, this version is to be used **at your own risk**, it can be install using:
-
-{% highlight r linenos %}
-if (!require('devtools')) install.packages('devtools')
-devtools::install_github("bquast/diagonals")
-{% endhighlight %}
