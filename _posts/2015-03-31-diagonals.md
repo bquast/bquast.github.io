@@ -1,6 +1,6 @@
 ---
 layout: post
-title: gvc package on CRAN
+title: diagonals package on CRAN
 permalink: diagonals
 ---
 
