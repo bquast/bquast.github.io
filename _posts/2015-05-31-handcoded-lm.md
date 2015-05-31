@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Handcoded Linear Model"
+author: "Bastiaan Quast"
+date: 2015-05-31
+output: md_document
+---
+
 Load a basic data set
 
     data("iris")
