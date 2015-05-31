@@ -1,0 +1,89 @@
+---
+layout: post
+title: "Handcoded Linear Model"
+author: "Bastiaan Quast"
+date: 2015-05-31
+output: md_document
+---
+
+Load a basic data set
+
+```{r}
+data("iris")
+```
+
+Inspect the data set.
+
+```{r}
+summary(iris)
+```
+
+Asign our variables to object (in the global environment)
+
+```{r}
+Y <- iris$Petal.Length
+X <- iris$Petal.Width
+```
+
+Use the built in command
+
+```{r}
+lm( Y ~ X - 1 )
+```
+
+Now we estimate our beta ourselves.
+
+```{r}
+(t(X)%*%X)^-1 %*% t(X)%*%Y
+```
+
+Now lets estimate with an intercept
+
+```{r}
+lm( Y ~ X )
+```
+
+To hand code this, we need to add a vector of ones (1s)
+
+```{r}
+X1 <- cbind(X, 1)
+head(X1)
+```
+
+We also have to correct a small cheat which we used above. `^-1` is not correct syntax for a matrix inversion. In the above case it works correctly because our `X` matrix is in fact a vector. If we pre-multiply this vector with the transpose of itself, we obtain a scalar.
+
+```{r}
+dim( t(X) %*% X )
+```
+
+This is the reason that our inversion using `^-1` worked correctly. However, for matrices wider that one this is not the case.
+
+```{r}
+dim( t(X1) %*% X1 )
+(t(X1)%*%X1)^-1
+```
+
+
+
+We therefore use a different tool, the Generalised Inverse `ginv()` from the `MASS` package.
+
+Now we can use this matrix to estimate a model with a 
+
+```{r}
+library(MASS)
+ginv( (t(X1)%*%X1) ) %*% t(X1)%*%Y
+```
+
+Now lets look at which method is faster.
+
+```{r}
+system.time(lm( Y ~ X ))
+system.time(ginv(t(X1)%*%X1) %*% t(X1)%*%Y)
+```
+
+The faster way to do this (using the QR decomposition) is:
+
+```{r}
+solve(t(X1)%*%X1) %*% t(X1)%*%Y
+system.time( solve(t(X)%*%X) %*% t(X)%*%Y )
+```
