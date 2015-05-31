@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Handcoded Linear Model"
-author: "Bastiaan Quast"
-date: 2015-05-31
+permalink: handcoded-lm
 ---
 
 Load a basic data set
