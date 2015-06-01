@@ -29,7 +29,7 @@ now standard Vertical Specialisation ratio. This article summarises the methodol
 of the algorithms, describes the format of the input and output data, and exemplifies
 the usefulness of the two methods on the basis of a simple example data set.
 
-[download the full article](goo.gl/tm7UqC)
+[download the full article](http://graduateinstitute.ch/files/live/sites/iheid/files/sites/ctei/shared/CTEI/working_papers/CTEI-2015-01_Quast,%20Kummritz.pdf)
 
 
 
