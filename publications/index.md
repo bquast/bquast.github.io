@@ -1,7 +1,6 @@
 ﻿---
 layout: page
 title: Publications
-encoding: UTF-8
 image:
   feature: sample-image-3.jpg
   credit: WeGraphics
