@@ -71,28 +71,24 @@ This `^-1` will invert every **individual** number in the matrix, rather than th
 
 We want to obtain to obtain the inverse of the matrix, because this will allow us to pre-multiply on both sides, eliminating `XI` on the **Right-Hand Side** (RHS).
 
-```{r}
-round( ginv(XI) %*% XI )
-```
-
 We therefore use a different tool, the Generalised Inverse `ginv()` function from the `MASS` package.
 
 Now we can use this matrix to estimate a model with an intercept.
 
 ```{r}
-library(MASS) # we only need this ones after starting R
+library(MASS) # we only need this once after starting R
 ginv( (t(XI)%*%XI) ) %*% t(XI)%*%y
 ```
 
 Note that this is programmatically exactly the same the way that the `lm()` funcios this.
 
-We can suppress the automatic constant and include our `XI` variable and we will obtain the same results.
+We can suppress the automatic intercept and include our `XI` variable and we will obtain the same results.
 
 ```{r}
 lm(Y ~ XI -1 )
 ```
 
-Note that here we have constructed a univariate (uni**variate**) model, however, from a programmic poitn of view, the hurdles of multivariate modelling have already beeno overcome by including the intercept.
+We have now constructed a univariate (uni**variate**) model, however, from a programmic poitn of view, the hurdles of multivariate modelling have already beeno overcome by estimating a model with an intercept (making `X` a matrix).
 
 It is therefore very easy to use the same method in a case with two independent variables.
 
