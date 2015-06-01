@@ -91,9 +91,5 @@ and answers from a questionnaire sent to the invested-in funds.
 We find that there are some aspects of ESG management which have a covariation with financial performance.
 This allows us to formulate expectations for the financial performance of future funds, based on their ESG approach.
 
-
-
-
-
-
 [more about me](/about)
+-------------------------
