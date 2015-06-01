@@ -4,7 +4,7 @@ title: "Handcoded LM function"
 tags: [R, linear model, lm, ols, function, programming]
 ---
 
-In [yesterday's post]() we developed a method for constructing a multivariate linear model with an intercept.
+In [yesterday's post](/handcoded-lm) we developed a method for constructing a multivariate linear model with an intercept.
 
 Today we will turn the collection of loose commands into an integrated and easy to use `function`.
 
@@ -23,13 +23,16 @@ We now construction our linear model, the fastest way of doing this is using the
 
 {% highlight r %}
 XI <- cbind(x1, x2, 1) # tie all the independent variables together
-solve(t(XI)%*%XI) %*% t(XI)%*%Y # solve for beta
+solve(t(XI)%*%XI) %*% t(XI)%*%y # solve for beta
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## Error in eval(expr, envir, enclos): object 'Y' not found
+##          [,1]
+## x1  1.7481029
+## x2  0.5422556
+##    -1.5071384
 {% endhighlight %}
 
 In `R` functions are treated as objects, which means that we ascribe our function to a name, the same way we ascribed our variables to a name (e.g. `x1 <- Petal.Length`).

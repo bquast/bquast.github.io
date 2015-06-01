@@ -99,13 +99,13 @@ lm( y ~ x )
 ##       1.084        2.230
 {% endhighlight %}
 
-To hand code this, we need to add a vector of ones (1s).
-Note that the single `1` that we are binding to the vector `X` will be repeated until it is the same lenght.
+To hand code this, we need to add a vector of ones (`1`s).
+Note that the single `1` that we are binding to the vector `X` will be repeated until it is the same length.
 
 
 {% highlight r %}
 XI <- cbind(x, 1) # create a new object XI (I for Intercept)
-head(XI) # inspect the first 10 rows
+head(XI) # inspect the first few rows
 {% endhighlight %}
 
 
@@ -124,13 +124,13 @@ We also have to correct a small cheat which we used above. `^-1` is not correct 
 
 
 {% highlight r %}
-dim( t(X) %*% X )
+dim( t(x) %*% x )
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## Error in t(X): object 'X' not found
+## [1] 1 1
 {% endhighlight %}
 
 This is the reason that our inversion using `^-1` worked correctly. However, for matrices wider than one column this is not the case.
@@ -146,6 +146,7 @@ dim( t(XI) %*% XI )
 ## [1] 2 2
 {% endhighlight %}
 
+This `^-1` will invert every **individual** number in the matrix, rather than the matrix as a whole.
 
 
 {% highlight r %}
@@ -158,6 +159,19 @@ dim( t(XI) %*% XI )
 ##             x            
 ## x 0.003307644 0.005558644
 ##   0.005558644 0.006666667
+{% endhighlight %}
+
+We want to obtain to obtain the inverse of the matrix, because this will allow us to pre-multiply on both sides, eliminating `XI` on the **Right-Hand Side** (RHS).
+
+
+{% highlight r %}
+round( ginv(XI) %*% XI )
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Error in eval(expr, envir, enclos): could not find function "ginv"
 {% endhighlight %}
 
 We therefore use a different tool, the Generalised Inverse `ginv()` function from the `MASS` package.
@@ -243,7 +257,10 @@ ginv( (t(XI)%*%XI) ) %*% t(XI)%*%y
 
 And that's all! The leap from univariate to multivariat modelling was truely very small.
 
-Now lets look at which method is faster.
+There is one last thing to note here.
+Using [QR decompostion](https://en.wikipedia.org/wiki/QR_decomposition),
+we can obtain the inverse that we need in a computationally much more efficient way.
+The function that we use for this is `solve()`.
 
 
 {% highlight r %}
@@ -254,7 +271,7 @@ system.time(lm( y ~ XI ))
 
 {% highlight text %}
 ##    user  system elapsed 
-##   0.002   0.000   0.001
+##   0.001   0.000   0.001
 {% endhighlight %}
 
 
@@ -267,7 +284,7 @@ system.time(ginv(t(XI)%*%XI) %*% t(XI)%*%y)
 
 {% highlight text %}
 ##    user  system elapsed 
-##   0.001   0.000   0.001
+##       0       0       0
 {% endhighlight %}
 
 So far we have been calculating the inverse for pre-multiplication. The faster way to do this is using the QR decomposition (`solve()`).
