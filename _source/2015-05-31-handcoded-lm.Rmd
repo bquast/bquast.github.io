@@ -43,25 +43,36 @@ Now lets estimate with an intercept
 lm( y ~ x )
 ```
 
-To hand code this, we need to add a vector of ones (1s).
-Note that the single `1` that we are binding to the vector `X` will be repeated until it is the same lenght.
+To hand code this, we need to add a vector of ones (`1`s).
+Note that the single `1` that we are binding to the vector `X` will be repeated until it is the same length.
 
 ```{r}
 XI <- cbind(x, 1) # create a new object XI (I for Intercept)
-head(XI) # inspect the first 10 rows
+head(XI) # inspect the first few rows
 ```
 
 We also have to correct a small cheat which we used above. `^-1` is not correct syntax for a matrix inversion. In the above case it works correctly because our `X` matrix is in fact a vector. If we pre-multiply this vector with the transpose of itself, we obtain a scalar.
 
 ```{r}
-dim( t(X) %*% X )
+dim( t(x) %*% x )
 ```
 
 This is the reason that our inversion using `^-1` worked correctly. However, for matrices wider than one column this is not the case.
 
 ```{r}
 dim( t(XI) %*% XI )
+```
+
+This `^-1` will invert every **individual** number in the matrix, rather than the matrix as a whole.
+
+```{r}
 (t(XI)%*%XI)^-1
+```
+
+We want to obtain to obtain the inverse of the matrix, because this will allow us to pre-multiply on both sides, eliminating `XI` on the **Right-Hand Side** (RHS).
+
+```{r}
+round( ginv(XI) %*% XI )
 ```
 
 We therefore use a different tool, the Generalised Inverse `ginv()` function from the `MASS` package.
@@ -107,7 +118,10 @@ ginv( (t(XI)%*%XI) ) %*% t(XI)%*%y
 
 And that's all! The leap from univariate to multivariat modelling was truely very small.
 
-Now lets look at which method is faster.
+There is one last thing to note here.
+Using [QR decompostion](https://en.wikipedia.org/wiki/QR_decomposition),
+we can obtain the inverse that we need in a computationally much more efficient way.
+The function that we use for this is `solve()`.
 
 ```{r}
 system.time(lm( y ~ XI ))
