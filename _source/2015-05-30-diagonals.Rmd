@@ -1,0 +1,104 @@
+---
+layout: post
+title: introducing diagonals
+tags: [R, diagonals, matrix]
+permalink: diagonals
+---
+
+A new R package `diagonals` is now available on CRAN. The package implements several tools for dealing with **fat diagonals** on matrices.
+
+Block-diagonal matrices can be extracted or removed using two small
+functions implemented here.
+Furthermore, non-square matrices are
+supported using two additional functions.
+
+Block-diagonal matrices occur when we combine two dimensions of a data
+set along one edge of a matrix. For example, trade-flow data in the
+[decompr](http://cran.r-project.org/web/packages/decompr/index.html) and
+[gvc](http://cran.r-project.org/web/packages/gvc/index.html) package
+have each `country * industry` combination occur on each edge of the matrix.
+
+```{r}
+m <- matrix(1:64, nrow=8)
+m
+```
+
+We can now drop everything except a block diagonal.
+
+```{r}
+library(diagonals)
+block_matrix(m, steps=4)
+```
+
+Or drop only the block diagonal.
+
+```
+minus_block_matrix(m, steps=2)
+```
+
+The number of `steps` can vary, but dimensions should be multiples of
+`steps`. Alternatively we can specify the size of the `size` of the
+step.
+
+```{r}
+block_matrix(m, size=2)
+```
+
+Even non-square matrices are supported, as long as each dimension is a
+multiple of size.
+
+```{r}
+# create the matrix
+nsm <- matrix(1:27, nrow=9, ncol=3 )
+
+# test if the dimensions are multiples of size
+# i.e. there are no remainders after the modulo division of dimensions by steps
+dim(nsm) %% 3 # we will use 3 (three) steps
+```
+
+Now extract the rectangular diagonal.
+
+```{r}
+rectangle_matrix(nsm, steps=3)
+```
+
+Or this.
+
+```{r}
+rectangle_matrix( t(nsm), steps=3 )
+```
+
+Lastly, we can also choose a replacement parameter other than zero.
+
+```{r}
+block_matrix(m, steps=4, replacement=-1)
+```
+
+or
+
+```{r}
+minus_rectangle_matrix(nsm, steps=3, replacement=666)
+```
+
+The [diagonals packge](http://cran.r-project.org/?package=diagonals) is now [available on CRAN](/diagonals-cran) and can therefore be install directly from inside `R` using:
+
+```{r}
+install.packages("diagonals")
+```
+
+Subsequently the package can be loaded using:
+
+```{r}
+library(diagonals)
+```
+
+The above introduction is also available as a vignette that is [included in the package](http://cran.r-project.org/web/packages/diagonals/vignettes/diagonals.html).
+It can be accessed from `R` using:
+
+```{r}
+vignette("diagonals")
+```
+
+An application of `diagonals` in **Social Network Analysis** is demonstrated in last weeks post: [diagonals in networks](/diagonals-network). This post is also available as a vignette that is [included in the package](http://cran.r-project.org/web/packages/diagonals/vignettes/network.html)
+
+For more information on the package and its development please see yesterday's post [diagonals on CRAN](/diagonals-cran).
