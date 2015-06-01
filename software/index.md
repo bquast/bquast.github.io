@@ -1,13 +1,40 @@
 ---
 layout: page
 title: Research
-modified: 2015-05-22T15:07:02.362000-04:00
 image:
   feature: sample-image-3.jpg
   credit: WeGraphics
   creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 ---
 
-I have developed the R packages [decompr](https://qua.st/decompr) ([CRAN](http://cran.r-project.org/web/packages/decompr/)) and gvc ([CRAN](http://cran.r-project.org/web/packages/gvc/index.html)) which can be used for the **Wang-Wei-Zhu** and **Leontief decomposition** algorithms and futher analysis of Global Value chains.
+diagonals (R)
+----------------
+The [diagonals package](/diagonals) ([CRAN](http://cran.r-project.org/package=diagonals)) implements several tools for dealing with fat diagonals on matrices.
+Block-diagonal matrices can be extracted or removed using two small functions implemented here. Furthermore, non-square matrices are supported using two additional functions.
+Block-diagonal matrices occur when we combine two dimensions of a data set along one edge of a matrix. For example, trade-flow data in the decompr and gvc package have each `country * industry` combination occur on each edge of the matrix.
+
+
+decompr (R)
+----------------
+I have developed the R packages [decompr](https://qua.st/decompr) ([CRAN](http://cran.r-project.org/web/packages/decompr/)) which can be used for the **Wang-Wei-Zhu** and **Leontief decomposition** algorithms.
+
+
+gvc (R)
+-----------------
+The [gvc package](/gvc) ([CRAN](http://cran.r-project.org/web/packages/gvc/index.html)) can be used for futher analysis of Global Value chains. It implements several tools for this.
+
+- Importing to Export (`i2e()`)
+- Exporting to Re-export (`e2r()`)
+- New Revealed Comparative Advantage (`nrca()`)
+
+and several more.
+
+
+rstudio-desktop-previous (Arch Linux)
+--------------------------------
+Of course I am not the author of [RStudio](http://www.rstudio.com/).
+[This package](https://aur.archlinux.org/packages/rstudio-desktop-preview) installs nightly builds from the RStudio S3 server on [Arch Linux](https://www.archlinux.org/).
+
 
 [more about me](/about)
+-----------------------
