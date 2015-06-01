@@ -25,7 +25,7 @@ Y <- iris$Petal.Length
 X <- iris$Petal.Width
 ```
 
-Use the built in command
+Use the built in command.
 
 ```{r}
 lm( Y ~ X - 1 )
