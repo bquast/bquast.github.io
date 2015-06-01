@@ -3,9 +3,9 @@ layout: page
 title: Research
 modified: 2015-05-22T15:07:02.362000-04:00
 image:
-  feature: sample-image-3.jpg
-  credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+  feature: ebola.jpg
+  credit: Bastiaan Quast
+  creditlink: http://qua.st/
 ---
 
 I am currently working on the second phase field study of the impact of the
