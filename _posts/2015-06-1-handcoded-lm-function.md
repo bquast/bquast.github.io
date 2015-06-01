@@ -23,13 +23,13 @@ We now construction our linear model, the fastest way of doing this is using the
 
 {% highlight r %}
 XI <- cbind(x1, x2, 1) # tie all the independent variables together
-solve(t(X1)%*%X1) %*% t(X1)%*%Y # solve for beta
+solve(t(XI)%*%XI) %*% t(XI)%*%Y # solve for beta
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## Error in t(X1): object 'X1' not found
+## Error in eval(expr, envir, enclos): object 'Y' not found
 {% endhighlight %}
 
 In `R` functions are treated as objects, which means that we ascribe our function to a name, the same way we ascribed our variables to a name (e.g. `x1 <- Petal.Length`).
