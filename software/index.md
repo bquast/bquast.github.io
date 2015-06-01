@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research
+title: Software
 image:
   feature: sample-image-3.jpg
   credit: WeGraphics
