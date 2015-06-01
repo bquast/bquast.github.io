@@ -6,7 +6,7 @@ tags: [R, linear model, lm, ols]
 
 It can be very insightful to hand code a linear model.
 
-Load a basic data set
+Load a basic data set.
 
 
 {% highlight r %}
@@ -39,19 +39,19 @@ summary(iris)
 ## 
 {% endhighlight %}
 
-Asign our variables to object (in the global environment)
+Assign our variables to objects (in the global environment)
 
 
 {% highlight r %}
-Y <- iris$Petal.Length
-X <- iris$Petal.Width
+y <- iris$Petal.Length
+x <- iris$Petal.Width
 {% endhighlight %}
 
 Use the built in command.
 
 
 {% highlight r %}
-lm( Y ~ X - 1 )
+lm( y ~ x -1 ) # the -1 ensures that we don't have an intercept
 {% endhighlight %}
 
 
@@ -59,10 +59,10 @@ lm( Y ~ X - 1 )
 {% highlight text %}
 ## 
 ## Call:
-## lm(formula = Y ~ X - 1)
+## lm(formula = y ~ x - 1)
 ## 
 ## Coefficients:
-##     X  
+##     x  
 ## 2.875
 {% endhighlight %}
 
@@ -70,7 +70,7 @@ Now we estimate our beta ourselves.
 
 
 {% highlight r %}
-(t(X)%*%X)^-1 %*% t(X)%*%Y
+(t(x)%*%x)^-1 %*% t(x)%*%y
 {% endhighlight %}
 
 
@@ -84,7 +84,7 @@ Now lets estimate with an intercept
 
 
 {% highlight r %}
-lm( Y ~ X )
+lm( y ~ x )
 {% endhighlight %}
 
 
@@ -92,25 +92,26 @@ lm( Y ~ X )
 {% highlight text %}
 ## 
 ## Call:
-## lm(formula = Y ~ X)
+## lm(formula = y ~ x)
 ## 
 ## Coefficients:
-## (Intercept)            X  
+## (Intercept)            x  
 ##       1.084        2.230
 {% endhighlight %}
 
-To hand code this, we need to add a vector of ones (1s)
+To hand code this, we need to add a vector of ones (1s).
+Note that the single `1` that we are binding to the vector `X` will be repeated until it is the same lenght.
 
 
 {% highlight r %}
-X1 <- cbind(X, 1)
-head(X1)
+XI <- cbind(x, 1) # create a new object XI (I for Intercept)
+head(XI) # inspect the first 10 rows
 {% endhighlight %}
 
 
 
 {% highlight text %}
-##        X  
+##        x  
 ## [1,] 0.2 1
 ## [2,] 0.2 1
 ## [3,] 0.2 1
@@ -129,14 +130,14 @@ dim( t(X) %*% X )
 
 
 {% highlight text %}
-## [1] 1 1
+## Error in t(X): object 'X' not found
 {% endhighlight %}
 
-This is the reason that our inversion using `^-1` worked correctly. However, for matrices wider that one this is not the case.
+This is the reason that our inversion using `^-1` worked correctly. However, for matrices wider than one column this is not the case.
 
 
 {% highlight r %}
-dim( t(X1) %*% X1 )
+dim( t(XI) %*% XI )
 {% endhighlight %}
 
 
@@ -148,27 +149,25 @@ dim( t(X1) %*% X1 )
 
 
 {% highlight r %}
-(t(X1)%*%X1)^-1
+(t(XI)%*%XI)^-1
 {% endhighlight %}
 
 
 
 {% highlight text %}
-##             X            
-## X 0.003307644 0.005558644
+##             x            
+## x 0.003307644 0.005558644
 ##   0.005558644 0.006666667
 {% endhighlight %}
 
+We therefore use a different tool, the Generalised Inverse `ginv()` function from the `MASS` package.
 
-
-We therefore use a different tool, the Generalised Inverse `ginv()` from the `MASS` package.
-
-Now we can use this matrix to estimate a model with a 
+Now we can use this matrix to estimate a model with an intercept.
 
 
 {% highlight r %}
-library(MASS)
-ginv( (t(X1)%*%X1) ) %*% t(X1)%*%Y
+library(MASS) # we only need this ones after starting R
+ginv( (t(XI)%*%XI) ) %*% t(XI)%*%y
 {% endhighlight %}
 
 
@@ -179,11 +178,76 @@ ginv( (t(X1)%*%X1) ) %*% t(X1)%*%Y
 ## [2,] 1.083558
 {% endhighlight %}
 
+Note that this is programmatically exactly the same the way that the `lm()` funcios this.
+
+We can suppress the automatic constant and include our `XI` variable and we will obtain the same results.
+
+
+{% highlight r %}
+lm(Y ~ XI -1 )
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Error in eval(expr, envir, enclos): object 'Y' not found
+{% endhighlight %}
+
+Note that here we have constructed a univariate (uni**variate**) model, however, from a programmic poitn of view, the hurdles of multivariate modelling have already beeno overcome by including the intercept.
+
+It is therefore very easy to use the same method in a case with two independent variables.
+
+
+{% highlight r %}
+x1 <- iris$Petal.Width
+x2 <- iris$Sepal.Length
+y  <- iris$Petal.Length
+{% endhighlight %}
+
+we start by binding the two independent variables together (with vector of `1`s, since we want an intercept).
+
+
+{% highlight r %}
+XI <- cbind(x1, x2, 1)
+head(XI)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+##       x1  x2  
+## [1,] 0.2 5.1 1
+## [2,] 0.2 4.9 1
+## [3,] 0.2 4.7 1
+## [4,] 0.2 4.6 1
+## [5,] 0.2 5.0 1
+## [6,] 0.4 5.4 1
+{% endhighlight %}
+
+Now we estimate our model
+
+
+{% highlight r %}
+# make sure the MASS package is still loaded
+ginv( (t(XI)%*%XI) ) %*% t(XI)%*%y
+{% endhighlight %}
+
+
+
+{% highlight text %}
+##            [,1]
+## [1,]  1.7481029
+## [2,]  0.5422556
+## [3,] -1.5071384
+{% endhighlight %}
+
+And that's all! The leap from univariate to multivariat modelling was truely very small.
+
 Now lets look at which method is faster.
 
 
 {% highlight r %}
-system.time(lm( Y ~ X ))
+system.time(lm( y ~ XI ))
 {% endhighlight %}
 
 
@@ -196,7 +260,36 @@ system.time(lm( Y ~ X ))
 
 
 {% highlight r %}
-system.time(ginv(t(X1)%*%X1) %*% t(X1)%*%Y)
+system.time(ginv(t(XI)%*%XI) %*% t(XI)%*%y)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+##    user  system elapsed 
+##   0.001   0.000   0.001
+{% endhighlight %}
+
+So far we have been calculating the inverse for pre-multiplication. The faster way to do this is using the QR decomposition (`solve()`).
+
+
+{% highlight r %}
+solve(t(XI)%*%XI) %*% t(XI)%*%y
+{% endhighlight %}
+
+
+
+{% highlight text %}
+##          [,1]
+## x1  1.7481029
+## x2  0.5422556
+##    -1.5071384
+{% endhighlight %}
+
+
+
+{% highlight r %}
+system.time( solve(t(XI)%*%XI) %*% t(XI)%*%y )
 {% endhighlight %}
 
 
@@ -206,30 +299,4 @@ system.time(ginv(t(X1)%*%X1) %*% t(X1)%*%Y)
 ##       0       0       0
 {% endhighlight %}
 
-The faster way to do this (using the QR decomposition) is:
-
-
-{% highlight r %}
-solve(t(X1)%*%X1) %*% t(X1)%*%Y
-{% endhighlight %}
-
-
-
-{% highlight text %}
-##       [,1]
-## X 2.229940
-##   1.083558
-{% endhighlight %}
-
-
-
-{% highlight r %}
-system.time( solve(t(X)%*%X) %*% t(X)%*%Y )
-{% endhighlight %}
-
-
-
-{% highlight text %}
-##    user  system elapsed 
-##       0       0       0
-{% endhighlight %}
+EDIT: in [tomorrow's post](/handcoded-lm-function) we use the method we developed here to create an easy to use function.
