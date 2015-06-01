@@ -4,9 +4,9 @@ title: About me
 modified: 2015-05-22T15:10:07.573882-04:00
 comments: true
 image:
-  feature: sample-image-2.jpg
-  credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+  feature: energy.jpg
+  credit: Bastiaan Quast
+  creditlink: http://qua.st/
 ---
 
 Bastiaan Quast, from The Netherlands, living in Geneva, 28 years old.
