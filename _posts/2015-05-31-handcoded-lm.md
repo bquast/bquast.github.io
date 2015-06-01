@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Handcoded Linear Model"
+permalink: handcoded-lm
+---
+
 Load a basic data set
 
     data("iris")
