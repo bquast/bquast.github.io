@@ -1,6 +1,7 @@
 ---
 layout: post
 title: diagonals in a network
+tags: [R, diagonals, network, social]
 permalink: diagonals-network
 ---
 
@@ -16,7 +17,7 @@ m
 
 Let says that we want to look at second-order connections (i.e. friends
 of friends). If we now want to represent the data from both time period
-in a single object, we need a 4-dimensional array. Higher-order arrays
+in a single object, we need a **4-dimensional array**. Higher-order arrays
 are hard to visualise, another way of doing this is by representing two
 dimensions along each of the two edges of a matrix. We can do this using
 the **Knonecker Product** (denoted ⊗), which we can call in `R` using
