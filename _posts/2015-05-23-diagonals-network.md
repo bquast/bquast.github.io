@@ -1,6 +1,7 @@
 ---
 layout: post
 title: diagonals in a network
+tags: [R, diagonals, network, social]
 permalink: diagonals-network
 ---
 
@@ -19,14 +20,14 @@ m
 
 {% highlight text %}
 ##      [,1] [,2] [,3]
-## [1,]    1    0    1
-## [2,]    1    1    0
+## [1,]    0    0    0
+## [2,]    1    0    0
 ## [3,]    0    0    1
 {% endhighlight %}
 
 Let says that we want to look at second-order connections (i.e. friends
 of friends). If we now want to represent the data from both time period
-in a single object, we need a 4-dimensional array. Higher-order arrays
+in a single object, we need a **4-dimensional array**. Higher-order arrays
 are hard to visualise, another way of doing this is by representing two
 dimensions along each of the two edges of a matrix. We can do this using
 the **Knonecker Product** (denoted ⊗), which we can call in `R` using
@@ -42,14 +43,14 @@ M
 
 {% highlight text %}
 ##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
-##  [1,]    1    0    1    0    0    0    1    0    1
-##  [2,]    1    1    0    0    0    0    1    1    0
-##  [3,]    0    0    1    0    0    0    0    0    1
-##  [4,]    1    0    1    1    0    1    0    0    0
-##  [5,]    1    1    0    1    1    0    0    0    0
-##  [6,]    0    0    1    0    0    1    0    0    0
-##  [7,]    0    0    0    0    0    0    1    0    1
-##  [8,]    0    0    0    0    0    0    1    1    0
+##  [1,]    0    0    0    0    0    0    0    0    0
+##  [2,]    0    0    0    0    0    0    0    0    0
+##  [3,]    0    0    0    0    0    0    0    0    0
+##  [4,]    0    0    0    0    0    0    0    0    0
+##  [5,]    1    0    0    0    0    0    0    0    0
+##  [6,]    0    0    1    0    0    0    0    0    0
+##  [7,]    0    0    0    0    0    0    0    0    0
+##  [8,]    0    0    0    0    0    0    1    0    0
 ##  [9,]    0    0    0    0    0    0    0    0    1
 {% endhighlight %}
 
@@ -69,11 +70,11 @@ minus_block_matrix(M, size=3)
 
 {% highlight text %}
 ##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
-##  [1,]    0    0    0    0    0    0    1    0    1
-##  [2,]    0    0    0    0    0    0    1    1    0
-##  [3,]    0    0    0    0    0    0    0    0    1
-##  [4,]    1    0    1    0    0    0    0    0    0
-##  [5,]    1    1    0    0    0    0    0    0    0
+##  [1,]    0    0    0    0    0    0    0    0    0
+##  [2,]    0    0    0    0    0    0    0    0    0
+##  [3,]    0    0    0    0    0    0    0    0    0
+##  [4,]    0    0    0    0    0    0    0    0    0
+##  [5,]    1    0    0    0    0    0    0    0    0
 ##  [6,]    0    0    1    0    0    0    0    0    0
 ##  [7,]    0    0    0    0    0    0    0    0    0
 ##  [8,]    0    0    0    0    0    0    0    0    0
