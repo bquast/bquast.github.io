@@ -50,6 +50,33 @@ sécurité, du comportement des femmes en matière de sécurité ou encore de la
 sécurité.
 
 
+Diagnostic Local de Sécurité 2013
+--------------------------------------
+with [Coginta](http://www.coginta.org/fr)
+
+Le diagnostic local de sécurité 2013 propose une série d'indicateurs clés, la plupart
+standardisés, qui permettent de mesurer le niveau et l'évolution de criminalité dans le
+canton, de cerner les problèmes de tranquillité et d'ordre publics, ainsi que d'évaluer le
+sentiment de sécurité des résidents. Outre les statistiques policières, le diagnostic local
+de sécurité analyse les données issues d'un sondage réalisé pour l'occasion. 1'733
+questionnaires ont été complétés en lignes et 509 interviews ont eu lieu par téléphone.
+Cela constitue un échantillon représentatif de la population genevoise, subdivisé en 6
+zones: la zone dite Pâquis-Eaux-vives (PEV), le reste de la Ville de Genève, le croissant
+urbain de Vernier, le reste de la commune de Vernier, Meyrin Cité, le reste de la
+commune de Meyrin et la campagne genevoise.
+L'édition 2013 développe six axes d'analyse généraux: la qualité de la vie, la sécurité au
+quotidien, la perception des résidents sur la sécurité et la police, leur comportement et
+les mesures de prévention qu'ils adoptent, finalement leurs attentes envers la police.
+Ces thèmes sont repris dans l'examen détaillé des communes de Vernier et de Meyrin.
+Par ailleurs, le diagnostic 2013 permet d'évaluer les effets sur la criminalité et sur
+l'opinion de la population du nouveau dispositif de police intensive mis en place en
+octobre 2012, appelé ALPHA.
+Enfin, cette nouvelle édition innove en proposant une palette de questions sur les
+polices municipales, notamment les attentes des résidents envers ce partenaire de plus
+en plus sollicité.
+Les résultats sont résumés ci-dessous en 95 points et suivent la structure du rapport
+afin que le lecteur puisse aisément se reporter à l’analyse complète. 
+
 [download the full report](http://www.coginta.org/uploads/documents/8f53340bc6bda5e6a44a9f5697da31f0ed0e9021.pdf)
 
 
