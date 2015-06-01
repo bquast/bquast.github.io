@@ -211,12 +211,6 @@ The [diagonals packge](http://cran.r-project.org/?package=diagonals) is now [ava
 install.packages("diagonals")
 {% endhighlight %}
 
-
-
-{% highlight text %}
-## Error in contrib.url(repos, "source"): trying to use CRAN without setting a mirror
-{% endhighlight %}
-
 Subsequently the package can be loaded using:
 
 
@@ -230,12 +224,6 @@ It can be accessed from `R` using:
 
 {% highlight r %}
 vignette("diagonals")
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Warning: vignette 'diagonals' has no PDF/HTML
 {% endhighlight %}
 
 An application of `diagonals` in **Social Network Analysis** is demonstrated in last weeks post: [diagonals in networks](/diagonals-network). This post is also available as a vignette that is [included in the package](http://cran.r-project.org/web/packages/diagonals/vignettes/network.html)

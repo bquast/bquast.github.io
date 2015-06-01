@@ -82,20 +82,20 @@ minus_rectangle_matrix(nsm, steps=3, replacement=666)
 
 The [diagonals packge](http://cran.r-project.org/?package=diagonals) is now [available on CRAN](/diagonals-cran) and can therefore be install directly from inside `R` using:
 
-```{r}
+```{r, eval=FALSE}
 install.packages("diagonals")
 ```
 
 Subsequently the package can be loaded using:
 
-```{r}
+```{r, eval=FALSE}
 library(diagonals)
 ```
 
 The above introduction is also available as a vignette that is [included in the package](http://cran.r-project.org/web/packages/diagonals/vignettes/diagonals.html).
 It can be accessed from `R` using:
 
-```{r}
+```{r, eval=FALSE}
 vignette("diagonals")
 ```
 
