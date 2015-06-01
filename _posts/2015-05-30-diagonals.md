@@ -62,9 +62,24 @@ block_matrix(m, steps=4)
 
 Or drop only the block diagonal.
 
-```
+
+{% highlight r %}
 minus_block_matrix(m, steps=2)
-```
+{% endhighlight %}
+
+
+
+{% highlight text %}
+##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+## [1,]    0    0    0    0   33   41   49   57
+## [2,]    0    0    0    0   34   42   50   58
+## [3,]    0    0    0    0   35   43   51   59
+## [4,]    0    0    0    0   36   44   52   60
+## [5,]    5   13   21   29    0    0    0    0
+## [6,]    6   14   22   30    0    0    0    0
+## [7,]    7   15   23   31    0    0    0    0
+## [8,]    8   16   24   32    0    0    0    0
+{% endhighlight %}
 
 The number of `steps` can vary, but dimensions should be multiples of
 `steps`. Alternatively we can specify the size of the `size` of the

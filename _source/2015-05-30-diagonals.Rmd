@@ -32,7 +32,7 @@ block_matrix(m, steps=4)
 
 Or drop only the block diagonal.
 
-```
+```{r}
 minus_block_matrix(m, steps=2)
 ```
 
