@@ -4,6 +4,8 @@ title: "Handcoded Linear Model"
 tags: [R, linear model, lm, ols]
 ---
 
+It can be very insightful to hand code a linear model.
+
 Load a basic data set
 
 ```{r}
