@@ -40,20 +40,19 @@ minus_block_matrix(M, size=3)
 
 The [diagonals](http://cran.r-project.org/?package=diagonals) package now [available on CRAN](/diagonals-cran) and can therefore be install directly from inside `R` using:
 
-```{r}
+```{r, eval=FALSE}
 install.packages("diagonals")
 ```
-
 Subsequently the package can be loaded using:
 
-```{r}
+```{r, eval=FALSE}
 library(diagonals)
 ```
 
 The above demonstration is also available as a vignette that is [included in the package](http://cran.r-project.org/web/packages/diagonals/vignettes/network.html).
 It can be accessed from `R` using:
 
-```{r}
+```{r, eval=FALSE}
 vignette("network")
 ```
 
