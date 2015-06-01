@@ -89,3 +89,77 @@ multiplying(5, -6)
 Note that because this function was a bit longer, I put the code on a new line.
 When doing this, the code has to be enclosed in curly brackets (`{` and `}`).
 
+It is now time to apply these insights to our linear model. The first step is to define our function which takes the arguments `y` and `X`.
+
+
+{% highlight r %}
+modelling <- function (y, X) {
+  
+}
+{% endhighlight %}
+
+We can now simply insert our sollution for beta.
+
+
+{% highlight r %}
+modelling <- function (y, X) {
+  solve(t(XI)%*%XI) %*% t(XI)%*%y # solve for beta
+}
+{% endhighlight %}
+
+We can now estimate our model.
+
+
+{% highlight r %}
+modelling(y = y, X = XI)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+##          [,1]
+## x1  1.7481029
+## x2  0.5422556
+##    -1.5071384
+{% endhighlight %}
+
+Note that the argument (e.g. `X`) and the assigned object (`XI`) do not have to have the same name.
+
+At this point we still need to manually include our incept using `cbind(x1, x2, 1)`.
+
+We can add a small piece to our code, which will allow the function to take care of this.
+
+
+{% highlight r %}
+modelling <- function (y, X, intercept=TRUE) {
+  if (intercept) X <- cbind(X, 1)
+  solve(t(XI)%*%XI) %*% t(XI)%*%y # solve for beta
+}
+{% endhighlight %}
+
+The first piece `intercept=TRUE` creates the argument and sets the default to `TRUE`.
+That means that, unless me manually specify `default=FALSE`, an intercept will be included.
+
+The second piece `if (intercept) X <- cbind(X, 1)` does the following.
+
+1. check if `intercept == TRUE`
+2. if so, overwrite `X` with `cbind(X, 1)`
+
+We can now use this function as follows.
+
+
+{% highlight r %}
+X <- cbind(x1, x2)
+modelling(y = y, X = X)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+##          [,1]
+## x1  1.7481029
+## x2  0.5422556
+##    -1.5071384
+{% endhighlight %}
+
+That gives us a pretty complete linear model.

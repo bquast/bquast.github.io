@@ -163,24 +163,13 @@ This `^-1` will invert every **individual** number in the matrix, rather than th
 
 We want to obtain to obtain the inverse of the matrix, because this will allow us to pre-multiply on both sides, eliminating `XI` on the **Right-Hand Side** (RHS).
 
-
-{% highlight r %}
-round( ginv(XI) %*% XI )
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in eval(expr, envir, enclos): could not find function "ginv"
-{% endhighlight %}
-
 We therefore use a different tool, the Generalised Inverse `ginv()` function from the `MASS` package.
 
 Now we can use this matrix to estimate a model with an intercept.
 
 
 {% highlight r %}
-library(MASS) # we only need this ones after starting R
+library(MASS) # we only need this once after starting R
 ginv( (t(XI)%*%XI) ) %*% t(XI)%*%y
 {% endhighlight %}
 
@@ -194,7 +183,7 @@ ginv( (t(XI)%*%XI) ) %*% t(XI)%*%y
 
 Note that this is programmatically exactly the same the way that the `lm()` funcios this.
 
-We can suppress the automatic constant and include our `XI` variable and we will obtain the same results.
+We can suppress the automatic intercept and include our `XI` variable and we will obtain the same results.
 
 
 {% highlight r %}
@@ -207,7 +196,7 @@ lm(Y ~ XI -1 )
 ## Error in eval(expr, envir, enclos): object 'Y' not found
 {% endhighlight %}
 
-Note that here we have constructed a univariate (uni**variate**) model, however, from a programmic poitn of view, the hurdles of multivariate modelling have already beeno overcome by including the intercept.
+We have now constructed a univariate (uni**variate**) model, however, from a programmic poitn of view, the hurdles of multivariate modelling have already beeno overcome by estimating a model with an intercept (making `X` a matrix).
 
 It is therefore very easy to use the same method in a case with two independent variables.
 
@@ -271,7 +260,7 @@ system.time(lm( y ~ XI ))
 
 {% highlight text %}
 ##    user  system elapsed 
-##   0.001   0.000   0.001
+##   0.002   0.000   0.001
 {% endhighlight %}
 
 
@@ -284,7 +273,7 @@ system.time(ginv(t(XI)%*%XI) %*% t(XI)%*%y)
 
 {% highlight text %}
 ##    user  system elapsed 
-##       0       0       0
+##   0.001   0.000   0.001
 {% endhighlight %}
 
 So far we have been calculating the inverse for pre-multiplication. The faster way to do this is using the QR decomposition (`solve()`).
