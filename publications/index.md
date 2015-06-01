@@ -49,6 +49,8 @@ délits, du profil des auteurs et des victimes, de l’image de la police, des �
 sécurité, du comportement des femmes en matière de sécurité ou encore de la relations des jeunes à la
 sécurité.
 
+[download the full report](http://www.coginta.org/uploads/documents/8f53340bc6bda5e6a44a9f5697da31f0ed0e9021.pdf)
+
 
 Diagnostic Local de Sécurité 2013
 --------------------------------------
@@ -77,12 +79,19 @@ en plus sollicité.
 Les résultats sont résumés ci-dessous en 95 points et suivent la structure du rapport
 afin que le lecteur puisse aisément se reporter à l’analyse complète. 
 
-[download the full report](http://www.coginta.org/uploads/documents/8f53340bc6bda5e6a44a9f5697da31f0ed0e9021.pdf)
-
-
-
-
 [download the full report](http://www.geneve.ch/police/doc/statistiques/diagnostic-local-securite-2013.pdf)
+
+
+On the Relation Between PE Funds' Environmental, Social, and Governance Management and their Financial Performance
+----------------------------------
+This study attempts to show relation (covariates) between Private Equity funds'
+Environmental, Social, and Governance (ESG) management, and their financial performance. 
+For this study we used data from the investments of two European Development Finance Institutes
+and answers from a questionnaire sent to the invested-in funds.
+We find that there are some aspects of ESG management which have a covariation with financial performance.
+This allows us to formulate expectations for the financial performance of future funds, based on their ESG approach.
+
+
 
 
 
