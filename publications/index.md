@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Publications
-modified: 2015-05-22T15:07:02.362000-04:00
+encoding: UTF-8
 image:
   feature: sample-image-3.jpg
   credit: WeGraphics
@@ -32,6 +32,9 @@ the usefulness of the two methods on the basis of a simple example data set.
 [download the full article](http://graduateinstitute.ch/files/live/sites/iheid/files/sites/ctei/shared/CTEI/working_papers/CTEI-2015-01_Quast,%20Kummritz.pdf)
 
 
+
+
+
 DIAGNOSTIC LOCAL DE SÉCURITÉ 2014
 -----------------------------------
 Conçu comme un véritable outil d'analyse et d'aide à la prise de décision stratégique, le présent
@@ -51,6 +54,9 @@ sécurité.
 [download the full report](http://www.coginta.org/uploads/documents/8f53340bc6bda5e6a44a9f5697da31f0ed0e9021.pdf)
 
 
+
+
+[download the full report](http://www.geneve.ch/police/doc/statistiques/diagnostic-local-securite-2013.pdf)
 
 
 
