@@ -1,12 +1,20 @@
 ---
 layout: post
 title: "Handcoded Linear Model"
-tags: [R, linear model, lm, ols]
+tags: [R, handcoded, linear, model, lm, ols]
 ---
 
-It can be very insightful to hand code a linear model.
+> In order to understand statistics, you have to do the calculations yourself!
 
-Load a basic data set.
+
+Yet when it comes to econometrics, the main take-aways from the workshop are primarily in terms of the syntax of yet another computer program.
+
+In this series of post titled: **handcoded**, I show how many workhorses of the econometricians toolbox can be implemented with some very basic commands.
+This manual implementation greatly helps in keeping an understanding of what actually happens when we call e.g. `MCMC..` with a few paramters.
+
+The Linear Model
+----------------------
+We start by loading a basic data set.
 
 ```{r}
 data("iris")
@@ -31,7 +39,7 @@ Use the built in command.
 lm( y ~ x -1 ) # the -1 ensures that we don't have an intercept
 ```
 
-Now we estimate our beta ourselves.
+Now we estimate our beta ourselves (`solve`! it's coming, read on...).
 
 ```{r}
 (t(x)%*%x)^-1 %*% t(x)%*%y
@@ -85,7 +93,7 @@ Note that this is programmatically exactly the same the way that the `lm()` func
 We can suppress the automatic intercept and include our `XI` variable and we will obtain the same results.
 
 ```{r}
-lm(Y ~ XI -1 )
+lm(y ~ XI -1 )
 ```
 
 We have now constructed a univariate (uni**variate**) model, however, from a programmic poitn of view, the hurdles of multivariate modelling have already beeno overcome by estimating a model with an intercept (making `X` a matrix).
