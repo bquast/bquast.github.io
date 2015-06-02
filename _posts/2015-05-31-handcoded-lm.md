@@ -6,11 +6,14 @@ tags: [R, handcoded, linear, model, lm, ols]
 
 > In order to understand statistics, you have to do the calculations yourself!
 
+Warnings such as these are often given in statistics courses and for good reason too!
+Doing the work yourself really cements the understanding of statistics.
 
-Yet when it comes to econometrics, the main take-aways from the workshop are primarily in terms of the syntax of yet another computer program.
+Yet when it comes to econometrics, the main take-aways from the workshops are primarily in terms of the **syntax** of yet another computer program.
 
-In this series of post titled: **handcoded**, I show how many workhorses of the econometricians toolbox can be implemented with some very basic commands.
+In this series of post titled: **handcoded**, I show how many workhorses of the econometrician's toolbox can be implemented in a very simple manner.
 This manual implementation greatly helps in keeping an understanding of what actually happens when we call e.g. `MCMC..` with a few paramters.
+
 
 The Linear Model
 ----------------------
@@ -274,7 +277,7 @@ system.time(lm( y ~ XI ))
 
 {% highlight text %}
 ##    user  system elapsed 
-##   0.002   0.000   0.002
+##   0.002   0.000   0.001
 {% endhighlight %}
 
 
@@ -287,7 +290,7 @@ system.time(ginv(t(XI)%*%XI) %*% t(XI)%*%y)
 
 {% highlight text %}
 ##    user  system elapsed 
-##   0.000   0.000   0.001
+##   0.001   0.000   0.000
 {% endhighlight %}
 
 So far we have been calculating the inverse for pre-multiplication. The faster way to do this is using the QR decomposition (`solve()`).
