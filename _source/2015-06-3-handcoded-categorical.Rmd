@@ -5,39 +5,81 @@ tags: [R, linear model, lm, ols]
 published: false
 ---
 
+Recap
+-----------
 In last week's posts we discussed [handcoding a linear model](/handcoded-lm) and [writing a convenient function for this](/handcoded-lm-function),
 in today's post we will take this a step further by including a categorical variable.
 
+
+Swiss life
+------------
+Since I live in Geneva we will use a built-in data set that is close to home.
+
+```{r}
+data("swiss")
+```
+
+This data set compares fertility rates in 47 different French-speaking regions (sub-Cantonal) of Switzerland around the year 1888 (for more information see `help("swiss")`).
+
+```{r}
+str(swiss)
+attach(swiss) # this makes the variables inside swiss directly accessible
+```
+
+In our study we want to look at the effect of religion on fertility.
+
+```{r}
+hist(Fertility)
+```
+
+As we're dealing with Switzerland in the 19th certury,
+there are essentially only two religions, Protestant and Roman-Catholic.
+As the predominantly protestant authorities in the cities are generally suspicious of the Catholic mountainfolk, this variable is astutely labelled `Catholic` (indicating the percentage of Catholic citizen, the percentage of protestant is therefore `100 - Catholic`).
+
+```{r}
+hist(Catholic)
+```
+
+
+Categorical Variables
+----------------------------------
 Handling categorical variables in a statistical model is bit different because they generally do not have a direct numerical representation.
 
 A special case of categorical variable is the dichotonomous variable. This categorical variable can take only two forms, e.g. `Male|Female`, `Infected|Not-Infected`, `Pre-Intervention|Post-Intervention`, etc.
 
-In this case we use the follow data set.
+In Switzerland many issues are decided upon by popular vote, with no first-past-the-post or other democracy autrocities.
+This means that having minimal majority can drastically change policymaking.
+We use this as our justification for re-encoding the percentage variable `Catholic` to a dichotonomous variable `Catholic_D`
+
+`D` here no longer stands for dichotonomous, it stands for dummy. A dummy variable is a variable that either takes the value `1` (TRUE) or `0` (FALSE).
+This allows us to quantify the covariance of the question (Catholic?).
+It is thus the effect of a region being Catholic rather than Protestant.
 
 ```{r}
-data("Titanic")
+Catholic_D <- ifelse(Catholic >= 50, 1, 0)
+table(Catholic_D)
 ```
 
-The data set is currently stored in a `matrix`, for the purposes of our analysis it is more convenient to store it in a `data.frame` object.
-We can use the `as.data.frame()` function to convert `Titanic` to a `data.frame` and them overwrite the old `matrix` format object.
+Let reload our function from [last week](/handcoded-lm-function).
 
 ```{r}
-Titanic <- as.data.frame(Titanic)
+linear_model <- function (y, X, intercept=TRUE) {
+  if (intercept) X <- cbind(X, 1)
+  solve(t(X)%*%X) %*% t(X)%*%y # solve for beta
+}
 ```
 
-We can now inspect the `data.frame`.
+We can now call the function with the parameters set.
 
 ```{r}
-summary(Titanic)
+linear_model(y = Fertility, X = Catholic_D, intercept = TRUE)
 ```
 
-We see the follow
+Our model gives us an intercept of `66.22` and the coefficient of the variable `Catholic_D` is `10.24`.
+Note that it wasn't necesarry to specify `intercept = TRUE` since this is already the default.
+The `y = ` and `X = ` parts also are not necessary as long was we enter our object in the correct order,
+i.e. in the order that we specified when we created the function (`function(y, X, ...)`.
 
-This is therefore a dichotonomous variable.
 
-Dichotonomous variables are represented using a so called [dummy variable](https://en.wikipedia.org/wiki/Dummy_variable_(statistics)).
-A dummy variable takes on of two values, it has to be either `0` or `1`. 
-
-```{r}
-table(Seatbelts)
-```
+General categorical Variable
+-------------------------
