@@ -8,3 +8,7 @@ node_modules
 _asset_bundler_cache
 .Rproj.user
 .Rhistory
+
+
+# RStudio files
+.Rproj.user/
