@@ -20,40 +20,54 @@ Block diagonal matrices occur when we combine two dimensions of a data set along
 
 The stable version of the `diagonals` package can be install from [CRAN](http://cran.r-project.org/) using:
 
-    install.packages("diagonals")
+{% highlight r %}
+install.packages("diagonals")
+{% endhighlight %}
 
 The development version, to be used **at your peril**, can be installed using:
 
-    if (!require('devtools')) install.packages('devtools')
-    devtools::install_github("bquast/decompr")
+{% highlight r %}
+if (!require('devtools')) install.packages('devtools')
+devtools::install_github("bquast/decompr")
+{% endhighlight %}
 
 Following installation, the package can be loaded using:
 
-    library(diagonals)
+{% highlight r %}
+library(diagonals)
+{% endhighlight %}
 
 For information on using the package, please refer to the help files    .
 
-    help("diagonals")
-    help(package = "diagonals")
-    
+{% highlight r %}
+help("diagonals")
+help(package = "diagonals")
+{% endhighlight %}
+
 For examples of usage, see the function specific help pages
 
-    help("block_matrix")
-    help("minus_block_matrix")
-    help("rectangle_matrix")
-    help("minus_rectangle_matrix")
+{% highlight r %}
+help("block_matrix")
+help("minus_block_matrix")
+help("rectangle_matrix")
+help("minus_rectangle_matrix")
+{% endhighlight %}
 
 In addition to the help files we provide long form examples in the **vignettes** .
 
-    vignette("diagonals")
-    vignette("network")
-    
-    # or
-    browseVignettes("diagonals")
-    
+{% highlight r %}
+vignette("diagonals")
+vignette("network")
+
+# or
+browseVignettes("diagonals")
+{% endhighlight %}
+
 An overview of the changes is available in the NEWS file.
 
-    news(package="diagonals")
+{% highlight r %}
+news(package="diagonals")
+{% endhighlight %}
 
 There is also a blog post with information on my [personal website](http://qua.st/).
 
@@ -62,10 +76,10 @@ There is also a blog post with information on my [personal website](http://qua.s
 
 Development
 -------------
-Development takes place on the [GitHub](http://github.com/) page.
+Development takes place on the GitHub page.
 
- - http://github.com/bquast/diagonals
+http://github.com/bquast/diagonals
 
 Bugs can be filed on the issues page on GitHub.
 
- - https://github.com/bquast/diagonals/issues
+https://github.com/bquast/diagonals/issues
