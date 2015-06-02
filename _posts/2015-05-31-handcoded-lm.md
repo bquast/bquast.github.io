@@ -1,12 +1,20 @@
 ---
 layout: post
 title: "Handcoded Linear Model"
-tags: [R, linear model, lm, ols]
+tags: [R, handcoded, linear, model, lm, ols]
 ---
 
-It can be very insightful to hand code a linear model.
+> In order to understand statistics, you have to do the calculations yourself!
 
-Load a basic data set.
+
+Yet when it comes to econometrics, the main take-aways from the workshop are primarily in terms of the syntax of yet another computer program.
+
+In this series of post titled: **handcoded**, I show how many workhorses of the econometricians toolbox can be implemented with some very basic commands.
+This manual implementation greatly helps in keeping an understanding of what actually happens when we call e.g. `MCMC..` with a few paramters.
+
+The Linear Model
+----------------------
+We start by loading a basic data set.
 
 
 {% highlight r %}
@@ -66,7 +74,7 @@ lm( y ~ x -1 ) # the -1 ensures that we don't have an intercept
 ## 2.875
 {% endhighlight %}
 
-Now we estimate our beta ourselves.
+Now we estimate our beta ourselves (`solve`! it's coming, read on...).
 
 
 {% highlight r %}
@@ -187,13 +195,19 @@ We can suppress the automatic intercept and include our `XI` variable and we wil
 
 
 {% highlight r %}
-lm(Y ~ XI -1 )
+lm(y ~ XI -1 )
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## Error in eval(expr, envir, enclos): object 'Y' not found
+## 
+## Call:
+## lm(formula = y ~ XI - 1)
+## 
+## Coefficients:
+##   XIx     XI  
+## 2.230  1.084
 {% endhighlight %}
 
 We have now constructed a univariate (uni**variate**) model, however, from a programmic poitn of view, the hurdles of multivariate modelling have already beeno overcome by estimating a model with an intercept (making `X` a matrix).
@@ -260,7 +274,7 @@ system.time(lm( y ~ XI ))
 
 {% highlight text %}
 ##    user  system elapsed 
-##   0.002   0.000   0.001
+##   0.002   0.000   0.002
 {% endhighlight %}
 
 
@@ -273,7 +287,7 @@ system.time(ginv(t(XI)%*%XI) %*% t(XI)%*%y)
 
 {% highlight text %}
 ##    user  system elapsed 
-##   0.001   0.000   0.001
+##   0.000   0.000   0.001
 {% endhighlight %}
 
 So far we have been calculating the inverse for pre-multiplication. The faster way to do this is using the QR decomposition (`solve()`).
