@@ -83,3 +83,5 @@ i.e. in the order that we specified when we created the function (`function(y, X
 
 General categorical Variable
 -------------------------
+A general categorical variable can take more than two values.
+This makes it impossible to be mapped to a dummy variable.

@@ -93,7 +93,7 @@ It is now time to apply these insights to our linear model. The first step is to
 
 
 {% highlight r %}
-modelling <- function (y, X) {
+linear_model <- function (y, X) {
   
 }
 {% endhighlight %}
@@ -102,8 +102,8 @@ We can now simply insert our sollution for beta.
 
 
 {% highlight r %}
-modelling <- function (y, X) {
-  solve(t(XI)%*%XI) %*% t(XI)%*%y # solve for beta
+linear_model <- function (y, X) {
+  solve(t(X)%*%X) %*% t(X)%*%y # solve for beta
 }
 {% endhighlight %}
 
@@ -111,7 +111,7 @@ We can now estimate our model.
 
 
 {% highlight r %}
-modelling(y = y, X = XI)
+linear_model(y = y, X = XI)
 {% endhighlight %}
 
 
@@ -131,9 +131,9 @@ We can add a small piece to our code, which will allow the function to take care
 
 
 {% highlight r %}
-modelling <- function (y, X, intercept=TRUE) {
+linear_model <- function (y, X, intercept=TRUE) {
   if (intercept) X <- cbind(X, 1)
-  solve(t(XI)%*%XI) %*% t(XI)%*%y # solve for beta
+  solve(t(X)%*%X) %*% t(X)%*%y # solve for beta
 }
 {% endhighlight %}
 
@@ -150,7 +150,7 @@ We can now use this function as follows.
 
 {% highlight r %}
 X <- cbind(x1, x2)
-modelling(y = y, X = X)
+linear_model(y = y, X = X)
 {% endhighlight %}
 
 
