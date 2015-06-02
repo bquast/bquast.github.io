@@ -4,3 +4,40 @@ title: "Handcoded Categorical Variables"
 tags: [R, linear model, lm, ols]
 published: false
 ---
+
+In last week's posts we discussed [handcoding a linear model](/handcoded-lm) and [writing a convenient function for this](/handcoded-lm-function),
+in today's post we will take this a step further by including a categorical variable.
+
+Handling categorical variables in a statistical model is bit different because they generally do not have a direct numerical representation.
+
+A special case of categorical variable is the dichotonomous variable. This categorical variable can take only two forms, e.g. `Male|Female`, `Infected|Not-Infected`, `Pre-Intervention|Post-Intervention`, etc.
+
+In this case we use the follow data set.
+
+```{r}
+data("Titanic")
+```
+
+The data set is currently stored in a `matrix`, for the purposes of our analysis it is more convenient to store it in a `data.frame` object.
+We can use the `as.data.frame()` function to convert `Titanic` to a `data.frame` and them overwrite the old `matrix` format object.
+
+```{r}
+Titanic <- as.data.frame(Titanic)
+```
+
+We can now inspect the `data.frame`.
+
+```{r}
+summary(Titanic)
+```
+
+We see the follow
+
+This is therefore a dichotonomous variable.
+
+Dichotonomous variables are represented using a so called [dummy variable](https://en.wikipedia.org/wiki/Dummy_variable_(statistics)).
+A dummy variable takes on of two values, it has to be either `0` or `1`. 
+
+```{r}
+table(Seatbelts)
+```
