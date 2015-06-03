@@ -6,3 +6,9 @@ permalink: handcoding-instrumental-variables
 published: false
 ---
 
+The Instrumental Variables approach....
+
+$$ 1 + 1 $$
+
+We can solve this...
+
