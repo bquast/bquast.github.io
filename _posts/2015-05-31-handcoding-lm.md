@@ -21,9 +21,8 @@ The Linear Model
 Then using the **Ordinary Least Squares** approach to solving a model, we start with the following equation.
 
 $$
-y = \beta \mathbf{X} + \epsilon
+\beta = (\mathbf{X}^T\mathbf{X})^{-1} \mathbf{X}^Ty
 $$
-
 
 We start by loading a basic data set.
 
@@ -285,7 +284,7 @@ system.time(lm( y ~ XI ))
 
 {% highlight text %}
 ##    user  system elapsed 
-##   0.002   0.000   0.001
+##   0.002   0.000   0.002
 {% endhighlight %}
 
 
@@ -298,7 +297,7 @@ system.time(ginv(t(XI)%*%XI) %*% t(XI)%*%y)
 
 {% highlight text %}
 ##    user  system elapsed 
-##   0.001   0.000   0.000
+##   0.001   0.000   0.001
 {% endhighlight %}
 
 So far we have been calculating the inverse for pre-multiplication. The faster way to do this is using the QR decomposition (`solve()`).
