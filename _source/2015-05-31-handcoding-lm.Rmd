@@ -20,6 +20,8 @@ The Linear Model
 ----------------------
 Then using the **Ordinary Least Squares** approach to solving a model, we start with the following equation.
 
+One plus one
+
 $$
 1+1
 $$
