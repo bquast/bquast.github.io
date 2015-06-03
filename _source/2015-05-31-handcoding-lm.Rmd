@@ -22,10 +22,6 @@ Then using the **Ordinary Least Squares** approach to solving a model, we start 
 
 One plus one
 
-$$
-1+1
-$$
-
 We start by loading a basic data set.
 
 ```{r}
