@@ -21,7 +21,7 @@ The Linear Model
 Then using the **Ordinary Least Squares** approach to solving a model, we start with the following equation.
 
 $$
-1+1
+\[ 1+1 \]
 $$
 
 We start by loading a basic data set.
