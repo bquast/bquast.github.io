@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hand Coding the Linear Model"
-tags: [R, handcoded, linear, model, lm, ols]
+tags: [R, hand coding, linear model, lm, ols]
 permalink: handcoding-lm
 ---
 
@@ -18,6 +18,12 @@ This manual implementation greatly helps in keeping an understanding of what act
 
 The Linear Model
 ----------------------
+Then using the **Ordinary Least Squares** approach to solving a model, we start with the following equation.
+
+$$
+y = \Beta X = \epsilon
+$$
+
 We start by loading a basic data set.
 
 
@@ -278,7 +284,7 @@ system.time(lm( y ~ XI ))
 
 {% highlight text %}
 ##    user  system elapsed 
-##   0.002   0.000   0.001
+##   0.001   0.000   0.001
 {% endhighlight %}
 
 
@@ -291,7 +297,7 @@ system.time(ginv(t(XI)%*%XI) %*% t(XI)%*%y)
 
 {% highlight text %}
 ##    user  system elapsed 
-##       0       0       0
+##   0.001   0.000   0.000
 {% endhighlight %}
 
 So far we have been calculating the inverse for pre-multiplication. The faster way to do this is using the QR decomposition (`solve()`).
@@ -320,7 +326,7 @@ system.time( solve(t(XI)%*%XI) %*% t(XI)%*%y )
 
 {% highlight text %}
 ##    user  system elapsed 
-##   0.000   0.000   0.001
+##       0       0       0
 {% endhighlight %}
 
 EDIT: in [tomorrow's post](/handcoded-lm-function) we use the method we developed here to create an easy to use function.

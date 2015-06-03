@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hand Coding the Linear Model"
-tags: [R, handcoded, linear, model, lm, ols]
+tags: [R, hand coding, linear model, lm, ols]
 permalink: handcoding-lm
 ---
 
@@ -18,6 +18,18 @@ This manual implementation greatly helps in keeping an understanding of what act
 
 The Linear Model
 ----------------------
+Then using the **Ordinary Least Squares** approach to solving a model, we start with the following equation.
+
+$$
+y = \beta \mathbf{X} + \epsilon
+$$
+
+Which we solve for $\beta$.
+
+$$
+\beta = (\mathbf{X}^T\mathbf{X})^{-1} \mathbf{X}^Ty
+$$
+
 We start by loading a basic data set.
 
 ```{r}
