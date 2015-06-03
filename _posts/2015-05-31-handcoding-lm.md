@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Handcoded Linear Model"
+title: "Hand Coding the Linear Model"
 tags: [R, handcoded, linear, model, lm, ols]
+permalink: handcoding-lm
 ---
 
 > In order to understand statistics, you have to do the calculations yourself!
@@ -319,7 +320,7 @@ system.time( solve(t(XI)%*%XI) %*% t(XI)%*%y )
 
 {% highlight text %}
 ##    user  system elapsed 
-##       0       0       0
+##   0.000   0.000   0.001
 {% endhighlight %}
 
 EDIT: in [tomorrow's post](/handcoded-lm-function) we use the method we developed here to create an easy to use function.

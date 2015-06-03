@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Handcoded Linear Model"
+title: "Hand Coding the Linear Model"
 tags: [R, handcoded, linear, model, lm, ols]
+permalink: handcoding-lm
 ---
 
 > In order to understand statistics, you have to do the calculations yourself!

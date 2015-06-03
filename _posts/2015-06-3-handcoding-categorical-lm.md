@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Handcoded Categorical Variables"
+title: "Hand Coding Categorical Variables"
 tags: [R, linear model, lm, ols]
+permalink: handcoding-categorical-lm
 published: false
 ---
 
