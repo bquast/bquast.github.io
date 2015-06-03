@@ -24,7 +24,7 @@ $$
 y = \beta \mathbf{X} + \epsilon
 $$
 
-Which we solve for $$ \beta $$.
+Which we solve for $$ \beta $$ .
 
 $$
 \beta = (\mathbf{X}^T\mathbf{X})^{-1} \mathbf{X}^Ty

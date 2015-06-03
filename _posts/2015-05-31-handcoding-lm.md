@@ -24,7 +24,7 @@ $$
 y = \beta \mathbf{X} + \epsilon
 $$
 
-Which we solve for $$ \beta $$.
+Which we solve for $$ \beta $$ .
 
 $$
 \beta = (\mathbf{X}^T\mathbf{X})^{-1} \mathbf{X}^Ty
@@ -332,7 +332,7 @@ system.time( solve(t(XI)%*%XI) %*% t(XI)%*%y )
 
 {% highlight text %}
 ##    user  system elapsed 
-##   0.000   0.000   0.001
+##       0       0       0
 {% endhighlight %}
 
 EDIT: in [tomorrow's post](/handcoded-lm-function) we use the method we developed here to create an easy to use function.
