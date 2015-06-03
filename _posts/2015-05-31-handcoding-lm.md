@@ -20,7 +20,9 @@ The Linear Model
 ----------------------
 Then using the **Ordinary Least Squares** approach to solving a model, we start with the following equation.
 
-One plus one
+$$
+1+1
+$$
 
 We start by loading a basic data set.
 
@@ -295,7 +297,7 @@ system.time(ginv(t(XI)%*%XI) %*% t(XI)%*%y)
 
 {% highlight text %}
 ##    user  system elapsed 
-##   0.000   0.000   0.001
+##       0       0       0
 {% endhighlight %}
 
 So far we have been calculating the inverse for pre-multiplication. The faster way to do this is using the QR decomposition (`solve()`).
@@ -324,7 +326,7 @@ system.time( solve(t(XI)%*%XI) %*% t(XI)%*%y )
 
 {% highlight text %}
 ##    user  system elapsed 
-##   0.000   0.000   0.001
+##       0       0       0
 {% endhighlight %}
 
 EDIT: in [tomorrow's post](/handcoded-lm-function) we use the method we developed here to create an easy to use function.
