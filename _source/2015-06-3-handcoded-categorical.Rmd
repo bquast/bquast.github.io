@@ -182,3 +182,5 @@ Finally, lets see if this is what we get if we use the built in model.
 ```{r}
 lm(Fertility ~ Religion_D)
 ```
+
+Which gives us the same result!
