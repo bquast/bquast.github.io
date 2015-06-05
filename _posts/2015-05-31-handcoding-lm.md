@@ -20,9 +20,12 @@ The Linear Model
 ----------------------
 Then using the **Ordinary Least Squares** approach to solving a model, we start with the following equation.
 
-$$
-y = \beta X = \epsilon
-$$
+
+> y = BX + e
+
+for
+
+> (XT*x) * (XT*y)
 
 We start by loading a basic data set.
 
