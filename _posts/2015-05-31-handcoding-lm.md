@@ -23,9 +23,9 @@ Then using the **Ordinary Least Squares** approach to solving a model, we start 
 
 > y = BX + e
 
-for
+for B, which gives us:
 
-> (XT*x) * (XT*y)
+> (XT*x) * (XT*y) = B
 
 We start by loading a basic data set.
 
