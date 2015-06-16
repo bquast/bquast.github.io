@@ -1,6 +1,7 @@
 ---
 layout: post
 title: diagonals package on CRAN
+tags: [R, diagonals, matrix, cran, package]
 permalink: diagonals-cran
 ---
 
