@@ -9,7 +9,7 @@ image:
 
 decompr: Global Value Chain decomposition in R
 ----------------------------------------------
-by Bastiaan Quast and Viktor Kummritz
+**by Bastiaan Quast and Viktor Kummritz**
 
 Global Value Chains have become a central unit of analysis in research on
 international trade. However, the complex matrix transformations at the basis of most
@@ -31,9 +31,9 @@ the usefulness of the two methods on the basis of a simple example data set.
 [download the full article](http://graduateinstitute.ch/files/live/sites/iheid/files/sites/ctei/shared/CTEI/working_papers/CTEI-2015-01_Quast,%20Kummritz.pdf)
 
 
-Diagnostic Local de Sécurité 2014
----------------------------------------
-with [Coginta](http://www.coginta.org/fr)
+Diagnostic Local de Sécurité 2014, Conakry, Guinea
+----------------------------------------------------
+**with [Coginta](http://www.coginta.org/fr)**
 
 Conçu comme un véritable outil d'analyse et d'aide à la prise de décision stratégique, le présent
 diagnostic local de sécurité constitue un audit des problématiques de sécurité rencontrées dans
@@ -52,9 +52,9 @@ sécurité.
 [download the full report](http://www.coginta.org/uploads/documents/8f53340bc6bda5e6a44a9f5697da31f0ed0e9021.pdf)
 
 
-Diagnostic Local de Sécurité 2013
---------------------------------------
-with [Coginta](http://www.coginta.org/fr)
+Diagnostic Local de Sécurité 2013; Geneva, Switzerland
+------------------------------------------------------
+**with [Coginta](http://www.coginta.org/fr)**
 
 Le diagnostic local de sécurité 2013 propose une série d'indicateurs clés, la plupart
 standardisés, qui permettent de mesurer le niveau et l'évolution de criminalité dans le
