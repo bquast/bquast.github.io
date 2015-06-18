@@ -65,7 +65,7 @@ It can be accessed from `R` using:
 vignette("fatdiag")
 
 # or
-browseVignettes(package = "diagonals"")
+browseVignettes(package = "diagonals")
 ```
 
 An application of `diagonals` in **Social Network Analysis** is demonstrated in last weeks post: [diagonals in networks](/diagonals-network).
