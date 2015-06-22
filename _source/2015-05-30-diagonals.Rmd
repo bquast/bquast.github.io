@@ -1,7 +1,7 @@
 ---
 layout: post
 title: introducing diagonals
-tags: [R, diagonals, matrix]
+tags: [R, diagonals, matrix, package]
 permalink: diagonals
 ---
 

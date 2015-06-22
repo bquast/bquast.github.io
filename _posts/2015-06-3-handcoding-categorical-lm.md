@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Hand Coding Categorical Variables"
-tags: [R, linear model, lm, ols]
+tags: [R, linear model, lm, ols, categorical variable, dummy variable]
 permalink: handcoding-categorical-lm
+published: false
 ---
 
 In last week's posts we discussed [handcoding a linear model](/handcoded-lm) and [writing a convenient function for this](/handcoded-lm-function),

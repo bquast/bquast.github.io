@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hand Coding Categorical Variables"
-tags: [R, linear model, lm, ols]
+tags: [R, linear model, lm, ols, categorical variable, dummy variable]
 permalink: handcoding-categorical-lm
 published: false
 ---

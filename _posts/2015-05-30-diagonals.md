@@ -1,7 +1,7 @@
 ---
 layout: post
 title: introducing diagonals
-tags: [R, diagonals, matrix]
+tags: [R, diagonals, matrix, package]
 permalink: diagonals
 ---
 
@@ -43,21 +43,29 @@ We can now drop everything except a block diagonal.
 
 {% highlight r %}
 library(diagonals)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## 
+## D I
+## A G
+##     O N
+##     A L
+##         S
+{% endhighlight %}
+
+
+
+{% highlight r %}
 block_matrix(m, steps=4)
 {% endhighlight %}
 
 
 
 {% highlight text %}
-##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
-## [1,]    1    9    0    0    0    0    0    0
-## [2,]    2   10    0    0    0    0    0    0
-## [3,]    0    0   19   27    0    0    0    0
-## [4,]    0    0   20   28    0    0    0    0
-## [5,]    0    0    0    0   37   45    0    0
-## [6,]    0    0    0    0   38   46    0    0
-## [7,]    0    0    0    0    0    0   55   63
-## [8,]    0    0    0    0    0    0   56   64
+## Error in eval(expr, envir, enclos): could not find function "block_matrix"
 {% endhighlight %}
 
 Or drop only the block diagonal.
@@ -70,15 +78,7 @@ minus_block_matrix(m, steps=2)
 
 
 {% highlight text %}
-##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
-## [1,]    0    0    0    0   33   41   49   57
-## [2,]    0    0    0    0   34   42   50   58
-## [3,]    0    0    0    0   35   43   51   59
-## [4,]    0    0    0    0   36   44   52   60
-## [5,]    5   13   21   29    0    0    0    0
-## [6,]    6   14   22   30    0    0    0    0
-## [7,]    7   15   23   31    0    0    0    0
-## [8,]    8   16   24   32    0    0    0    0
+## Error in eval(expr, envir, enclos): could not find function "minus_block_matrix"
 {% endhighlight %}
 
 The number of `steps` can vary, but dimensions should be multiples of
@@ -93,15 +93,7 @@ block_matrix(m, size=2)
 
 
 {% highlight text %}
-##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
-## [1,]    1    9    0    0    0    0    0    0
-## [2,]    2   10    0    0    0    0    0    0
-## [3,]    0    0   19   27    0    0    0    0
-## [4,]    0    0   20   28    0    0    0    0
-## [5,]    0    0    0    0   37   45    0    0
-## [6,]    0    0    0    0   38   46    0    0
-## [7,]    0    0    0    0    0    0   55   63
-## [8,]    0    0    0    0    0    0   56   64
+## Error in eval(expr, envir, enclos): could not find function "block_matrix"
 {% endhighlight %}
 
 Even non-square matrices are supported, as long as each dimension is a
@@ -133,16 +125,7 @@ rectangle_matrix(nsm, steps=3)
 
 
 {% highlight text %}
-##       [,1] [,2] [,3]
-##  [1,]    1    0    0
-##  [2,]    2    0    0
-##  [3,]    3    0    0
-##  [4,]    0   13    0
-##  [5,]    0   14    0
-##  [6,]    0   15    0
-##  [7,]    0    0   25
-##  [8,]    0    0   26
-##  [9,]    0    0   27
+## Error in eval(expr, envir, enclos): could not find function "rectangle_matrix"
 {% endhighlight %}
 
 Or this.
@@ -155,10 +138,7 @@ rectangle_matrix( t(nsm), steps=3 )
 
 
 {% highlight text %}
-##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
-## [1,]    1    2    3    0    0    0    0    0    0
-## [2,]    0    0    0   13   14   15    0    0    0
-## [3,]    0    0    0    0    0    0   25   26   27
+## Error in eval(expr, envir, enclos): could not find function "rectangle_matrix"
 {% endhighlight %}
 
 Lastly, we can also choose a replacement parameter other than zero.
@@ -171,15 +151,7 @@ block_matrix(m, steps=4, replacement=-1)
 
 
 {% highlight text %}
-##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
-## [1,]    1    9   -1   -1   -1   -1   -1   -1
-## [2,]    2   10   -1   -1   -1   -1   -1   -1
-## [3,]   -1   -1   19   27   -1   -1   -1   -1
-## [4,]   -1   -1   20   28   -1   -1   -1   -1
-## [5,]   -1   -1   -1   -1   37   45   -1   -1
-## [6,]   -1   -1   -1   -1   38   46   -1   -1
-## [7,]   -1   -1   -1   -1   -1   -1   55   63
-## [8,]   -1   -1   -1   -1   -1   -1   56   64
+## Error in eval(expr, envir, enclos): could not find function "block_matrix"
 {% endhighlight %}
 
 or
@@ -192,16 +164,7 @@ minus_rectangle_matrix(nsm, steps=3, replacement=666)
 
 
 {% highlight text %}
-##       [,1] [,2] [,3]
-##  [1,]  666   10   19
-##  [2,]  666   11   20
-##  [3,]  666   12   21
-##  [4,]    4  666   22
-##  [5,]    5  666   23
-##  [6,]    6  666   24
-##  [7,]    7   16  666
-##  [8,]    8   17  666
-##  [9,]    9   18  666
+## Error in eval(expr, envir, enclos): could not find function "minus_rectangle_matrix"
 {% endhighlight %}
 
 The [diagonals packge](http://cran.r-project.org/?package=diagonals) is now [available on CRAN](/diagonals-cran) and can therefore be install directly from inside `R` using:
