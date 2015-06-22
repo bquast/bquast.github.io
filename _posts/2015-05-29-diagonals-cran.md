@@ -1,6 +1,7 @@
 ---
 layout: post
 title: diagonals package on CRAN
+tags: [R, diagonals, matrix, cran, package]
 permalink: diagonals-cran
 ---
 
@@ -47,17 +48,13 @@ help(package = "diagonals")
 For examples of usage, see the function specific help pages
 
 {% highlight r %}
-help("block_matrix")
-help("minus_block_matrix")
-help("rectangle_matrix")
-help("minus_rectangle_matrix")
+help("fatdiag")
 {% endhighlight %}
 
 In addition to the help files we provide long form examples in the **vignettes** .
 
 {% highlight r %}
-vignette("diagonals")
-vignette("network")
+vignette("fatdiag")
 
 # or
 browseVignettes("diagonals")
@@ -71,7 +68,7 @@ news(package="diagonals")
 
 There is also a blog post with information on my [personal website](http://qua.st/).
 
- - http://qua.st/diagonals/
+http://qua.st/diagonals/
  
 
 Development

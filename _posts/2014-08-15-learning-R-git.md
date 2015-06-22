@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Learning R and Git
+tags: [R, learning, education]
 permalink: learning-R-git
 ---
 

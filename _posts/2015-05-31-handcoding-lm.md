@@ -23,6 +23,12 @@ Then using the **Ordinary Least Squares** approach to solving a model, we start 
 
 > y = BX + e
 
+$$
+
+y = BX + e
+
+$$
+
 for B, which gives us:
 
 > (XT*x) * (XT*y) = B

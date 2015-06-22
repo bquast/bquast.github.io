@@ -3,6 +3,7 @@ layout: post
 title: diagonals in a network
 tags: [R, diagonals, network, social]
 permalink: diagonals-network
+published: false
 ---
 
 A typical example in which `diagonals` can be helpful is Social Network
@@ -20,9 +21,9 @@ m
 
 {% highlight text %}
 ##      [,1] [,2] [,3]
-## [1,]    0    0    0
-## [2,]    1    0    0
-## [3,]    0    0    1
+## [1,]    0    1    0
+## [2,]    1    1    0
+## [3,]    1    0    0
 {% endhighlight %}
 
 Let says that we want to look at second-order connections (i.e. friends
@@ -43,15 +44,15 @@ M
 
 {% highlight text %}
 ##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
-##  [1,]    0    0    0    0    0    0    0    0    0
-##  [2,]    0    0    0    0    0    0    0    0    0
-##  [3,]    0    0    0    0    0    0    0    0    0
-##  [4,]    0    0    0    0    0    0    0    0    0
-##  [5,]    1    0    0    0    0    0    0    0    0
-##  [6,]    0    0    1    0    0    0    0    0    0
-##  [7,]    0    0    0    0    0    0    0    0    0
-##  [8,]    0    0    0    0    0    0    1    0    0
-##  [9,]    0    0    0    0    0    0    0    0    1
+##  [1,]    0    0    0    0    1    0    0    0    0
+##  [2,]    0    0    0    1    1    0    0    0    0
+##  [3,]    0    0    0    1    0    0    0    0    0
+##  [4,]    0    1    0    0    1    0    0    0    0
+##  [5,]    1    1    0    1    1    0    0    0    0
+##  [6,]    1    0    0    1    0    0    0    0    0
+##  [7,]    0    1    0    0    0    0    0    0    0
+##  [8,]    1    1    0    0    0    0    0    0    0
+##  [9,]    1    0    0    0    0    0    0    0    0
 {% endhighlight %}
 
 Feelings of friendship towards oneself aren't always particularly
@@ -61,7 +62,22 @@ insightful. We can now use the `diagonals` library to eliminate those.
 {% highlight r %}
 # load the library
 library(diagonals)
+{% endhighlight %}
 
+
+
+{% highlight text %}
+## 
+## D I
+## A G
+##     O N
+##     A L
+##         S
+{% endhighlight %}
+
+
+
+{% highlight r %}
 # remove the elements along the diagonal of width 2
 minus_block_matrix(M, size=3)
 {% endhighlight %}
@@ -69,16 +85,7 @@ minus_block_matrix(M, size=3)
 
 
 {% highlight text %}
-##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
-##  [1,]    0    0    0    0    0    0    0    0    0
-##  [2,]    0    0    0    0    0    0    0    0    0
-##  [3,]    0    0    0    0    0    0    0    0    0
-##  [4,]    0    0    0    0    0    0    0    0    0
-##  [5,]    1    0    0    0    0    0    0    0    0
-##  [6,]    0    0    1    0    0    0    0    0    0
-##  [7,]    0    0    0    0    0    0    0    0    0
-##  [8,]    0    0    0    0    0    0    0    0    0
-##  [9,]    0    0    0    0    0    0    0    0    0
+## Error in eval(expr, envir, enclos): could not find function "minus_block_matrix"
 {% endhighlight %}
 
 The [diagonals](http://cran.r-project.org/?package=diagonals) package now [available on CRAN](/diagonals-cran) and can therefore be install directly from inside `R` using:

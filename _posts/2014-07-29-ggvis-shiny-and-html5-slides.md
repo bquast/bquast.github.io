@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ggvis, shiny, and HTML5 slides
+tags: [R, ggvis, shiny, html5, slides]
 permalink: ggvis-shiny-html5-slides
 ---
 [ggvis](http://ggvis.rstudio.com) is wonderful new tool to create interactive graphics, which was build with [Shiny apps](http://shiny.rstudio.com/) in mind. In this post I will go over how you can create a Shiny app using ggvis and incorporating the 'app' in an rmarkdown slideshow (interactively).

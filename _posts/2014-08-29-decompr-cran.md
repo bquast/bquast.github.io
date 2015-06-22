@@ -1,6 +1,7 @@
 ---
 layout: post
 title: decompr on CRAN
+tags: [R, decompr, gvc, cran, package]
 permalink: decompr-cran
 ---
 

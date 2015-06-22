@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The decompr package
+tags: [R, decompr, gvc, package]
 permalink: decompr-package
 ---
 
