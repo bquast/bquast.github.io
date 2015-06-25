@@ -10,10 +10,10 @@ permalink: handcoding-lm
 Warnings such as these are often given in statistics courses and for good reason too!
 Doing the work yourself really cements the understanding of statistics.
 
-Yet when it comes to econometrics, the main take-aways from the workshops are primarily in terms of the **syntax** of yet another computer program.
+Yet when it comes to econometrics, the main take aways from the workshops are primarily in terms of the **syntax** of yet another computer program.
 
 In this series of post titled: **handcoded**, I show how many workhorses of the econometrician's toolbox can be implemented in a very simple manner.
-This manual implementation greatly helps in keeping an understanding of what actually happens when we call e.g. `MCMC..` with a few paramters.
+This manual implementation greatly helps in keeping an understanding of what actually happens when we call e.g. `MCMC..` with a few parameters.
 
 
 The Linear Model
@@ -27,7 +27,7 @@ $$
 for B, which gives us:
 
 $$
-(X^T *X) * (X^T*y) = \beta
+(X^T *X)^{-1} * (X^T*y) = \beta
 $$
 
 We start by loading a basic data set.
@@ -90,11 +90,11 @@ lm( y ~ x -1 ) # the -1 ensures that we don't have an intercept
 ## 2.875
 {% endhighlight %}
 
-Now we estimate our beta ourselves (`solve`! it's coming, read on...).
+Now we estimate our beta ourselves, the function used to invert is called `solve()`.
 
 
 {% highlight r %}
-(t(x)%*%x)^-1 %*% t(x)%*%y
+solve(t(x)%*%x) %*% t(x)%*%y
 {% endhighlight %}
 
 
@@ -144,7 +144,7 @@ head(XI) # inspect the first few rows
 ## [6,] 0.4 1
 {% endhighlight %}
 
-We also have to correct a small cheat which we used above. `^-1` is not correct syntax for a matrix inversion. In the above case it works correctly because our `X` matrix is in fact a vector. If we pre-multiply this vector with the transpose of itself, we obtain a scalar.
+We also have to discuss the above `solve()` function, `^-1` is not correct syntax for a matrix inversion. In the above case it would still work correctly because our `X` matrix is in fact a vector. If we pre-multiply this vector with the transpose of itself, we obtain a scalar.
 
 
 {% highlight r %}
@@ -157,7 +157,7 @@ dim( t(x) %*% x )
 ## [1] 1 1
 {% endhighlight %}
 
-This is the reason that our inversion using `^-1` worked correctly. However, for matrices wider than one column this is not the case.
+However, for matrices wider than one column this is not the case.
 
 
 {% highlight r %}
@@ -187,25 +187,26 @@ This `^-1` will invert every **individual** number in the matrix, rather than th
 
 We want to obtain to obtain the inverse of the matrix, because this will allow us to pre-multiply on both sides, eliminating `XI` on the **Right-Hand Side** (RHS).
 
-We therefore use a different tool, the Generalised Inverse `ginv()` function from the `MASS` package.
+We therefore use a different tool, the`solve()` function from the `base` package.
+This function implements the [QR decomposition](https://en.wikipedia.org/wiki/QR_decomposition),
+which is an efficient way of deriving an inverse of a matrix.
 
 Now we can use this matrix to estimate a model with an intercept.
 
 
 {% highlight r %}
-library(MASS) # we only need this once after starting R
-ginv( (t(XI)%*%XI) ) %*% t(XI)%*%y
+solve( (t(XI)%*%XI) ) %*% t(XI)%*%y
 {% endhighlight %}
 
 
 
 {% highlight text %}
-##          [,1]
-## [1,] 2.229940
-## [2,] 1.083558
+##       [,1]
+## x 2.229940
+##   1.083558
 {% endhighlight %}
 
-Note that this is programmatically exactly the same the way that the `lm()` funcios this.
+Note that this is programmatically exactly the same the way that the `lm()` function does this.
 
 We can suppress the automatic intercept and include our `XI` variable and we will obtain the same results.
 
@@ -226,7 +227,7 @@ lm(y ~ XI -1 )
 ## 2.230  1.084
 {% endhighlight %}
 
-We have now constructed a univariate (uni**variate**) model, however, from a programmic poitn of view, the hurdles of multivariate modelling have already beeno overcome by estimating a model with an intercept (making `X` a matrix).
+We have now constructed a univariate (uni**variate**) model, however, from a programmatic point of view, the hurdles of multivariate modelling have already been overcome by estimating a model with an intercept (making `X` a matrix).
 
 It is therefore very easy to use the same method in a case with two independent variables.
 
@@ -261,56 +262,7 @@ Now we estimate our model
 
 
 {% highlight r %}
-# make sure the MASS package is still loaded
-ginv( (t(XI)%*%XI) ) %*% t(XI)%*%y
-{% endhighlight %}
-
-
-
-{% highlight text %}
-##            [,1]
-## [1,]  1.7481029
-## [2,]  0.5422556
-## [3,] -1.5071384
-{% endhighlight %}
-
-And that's all! The leap from univariate to multivariat modelling was truely very small.
-
-There is one last thing to note here.
-Using [QR decompostion](https://en.wikipedia.org/wiki/QR_decomposition),
-we can obtain the inverse that we need in a computationally much more efficient way.
-The function that we use for this is `solve()`.
-
-
-{% highlight r %}
-system.time(lm( y ~ XI ))
-{% endhighlight %}
-
-
-
-{% highlight text %}
-##    user  system elapsed 
-##   0.001   0.000   0.001
-{% endhighlight %}
-
-
-
-{% highlight r %}
-system.time(ginv(t(XI)%*%XI) %*% t(XI)%*%y)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-##    user  system elapsed 
-##       0       0       0
-{% endhighlight %}
-
-So far we have been calculating the inverse for pre-multiplication. The faster way to do this is using the QR decomposition (`solve()`).
-
-
-{% highlight r %}
-solve(t(XI)%*%XI) %*% t(XI)%*%y
+solve( (t(XI)%*%XI) ) %*% t(XI)%*%y
 {% endhighlight %}
 
 
@@ -322,17 +274,11 @@ solve(t(XI)%*%XI) %*% t(XI)%*%y
 ##    -1.5071384
 {% endhighlight %}
 
+And that's all! The leap from univariate to multivariate modelling was truly very small.
 
+There is one last thing to note here.
+Using [QR decompostion](https://en.wikipedia.org/wiki/QR_decomposition),
+we can obtain the inverse that we need in a computationally much more efficient way.
+The function that we use for this is `solve()`.
 
-{% highlight r %}
-system.time( solve(t(XI)%*%XI) %*% t(XI)%*%y )
-{% endhighlight %}
-
-
-
-{% highlight text %}
-##    user  system elapsed 
-##       0       0       0
-{% endhighlight %}
-
-EDIT: in [tomorrow's post](/handcoded-lm-function) we use the method we developed here to create an easy to use function.
+**EDIT: in [tomorrow's post](/handcoded-lm-function) we use the method we developed here to create an easy to use function.**
