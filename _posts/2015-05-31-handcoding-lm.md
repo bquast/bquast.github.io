@@ -276,9 +276,4 @@ solve( (t(XI)%*%XI) ) %*% t(XI)%*%y
 
 And that's all! The leap from univariate to multivariate modelling was truly very small.
 
-There is one last thing to note here.
-Using [QR decompostion](https://en.wikipedia.org/wiki/QR_decomposition),
-we can obtain the inverse that we need in a computationally much more efficient way.
-The function that we use for this is `solve()`.
-
-**EDIT: in [tomorrow's post](/handcoded-lm-function) we use the method we developed here to create an easy to use function.**
+**EDIT:** in [tomorrow's post](/handcoded-lm-function) we use the method we developed here to create an easy to use function.
