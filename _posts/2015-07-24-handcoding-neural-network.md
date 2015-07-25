@@ -5,7 +5,7 @@ tags: [R, neural network, machine learning]
 permalink: handcoding-neural-network
 ---
 
-Andrew rote an amazing post at [I am Trask]() called:
+Andrew Trask wrote an amazing post at [I am Trask]() called:
 
 > [A Neural Network in 11 lines of Python](http://iamtrask.github.io/2015/07/12/basic-python-network/)
 
@@ -41,10 +41,10 @@ syn0
 
 
 {% highlight text %}
-##           [,1]      [,2]      [,3]      [,4]
-## [1,]  3.397239  3.730409  7.624077 0.8650246
-## [2,]  3.397205  3.738858  7.607350 0.7379852
-## [3,] -5.431674 -5.922698 -3.617042 3.2450772
+##           [,1]      [,2]       [,3]      [,4]
+## [1,] 0.6327345  5.132340  4.5702100  7.349621
+## [2,] 0.6582471 -7.335253  4.8222636 -4.866655
+## [3,] 0.0452390 -2.026576 -0.6738766  1.633244
 {% endhighlight %}
 
 
@@ -56,11 +56,11 @@ syn1
 
 
 {% highlight text %}
-##           [,1]
-## [1,] -7.865228
-## [2,] -8.375507
-## [3,] 13.265952
-## [4,] -5.796626
+##             [,1]
+## [1,]  -0.8563758
+## [2,]  11.4901034
+## [3,]   6.4287984
+## [4,] -11.2625398
 {% endhighlight %}
 
 After showing the 11 lines, Andrew builds a more simplistic version of this model in order to explain the workings,
@@ -108,23 +108,13 @@ for (iter in 1:10000) {
   syn0 = syn0 + t(l0)%*%l1_delta                    }
   
 print("Output After Training:")
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## [1] "Output After Training:"
-{% endhighlight %}
-
-
-
-{% highlight r %}
 print(l1)
 {% endhighlight %}
 
 
 
 {% highlight text %}
+## [1] "Output After Training:"
 ##      [,1]
 ## [1,]  0.5
 ## [2,]  0.5
@@ -192,6 +182,9 @@ for (j in 1:60000) {
   syn0 = syn0 + t(l0) %*% l1_delta
   
 }
+
+print("Output After Training:")
+print(l1)
 {% endhighlight %}
 
 
@@ -203,29 +196,7 @@ for (j in 1:60000) {
 ## [1] "Error: 0.00507859874667397"
 ## [1] "Error: 0.00452508690333462"
 ## [1] "Error: 0.00411914123908981"
-{% endhighlight %}
-
-
-
-{% highlight r %}
-print("Output After Training:")
-{% endhighlight %}
-
-
-
-{% highlight text %}
 ## [1] "Output After Training:"
-{% endhighlight %}
-
-
-
-{% highlight r %}
-print(l1)
-{% endhighlight %}
-
-
-
-{% highlight text %}
 ##              [,1]       [,2]      [,3]         [,4]
 ## [1,] 0.2458599375 0.88914038 0.3675612 0.4370393632
 ## [2,] 0.0002438464 0.03235284 0.9803207 0.0272840721

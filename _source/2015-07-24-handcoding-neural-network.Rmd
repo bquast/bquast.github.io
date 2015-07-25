@@ -5,7 +5,7 @@ tags: [R, neural network, machine learning]
 permalink: handcoding-neural-network
 ---
 
-Andrew rote an amazing post at [I am Trask]() called:
+Andrew Trask wrote an amazing post at [I am Trask]() called:
 
 > [A Neural Network in 11 lines of Python](http://iamtrask.github.io/2015/07/12/basic-python-network/)
 
@@ -40,7 +40,7 @@ syn1
 After showing the 11 lines, Andrew builds a more simplistic version of this model in order to explain the workings,
 the `R` version of this code is:
 
-```{r ex1}
+```{r ex1, results='hold'}
 # no importing here
 
 # sigmoid function
@@ -86,7 +86,7 @@ print(l1)
 
 Finally a more legible version of the 11 lines model is developed, the `R` equivalent of this model is:
 
-```{r ex2}
+```{r ex2, results='hold'}
 # no importing here
 
 nonlin = function(x,deriv=FALSE) {
