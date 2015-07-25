@@ -79,13 +79,10 @@ for (iter in 1:10000) {
   l1_delta = l1_error * nonlin(l1,TRUE)
   
   # update weights
-  syn0 = syn0 + t(l0)%*%l1_delta
+  syn0 = syn0 + t(l0)%*%l1_delta                    }
   
-  print("Output After Training:")
-  print(l1)
-  
-}
-
+print("Output After Training:")
+print(l1)
 ```
 
 Finally a more legible version of the 11 lines model is developed, the `R` equivalent of this model is:
