@@ -3,7 +3,6 @@ layout: post
 title: "Hand Coding a Neural Network"
 tags: [R, neural network, machine learning]
 permalink: handcoding-neural-network
-published: false
 ---
 
 Andrew rote an amazing post at [I am Trask]() called:
@@ -43,9 +42,9 @@ syn0
 
 {% highlight text %}
 ##           [,1]      [,2]      [,3]      [,4]
-## [1,] -6.461337 -5.387247 -2.992886 -3.996602
-## [2,] -6.377679  3.852036  4.946393 -4.060812
-## [3,]  2.515331 -1.832319  1.287810  5.990894
+## [1,]  3.397239  3.730409  7.624077 0.8650246
+## [2,]  3.397205  3.738858  7.607350 0.7379852
+## [3,] -5.431674 -5.922698 -3.617042 3.2450772
 {% endhighlight %}
 
 
@@ -57,11 +56,11 @@ syn1
 
 
 {% highlight text %}
-##            [,1]
-## [1,] -10.119288
-## [2,]   6.690724
-## [3,]  -6.926864
-## [4,]   7.970106
+##           [,1]
+## [1,] -7.865228
+## [2,] -8.375507
+## [3,] 13.265952
+## [4,] -5.796626
 {% endhighlight %}
 
 After showing the 11 lines, Andrew builds a more simplistic version of this model in order to explain the workings,

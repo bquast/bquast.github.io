@@ -3,7 +3,6 @@ layout: post
 title: "Hand Coding a Neural Network"
 tags: [R, neural network, machine learning]
 permalink: handcoding-neural-network
-published: false
 ---
 
 Andrew rote an amazing post at [I am Trask]() called:
