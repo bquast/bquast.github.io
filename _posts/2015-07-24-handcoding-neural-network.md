@@ -5,13 +5,13 @@ tags: [R, neural network, machine learning]
 permalink: handcoding-neural-network
 ---
 
-Andrew Trask wrote an amazing post at [I am Trask]() called:
+Andrew Trask wrote an amazing post at [I am Trask](http://iamtrask.github.io/) called:
 
 > [A Neural Network in 11 lines of Python](http://iamtrask.github.io/2015/07/12/basic-python-network/)
 
-Below I've translated the `python` code to `R`.
+Below I've translated the original `python` code used in the post to `R`.
 The original post has an excellent explanation of what each line does.
-I've tried to stay as close a possible to the original code as possible,
+I've tried to stay as close quto the original code as possible,
 all lines and comments correspond directly to the original code.
 
 The code for the Neural Network in 11 lines of R is:
@@ -41,10 +41,10 @@ syn0
 
 
 {% highlight text %}
-##           [,1]      [,2]       [,3]      [,4]
-## [1,] 0.6327345  5.132340  4.5702100  7.349621
-## [2,] 0.6582471 -7.335253  4.8222636 -4.866655
-## [3,] 0.0452390 -2.026576 -0.6738766  1.633244
+##           [,1]      [,2]      [,3]      [,4]
+## [1,]  5.477066 -5.350492 -5.635982  3.618113
+## [2,] -6.809600 -5.722380  3.959140  2.029142
+## [3,] -2.877620  2.101970 -1.833321 -3.877820
 {% endhighlight %}
 
 
@@ -56,11 +56,11 @@ syn1
 
 
 {% highlight text %}
-##             [,1]
-## [1,]  -0.8563758
-## [2,]  11.4901034
-## [3,]   6.4287984
-## [4,] -11.2625398
+##           [,1]
+## [1,]  9.841210
+## [2,] -8.165059
+## [3,]  7.620728
+## [4,] -6.832649
 {% endhighlight %}
 
 After showing the 11 lines, Andrew builds a more simplistic version of this model in order to explain the workings,
@@ -74,8 +74,7 @@ the `R` version of this code is:
 nonlin = function(x,deriv=FALSE) {
   if(deriv==TRUE)
     return( x*(1-x) )
-  return( 1/(1+exp(-x)) )
-}
+  return( 1/(1+exp(-x)) )         }
 
 # input dataset
 X = matrix(c(0,0,1,0,1,1,1,0,1,1,1,1), nrow=4, byrow=TRUE)
