@@ -38,3 +38,6 @@ Of course I am not the author of [RStudio](http://www.rstudio.com/).
 
 [more about me](/about)
 -----------------------
+
+<a class="twitter-timeline" href="https://twitter.com/hashtag/fert4all" data-widget-id="625970039833907201">#fert4all Tweets</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
