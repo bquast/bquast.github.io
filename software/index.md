@@ -11,7 +11,13 @@ R packages
 ----------------
 An overview of the R packages that I have published (currently five) is available here:
 
-> https://cran.r-project.org/web/checks/check_results_bquast_at_gmail.com.html
+https://cran.r-project.org/web/checks/check_results_bquast_at_gmail.com.html
+
+rddtools (R), 
+--------------
+with Mattieu Stigler
+
+Set of functions for Regression Discontinuity Design ('RDD'), for data visualisation, estimation and testing.
 
 diagonals (R)
 ----------------
@@ -36,7 +42,7 @@ The [gvc package](/gvc) ([CRAN](http://cran.r-project.org/web/packages/gvc/index
 and several more.
 
 
-rstudio-desktop-previous (Arch Linux)
+rstudio-desktop-preview (Arch Linux)
 --------------------------------
 Of course I am not the author of [RStudio](http://www.rstudio.com/).
 [This package](https://aur.archlinux.org/packages/rstudio-desktop-preview) installs nightly builds from the RStudio S3 server on [Arch Linux](https://www.archlinux.org/).
