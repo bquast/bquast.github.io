@@ -7,6 +7,12 @@ image:
   creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 ---
 
+R packages
+----------------
+An overview of the R packages that I have published (currently five) is available here:
+
+> https://cran.r-project.org/web/checks/check_results_bquast_at_gmail.com.html
+
 diagonals (R)
 ----------------
 The [diagonals package](/diagonals) ([CRAN](http://cran.r-project.org/package=diagonals)) implements several tools for dealing with fat diagonals on matrices.
