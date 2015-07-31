@@ -17,7 +17,7 @@ all lines and comments correspond directly to the original code.
 The code for the Neural Network in 11 lines of R is:
 
 
-{% highlight r %}
+{% highlight r linenos %}
 X = matrix(c(0,0,1,0,1,1,1,0,1,1,1,1), nrow=4, byrow=TRUE)
 y = matrix(c(0,1,1,0),nrow=4)
 syn0 = matrix(runif(n = 12, min=-1, max=1), nrow=3)
@@ -67,7 +67,7 @@ After showing the 11 lines, Andrew builds a more simplistic version of this mode
 the `R` version of this code is:
 
 
-{% highlight r %}
+{% highlight r linenos %}
 # no importing here
 
 # sigmoid function
@@ -124,7 +124,7 @@ print(l1)
 Finally a more legible version of the 11 lines model is developed, the `R` equivalent of this model is:
 
 
-{% highlight r %}
+{% highlight r linenos %}
 # no importing here
 
 nonlin = function(x,deriv=FALSE) {
