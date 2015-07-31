@@ -41,10 +41,10 @@ syn0
 
 
 {% highlight text %}
-##           [,1]      [,2]      [,3]      [,4]
-## [1,]  5.477066 -5.350492 -5.635982  3.618113
-## [2,] -6.809600 -5.722380  3.959140  2.029142
-## [3,] -2.877620  2.101970 -1.833321 -3.877820
+##            [,1]      [,2]       [,3]      [,4]
+## [1,]  2.3807690 -7.358492 -3.0529806 -5.785885
+## [2,] -5.0828537  5.754414  5.8005239 -5.346462
+## [3,] -0.4869195 -2.506318  0.8193008  1.563493
 {% endhighlight %}
 
 
@@ -57,10 +57,10 @@ syn1
 
 {% highlight text %}
 ##           [,1]
-## [1,]  9.841210
-## [2,] -8.165059
-## [3,]  7.620728
-## [4,] -6.832649
+## [1,]  7.253500
+## [2,] 12.039743
+## [3,] -5.975858
+## [4,] -6.934079
 {% endhighlight %}
 
 After showing the 11 lines, Andrew builds a more simplistic version of this model in order to explain the workings,
@@ -77,11 +77,13 @@ nonlin = function(x,deriv=FALSE) {
   return( 1/(1+exp(-x)) )         }
 
 # input dataset
-X = matrix(c(0,0,1,0,1,1,1,0,1,1,1,1), nrow=4, byrow=TRUE)
+X = matrix(c(0,0,1,
+             0,1,1,
+             1,0,1,
+             1,1,1), nrow=4, byrow=TRUE)
 
 # output dataset 
 y = matrix(c(0,1,1,0), nrow=4)
-
 
 # seed random number to make calculation
 # deterministic (just a good practice)
@@ -137,15 +139,13 @@ nonlin = function(x,deriv=FALSE) {
 X = matrix(c(0,0,1,
              0,1,1,
              1,0,1,
-             1,1,1),
-           nrow=4, byrow=TRUE)
+             1,1,1), nrow=4, byrow=TRUE)
 
 y = matrix(c(0,
              1,
              1,
              0),
            nrow=4)
-
 
 set.seed(1)
 
@@ -178,12 +178,7 @@ for (j in 1:60000) {
   l1_delta = l1_error * nonlin(l1, deriv=TRUE)
   
   syn1 = syn1 + t(l1) %*% l2_delta
-  syn0 = syn0 + t(l0) %*% l1_delta
-  
-}
-
-print("Output After Training:")
-print(l1)
+  syn0 = syn0 + t(l0) %*% l1_delta                     }
 {% endhighlight %}
 
 
@@ -195,7 +190,29 @@ print(l1)
 ## [1] "Error: 0.00507859874667397"
 ## [1] "Error: 0.00452508690333462"
 ## [1] "Error: 0.00411914123908981"
+{% endhighlight %}
+
+
+
+{% highlight r %}
+print("Output After Training:")
+{% endhighlight %}
+
+
+
+{% highlight text %}
 ## [1] "Output After Training:"
+{% endhighlight %}
+
+
+
+{% highlight r %}
+print(l1)
+{% endhighlight %}
+
+
+
+{% highlight text %}
 ##              [,1]       [,2]      [,3]         [,4]
 ## [1,] 0.2458599375 0.88914038 0.3675612 0.4370393632
 ## [2,] 0.0002438464 0.03235284 0.9803207 0.0272840721

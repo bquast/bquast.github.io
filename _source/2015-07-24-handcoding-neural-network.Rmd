@@ -50,11 +50,13 @@ nonlin = function(x,deriv=FALSE) {
   return( 1/(1+exp(-x)) )         }
 
 # input dataset
-X = matrix(c(0,0,1,0,1,1,1,0,1,1,1,1), nrow=4, byrow=TRUE)
+X = matrix(c(0,0,1,
+             0,1,1,
+             1,0,1,
+             1,1,1), nrow=4, byrow=TRUE)
 
 # output dataset 
 y = matrix(c(0,1,1,0), nrow=4)
-
 
 # seed random number to make calculation
 # deterministic (just a good practice)
@@ -98,15 +100,13 @@ nonlin = function(x,deriv=FALSE) {
 X = matrix(c(0,0,1,
              0,1,1,
              1,0,1,
-             1,1,1),
-           nrow=4, byrow=TRUE)
+             1,1,1), nrow=4, byrow=TRUE)
 
 y = matrix(c(0,
              1,
              1,
              0),
            nrow=4)
-
 
 set.seed(1)
 
@@ -139,13 +139,13 @@ for (j in 1:60000) {
   l1_delta = l1_error * nonlin(l1, deriv=TRUE)
   
   syn1 = syn1 + t(l1) %*% l2_delta
-  syn0 = syn0 + t(l0) %*% l1_delta
-  
-}
+  syn0 = syn0 + t(l0) %*% l1_delta                     }
+```
 
+
+```{r}
 print("Output After Training:")
 print(l1)
-
 ```
 
 Andrew concludes his article with a number of helpful links, as well as the suggestion:
