@@ -34,33 +34,23 @@ for (j in 1:60000) {
 The output of this is:
 
 
-{% highlight r %}
+{% highlight r linenos %}
 syn0
-{% endhighlight %}
-
-
-
-{% highlight text %}
-##            [,1]      [,2]       [,3]      [,4]
-## [1,]  2.3807690 -7.358492 -3.0529806 -5.785885
-## [2,] -5.0828537  5.754414  5.8005239 -5.346462
-## [3,] -0.4869195 -2.506318  0.8193008  1.563493
-{% endhighlight %}
-
-
-
-{% highlight r %}
 syn1
 {% endhighlight %}
 
 
 
 {% highlight text %}
-##           [,1]
-## [1,]  7.253500
-## [2,] 12.039743
-## [3,] -5.975858
-## [4,] -6.934079
+##           [,1]      [,2]      [,3]        [,4]
+## [1,] -5.212097  5.533400  5.103196 -0.09917318
+## [2,] -5.353412  5.329328  5.255606  1.30102506
+## [3,]  1.836841 -8.191955 -1.777823  0.08858564
+##            [,1]
+## [1,]  -7.314729
+## [2,] -12.920228
+## [3,]   7.469894
+## [4,]  -1.035425
 {% endhighlight %}
 
 After showing the 11 lines, Andrew builds a more simplistic version of this model in order to explain the workings,
@@ -194,7 +184,7 @@ for (j in 1:60000) {
 
 
 
-{% highlight r %}
+{% highlight r linenos %}
 print("Output After Training:")
 {% endhighlight %}
 
@@ -206,7 +196,7 @@ print("Output After Training:")
 
 
 
-{% highlight r %}
+{% highlight r linenos %}
 print(l1)
 {% endhighlight %}
 
@@ -222,6 +212,6 @@ print(l1)
 
 Andrew concludes his article with a number of helpful links, as well as the suggestion:
 
-> Try to rebuild this network from memory.
+> **Try to rebuild this network from memory.** I know that might sound a bit crazy, but it seriously helps. If you want to be able to create arbitrary architectures based on new academic papers or read and understand sample code for these different architectures, I think that it's a killer exercise. I think it's useful even if you're using frameworks like Torch, Caffe, or Theano. I worked with neural networks for a couple years before performing this exercise, and it was the best investment of time I've made in the field (and it didn't take long).
 
 For `R` users it should hopefully be easier to do this using the code above.

@@ -32,7 +32,7 @@ for (j in 1:60000) {
 
 The output of this is:
 
-```{r}
+```{r outp0, results='hold'}
 syn0
 syn1
 ```
@@ -150,6 +150,6 @@ print(l1)
 
 Andrew concludes his article with a number of helpful links, as well as the suggestion:
 
-> Try to rebuild this network from memory.
+> **Try to rebuild this network from memory.** I know that might sound a bit crazy, but it seriously helps. If you want to be able to create arbitrary architectures based on new academic papers or read and understand sample code for these different architectures, I think that it's a killer exercise. I think it's useful even if you're using frameworks like Torch, Caffe, or Theano. I worked with neural networks for a couple years before performing this exercise, and it was the best investment of time I've made in the field (and it didn't take long).
 
 For `R` users it should hopefully be easier to do this using the code above.

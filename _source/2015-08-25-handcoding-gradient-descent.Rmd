@@ -42,7 +42,7 @@ for (j in 1:60000) {
 
 The output of this is:
 
-```{r}
+```{r outp0, results='hold'}
 synapse_0
 synapse_1
 ```
@@ -156,13 +156,7 @@ for (j in 1:60000) {
 ```
 
 
-```{r}
+```{r, results='hold'}
 print("Output After Training:")
 print(l1)
 ```
-
-Andrew concludes his article with a number of helpful links, as well as the suggestion:
-
-> Try to rebuild this network from memory.
-
-For `R` users it should hopefully be easier to do this using the code above.

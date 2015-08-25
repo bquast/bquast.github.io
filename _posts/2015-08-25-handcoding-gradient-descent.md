@@ -46,31 +46,21 @@ The output of this is:
 
 {% highlight r linenos %}
 synapse_0
-{% endhighlight %}
-
-
-
-{% highlight text %}
-##            [,1]       [,2]      [,3]      [,4]
-## [1,]  1.6749966  4.0108150 -8.123309 -6.448839
-## [2,] -0.3972389 -8.1330857  4.281592 -6.195072
-## [3,]  1.7729916 -0.8021902 -1.193611  1.797256
-{% endhighlight %}
-
-
-
-{% highlight r linenos %}
 synapse_1
 {% endhighlight %}
 
 
 
 {% highlight text %}
-##           [,1]
-## [1,] -5.039078
-## [2,] 10.382043
-## [3,]  9.738095
-## [4,] -8.276506
+##           [,1]      [,2]      [,3]       [,4]
+## [1,] 2.1296798  6.739264  6.163607 -1.5215125
+## [2,] 2.5373070 -5.757949 -7.005258  0.4168904
+## [3,] 0.4386815  2.762378 -3.100071  0.3851545
+##            [,1]
+## [1,]   4.218976
+## [2,] -10.385862
+## [3,]  11.572147
+## [4,]   2.227137
 {% endhighlight %}
 
 After showing the 13 lines, Andrew builds a more simplistic version of this model in order to explain the workings,
@@ -209,32 +199,16 @@ for (j in 1:60000) {
 
 {% highlight r linenos %}
 print("Output After Training:")
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## [1] "Output After Training:"
-{% endhighlight %}
-
-
-
-{% highlight r linenos %}
 print(l1)
 {% endhighlight %}
 
 
 
 {% highlight text %}
+## [1] "Output After Training:"
 ##              [,1]       [,2]      [,3]         [,4]
 ## [1,] 0.2458599375 0.88914038 0.3675612 0.4370393632
 ## [2,] 0.0002438464 0.03235284 0.9803207 0.0272840721
 ## [3,] 0.9516103977 0.99993716 0.9855892 0.0186708858
 ## [4,] 0.0144994169 0.98514792 0.9998294 0.0006869615
 {% endhighlight %}
-
-Andrew concludes his article with a number of helpful links, as well as the suggestion:
-
-> Try to rebuild this network from memory.
-
-For `R` users it should hopefully be easier to do this using the code above.
