@@ -51,10 +51,10 @@ synapse_0
 
 
 {% highlight text %}
-##           [,1]      [,2]       [,3]      [,4]
-## [1,] -6.296208  5.677893  3.0894500 -5.131601
-## [2,]  3.617745 -7.438962 -0.3471426 -5.632614
-## [3,] -1.442666 -2.494515 -0.2238744  1.541094
+##            [,1]       [,2]      [,3]      [,4]
+## [1,]  1.6749966  4.0108150 -8.123309 -6.448839
+## [2,] -0.3972389 -8.1330857  4.281592 -6.195072
+## [3,]  1.7729916 -0.8021902 -1.193611  1.797256
 {% endhighlight %}
 
 
@@ -67,10 +67,10 @@ synapse_1
 
 {% highlight text %}
 ##           [,1]
-## [1,]  8.314939
-## [2,] 10.939783
-## [3,] -5.548317
-## [4,] -6.841668
+## [1,] -5.039078
+## [2,] 10.382043
+## [3,]  9.738095
+## [4,] -8.276506
 {% endhighlight %}
 
 After showing the 13 lines, Andrew builds a more simplistic version of this model in order to explain the workings,
@@ -115,22 +115,12 @@ for (iter in 1:10000) {
   
   # multiply how much we missed by the
   # slope of the sigmoid at the values in layer_1
-  layer_1_delta = l1_error * signmoid_output_to_derivative(layer_1)
+  layer_1_delta = layer_1_error * signmoid_output_to_derivative(layer_1)
   syanpse_0_derivative = t(layer_0) %*% layer_1_delta
   
   # update weights
-  synapse_0 = synapse_0 + t(l0)%*%l1_delta                     }
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error: object 'l1_error' not found
-{% endhighlight %}
-
-
-
-{% highlight r linenos %}
+  synapse_0 = synapse_0 + t(layer_0)%*%layer_1_delta                     }
+  
 print("Output After Training:")
 print(layer_1)
 {% endhighlight %}
@@ -139,11 +129,11 @@ print(layer_1)
 
 {% highlight text %}
 ## [1] "Output After Training:"
-##           [,1]
-## [1,] 0.5363624
-## [2,] 0.4725164
-## [3,] 0.4198776
-## [4,] 0.3591562
+##              [,1]
+## [1,] 4.095320e-03
+## [2,] 4.030840e-05
+## [3,] 4.002302e-05
+## [4,] 3.923468e-07
 {% endhighlight %}
 
 Finally a more legible version of the 13 lines model is developed, the `R` equivalent of this model is:

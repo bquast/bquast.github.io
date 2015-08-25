@@ -88,11 +88,11 @@ for (iter in 1:10000) {
   
   # multiply how much we missed by the
   # slope of the sigmoid at the values in layer_1
-  layer_1_delta = l1_error * signmoid_output_to_derivative(layer_1)
+  layer_1_delta = layer_1_error * signmoid_output_to_derivative(layer_1)
   syanpse_0_derivative = t(layer_0) %*% layer_1_delta
   
   # update weights
-  synapse_0 = synapse_0 + t(l0)%*%l1_delta                     }
+  synapse_0 = synapse_0 + t(layer_0)%*%layer_1_delta                     }
   
 print("Output After Training:")
 print(layer_1)
