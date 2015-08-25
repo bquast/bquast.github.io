@@ -37,47 +37,56 @@ for (j in 1:60000) {
   layer_2 = 1 / ( 1 + exp(-(layer_1%*%synapse_1)) )
   layer_2_delta = (layer_2-y)*(layer_2*(1-layer_2))
   layer_1_delta = (layer_2_delta %*% t(synapse_1)) * (layer_1*(1-layer_1))
-  synapse_1 = synapse_1 + (alpha * t(layer_1) %*% layer_2_delta )
-  synapse_0 = synapse_0 + (alpha * t(X) %*% layer_1_delta )                      }
+  synapse_1 = synapse_1 - (alpha * t(layer_1) %*% layer_2_delta )
+  synapse_0 = synapse_0 - (alpha * t(X) %*% layer_1_delta )                 }
 {% endhighlight %}
 
 The output of this is:
 
 
-{% highlight r %}
-syn0
+{% highlight r linenos %}
+synapse_0
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## Error in eval(expr, envir, enclos): object 'syn0' not found
+##           [,1]      [,2]       [,3]      [,4]
+## [1,] -6.296208  5.677893  3.0894500 -5.131601
+## [2,]  3.617745 -7.438962 -0.3471426 -5.632614
+## [3,] -1.442666 -2.494515 -0.2238744  1.541094
 {% endhighlight %}
 
 
 
-{% highlight r %}
-syn1
+{% highlight r linenos %}
+synapse_1
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## Error in eval(expr, envir, enclos): object 'syn1' not found
+##           [,1]
+## [1,]  8.314939
+## [2,] 10.939783
+## [3,] -5.548317
+## [4,] -6.841668
 {% endhighlight %}
 
-After showing the 11 lines, Andrew builds a more simplistic version of this model in order to explain the workings,
+After showing the 13 lines, Andrew builds a more simplistic version of this model in order to explain the workings,
 the `R` version of this code is:
 
 
 {% highlight r linenos %}
 # no importing here
 
-# sigmoid function
-nonlin = function(x,deriv=FALSE) {
-  if(deriv==TRUE)
-    return( x*(1-x) )
-  return( 1/(1+exp(-x)) )         }
+# compute sigmoid nonlinearity
+sigmoid = function(x) {
+  output = 1 / (1+exp(-x))
+  return(output)            }
+
+signmoid_output_to_derivative = function(output) {
+  return( output*(1-output) )                      }
 
 # input dataset
 X = matrix(c(0,0,1,
@@ -93,40 +102,51 @@ y = matrix(c(0,1,1,0), nrow=4)
 set.seed(1)
 
 # initialize weights randomly with mean 0
-syn0 = matrix(runif(n = 3, min=-1, max=1), nrow=3)
+synapse_0 = matrix(runif(n = 3, min=-1, max=1), nrow=3)
 
 for (iter in 1:10000) {
   
   # forward propagation
-  l0 = X
-  l1 = nonlin(l0%*%syn0)
+  layer_0 = X
+  layer_1 = sigmoid(layer_0%*%synapse_0)
   
   # how much did we miss?
-  l1_error = y - l1
+  layer_1_error = layer_1 - y
   
-  # multiply how much we missed by the slope of the
-  # sigmoid at the values in L1
-  l1_delta = l1_error * nonlin(l1,TRUE)
+  # multiply how much we missed by the
+  # slope of the sigmoid at the values in layer_1
+  layer_1_delta = l1_error * signmoid_output_to_derivative(layer_1)
+  syanpse_0_derivative = t(layer_0) %*% layer_1_delta
   
   # update weights
-  syn0 = syn0 + t(l0)%*%l1_delta                    }
-  
+  synapse_0 = synapse_0 + t(l0)%*%l1_delta                     }
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Error: object 'l1_error' not found
+{% endhighlight %}
+
+
+
+{% highlight r linenos %}
 print("Output After Training:")
-print(l1)
+print(layer_1)
 {% endhighlight %}
 
 
 
 {% highlight text %}
 ## [1] "Output After Training:"
-##      [,1]
-## [1,]  0.5
-## [2,]  0.5
-## [3,]  0.5
-## [4,]  0.5
+##           [,1]
+## [1,] 0.5363624
+## [2,] 0.4725164
+## [3,] 0.4198776
+## [4,] 0.3591562
 {% endhighlight %}
 
-Finally a more legible version of the 11 lines model is developed, the `R` equivalent of this model is:
+Finally a more legible version of the 13 lines model is developed, the `R` equivalent of this model is:
 
 
 {% highlight r linenos %}
@@ -197,7 +217,7 @@ for (j in 1:60000) {
 
 
 
-{% highlight r %}
+{% highlight r linenos %}
 print("Output After Training:")
 {% endhighlight %}
 
@@ -209,7 +229,7 @@ print("Output After Training:")
 
 
 
-{% highlight r %}
+{% highlight r linenos %}
 print(l1)
 {% endhighlight %}
 
