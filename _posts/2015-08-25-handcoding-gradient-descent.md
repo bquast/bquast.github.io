@@ -46,21 +46,31 @@ The output of this is:
 
 {% highlight r linenos %}
 synapse_0
+{% endhighlight %}
+
+
+
+{% highlight text %}
+##           [,1]       [,2]      [,3]      [,4]
+## [1,]  3.545988 -0.7574938 -4.059472 -6.855083
+## [2,]  3.546789 -0.6330600 -4.065121 -6.851793
+## [3,] -5.511110  0.1934818  6.271507  2.991949
+{% endhighlight %}
+
+
+
+{% highlight r linenos %}
 synapse_1
 {% endhighlight %}
 
 
 
 {% highlight text %}
-##           [,1]      [,2]      [,3]       [,4]
-## [1,] 2.1296798  6.739264  6.163607 -1.5215125
-## [2,] 2.5373070 -5.757949 -7.005258  0.4168904
-## [3,] 0.4386815  2.762378 -3.100071  0.3851545
-##            [,1]
-## [1,]   4.218976
-## [2,] -10.385862
-## [3,]  11.572147
-## [4,]   2.227137
+##             [,1]
+## [1,]  -7.4613936
+## [2,]   0.1730553
+## [3,]   7.0278715
+## [4,] -12.8437782
 {% endhighlight %}
 
 After showing the 13 lines, Andrew builds a more simplistic version of this model in order to explain the workings,
@@ -126,89 +136,109 @@ print(layer_1)
 ## [4,] 3.923468e-07
 {% endhighlight %}
 
-Finally a more legible version of the 13 lines model is developed, the `R` equivalent of this model is:
 
 
 {% highlight r linenos %}
 # no importing here
 
-nonlin = function(x,deriv=FALSE) {
-  if(deriv==TRUE)
-    return( x*(1-x) )
-  
-  return( 1/(1+exp(-x)) )
-}
+alphas = c(0.001,0.01,0.1,1,10,100,1000)
 
+# compute sigmoid nonlinearity
+sigmoid = function(x) {
+  output = 1 / (1+exp(-x))
+  return(output)            }
+
+signmoid_output_to_derivative = function(output) {
+  return( output*(1-output) )                      }
+
+# input dataset
 X = matrix(c(0,0,1,
              0,1,1,
              1,0,1,
              1,1,1), nrow=4, byrow=TRUE)
 
+# output dataset 
 y = matrix(c(0,
              1,
              1,
-             0),
-           nrow=4)
+             0), nrow=4)
 
-set.seed(1)
-
-# initialize weights randomly with mean 0
-syn0 = matrix(runif(n = 12, min=-1, max=1), nrow=3)
-syn1 = matrix(runif(n =  4, min=-1, max=1), nrow=4)
-
-for (j in 1:60000) {
+for (alpha in alphas) {
+  # print "\nTraining With Alpha:" + str(alpha)
+  print(paste("Training With Alpha", alpha))
+  set.seed(1)
   
-  # Feed forward through layers 0, 1, and 2
-  l0 = X
-  l1 = nonlin(l0%*%syn0)
-  l2 = nonlin(l1%*%syn1)
+  # randomly initialize our weights with mean 0
+  synapse_0 = matrix(runif(n = 3*4, min=-1, max=1), nrow=3)
+  synapse_1 = matrix(runif(n = 4,   min=-1, max=1), ncol=1)
   
-  # how much did we miss the target value?
-  l2_error = y - l2
-  
-  if (j %% 10000 == 0)
-    print(paste("Error:", mean(abs(l2_error))))
-  
-  # in what direction is the target value?
-  # were we really sure? if so, don't change too much.
-  l2_delta = l2_error*nonlin(l2,deriv=TRUE)
-  
-  # how much did each L1 value contribute to the error (according to the weights)?
-  l1_error = l2_delta %*% t(syn1)
-  
-  # in what direction is the target l1?
-  # were we really sure? if so, don't change too much.
-  l1_delta = l1_error * nonlin(l1, deriv=TRUE)
-  
-  syn1 = syn1 + t(l1) %*% l2_delta
-  syn0 = syn0 + t(l0) %*% l1_delta                     }
+  for (iter in 1:60000) {
+    
+    # Feed forward through layers 0, 1, and 2
+    layer_0 = X
+    layer_1 = sigmoid(layer_0%*%synapse_0)
+    layer_2 = sigmoid(layer_1%*%synapse_1)
+    
+    # how much did we miss the target value?
+    layer_2_error = layer_2 - y
+    
+    if (j %% 10000 == 0)
+      print(paste("Error after", j, "iterations:", mean(abs(l2_error))))
+    
+    # in what direction is the target value?
+    # were we really sure? if so, don't change too much.
+    layer_2_delta = layer_2_error * signmoid_output_to_derivative(layer_2)
+    
+    # how much did each l1 value contribute to the l2 error (according to the weights)?
+    layer_1_error = layer_2_delta %*% t(synapse_1)
+    
+    # in what direction is the target l1?
+    # were we really sure? if so, don't change too much.
+    layer_1_delta = layer_1_error * signmoid_output_to_derivative(layer_1)
+    
+    syanpse_1 = synapse_1 - t(layer_1) %*% layer_2_delta
+    synapse_0 = synapse_0 + t(layer_0)%*%layer_1_delta                     }  }
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## [1] "Error: 0.0105538166393651"
-## [1] "Error: 0.00729252475321203"
-## [1] "Error: 0.0058973637409426"
-## [1] "Error: 0.00507859874667397"
-## [1] "Error: 0.00452508690333462"
-## [1] "Error: 0.00411914123908981"
+## Error in mean(abs(l2_error)): object 'l2_error' not found
 {% endhighlight %}
 
 
 
 {% highlight r linenos %}
 print("Output After Training:")
-print(l1)
+print(layer_1)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## [1] "Training With Alpha 0.001"
+## [1] "Output After Training:"
+##           [,1]      [,2]      [,3]      [,4]
+## [1,] 0.5363624 0.6892851 0.5642007 0.3436915
+## [2,] 0.4725164 0.5498694 0.6410268 0.2253184
+## [3,] 0.4198776 0.8338545 0.7590684 0.1789740
+## [4,] 0.3591562 0.7343018 0.8129318 0.1079971
+{% endhighlight %}
+
+
+
+{% highlight r linenos %}
+print("Output After Training:")
+print(layer_1)
 {% endhighlight %}
 
 
 
 {% highlight text %}
 ## [1] "Output After Training:"
-##              [,1]       [,2]      [,3]         [,4]
-## [1,] 0.2458599375 0.88914038 0.3675612 0.4370393632
-## [2,] 0.0002438464 0.03235284 0.9803207 0.0272840721
-## [3,] 0.9516103977 0.99993716 0.9855892 0.0186708858
-## [4,] 0.0144994169 0.98514792 0.9998294 0.0006869615
+##           [,1]      [,2]      [,3]      [,4]
+## [1,] 0.5363624 0.6892851 0.5642007 0.3436915
+## [2,] 0.4725164 0.5498694 0.6410268 0.2253184
+## [3,] 0.4198776 0.8338545 0.7590684 0.1789740
+## [4,] 0.3591562 0.7343018 0.8129318 0.1079971
 {% endhighlight %}
