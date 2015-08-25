@@ -36,8 +36,8 @@ for (j in 1:60000) {
   layer_2 = 1 / ( 1 + exp(-(layer_1%*%synapse_1)) )
   layer_2_delta = (layer_2-y)*(layer_2*(1-layer_2))
   layer_1_delta = (layer_2_delta %*% t(synapse_1)) * (layer_1*(1-layer_1))
-  synapse_1 = synapse_1 - (alpha * t(layer_1) %*% layer_2_delta )
-  synapse_0 = synapse_0 - (alpha * t(X) %*% layer_1_delta )                 }
+  synapse_1 = synapse_1 - alpha * ( t(layer_1) %*% layer_2_delta )
+  synapse_0 = synapse_0 - alpha * ( t(X) %*% layer_1_delta )                 }
 ```
 
 The output of this is:
@@ -133,7 +133,7 @@ for (alpha in alphas) {
   synapse_0 = matrix(runif(n = 3*4, min=-1, max=1), nrow=3)
   synapse_1 = matrix(runif(n = 4,   min=-1, max=1), ncol=1)
   
-  for (iter in 1:60000) {
+  for (j in 1:60000) {
     
     # Feed forward through layers 0, 1, and 2
     layer_0 = X
@@ -144,7 +144,7 @@ for (alpha in alphas) {
     layer_2_error = layer_2 - y
     
     if (j %% 10000 == 0)
-      print(paste("Error after", j, "iterations:", mean(abs(l2_error))))
+      print(paste("Error after", j, "iterations:", mean(abs(layer_2_error))))
     
     # in what direction is the target value?
     # were we really sure? if so, don't change too much.
@@ -157,11 +157,8 @@ for (alpha in alphas) {
     # were we really sure? if so, don't change too much.
     layer_1_delta = layer_1_error * signmoid_output_to_derivative(layer_1)
     
-    syanpse_1 = synapse_1 - t(layer_1) %*% layer_2_delta
-    synapse_0 = synapse_0 + t(layer_0)%*%layer_1_delta                     }  }
-  
-print("Output After Training:")
-print(layer_1)
+    syanpse_1 = synapse_1 - alpha * ( t(layer_1) %*% layer_2_delta )
+    synapse_0 = synapse_0 - alpha * ( t(layer_0)%*%layer_1_delta   )                   }  }
 ```
 
 

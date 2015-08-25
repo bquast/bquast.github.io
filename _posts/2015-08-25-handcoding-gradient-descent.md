@@ -37,8 +37,8 @@ for (j in 1:60000) {
   layer_2 = 1 / ( 1 + exp(-(layer_1%*%synapse_1)) )
   layer_2_delta = (layer_2-y)*(layer_2*(1-layer_2))
   layer_1_delta = (layer_2_delta %*% t(synapse_1)) * (layer_1*(1-layer_1))
-  synapse_1 = synapse_1 - (alpha * t(layer_1) %*% layer_2_delta )
-  synapse_0 = synapse_0 - (alpha * t(X) %*% layer_1_delta )                 }
+  synapse_1 = synapse_1 - alpha * ( t(layer_1) %*% layer_2_delta )
+  synapse_0 = synapse_0 - alpha * ( t(X) %*% layer_1_delta )                 }
 {% endhighlight %}
 
 The output of this is:
@@ -51,10 +51,10 @@ synapse_0
 
 
 {% highlight text %}
-##           [,1]       [,2]      [,3]      [,4]
-## [1,]  3.545988 -0.7574938 -4.059472 -6.855083
-## [2,]  3.546789 -0.6330600 -4.065121 -6.851793
-## [3,] -5.511110  0.1934818  6.271507  2.991949
+##            [,1]      [,2]      [,3]      [,4]
+## [1,]  0.6599928 -4.112528 -6.566531  5.152019
+## [2,] -0.2885111  4.197566  6.513230 -5.273546
+## [3,]  0.1117825  2.538704 -3.402528 -2.994635
 {% endhighlight %}
 
 
@@ -66,11 +66,11 @@ synapse_1
 
 
 {% highlight text %}
-##             [,1]
-## [1,]  -7.4613936
-## [2,]   0.1730553
-## [3,]   7.0278715
-## [4,] -12.8437782
+##            [,1]
+## [1,] -0.6862487
+## [2,] -5.9624483
+## [3,] 11.8858211
+## [4,]  7.6466318
 {% endhighlight %}
 
 After showing the 13 lines, Andrew builds a more simplistic version of this model in order to explain the workings,
@@ -172,7 +172,7 @@ for (alpha in alphas) {
   synapse_0 = matrix(runif(n = 3*4, min=-1, max=1), nrow=3)
   synapse_1 = matrix(runif(n = 4,   min=-1, max=1), ncol=1)
   
-  for (iter in 1:60000) {
+  for (j in 1:60000) {
     
     # Feed forward through layers 0, 1, and 2
     layer_0 = X
@@ -183,7 +183,7 @@ for (alpha in alphas) {
     layer_2_error = layer_2 - y
     
     if (j %% 10000 == 0)
-      print(paste("Error after", j, "iterations:", mean(abs(l2_error))))
+      print(paste("Error after", j, "iterations:", mean(abs(layer_2_error))))
     
     # in what direction is the target value?
     # were we really sure? if so, don't change too much.
@@ -196,33 +196,62 @@ for (alpha in alphas) {
     # were we really sure? if so, don't change too much.
     layer_1_delta = layer_1_error * signmoid_output_to_derivative(layer_1)
     
-    syanpse_1 = synapse_1 - t(layer_1) %*% layer_2_delta
-    synapse_0 = synapse_0 + t(layer_0)%*%layer_1_delta                     }  }
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in mean(abs(l2_error)): object 'l2_error' not found
-{% endhighlight %}
-
-
-
-{% highlight r linenos %}
-print("Output After Training:")
-print(layer_1)
+    syanpse_1 = synapse_1 - alpha * ( t(layer_1) %*% layer_2_delta )
+    synapse_0 = synapse_0 - alpha * ( t(layer_0)%*%layer_1_delta   )                   }  }
 {% endhighlight %}
 
 
 
 {% highlight text %}
 ## [1] "Training With Alpha 0.001"
-## [1] "Output After Training:"
-##           [,1]      [,2]      [,3]      [,4]
-## [1,] 0.5363624 0.6892851 0.5642007 0.3436915
-## [2,] 0.4725164 0.5498694 0.6410268 0.2253184
-## [3,] 0.4198776 0.8338545 0.7590684 0.1789740
-## [4,] 0.3591562 0.7343018 0.8129318 0.1079971
+## [1] "Error after 10000 iterations: 0.498823347999877"
+## [1] "Error after 20000 iterations: 0.498917387108483"
+## [1] "Error after 30000 iterations: 0.499018853229654"
+## [1] "Error after 40000 iterations: 0.499121375353957"
+## [1] "Error after 50000 iterations: 0.499219572353048"
+## [1] "Error after 60000 iterations: 0.499308750697558"
+## [1] "Training With Alpha 0.01"
+## [1] "Error after 10000 iterations: 0.499497826959898"
+## [1] "Error after 20000 iterations: 0.498641326465821"
+## [1] "Error after 30000 iterations: 0.496956955112539"
+## [1] "Error after 40000 iterations: 0.493890610439056"
+## [1] "Error after 50000 iterations: 0.488671091119026"
+## [1] "Error after 60000 iterations: 0.482015340894521"
+## [1] "Training With Alpha 0.1"
+## [1] "Error after 10000 iterations: 0.458964864668801"
+## [1] "Error after 20000 iterations: 0.440296873961302"
+## [1] "Error after 30000 iterations: 0.435721552956624"
+## [1] "Error after 40000 iterations: 0.433741459806895"
+## [1] "Error after 50000 iterations: 0.432645250195108"
+## [1] "Error after 60000 iterations: 0.431951283530493"
+## [1] "Training With Alpha 1"
+## [1] "Error after 10000 iterations: 0.430648089011645"
+## [1] "Error after 20000 iterations: 0.42973270388057"
+## [1] "Error after 30000 iterations: 0.429425130948803"
+## [1] "Error after 40000 iterations: 0.42926004089335"
+## [1] "Error after 50000 iterations: 0.429152167876871"
+## [1] "Error after 60000 iterations: 0.429075022172101"
+## [1] "Training With Alpha 10"
+## [1] "Error after 10000 iterations: 0.428909279036476"
+## [1] "Error after 20000 iterations: 0.428783822612087"
+## [1] "Error after 30000 iterations: 0.428744034006972"
+## [1] "Error after 40000 iterations: 0.428724732170788"
+## [1] "Error after 50000 iterations: 0.428713362098269"
+## [1] "Error after 60000 iterations: 0.428705874754754"
+## [1] "Training With Alpha 100"
+## [1] "Error after 10000 iterations: 0.428691131215767"
+## [1] "Error after 20000 iterations: 0.428680295041344"
+## [1] "Error after 30000 iterations: 0.428676727569616"
+## [1] "Error after 40000 iterations: 0.428674952802699"
+## [1] "Error after 50000 iterations: 0.428673890942781"
+## [1] "Error after 60000 iterations: 0.428673184328116"
+## [1] "Training With Alpha 1000"
+## [1] "Error after 10000 iterations: 0.452360975310751"
+## [1] "Error after 20000 iterations: 0.452359991803577"
+## [1] "Error after 30000 iterations: 0.452359694858478"
+## [1] "Error after 40000 iterations: 0.452359550631165"
+## [1] "Error after 50000 iterations: 0.452359465308302"
+## [1] "Error after 60000 iterations: 0.452359408902304"
 {% endhighlight %}
 
 
@@ -236,9 +265,9 @@ print(layer_1)
 
 {% highlight text %}
 ## [1] "Output After Training:"
-##           [,1]      [,2]      [,3]      [,4]
-## [1,] 0.5363624 0.6892851 0.5642007 0.3436915
-## [2,] 0.4725164 0.5498694 0.6410268 0.2253184
-## [3,] 0.4198776 0.8338545 0.7590684 0.1789740
-## [4,] 0.3591562 0.7343018 0.8129318 0.1079971
+##              [,1]         [,2]         [,3]         [,4]
+## [1,] 4.324337e-07 9.999967e-01 8.963235e-07 9.998340e-01
+## [2,] 1.456566e-08 1.668968e-06 9.999985e-01 8.425039e-05
+## [3,] 1.079468e-08 1.145600e-06 7.084046e-19 5.782283e-05
+## [4,] 3.635971e-10 6.288507e-18 5.205575e-07 8.091203e-13
 {% endhighlight %}
