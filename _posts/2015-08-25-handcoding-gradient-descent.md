@@ -25,7 +25,7 @@ all lines and comments correspond directly to the original code.
 The code for the Neural Network in 13 lines of R is:
 
 
-{% highlight r %}
+{% highlight r linenos %}
 # no importing here
 X = matrix(c(0,0,1,0,1,1,1,0,1,1,1,1), nrow=4, byrow=TRUE)
 y = matrix(c(0,1,1,0),nrow=4)
@@ -44,7 +44,7 @@ for (j in 1:60000) {
 The output of this is:
 
 
-{% highlight r %}
+{% highlight r linenos %}
 synapse_0
 {% endhighlight %}
 
@@ -59,7 +59,7 @@ synapse_0
 
 
 
-{% highlight r %}
+{% highlight r linenos %}
 synapse_1
 {% endhighlight %}
 
@@ -77,7 +77,7 @@ After showing the 13 lines, Andrew builds a more simplistic version of this mode
 the `R` version of this code is:
 
 
-{% highlight r %}
+{% highlight r linenos %}
 # no importing here
 
 # compute sigmoid nonlinearity
@@ -138,7 +138,7 @@ print(layer_1)
 
 
 
-{% highlight r %}
+{% highlight r linenos %}
 # no importing here
 
 alphas = c(0.001,0.01,0.1,1,10,100,1000)
@@ -257,7 +257,7 @@ for (alpha in alphas) {
 
 
 
-{% highlight r %}
+{% highlight r linenos %}
 print("Output After Training:")
 print(layer_1)
 {% endhighlight %}
