@@ -164,6 +164,6 @@ for (alpha in alphas) {
 
 
 ```{r, results='hold'}
-print("Output After Training:")
-print(layer_1)
+print("Output After Training (transposed):")
+print(t(layer_1))
 ```
