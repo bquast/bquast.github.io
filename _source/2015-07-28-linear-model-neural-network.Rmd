@@ -1,0 +1,51 @@
+---
+layout: post
+title: "Linear Model and Neural Network"
+tags: [R, linear model, neural network, machine learning]
+permalink: linear-model-neural-network
+---
+
+In this short post I want to quickly demonstrate how the most basic neural network (no hidden layer) gives us the same results as the linear model.
+
+First we need data
+
+```{r data}
+data(swiss)
+str(swiss)
+```
+
+We can now specify a model.
+
+```{r model}
+m1 <- formula(Fertility ~ Agriculture + Examination + Education + Catholic + Infant.Mortality)
+```
+
+Let's start by estimating a linear model.
+
+```{r lm}
+lm1 <- lm(formula=m1, data=swiss)
+summary(lm1)
+```
+
+Now lets use the built in `nnet` package to estimate a neural network without a hidden layer.
+
+```{r nnet}
+library(nnet)
+nn1 <- nnet(formula=m1, data=swiss, size=0, skip=TRUE, linout=TRUE)
+summary(nn1)
+```
+
+Let look at the results next to each other.
+
+```{r results, results='hold'}
+lm1
+summary(nn1)
+```
+
+We can also estimate this model using the `neuralnet` package (this package needs to be installed first using `install.packages("neuralnet")`). This package allows us to nicely visualise the results.
+
+```{r neuralnet}
+library(neuralnet)
+nn1a <- neuralnet(formula=m1, data=swiss, hidden=0, linear.output=TRUE)
+plot(nn1a)
+```
