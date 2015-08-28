@@ -52,5 +52,5 @@ We can also estimate this model using the `neuralnet` package (this package need
 ```{r neuralnet}
 library(neuralnet)
 nn1a <- neuralnet(formula=m1, data=swiss, hidden=0, linear.output=TRUE)
-plot(nn1a)
+plot(nn1a, rep='best')
 ```
