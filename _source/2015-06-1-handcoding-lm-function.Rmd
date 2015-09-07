@@ -5,7 +5,7 @@ tags: [R, linear model, lm, ols, function, programming]
 permalink: handcoding-lm-function
 ---
 
-In [yesterday's post](/handcoded-lm) we developed a method for constructing a multivariate linear model with an intercept.
+In [yesterday's post](/handcoding-lm) we developed a method for constructing a multivariate linear model with an intercept.
 
 Today we will turn the collection of loose commands into an integrated and easy to use `function`.
 

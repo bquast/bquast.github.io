@@ -138,4 +138,4 @@ solve( (t(XI)%*%XI) ) %*% t(XI)%*%y
 
 And that's all! The leap from univariate to multivariate modelling was truly very small.
 
-**EDIT:** in [tomorrow's post](/handcoded-lm-function) we use the method we developed here to create an easy to use function.
+**EDIT:** in [tomorrow's post](/handcoding-lm-function) we use the method we developed here to create an easy to use function.
