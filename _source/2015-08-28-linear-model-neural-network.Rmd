@@ -54,3 +54,10 @@ library(neuralnet)
 nn1a <- neuralnet(formula=m1, data=swiss, hidden=0, linear.output=TRUE)
 plot(nn1a, rep='best')
 ```
+
+Of course it only becomes interesting if we include a hidden layer.
+
+```{r hidden}
+nn2a <- neuralnet(formula=m1, data=swiss, hidden=2)
+plot(nn2a, rep='best')
+```
