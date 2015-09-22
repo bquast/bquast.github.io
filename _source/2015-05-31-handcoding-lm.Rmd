@@ -5,7 +5,7 @@ tags: [R, hand coding, linear model, lm, ols]
 permalink: handcoding-lm
 ---
 
-> In order to understand statistics, you have to do the calculations yourself!
+> In order to understand statistics, you have to do the calculations yourself
 
 Warnings such as these are often given in statistics courses and for good reason too!
 Doing the work yourself really cements the understanding of statistics.
@@ -56,7 +56,7 @@ We can now compute the \$$\hat{ \beta_1 }$$:
 x_m <- mean(x) # x bar in our equation
 y_m <- mean(y) # y bar in our equation
 numerator   <- sum( (x-x_m) * (y-y_m) )
-denominator <- sum( (x-x_m)ˆ2 ) 
+denominator <- sum( (x-x_m)*(x-x_m) ) 
 beta1_hat   <- numerator / denominator
 ```
 

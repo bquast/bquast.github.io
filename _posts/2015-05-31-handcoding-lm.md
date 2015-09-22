@@ -5,7 +5,7 @@ tags: [R, hand coding, linear model, lm, ols]
 permalink: handcoding-lm
 ---
 
-> In order to understand statistics, you have to do the calculations yourself!
+> In order to understand statistics, you have to do the calculations yourself
 
 Warnings such as these are often given in statistics courses and for good reason too!
 Doing the work yourself really cements the understanding of statistics.
@@ -18,16 +18,17 @@ This manual implementation greatly helps in keeping an understanding of what act
 
 The Linear Model
 ----------------------
-Then using the **Ordinary Least Squares** approach to solving a model, we start with the following equation.
+Then using the **Ordinary Least Squares** approach to solving a model, we start with the following equation of the OLS model for a univariate regression.
 
 $$
-y = \beta X + \epsilon
+y_i = \beta_0 \beta_1 x_1 + \epsilon
 $$
 
-for B, which gives us:
+For \$$ \beta_1 $$, this [gives us](https://en.wikipedia.org/wiki/Simple_linear_regression#Fitting_the_regression_line)
+(hat denotes the estimator, bar denotes the mean):
 
 $$
-(X^T *X)^{-1} * (X^T*y) = \beta
+\hat{\beta_1} = \frac{ \sumˆn_{i=1} (x_i - \bar{x} )(y_i - \bar{y} ) }{(x_i - \bar{x})ˆ2 }
 $$
 
 We start by loading a basic data set.
@@ -70,6 +71,63 @@ Assign our variables to objects (in the global environment)
 y <- iris$Petal.Length
 x <- iris$Petal.Width
 {% endhighlight %}
+
+We can now compute the \$$\hat{ \beta_1 }$$:
+
+
+{% highlight r %}
+x_m <- mean(x) # x bar in our equation
+y_m <- mean(y) # y bar in our equation
+numerator   <- sum( (x-x_m) * (y-y_m) )
+denominator <- sum( (x-x_m)*(x-x_m) ) 
+beta1_hat   <- numerator / denominator
+{% endhighlight %}
+
+Using \$$ \hat{ \beta_1 } $$ we can now compute \\$ \hat{beta_0} $$
+
+
+{% highlight r %}
+beta0_hat <- y_m - ( beta1_hat * x_m )
+{% endhighlight %}
+
+Lets check this using the built in command.
+
+
+{% highlight r %}
+lm( y ~ x )
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## 
+## Call:
+## lm(formula = y ~ x)
+## 
+## Coefficients:
+## (Intercept)            x  
+##       1.084        2.230
+{% endhighlight %}
+
+
+
+The matrix model
+------------------
+In matrix form we can specify our general equation as:
+
+$$
+y = \Beta X + \epsilon
+$$
+
+From which we can derive our estimator:
+
+$$
+\Beta = (X^T *X)^{-1} * (X^T*y)
+$$
+
+
+The matrix estimation
+-----------------------
 
 Use the built in command.
 
