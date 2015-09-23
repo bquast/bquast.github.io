@@ -79,13 +79,13 @@ The matrix model
 In matrix form we can specify our general equation as:
 
 $$
-y = \Beta X + \epsilon
+y = \beta X + \epsilon
 $$
 
 From which we can derive our estimator:
 
 $$
-\Beta = (X^T *X)^{-1} * (X^T*y)
+\beta = (X^T *X)^{-1} * (X^T*y)
 $$
 
 
