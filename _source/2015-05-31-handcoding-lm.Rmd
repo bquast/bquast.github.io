@@ -57,13 +57,13 @@ x_m <- mean(x) # x bar in our equation
 y_m <- mean(y) # y bar in our equation
 numerator   <- sum( (x-x_m) * (y-y_m) )
 denominator <- sum( (x-x_m)*(x-x_m) ) 
-beta1_hat   <- numerator / denominator
+( beta1_hat   <- numerator / denominator) )
 ```
 
 Using the slope parameter we can now compute the intercept.
 
 ```{r}
-beta0_hat <- y_m - ( beta1_hat * x_m )
+( beta0_hat <- y_m - ( beta1_hat * x_m ) )
 ```
 
 Lets check this using the built in command.
