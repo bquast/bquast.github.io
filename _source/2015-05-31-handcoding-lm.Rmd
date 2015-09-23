@@ -21,11 +21,11 @@ The Linear Model
 Then using the **Ordinary Least Squares** approach to solving a model, we start with the following equation of the OLS model for a univariate regression.
 
 $$
-y_i = \beta_0 \beta_1 x_1 + \epsilon
+y_i = \beta_0 + \beta_1 x_1 + \epsilon
 $$
 
-For \$$ \beta_1 $$, this [gives us](https://en.wikipedia.org/wiki/Simple_linear_regression#Fitting_the_regression_line)
-(hat denotes the estimator, bar denotes the mean):
+This [can be solver for](https://en.wikipedia.org/wiki/Simple_linear_regression#Fitting_the_regression_line)
+the following (hat denotes the estimator, bar denotes the mean):
 
 $$
 \hat{\beta_1} = \frac{ \sumˆn_{i=1} (x_i - \bar{x} )(y_i - \bar{y} ) }{(x_i - \bar{x})ˆ2 }
@@ -50,7 +50,7 @@ y <- iris$Petal.Length
 x <- iris$Petal.Width
 ```
 
-We can now compute the \$$\hat{ \beta_1 }$$:
+We can now estimate the slope parameter:
 
 ```{r}
 x_m <- mean(x) # x bar in our equation
@@ -60,7 +60,7 @@ denominator <- sum( (x-x_m)*(x-x_m) )
 beta1_hat   <- numerator / denominator
 ```
 
-Using \$$ \hat{ \beta_1 } $$ we can now compute \\$ \hat{beta_0} $$
+Using the slope parameter we can now compute the intercept.
 
 ```{r}
 beta0_hat <- y_m - ( beta1_hat * x_m )
