@@ -2,22 +2,29 @@
 layout: page
 title: Software
 image:
-  feature: sample-image-3.jpg
-  credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+  feature: energy.jpg
+  credit: Bastiaan Quast
+  creditlink: http://qua.st/
 ---
 
 R packages
 ----------------
-An overview of the R packages that I have published (currently five) is available here:
+An overview of the R packages that I have published (currently six) is available here:
 
 https://cran.r-project.org/web/checks/check_results_bquast_at_gmail.com.html
+
+
+learNN (R)
+--------------
+Code examples for basic mechanisms of neural networks, such as backpropagation, gradient descent, and dropout.
+
 
 rddtools (R), 
 --------------
 with Mattieu Stigler
 
 Set of functions for Regression Discontinuity Design ('RDD'), for data visualisation, estimation and testing.
+
 
 diagonals (R)
 ----------------
@@ -39,7 +46,10 @@ The [gvc package](/gvc) ([CRAN](http://cran.r-project.org/web/packages/gvc/index
 - Exporting to Re-export (`e2r()`)
 - New Revealed Comparative Advantage (`nrca()`)
 
-and several more.
+
+wiod (R)
+-----------------
+The [wiod package](/wiod) ([CRAN](http://cran.r-project.org/package=wiod)) contains the World Input-Output Database data in a format that can be used by the decompr and gvc packages.
 
 
 rstudio-desktop-preview (Arch Linux)
