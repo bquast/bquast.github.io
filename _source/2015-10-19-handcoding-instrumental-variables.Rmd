@@ -110,3 +110,7 @@ Xhat <- s1$coefficients[2]*z + s1$coefficients[1]
 # estimate second stage using Xhat
 lm(y ~ Xhat)
 ```
+
+Note that if you estimate a TSLS using the `lm` function,
+that you can **only** use the coefficients,
+the error terms will be **wrong**. 

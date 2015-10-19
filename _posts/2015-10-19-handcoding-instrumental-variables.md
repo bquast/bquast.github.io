@@ -224,3 +224,7 @@ lm(y ~ Xhat)
 ## (Intercept)         Xhat  
 ##      15.570        1.023
 {% endhighlight %}
+
+Note that if you estimate a TSLS using the `lm` function,
+that you can **only** use the coefficients,
+the error terms will be **wrong**. 
