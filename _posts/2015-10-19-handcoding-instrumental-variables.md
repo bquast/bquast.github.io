@@ -91,37 +91,10 @@ library(AER)
 
 
 {% highlight r %}
+data("CigarettesSW")
 rprice  <- with(CigarettesSW, price/cpi)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in with(CigarettesSW, price/cpi): object 'CigarettesSW' not found
-{% endhighlight %}
-
-
-
-{% highlight r %}
 tdiff   <- with(CigarettesSW, (taxs - tax)/cpi)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in with(CigarettesSW, (taxs - tax)/cpi): object 'CigarettesSW' not found
-{% endhighlight %}
-
-
-
-{% highlight r %}
 packs   <- CigarettesSW$packs
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in eval(expr, envir, enclos): object 'CigarettesSW' not found
 {% endhighlight %}
 
 We first need to obtain our first stage estimate (putting the whole function between parentheses allows us to both write it to the object `s1` and print it.
@@ -134,7 +107,9 @@ We first need to obtain our first stage estimate (putting the whole function bet
 
 
 {% highlight text %}
-## Error in cbind(X, 1): object 'tdiff' not found
+##        [,1]
+## X  4.163002
+##   91.103739
 {% endhighlight %}
 
 We can now obtain the predicted (fitted) values
@@ -142,12 +117,6 @@ We can now obtain the predicted (fitted) values
 
 {% highlight r %}
 Xhat <- s1[1]*tdiff + s1[2]
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in eval(expr, envir, enclos): object 's1' not found
 {% endhighlight %}
 
 Using these fitted values, we can finally estimate our second stage.
@@ -160,7 +129,9 @@ ols(y = packs, X = Xhat)
 
 
 {% highlight text %}
-## Error in cbind(X, 1): object 'Xhat' not found
+##         [,1]
+## X  -1.019485
+##   219.576384
 {% endhighlight %}
 
 Now compare this to the results using the `AER` package.
@@ -174,7 +145,13 @@ ivreg(packs ~ rprice | tdiff)
 
 
 {% highlight text %}
-## Error in eval(expr, envir, enclos): object 'packs' not found
+## 
+## Call:
+## ivreg(formula = packs ~ rprice | tdiff)
+## 
+## Coefficients:
+## (Intercept)       rprice  
+##     219.576       -1.019
 {% endhighlight %}
 
 When we compare this estimate to the estimate from the linear model, we find that the effect of the price is significantly overestimated there.
@@ -187,7 +164,13 @@ lm(packs ~ rprice)
 
 
 {% highlight text %}
-## Error in eval(expr, envir, enclos): object 'packs' not found
+## 
+## Call:
+## lm(formula = packs ~ rprice)
+## 
+## Coefficients:
+## (Intercept)       rprice  
+##     222.209       -1.044
 {% endhighlight %}
 
 We can also do this using `R`'s built in `lm` function.
@@ -196,17 +179,7 @@ We can also do this using `R`'s built in `lm` function.
 {% highlight r %}
 # first stage
 s1 <- lm(rprice ~ tdiff)
-{% endhighlight %}
 
-
-
-{% highlight text %}
-## Error in eval(expr, envir, enclos): object 'rprice' not found
-{% endhighlight %}
-
-
-
-{% highlight r %}
 # estimate second stage using fitted values (Xhat)
 lm(packs ~ s1$fitted.values)
 {% endhighlight %}
@@ -214,7 +187,13 @@ lm(packs ~ s1$fitted.values)
 
 
 {% highlight text %}
-## Error in eval(expr, envir, enclos): object 'packs' not found
+## 
+## Call:
+## lm(formula = packs ~ s1$fitted.values)
+## 
+## Coefficients:
+##      (Intercept)  s1$fitted.values  
+##          219.576            -1.019
 {% endhighlight %}
 
 As an intermediate form, we can  manually calculate `Xhat` (`fitted.values`) and estimate using that.
@@ -223,17 +202,7 @@ As an intermediate form, we can  manually calculate `Xhat` (`fitted.values`) and
 {% highlight r %}
 # manually obtain fitted values
 Xhat <- s1$coefficients[2]*tdiff + s1$coefficients[1]
-{% endhighlight %}
 
-
-
-{% highlight text %}
-## Error in eval(expr, envir, enclos): object 's1' not found
-{% endhighlight %}
-
-
-
-{% highlight r %}
 # estimate second stage using Xhat
 lm(packs ~ Xhat)
 {% endhighlight %}
@@ -241,7 +210,13 @@ lm(packs ~ Xhat)
 
 
 {% highlight text %}
-## Error in eval(expr, envir, enclos): object 'packs' not found
+## 
+## Call:
+## lm(formula = packs ~ Xhat)
+## 
+## Coefficients:
+## (Intercept)         Xhat  
+##     219.576       -1.019
 {% endhighlight %}
 
 Note that if you estimate a TSLS using the `lm` function,

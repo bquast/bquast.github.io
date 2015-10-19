@@ -37,37 +37,10 @@ library(AER)
 
 
 {% highlight r %}
+data("CigarettesSW")
 rprice  <- with(CigarettesSW, price/cpi)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in with(CigarettesSW, price/cpi): object 'CigarettesSW' not found
-{% endhighlight %}
-
-
-
-{% highlight r %}
 tdiff   <- with(CigarettesSW, (taxs - tax)/cpi)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in with(CigarettesSW, (taxs - tax)/cpi): object 'CigarettesSW' not found
-{% endhighlight %}
-
-
-
-{% highlight r %}
 packs   <- CigarettesSW$packs
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in eval(expr, envir, enclos): object 'CigarettesSW' not found
 {% endhighlight %}
 
 Estimate using OLS.
@@ -80,7 +53,13 @@ lm(packs ~ rprice)
 
 
 {% highlight text %}
-## Error in eval(expr, envir, enclos): object 'packs' not found
+## 
+## Call:
+## lm(formula = packs ~ rprice)
+## 
+## Coefficients:
+## (Intercept)       rprice  
+##     222.209       -1.044
 {% endhighlight %}
 
 Now using instrumental variables.
@@ -93,7 +72,13 @@ ivreg(packs ~ rprice | tdiff)
 
 
 {% highlight text %}
-## Error in eval(expr, envir, enclos): object 'packs' not found
+## 
+## Call:
+## ivreg(formula = packs ~ rprice | tdiff)
+## 
+## Coefficients:
+## (Intercept)       rprice  
+##     219.576       -1.019
 {% endhighlight %}
 
 Now using the `lm` function.
@@ -102,30 +87,10 @@ Now using the `lm` function.
 {% highlight r %}
 # first stage
 lms1 <- lm(rprice ~ tdiff)
-{% endhighlight %}
 
-
-
-{% highlight text %}
-## Error in eval(expr, envir, enclos): object 'rprice' not found
-{% endhighlight %}
-
-
-
-{% highlight r %}
 # manually obtain fitted values
 lmXhat <- lms1$coefficients[2]*tdiff + lms1$coefficients[1]
-{% endhighlight %}
 
-
-
-{% highlight text %}
-## Error in eval(expr, envir, enclos): object 'lms1' not found
-{% endhighlight %}
-
-
-
-{% highlight r %}
 # estimate second stage using Xhat
 (lms2 <- lm(packs ~ lmXhat) )
 {% endhighlight %}
@@ -133,7 +98,13 @@ lmXhat <- lms1$coefficients[2]*tdiff + lms1$coefficients[1]
 
 
 {% highlight text %}
-## Error in eval(expr, envir, enclos): object 'packs' not found
+## 
+## Call:
+## lm(formula = packs ~ lmXhat)
+## 
+## Coefficients:
+## (Intercept)       lmXhat  
+##     219.576       -1.019
 {% endhighlight %}
 
 Now using a neural network
@@ -141,6 +112,7 @@ Now using a neural network
 
 {% highlight r %}
 library(nnet)
+set.seed(123)
 
 # first stage
 nns1 <- nnet(rprice ~ tdiff, size=0, skip=TRUE, linout=TRUE)
@@ -149,7 +121,10 @@ nns1 <- nnet(rprice ~ tdiff, size=0, skip=TRUE, linout=TRUE)
 
 
 {% highlight text %}
-## Error in eval(expr, envir, enclos): object 'rprice' not found
+## # weights:  2
+## initial  value 1123401.708750 
+## final  value 14467.562948 
+## converged
 {% endhighlight %}
 
 
@@ -157,17 +132,7 @@ nns1 <- nnet(rprice ~ tdiff, size=0, skip=TRUE, linout=TRUE)
 {% highlight r %}
 # manually obtain fitted values
 nnXhat <- nns1$fitted.values
-{% endhighlight %}
 
-
-
-{% highlight text %}
-## Error in eval(expr, envir, enclos): object 'nns1' not found
-{% endhighlight %}
-
-
-
-{% highlight r %}
 # estimate second stage using Xhat
 (nns2 <- nnet(packs ~ nnXhat, size=0, skip=TRUE, linout=TRUE) )
 {% endhighlight %}
@@ -175,7 +140,19 @@ nnXhat <- nns1$fitted.values
 
 
 {% highlight text %}
-## Error in eval(expr, envir, enclos): object 'packs' not found
+## # weights:  2
+## initial  value 335265.176965 
+## final  value 48851.806790 
+## converged
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## a 1-0-1 network with 2 weights
+## inputs: nnXhat 
+## output(s): packs 
+## options were - skip-layer connections  linear output units
 {% endhighlight %}
 
 Compare output.
@@ -188,7 +165,8 @@ lms2$coefficients - nns2$wts
 
 
 {% highlight text %}
-## Error in eval(expr, envir, enclos): object 'lms2' not found
+##   (Intercept)        lmXhat 
+##  4.880515e-05 -4.206591e-07
 {% endhighlight %}
 
 Compare estimates.
@@ -213,7 +191,7 @@ qplot(lms2$fitted.values - nns2$fitted.values)
 
 
 {% highlight text %}
-## Error in eval(expr, envir, enclos): object 'lms2' not found
+## stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.
 {% endhighlight %}
 
-
+![plot of chunk qplot](/images/source/2015-10-20-neural-network-instrumental-variables/qplot-1.png) 

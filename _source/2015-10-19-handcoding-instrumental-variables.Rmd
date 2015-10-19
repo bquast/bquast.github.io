@@ -47,6 +47,7 @@ We will replicate an example from the `AER` (Applied Econometric Regressions) pa
 
 ```{r}
 library(AER)
+data("CigarettesSW")
 rprice  <- with(CigarettesSW, price/cpi)
 tdiff   <- with(CigarettesSW, (taxs - tax)/cpi)
 packs   <- CigarettesSW$packs
