@@ -1,0 +1,89 @@
+---
+title: "Neural Network Instrumental Variables"
+output: html_document
+permalink: neural-network-iv-simulated
+tags:
+- R
+- linear model
+- neural network
+- machine learning
+layout: post
+---
+
+Some simulated data, borrow from [this post](http://jacobsimmering.com/2014/01/10/InstrumentalVariables.html).
+
+```{r}
+library(MASS)
+# same random numbers
+set.seed(123)
+# we are really generating x* and c and using a common variance
+xStarAndC <- mvrnorm(1000, c(20, 15), matrix(c(1, 0.5, 0.5, 1), 2, 2))
+xStar <- xStarAndC[, 1]
+c <- xStarAndC[, 2]
+z <- rnorm(1000)
+x <- xStar + z
+# using 1 makes it easy to estimate how 'wrong' an estimator is and toss
+# some noise on y
+y <- 1 + x + c + rnorm(1000, 0, 0.5)
+```
+
+Let's look at the true model.
+
+```{r}
+lm(y ~ x + c)
+```
+
+Estimate using OLS.
+
+```{r}
+lm(y ~ x)
+```
+
+Now using instrumental variables.
+
+```{r, message=FALSE}
+library(AER)
+ivreg(y ~ x | z)
+```
+
+Now using the `lm` function.
+
+```{r}
+# first stage
+lms1 <- lm(x ~ z)
+
+# manually obtain fitted values
+lmXhat <- lms1$coefficients[2]*z + lms1$coefficients[1]
+
+# estimate second stage using Xhat
+(lms2 <- lm(y ~ lmXhat) )
+```
+
+Now using a neural network
+
+```{r}
+library(nnet)
+
+# first stage
+nns1 <- nnet(x ~ z, size=0, skip=TRUE, linout=TRUE)
+
+# manually obtain fitted values
+nnXhat <- nns1$fitted.values
+
+# estimate second stage using Xhat
+(nns2 <- nnet(y ~ nnXhat, size=0, skip=TRUE, linout=TRUE) )
+summary(nns2)
+```
+
+Compare output.
+
+```{r}
+lms2$coefficients - nns2$wts
+```
+
+Compare estimates.
+
+```{r}
+library(ggplot2)
+qplot(lms2$fitted.values - nns2$fitted.values)
+```
