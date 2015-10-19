@@ -10,7 +10,7 @@ tags:
 layout: post
 ---
 
-Some simulated data, borrow from [this post](http://jacobsimmering.com/2014/01/10/InstrumentalVariables.html).
+Some simulated data, borrowed from [this post](http://jacobsimmering.com/2014/01/10/InstrumentalVariables.html).
 
 ```{r}
 library(MASS)
@@ -71,7 +71,7 @@ nns1 <- nnet(x ~ z, size=0, skip=TRUE, linout=TRUE)
 nnXhat <- nns1$fitted.values
 
 # estimate second stage using Xhat
-(nns2 <- nnet(y ~ nnXhat, size=0, skip=TRUE, linout=TRUE) )
+nns2 <- nnet(y ~ nnXhat, size=0, skip=TRUE, linout=TRUE)
 summary(nns2)
 ```
 
@@ -83,7 +83,7 @@ lms2$coefficients - nns2$wts
 
 Compare estimates.
 
-```{r qplot}
+```{r qplot, message=FALSE}
 library(ggplot2)
 qplot(lms2$fitted.values - nns2$fitted.values)
 ```

@@ -58,7 +58,8 @@ nns1 <- nnet(rprice ~ tdiff, size=0, skip=TRUE, linout=TRUE)
 nnXhat <- nns1$fitted.values
 
 # estimate second stage using Xhat
-(nns2 <- nnet(packs ~ nnXhat, size=0, skip=TRUE, linout=TRUE) )
+nns2 <- nnet(packs ~ nnXhat, size=0, skip=TRUE, linout=TRUE)
+summary(nns2)
 ```
 
 Compare output.
@@ -69,7 +70,7 @@ lms2$coefficients - nns2$wts
 
 Compare estimates.
 
-```{r qplot}
+```{r qplot, message=FALSE}
 library(ggplot2)
 qplot(lms2$fitted.values - nns2$fitted.values)
 ```

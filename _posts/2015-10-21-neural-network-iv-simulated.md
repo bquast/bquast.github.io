@@ -10,7 +10,7 @@ tags:
 layout: post
 ---
 
-Some simulated data, borrow from [this post](http://jacobsimmering.com/2014/01/10/InstrumentalVariables.html).
+Some simulated data, borrowed from [this post](http://jacobsimmering.com/2014/01/10/InstrumentalVariables.html).
 
 
 {% highlight r %}
@@ -138,7 +138,7 @@ nns1 <- nnet(x ~ z, size=0, skip=TRUE, linout=TRUE)
 nnXhat <- nns1$fitted.values
 
 # estimate second stage using Xhat
-(nns2 <- nnet(y ~ nnXhat, size=0, skip=TRUE, linout=TRUE) )
+nns2 <- nnet(y ~ nnXhat, size=0, skip=TRUE, linout=TRUE)
 {% endhighlight %}
 
 
@@ -148,15 +148,6 @@ nnXhat <- nns1$fitted.values
 ## initial  value 869603.061622 
 ## final  value 3188.205431 
 ## converged
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## a 1-0-1 network with 2 weights
-## inputs: nnXhat 
-## output(s): y 
-## options were - skip-layer connections  linear output units
 {% endhighlight %}
 
 
@@ -193,24 +184,7 @@ Compare estimates.
 
 {% highlight r %}
 library(ggplot2)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Loading required package: methods
-{% endhighlight %}
-
-
-
-{% highlight r %}
 qplot(lms2$fitted.values - nns2$fitted.values)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.
 {% endhighlight %}
 
 ![plot of chunk qplot](/images/source/2015-10-21-neural-network-iv-simulated/qplot-1.png) 

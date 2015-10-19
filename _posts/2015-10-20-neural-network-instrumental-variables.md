@@ -112,7 +112,7 @@ nns1 <- nnet(rprice ~ tdiff, size=0, skip=TRUE, linout=TRUE)
 nnXhat <- nns1$fitted.values
 
 # estimate second stage using Xhat
-(nns2 <- nnet(packs ~ nnXhat, size=0, skip=TRUE, linout=TRUE) )
+nns2 <- nnet(packs ~ nnXhat, size=0, skip=TRUE, linout=TRUE)
 {% endhighlight %}
 
 
@@ -126,11 +126,17 @@ nnXhat <- nns1$fitted.values
 
 
 
+{% highlight r %}
+summary(nns2)
+{% endhighlight %}
+
+
+
 {% highlight text %}
 ## a 1-0-1 network with 2 weights
-## inputs: nnXhat 
-## output(s): packs 
-## options were - skip-layer connections  linear output units
+## options were - skip-layer connections  linear output units 
+##   b->o  i1->o 
+## 219.58  -1.02
 {% endhighlight %}
 
 Compare output.
@@ -152,24 +158,7 @@ Compare estimates.
 
 {% highlight r %}
 library(ggplot2)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Loading required package: methods
-{% endhighlight %}
-
-
-
-{% highlight r %}
 qplot(lms2$fitted.values - nns2$fitted.values)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.
 {% endhighlight %}
 
 ![plot of chunk qplot](/images/source/2015-10-20-neural-network-instrumental-variables/qplot-1.png) 
