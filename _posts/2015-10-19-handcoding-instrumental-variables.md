@@ -64,80 +64,7 @@ ols(y = y, X = X, intercept = FALSE)
 {% endhighlight %}
 
 Having revisited the above, we can continue with instumental variables.
-Let's start with some simulated data.
-
-
-{% highlight r %}
-# this gives us the same random numbers
-set.seed(123)
-
-library(MASS)
-
-# we are really generating x* and c and using a common variance
-xStarAndC <- mvrnorm(1000, c(20, 15), matrix(c(1, 0.5, 0.5, 1), 2, 2))
-xStar <- xStarAndC[, 1]
-c <- xStarAndC[, 2]
-z <- rnorm(1000)
-x <- xStar + z
-
-# using 1 makes it easy to estimate how 'wrong' an estimator is and toss
-# some noise on y
-y <- 1 + x + c + rnorm(1000, 0, 0.5)
-
-# test
-lm(y ~ x + c)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## 
-## Call:
-## lm(formula = y ~ x + c)
-## 
-## Coefficients:
-## (Intercept)            x            c  
-##      0.8202       1.0165       0.9897
-{% endhighlight %}
-
-We first need to obtain our first stage estimate (putting the whole function between parentheses allows us to both write it to the object `s1` and print it.
-
-
-{% highlight r %}
-( s1 <- ols(y = x, X = z) )
-{% endhighlight %}
-
-
-
-{% highlight text %}
-##         [,1]
-## X  0.9693561
-##   19.9921182
-{% endhighlight %}
-
-We can now obtain the predicted (fitted) values
-
-
-{% highlight r %}
-Xhat <- s1[1]*z + s1[2]
-{% endhighlight %}
-
-Using these fitted values, we can finally estimate our second stage.
-
-
-{% highlight r %}
-ols(y = y, X = Xhat)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-##        [,1]
-## X  1.023056
-##   15.570124
-{% endhighlight %}
-
-Now compare this to the results using the `AER` (Applied Econometric Regressions) package.
+We will replicate an example from the `AER` (Applied Econometric Regressions) package.
 
 
 {% highlight r %}
@@ -164,19 +91,103 @@ library(AER)
 
 
 {% highlight r %}
-ivreg(y ~ x | z)
+rprice  <- with(CigarettesSW, price/cpi)
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## 
-## Call:
-## ivreg(formula = y ~ x | z)
-## 
-## Coefficients:
-## (Intercept)            x  
-##      15.570        1.023
+## Error in with(CigarettesSW, price/cpi): object 'CigarettesSW' not found
+{% endhighlight %}
+
+
+
+{% highlight r %}
+tdiff   <- with(CigarettesSW, (taxs - tax)/cpi)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Error in with(CigarettesSW, (taxs - tax)/cpi): object 'CigarettesSW' not found
+{% endhighlight %}
+
+
+
+{% highlight r %}
+packs   <- CigarettesSW$packs
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Error in eval(expr, envir, enclos): object 'CigarettesSW' not found
+{% endhighlight %}
+
+We first need to obtain our first stage estimate (putting the whole function between parentheses allows us to both write it to the object `s1` and print it.
+
+
+{% highlight r %}
+( s1 <- ols(y = rprice, X = tdiff) )
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Error in cbind(X, 1): object 'tdiff' not found
+{% endhighlight %}
+
+We can now obtain the predicted (fitted) values
+
+
+{% highlight r %}
+Xhat <- s1[1]*tdiff + s1[2]
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Error in eval(expr, envir, enclos): object 's1' not found
+{% endhighlight %}
+
+Using these fitted values, we can finally estimate our second stage.
+
+
+{% highlight r %}
+ols(y = packs, X = Xhat)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Error in cbind(X, 1): object 'Xhat' not found
+{% endhighlight %}
+
+Now compare this to the results using the `AER` package.
+
+
+{% highlight r %}
+library(AER)
+ivreg(packs ~ rprice | tdiff)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Error in eval(expr, envir, enclos): object 'packs' not found
+{% endhighlight %}
+
+When we compare this estimate to the estimate from the linear model, we find that the effect of the price is significantly overestimated there.
+
+
+{% highlight r %}
+lm(packs ~ rprice)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Error in eval(expr, envir, enclos): object 'packs' not found
 {% endhighlight %}
 
 We can also do this using `R`'s built in `lm` function.
@@ -184,22 +195,26 @@ We can also do this using `R`'s built in `lm` function.
 
 {% highlight r %}
 # first stage
-s1 <- lm(x ~ z)
-
-# estimate second stage using fitted values (Xhat)
-lm(y ~ s1$fitted.values)
+s1 <- lm(rprice ~ tdiff)
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## 
-## Call:
-## lm(formula = y ~ s1$fitted.values)
-## 
-## Coefficients:
-##      (Intercept)  s1$fitted.values  
-##           15.570             1.023
+## Error in eval(expr, envir, enclos): object 'rprice' not found
+{% endhighlight %}
+
+
+
+{% highlight r %}
+# estimate second stage using fitted values (Xhat)
+lm(packs ~ s1$fitted.values)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Error in eval(expr, envir, enclos): object 'packs' not found
 {% endhighlight %}
 
 As an intermediate form, we can  manually calculate `Xhat` (`fitted.values`) and estimate using that.
@@ -207,22 +222,26 @@ As an intermediate form, we can  manually calculate `Xhat` (`fitted.values`) and
 
 {% highlight r %}
 # manually obtain fitted values
-Xhat <- s1$coefficients[2]*z + s1$coefficients[1]
-
-# estimate second stage using Xhat
-lm(y ~ Xhat)
+Xhat <- s1$coefficients[2]*tdiff + s1$coefficients[1]
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## 
-## Call:
-## lm(formula = y ~ Xhat)
-## 
-## Coefficients:
-## (Intercept)         Xhat  
-##      15.570        1.023
+## Error in eval(expr, envir, enclos): object 's1' not found
+{% endhighlight %}
+
+
+
+{% highlight r %}
+# estimate second stage using Xhat
+lm(packs ~ Xhat)
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Error in eval(expr, envir, enclos): object 'packs' not found
 {% endhighlight %}
 
 Note that if you estimate a TSLS using the `lm` function,
