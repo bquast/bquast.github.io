@@ -14,7 +14,7 @@ This estimation allows us to [...]
 
 ```{r}
 ols <- function (y, X, intercept=TRUE) {
-  if (intercept) X <- cbind(X, 1)
+  if (intercept) X <- cbind(1, X)
   solve(t(X)%*%X) %*% t(X)%*%y # solve for beta
 }
 ```
@@ -45,7 +45,7 @@ ols(y = y, X = X, intercept = FALSE)
 Having revisited the above, we can continue with instumental variables.
 We will replicate an example from the `AER` (Applied Econometric Regressions) package.
 
-```{r}
+```{r, message=FALSE}
 library(AER)
 data("CigarettesSW")
 rprice  <- with(CigarettesSW, price/cpi)
@@ -53,7 +53,7 @@ tdiff   <- with(CigarettesSW, (taxs - tax)/cpi)
 packs   <- CigarettesSW$packs
 ```
 
-We first need to obtain our first stage estimate (putting the whole function between parentheses allows us to both write it to the object `s1` and print it.
+We first need to obtain our first stage estimate (putting the whole function between parentheses allows us to both write it to the object `s1` and print it).
 
 ```{r}
 ( s1 <- ols(y = rprice, X = tdiff) )
@@ -71,10 +71,9 @@ Using these fitted values, we can finally estimate our second stage.
 ols(y = packs, X = Xhat)
 ```
 
-Now compare this to the results using the `AER` package.
+Now compare this to the results using `ivreg()` fucntion from the `AER` package.
 
 ```{r}
-library(AER)
 ivreg(packs ~ rprice | tdiff)
 ```
 

@@ -15,7 +15,7 @@ This estimation allows us to [...]
 
 {% highlight r %}
 ols <- function (y, X, intercept=TRUE) {
-  if (intercept) X <- cbind(X, 1)
+  if (intercept) X <- cbind(1, X)
   solve(t(X)%*%X) %*% t(X)%*%y # solve for beta
 }
 {% endhighlight %}
@@ -42,9 +42,9 @@ ols(y = y, X = X)
 
 {% highlight text %}
 ##          [,1]
+##    -1.5071384
 ## x1  1.7481029
 ## x2  0.5422556
-##    -1.5071384
 {% endhighlight %}
 
 Which includes the intercept, since the default value it `TRUE` (see function definition above),
@@ -69,35 +69,13 @@ We will replicate an example from the `AER` (Applied Econometric Regressions) pa
 
 {% highlight r %}
 library(AER)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Loading required package: car
-## Loading required package: lmtest
-## Loading required package: zoo
-## 
-## Attaching package: 'zoo'
-## 
-## The following objects are masked from 'package:base':
-## 
-##     as.Date, as.Date.numeric
-## 
-## Loading required package: sandwich
-## Loading required package: survival
-{% endhighlight %}
-
-
-
-{% highlight r %}
 data("CigarettesSW")
 rprice  <- with(CigarettesSW, price/cpi)
 tdiff   <- with(CigarettesSW, (taxs - tax)/cpi)
 packs   <- CigarettesSW$packs
 {% endhighlight %}
 
-We first need to obtain our first stage estimate (putting the whole function between parentheses allows us to both write it to the object `s1` and print it.
+We first need to obtain our first stage estimate (putting the whole function between parentheses allows us to both write it to the object `s1` and print it).
 
 
 {% highlight r %}
@@ -108,8 +86,8 @@ We first need to obtain our first stage estimate (putting the whole function bet
 
 {% highlight text %}
 ##        [,1]
-## X  4.163002
 ##   91.103739
+## X  4.163002
 {% endhighlight %}
 
 We can now obtain the predicted (fitted) values
@@ -129,16 +107,15 @@ ols(y = packs, X = Xhat)
 
 
 {% highlight text %}
-##         [,1]
-## X  -1.019485
-##   219.576384
+##           [,1]
+##   126.89145456
+## X  -0.04658554
 {% endhighlight %}
 
-Now compare this to the results using the `AER` package.
+Now compare this to the results using `ivreg()` fucntion from the `AER` package.
 
 
 {% highlight r %}
-library(AER)
 ivreg(packs ~ rprice | tdiff)
 {% endhighlight %}
 
