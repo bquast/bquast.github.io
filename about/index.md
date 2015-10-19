@@ -2,11 +2,7 @@
 layout: page
 title: About me
 modified: 2015-05-22T15:10:07.573882-04:00
-comments: true
-image:
-  feature: energy.jpg
-  credit: Bastiaan Quast
-  creditlink: http://qua.st/
+comments: false
 ---
 
 Bastiaan Quast, from The Netherlands, living in Geneva, 28 years old.
