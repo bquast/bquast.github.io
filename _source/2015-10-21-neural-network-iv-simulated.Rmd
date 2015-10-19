@@ -1,5 +1,5 @@
 ---
-title: "Neural Network Instrumental Variables"
+title: "Neural Network IV with Simulated Data"
 output: html_document
 permalink: neural-network-iv-simulated
 tags:
@@ -83,7 +83,7 @@ lms2$coefficients - nns2$wts
 
 Compare estimates.
 
-```{r}
+```{r qplot}
 library(ggplot2)
 qplot(lms2$fitted.values - nns2$fitted.values)
 ```
