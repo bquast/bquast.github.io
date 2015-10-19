@@ -8,7 +8,68 @@ tags:
 - neural network
 - machine learning
 layout: post
-published: false
 ---
 
-Nothing here yet
+A simple example
+
+```{r}
+library(AER)
+rprice  <- with(CigarettesSW, price/cpi)
+tdiff   <- with(CigarettesSW, (taxs - tax)/cpi)
+packs   <- CigarettesSW$packs
+```
+
+Estimate using OLS.
+
+```{r}
+lm(packs ~ rprice)
+```
+
+Now using instrumental variables.
+
+```{r}
+ivreg(packs ~ rprice | tdiff)
+```
+
+Now using the `lm` function.
+
+```{r}
+# first stage
+lms1 <- lm(rprice ~ tdiff)
+
+# manually obtain fitted values
+lmXhat <- lms1$coefficients[2]*tdiff + lms1$coefficients[1]
+
+# estimate second stage using Xhat
+(lms2 <- lm(packs ~ lmXhat) )
+```
+
+Now using a neural network
+
+```{r}
+library(nnet)
+
+# first stage
+nns1 <- nnet(rprice ~ tdiff, size=0, skip=TRUE, linout=TRUE)
+
+# manually obtain fitted values
+nnXhat <- nns1$fitted.values
+
+# estimate second stage using Xhat
+(nns2 <- nnet(packs ~ nnXhat, size=0, skip=TRUE, linout=TRUE) )
+```
+
+Compare output.
+
+```{r}
+lms2$coefficients - nns2$wts
+```
+
+Compare estimates.
+
+```{r}
+library(ggplot2)
+qplot(lms2$fitted.values - nns2$fitted.values)
+```
+
+
