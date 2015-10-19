@@ -12,7 +12,7 @@ layout: post
 
 A simple example
 
-```{r}
+```{r, message=FALSE}
 library(AER)
 data("CigarettesSW")
 rprice  <- with(CigarettesSW, price/cpi)

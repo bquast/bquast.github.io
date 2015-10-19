@@ -15,28 +15,6 @@ A simple example
 
 {% highlight r %}
 library(AER)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Loading required package: car
-## Loading required package: lmtest
-## Loading required package: zoo
-## 
-## Attaching package: 'zoo'
-## 
-## The following objects are masked from 'package:base':
-## 
-##     as.Date, as.Date.numeric
-## 
-## Loading required package: sandwich
-## Loading required package: survival
-{% endhighlight %}
-
-
-
-{% highlight r %}
 data("CigarettesSW")
 rprice  <- with(CigarettesSW, price/cpi)
 tdiff   <- with(CigarettesSW, (taxs - tax)/cpi)
