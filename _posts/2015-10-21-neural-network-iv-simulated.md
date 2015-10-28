@@ -111,24 +111,19 @@ Now using instrumental variables.
 
 {% highlight r %}
 library(AER)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in library(AER): there is no package called 'AER'
-{% endhighlight %}
-
-
-
-{% highlight r %}
 ivreg(y ~ x | z)
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## Error in eval(expr, envir, enclos): could not find function "ivreg"
+## 
+## Call:
+## ivreg(formula = y ~ x | z)
+## 
+## Coefficients:
+## (Intercept)            x  
+##      15.949        1.008
 {% endhighlight %}
 
 Now using the `lm` function.
@@ -157,7 +152,7 @@ lmXhat <- lms1$coefficients[2]*z + lms1$coefficients[1]
 ##      15.949        1.008
 {% endhighlight %}
 
-Now using a neural network
+Now we can do the same using a neural network
 
 
 {% highlight r %}
@@ -171,7 +166,7 @@ nns1 <- nnet(x ~ z, size=0, skip=TRUE, linout=TRUE)
 
 {% highlight text %}
 ## # weights:  2
-## initial  value 98765.653982 
+## initial  value 100832.781903 
 ## final  value 924.804075 
 ## converged
 {% endhighlight %}
@@ -190,7 +185,7 @@ nns2 <- nnet(y ~ nnXhat, size=0, skip=TRUE, linout=TRUE)
 
 {% highlight text %}
 ## # weights:  2
-## initial  value 874286.766246 
+## initial  value 528901.038261 
 ## final  value 4019.409973 
 ## converged
 {% endhighlight %}
@@ -220,8 +215,8 @@ lms2$coefficients - nns2$wts
 
 
 {% highlight text %}
-## (Intercept)      lmXhat 
-##  1.0366e-06 -1.1273e-07
+##   (Intercept)        lmXhat 
+## -1.749729e-10 -2.814797e-09
 {% endhighlight %}
 
 Compare estimates.

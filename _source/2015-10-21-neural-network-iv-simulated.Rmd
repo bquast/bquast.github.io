@@ -81,7 +81,7 @@ lmXhat <- lms1$coefficients[2]*z + lms1$coefficients[1]
 (lms2 <- lm(y ~ lmXhat) )
 ```
 
-Now using a neural network
+Now we can do the same using a neural network
 
 ```{r}
 library(nnet)
