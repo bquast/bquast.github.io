@@ -14,8 +14,10 @@ Some simulated data, borrowed from [this post](http://jacobsimmering.com/2014/01
 
 
 {% highlight r %}
+# library for generation multivariate distributions
 library(MASS)
-# same random numbers
+
+# always use the same random numbers
 set.seed(123)
 
 # the means and errors for the multivariate distribution
