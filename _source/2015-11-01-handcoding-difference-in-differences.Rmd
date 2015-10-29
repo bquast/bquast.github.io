@@ -1,0 +1,79 @@
+---
+title: "Handcoding a Difference in Differences"
+output: html_document
+permalink: handcoding-difference-in-differences
+tags:
+- R
+- linear model
+- panel model
+- panel data
+layout: post
+published: false
+---
+
+In this post we will discuss how to manually implement a Difference-in-Differences (DiD) estimator in R,
+using simulated data.
+
+```{r data}
+# library for generation multivariate distributions
+library(MASS)
+
+# always use the same random numbers
+set.seed(123)
+
+# the means and errors for the multivariate distribution
+MUs    <- c(10,15)
+SIGMAs <- matrix(c(2, 1,
+                   1, 2   ),
+                 nrow=2,
+                 ncol=2       )
+
+# the multivariate distribution
+t0 <- mvrnorm(n     = 1000,
+              mu    = MUs,
+              Sigma = SIGMAs)
+
+# common trend
+MUs <- MUs + 10
+
+# time period 1: t1
+t1 <- mvrnorm(n     = 1000,
+              mu    = MUs,
+              Sigma = SIGMAs)
+
+MUs <- MUs + c(5, 10)
+
+# time period 2: t2
+t2 <- mvrnorm(n     = 1000,
+              mu    = MUs,
+              Sigma = SIGMAs)
+
+```
+
+```{r descriptives}
+# create data.frames with time index
+t0 <- data.frame(t = 0, t0)
+t1 <- data.frame(t = 1, t1)
+t2 <- data.frame(t = 2, t2)
+
+# summarise data
+summary(t0)
+summary(t1)
+summary(t2)
+
+# combine data
+t012 <- rbind(t0, t1, t2)
+```
+
+```{r plot}
+library(ggplot2)
+library(dplyr)
+
+t012 %>%
+  group_by(t) %>%
+  summarise(x1=mean(X1), x2=mean(X2) ) %>%
+  ggplot(aes(x=t)) + 
+    geom_line(aes(y=x1, colour="blue")) + # add x1 to plot
+    geom_line(aes(y=x2, colour="red")) + # add x2 to plot
+    geom_abline(intercept=10, slope=10, colour="red", linetype=2) # assumed common trend
+```
