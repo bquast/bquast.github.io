@@ -113,4 +113,3 @@ qplot(lms2$fitted.values - nns2$fitted.values)
 ```
 
 Now redo using a non-linearity
-
