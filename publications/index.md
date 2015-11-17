@@ -7,6 +7,12 @@ image:
   creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 ---
 
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,my,su,sw,ur', gaTrack: true, gaId: 'UA-52945502-2'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 decompr: Global Value Chain decomposition in R
 ----------------------------------------------
 **by Bastiaan Quast and Viktor Kummritz**
