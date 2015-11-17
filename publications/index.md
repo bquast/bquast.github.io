@@ -7,11 +7,6 @@ image:
   creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 ---
 
-<div id="google_translate_element"></div><script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,my,su,sw,ur', gaTrack: true, gaId: 'UA-52945502-2'}, 'google_translate_element');
-}
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 decompr: Global Value Chain decomposition in R
 ----------------------------------------------
@@ -56,6 +51,13 @@ sécurité, du comportement des femmes en matière de sécurité ou encore de la
 sécurité.
 
 [download the full report](http://www.coginta.org/uploads/documents/8f53340bc6bda5e6a44a9f5697da31f0ed0e9021.pdf)
+
+
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,my,su,sw,ur', gaTrack: true, gaId: 'UA-52945502-2'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 Diagnostic Local de Sécurité 2013; Geneva, Switzerland
