@@ -3,6 +3,7 @@ layout: post
 title: "Hand Coding a Linear Model function"
 tags: [R, linear model, lm, ols, function, programming]
 permalink: handcoding-lm-function
+published: false
 ---
 
 In [yesterday's post](/handcoding-lm) we developed a method for constructing a multivariate linear model with an intercept.

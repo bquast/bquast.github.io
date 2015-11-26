@@ -3,7 +3,7 @@ layout: post
 title: diagonals in a network
 tags: [R, diagonals, network, social]
 permalink: diagonals-network
-published: false
+published: true
 ---
 
 A typical example in which `diagonals` can be helpful is Social Network
@@ -21,8 +21,8 @@ m
 
 {% highlight text %}
 ##      [,1] [,2] [,3]
-## [1,]    0    0    1
-## [2,]    1    0    1
+## [1,]    1    0    1
+## [2,]    0    0    0
 ## [3,]    0    1    1
 {% endhighlight %}
 
@@ -44,14 +44,14 @@ M
 
 {% highlight text %}
 ##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
-##  [1,]    0    0    0    0    0    0    0    0    1
-##  [2,]    0    0    0    0    0    0    1    0    1
-##  [3,]    0    0    0    0    0    0    0    1    1
-##  [4,]    0    0    1    0    0    0    0    0    1
-##  [5,]    1    0    1    0    0    0    1    0    1
-##  [6,]    0    1    1    0    0    0    0    1    1
-##  [7,]    0    0    0    0    0    1    0    0    1
-##  [8,]    0    0    0    1    0    1    1    0    1
+##  [1,]    1    0    1    0    0    0    1    0    1
+##  [2,]    0    0    0    0    0    0    0    0    0
+##  [3,]    0    1    1    0    0    0    0    1    1
+##  [4,]    0    0    0    0    0    0    0    0    0
+##  [5,]    0    0    0    0    0    0    0    0    0
+##  [6,]    0    0    0    0    0    0    0    0    0
+##  [7,]    0    0    0    1    0    1    1    0    1
+##  [8,]    0    0    0    0    0    0    0    0    0
 ##  [9,]    0    0    0    0    1    1    0    1    1
 {% endhighlight %}
 

@@ -3,7 +3,7 @@ layout: post
 title: diagonals in a network
 tags: [R, diagonals, network, social]
 permalink: diagonals-network
-published: false
+published: true
 ---
 
 A typical example in which `diagonals` can be helpful is Social Network

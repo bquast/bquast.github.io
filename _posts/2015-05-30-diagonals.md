@@ -3,6 +3,7 @@ layout: post
 title: introducing diagonals
 tags: [R, diagonals, matrix, package]
 permalink: diagonals
+published: true
 ---
 
 A new R package `diagonals` is now available on CRAN. The package implements several tools for dealing with **fat diagonals** on matrices.

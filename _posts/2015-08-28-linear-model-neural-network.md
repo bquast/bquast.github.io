@@ -2,12 +2,8 @@
 title: "Linear Model and Neural Network"
 output: pdf_document
 permalink: linear-model-neural-network
-tags:
-- R
-- linear model
-- neural network
-- machine learning
-layout: post
+tags: [R, linear model, neural network, machine learning]
+published: false
 ---
 
 In this short post I want to quickly demonstrate how the most basic neural network (no hidden layer) gives us the same results as the linear model.
@@ -86,8 +82,8 @@ nn1 <- nnet(formula=m1, data=swiss, size=0, skip=TRUE, linout=TRUE)
 
 {% highlight text %}
 ## # weights:  6
-## initial  value 133241.333980 
-## iter  10 value 2105.042931
+## initial  value 237223.967388 
+## iter  10 value 2105.042930
 ## iter  10 value 2105.042930
 ## iter  10 value 2105.042930
 ## final  value 2105.042930 

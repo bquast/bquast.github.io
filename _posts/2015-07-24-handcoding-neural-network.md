@@ -3,6 +3,7 @@ layout: post
 title: "Hand Coding a Neural Network"
 tags: [R, neural network, machine learning]
 permalink: handcoding-neural-network
+published: false
 ---
 
 Andrew Trask wrote an amazing post at [I am Trask](http://iamtrask.github.io/) called:
@@ -17,7 +18,7 @@ all lines and comments correspond directly to the original code.
 The code for the Neural Network in 11 lines of R is:
 
 
-{% highlight r linenos %}
+{% highlight r %}
 X = matrix(c(0,0,1,0,1,1,1,0,1,1,1,1), nrow=4, byrow=TRUE)
 y = matrix(c(0,1,1,0),nrow=4)
 syn0 = matrix(runif(n = 12, min=-1, max=1), nrow=3)
@@ -34,7 +35,7 @@ for (j in 1:60000) {
 The output of this is:
 
 
-{% highlight r linenos %}
+{% highlight r %}
 syn0
 syn1
 {% endhighlight %}
@@ -42,22 +43,22 @@ syn1
 
 
 {% highlight text %}
-##           [,1]      [,2]      [,3]        [,4]
-## [1,] -5.212097  5.533400  5.103196 -0.09917318
-## [2,] -5.353412  5.329328  5.255606  1.30102506
-## [3,]  1.836841 -8.191955 -1.777823  0.08858564
+##           [,1]       [,2]      [,3]      [,4]
+## [1,]  3.850361 -1.2415228 -6.952398 -4.634584
+## [2,] -3.158713  2.2793418 -6.167948 -5.632617
+## [3,]  2.133633  0.3900398  2.787350  7.808627
 ##            [,1]
-## [1,]  -7.314729
-## [2,] -12.920228
-## [3,]   7.469894
-## [4,]  -1.035425
+## [1,]  -4.313891
+## [2,]  -2.923203
+## [3,] -11.902840
+## [4,]  11.213823
 {% endhighlight %}
 
 After showing the 11 lines, Andrew builds a more simplistic version of this model in order to explain the workings,
 the `R` version of this code is:
 
 
-{% highlight r linenos %}
+{% highlight r %}
 # no importing here
 
 # sigmoid function
@@ -116,7 +117,7 @@ print(l1)
 Finally a more legible version of the 11 lines model is developed, the `R` equivalent of this model is:
 
 
-{% highlight r linenos %}
+{% highlight r %}
 # no importing here
 
 nonlin = function(x,deriv=FALSE) {
@@ -184,7 +185,7 @@ for (j in 1:60000) {
 
 
 
-{% highlight r linenos %}
+{% highlight r %}
 print("Output After Training:")
 {% endhighlight %}
 
@@ -196,7 +197,7 @@ print("Output After Training:")
 
 
 
-{% highlight r linenos %}
+{% highlight r %}
 print(l1)
 {% endhighlight %}
 

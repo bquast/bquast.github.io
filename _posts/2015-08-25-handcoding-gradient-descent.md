@@ -3,6 +3,7 @@ layout: post
 title: "Hand Coding Gradient Descent"
 tags: [R, neural network, gradient, descent, machine learning]
 permalink: handcoding-gradient-descent
+published: false
 ---
 
 Andrew Trask wrote an amazing post at [I am Trask](http://iamtrask.github.io/) called:
@@ -25,7 +26,7 @@ all lines and comments correspond directly to the original code.
 The code for the Neural Network in 13 lines of R is:
 
 
-{% highlight r linenos %}
+{% highlight r %}
 # no importing here
 X = matrix(c(0,0,1,0,1,1,1,0,1,1,1,1), nrow=4, byrow=TRUE)
 y = matrix(c(0,1,1,0),nrow=4)
@@ -44,22 +45,22 @@ for (j in 1:60000) {
 The output of this is:
 
 
-{% highlight r linenos %}
+{% highlight r %}
 synapse_0
 {% endhighlight %}
 
 
 
 {% highlight text %}
-##           [,1]      [,2]     [,3]      [,4]
-## [1,] -6.590990 -6.228550 2.018493 -1.004613
-## [2,]  6.506633  6.339697 1.262914 -1.568644
-## [3,] -3.524261  3.241857 0.295714  2.704211
+##           [,1]      [,2]      [,3]      [,4]
+## [1,] -6.101768  5.148567 -5.604911  3.540070
+## [2,]  3.659284  5.112462  7.336792  0.509775
+## [3,] -1.217326 -1.107076  2.309337 -2.279484
 {% endhighlight %}
 
 
 
-{% highlight r linenos %}
+{% highlight r %}
 synapse_1
 {% endhighlight %}
 
@@ -67,17 +68,17 @@ synapse_1
 
 {% highlight text %}
 ##            [,1]
-## [1,]  11.371375
-## [2,] -10.665801
-## [3,]   3.154690
-## [4,]   3.208889
+## [1,]   8.598456
+## [2,]   8.493038
+## [3,] -10.543036
+## [4,]  -3.787804
 {% endhighlight %}
 
 After showing the 13 lines, Andrew builds a more simplistic version of this model in order to explain the workings,
 the `R` version of this code is:
 
 
-{% highlight r linenos %}
+{% highlight r %}
 # no importing here
 
 # compute sigmoid nonlinearity
@@ -138,7 +139,7 @@ print(layer_1)
 
 
 
-{% highlight r linenos %}
+{% highlight r %}
 # no importing here
 
 alphas = c(0.001,0.01,0.1,1,10,100,1000)
@@ -257,7 +258,7 @@ for (alpha in alphas) {
 
 
 
-{% highlight r linenos %}
+{% highlight r %}
 print("Output After Training (transposed):")
 print(t(layer_1))
 {% endhighlight %}

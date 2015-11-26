@@ -3,6 +3,7 @@ layout: post
 title: WIOD data sets package
 tags: [R, wiod, decompr, gvc]
 permalink: wiod
+published: true
 ---
 
 A new R package `wiod` is now available on GitHub. The package contains the complete WIOD data sets, in a format compatible with the [decompr](http://qua.st/decompr) and [gvc](http://qua.st/gvc) package.
