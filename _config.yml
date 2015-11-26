@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title:            QUA.ST
+title:            qua.st
 locale:           en_US
 url:              http://qua.st
 encoding:         UTF-8
