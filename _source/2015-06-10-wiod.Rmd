@@ -14,7 +14,7 @@ Installation
 -------------
 The package can be installed using:
 
-```{r install}
+```{r install, eval=FALSE}
 install.packages('wiod') # case sensitive!
 ```
 
