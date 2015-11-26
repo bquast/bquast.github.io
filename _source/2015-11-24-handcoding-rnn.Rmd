@@ -12,7 +12,7 @@ published: false
 
 ```{r data}
 # no importing here
-set.seed(0)
+# set.seed(0)
 
 # compute sigmoid nonlinearity
 sigmoid = function(x) {
@@ -55,10 +55,10 @@ synapse_h_update = matrix(0, nrow = hidden_dim, ncol = hidden_dim)
 for (j in 1:10000) {
   
   # generate a simple addition problem (a + b = c)
-  a_int = sample(1:largest_number/2, 1) # int version
+  a_int = sample(1:(largest_number/2), 1) # int version
   a = int2binary(a_int) # binary encoding
   
-  b_int = sample(1:largest_number/2, 1) # int version
+  b_int = sample(1:(largest_number/2), 1) # int version
   b = int2binary(b_int)
   
   # true answer
@@ -132,7 +132,10 @@ for (j in 1:10000) {
     print(paste("Error:", overallError))
     print(paste("Pred:", paste(d, collapse = " ")))
     print(paste("True:", paste(c, collapse = " ")))
-    print(paste(a_int, "+", b_int, "=", c_int))
+    out = 0
+    for (x in 1:length(d)) {
+      out[x] = rev(d)[x]*2^(x-1) }
+    print(paste(a_int, "+", b_int, "=", sum(out)))
     print("----------------")                     }             }
 
 ```
