@@ -6,14 +6,18 @@ permalink: wiod
 published: true
 ---
 
-A new R package `wiod` is now available on GitHub. The package contains the complete WIOD data sets, in a format compatible with the [decompr](http://qua.st/decompr) and [gvc](http://qua.st/gvc) package.
+The `wiod` package is now available on [CRAN](http://cran.r-project.org/package=wiod).
+The package contains the complete [WIOD](http://www.wiod.org/) data sets, in a format compatible with the [decompr](http://qua.st/decompr) and [gvc](http://qua.st/gvc) package.
 
-The package can be installed from GitHub.
 
-```{r}
-if (!require('devtools')) install.packages('devtools')
-devtools::install_github("bquast/wiod")
+Installation
+-------------
+The package can be installed using:
+
+```{r install}
+install.packages('wiod') # case sensitive!
 ```
+
 
 Usage
 ----------
@@ -32,26 +36,26 @@ data(wiod95)
 For information on using the package, please refer to the help files.
 
 ```{r}
-help("wiod")
-help(package = "wiod")
+help('wiod')
+help(package = 'wiod')
 ```
     
 For examples of usage, see the function-specific help pages.
 
 
 ```{r}
-help("countries")
-help("industries")
-help("inter95")
+help('countries')
+help('industries')
+help('inter95')
 ```
 
 In addition to the help files we provide long-form examples in the [vignette](http://cran.r-project.org/web/packages/wiod/vignettes/wiod.html).
 
 ```{r}
-vignette("wiod")
+vignette('wiod')
 
 # or
-browseVignettes("wiod")
+browseVignettes('wiod')
 ```
 
 
@@ -60,7 +64,7 @@ Additional Information
 An overview of the changes is available in the NEWS file.
 
 ```{r}
-news(package="wiod")
+news(package='wiod')
 ```
 
 There is also a blog post with information on my [personal website](http://qua.st/).
@@ -70,6 +74,13 @@ http://qua.st/wiod/
 
 Development
 -------------
+A development version can be installed **at your own peril**, using:
+
+```{r, eval=FALSE}
+if (!require('devtools')) install.packages('devtools')
+devtools::install_github("bquast/wiod")
+```
+
 Development takes place on the GitHub page.
 
 http://github.com/bquast/wiod
