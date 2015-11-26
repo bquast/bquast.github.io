@@ -74,8 +74,8 @@ devtools::install_github("bquast/learNN")
 
 Development takes place on the GitHub page.
 
-> http://github.com/bquast/wiod
+# https://github.com/bquast/learNN
 
 Bugs can be filed on the GitHub issues page.
 
-> https://github.com/bquast/wiod/issues.
+# https://github.com/bquast/learNN/issues
