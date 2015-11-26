@@ -6,20 +6,7 @@ permalink: learNN
 published: true
 ---
 
-The [learNN package ](http://cran.r-project.org/package=learNN) makes it easy to become familiar with the way neural networks work by demonstrating the key concepts using straightforward code examples.
-
-The package can now be installed from [CRAN](http://cran.r-project.org/) using:
-
-```{r, eval=FALSE}
-install.packages('learNN') # case sensitive!
-```
-
-A development version can be installed **at your own peril**, using:
-
-```{r, eval=FALSE}
-if (!require('devtools')) install.packages('devtools')
-devtools::install_github("bquast/learNN")
-```
+The [learNN package ](http://cran.r-project.org/package=learNN) makes it easy to become familiar with the way neural networks work.
 
 The package is based on previous post on this blog.
 
@@ -35,4 +22,4 @@ In a follow up post called:
 
 Andrew shows how to improve the network with optimisation through gradient descent.
 
-Any issues can be filed on the [issues page](https://github.com/bquast/learNN/issues/) of the [GitHub repository](https://github.com/bquast/learNN/).
+In previous post I've translated this code to R.
