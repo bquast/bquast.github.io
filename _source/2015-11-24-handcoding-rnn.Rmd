@@ -58,7 +58,7 @@ for (j in 1:10000) {
   a_int = sample(1:largest_number/2, 1) # int version
   a = int2binary(a_int) # binary encoding
   
-  b_int = sample(1:largest_number/2)
+  b_int = sample(1:largest_number/2, 1) # int version
   b = int2binary(b_int)
   
   # true answer
@@ -100,7 +100,7 @@ for (j in 1:10000) {
   
   future_layer_1_delta = matrix(0, nrow = 1, ncol = hidden_dim)
   
-  for (position in 0:binary_dim) {
+  for (position in 0:(binary_dim-1)) {
     
     X = cbind(a[position+1], b[position+1])
     layer_1 = layer_1_values[dim(layer_1_values)[1]-position,]
@@ -130,12 +130,9 @@ for (j in 1:10000) {
   # print out progress
   if(j %% 1000 ==0) {
     print(paste("Error:", overallError))
-    print(paste("Pred:", d))
-    print(paste("True:", c))
+    print(paste("Pred:", paste(d, collapse = " ")))
+    print(paste("True:", paste(c, collapse = " ")))
     print(paste(a_int, "+", b_int, "=", c_int))
-  }
-  
-  
-  }
+    print("----------------")                     }             }
 
 ```
