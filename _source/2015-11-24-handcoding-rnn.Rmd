@@ -75,11 +75,11 @@ for (j in 1:10000) {
   # layer_1_values = rbind(layer_1_values, matrix(0, nrow=1, ncol=hidden_dim))
   
   # moving along the positions in the binary encoding
-  for (position in 0:binary_dim) {
+  for (position in 0:(binary_dim-1)) {
     
     # generate input and output
-    X = cbind(a[binary_dim - (position - 1)],b[binary_dim - (position - 1)])
-    y = c[binary_dim - (position - 1)]
+    X = cbind(a[binary_dim - position],b[binary_dim - position])
+    y = c[binary_dim - position]
     
     # hidden layer (input ~+ prev_hidden)
     layer_1 = sigmoid((X%*%synapse_0) + (layer_1_values[dim(layer_1_values)[1],] %*% synapse_h))
@@ -93,7 +93,7 @@ for (j in 1:10000) {
     overallError = overallError + abs(layer_2_error)
     
     # decode estimate so we can print it out
-    d[binary_dim - (position - 1)] = round(layer_2)
+    d[binary_dim - position] = round(layer_2)
     
     # store hidden layer so we can print it out
     layer_1_values = rbind(layer_1_values, layer_1)                                                  }
