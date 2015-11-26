@@ -2,12 +2,8 @@
 title: "Neural Network IV with Simulated Data"
 output: html_document
 permalink: neural-network-iv-simulated
-tags:
-- R
-- linear model
-- neural network
-- machine learning
-layout: post
+tags: [R, linear model, neural network]
+published: false
 ---
 
 Some simulated data, borrowed from [this post](http://jacobsimmering.com/2014/01/10/InstrumentalVariables.html).
@@ -230,3 +226,5 @@ qplot(lms2$fitted.values - nns2$fitted.values)
 {% endhighlight %}
 
 ![plot of chunk qplot](/images/source/2015-10-21-neural-network-iv-simulated/qplot-1.png) 
+
+Now redo using a non-linearity
