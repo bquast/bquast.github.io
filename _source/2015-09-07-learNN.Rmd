@@ -6,8 +6,7 @@ permalink: learNN
 published: true
 ---
 
-The [learNN package ](http://cran.r-project.org/package=learNN) makes it easy to become familiar with the way neural networks work.
-
+The [learNN package ](http://cran.r-project.org/package=learNN) makes it easy to become familiar with the way neural networks work by demonstrating the key concepts using straightforward code examples.
 The package is based on previous post on this blog.
 
 Andrew Trask wrote an amazing post at [I am Trask](http://iamtrask.github.io/) called:
@@ -22,4 +21,61 @@ In a follow up post called:
 
 Andrew shows how to improve the network with optimisation through gradient descent.
 
-In previous post I've translated this code to R.
+
+Installation
+--------------
+The package can now be installed from [CRAN](http://cran.r-project.org/) using:
+
+```{r, eval=FALSE}
+install.packages('learNN') # case sensitive!
+```
+
+Usage
+---------
+After installation, the package can be loaded using:
+
+```{r}
+library(learNN)
+```
+
+For information on using the package, please refer to the help files.
+
+```{r}
+help('learnn')
+help(package = 'learNN')
+```
+    
+For examples of usage, see the function-specific help pages.
+
+```{r}
+help('learn_bp') # learn Back Propagation
+help('learn_gd') # learn Gradient Descent
+help('learn_do') # learn DropOut
+```
+
+
+Additional Information
+-----------------------
+An overview of the changes is available in the NEWS file.
+
+```{r}
+news(package='wiod')
+```
+
+
+Development
+-------------
+A development version can be installed **at your own peril**, using:
+
+```{r, eval=FALSE}
+if (!require('devtools')) install.packages('devtools')
+devtools::install_github("bquast/learNN")
+```
+
+Development takes place on the GitHub page.
+
+http://github.com/bquast/wiod
+
+Bugs can be filed on the GitHub issues page.
+
+https://github.com/bquast/wiod/issues.
