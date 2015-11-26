@@ -89,7 +89,7 @@ for (j in 1:10000) {
     
     # did we miss?... if so, by how much?
     layer_2_error = y - layer_2
-    layer_2_deltas = rbind(layer_2_error * sigmoid_output_to_derivative(layer_2), layer_2_deltas)
+    layer_2_deltas = rbind(layer_2_deltas, layer_2_error * sigmoid_output_to_derivative(layer_2))
     overallError = overallError + abs(layer_2_error)
     
     # decode estimate so we can print it out
@@ -112,8 +112,8 @@ for (j in 1:10000) {
     layer_1_delta = (future_layer_1_delta %*% t(synapse_h) + layer_2_delta %*% t(synapse_1)) * sigmoid_output_to_derivative(layer_1)
     
     # let's update all our weights so we can try again
-    synapse_1_update = synapse_1_update + synapse_1_update %*% layer_2_delta
-    synapse_h_update = synapse_h_update + prev_layer_1 %*% layer_1_delta
+    synapse_1_update = synapse_1_update + matrix(layer_1) %*% layer_2_delta
+    synapse_h_update = synapse_h_update + matrix(prev_layer_1) %*% layer_1_delta
     synapse_0_update = synapse_0_update + t(X) %*% layer_1_delta
     
     future_layer_1_delta = layer_1_delta                             }
