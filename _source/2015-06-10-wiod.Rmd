@@ -23,19 +23,20 @@ Usage
 ----------
 Following installation, the package can be loaded using:
 
-```{r}
+```{r load}
 library(wiod)
 ```
 
 Data can be loaded using the the `data()` function, using `wiod` followed by the last two digits of the required year, as the argument, e.g.
 
-```{r}
+```{r data}
 data(wiod95)
+ls()
 ```
 
 For information on using the package, please refer to the help files.
 
-```{r}
+```{r package-help, eval=FALSE}
 help('wiod')
 help(package = 'wiod')
 ```
@@ -43,7 +44,7 @@ help(package = 'wiod')
 For examples of usage, see the function-specific help pages.
 
 
-```{r}
+```{r help, eval=FALSE}
 help('countries')
 help('industries')
 help('inter95')
@@ -51,7 +52,7 @@ help('inter95')
 
 In addition to the help files we provide long-form examples in the [vignette](http://cran.r-project.org/web/packages/wiod/vignettes/wiod.html).
 
-```{r}
+```{r vignette, eval=FALSE}
 vignette('wiod')
 
 # or
@@ -63,13 +64,9 @@ Additional Information
 -----------------------
 An overview of the changes is available in the NEWS file.
 
-```{r}
+```{r news, eval=FALSE}
 news(package='wiod')
 ```
-
-There is also a blog post with information on my [personal website](http://qua.st/).
-
-http://qua.st/wiod/
 
 
 Development
