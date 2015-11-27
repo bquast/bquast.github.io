@@ -6,17 +6,7 @@ permalink: diagonals
 published: true
 ---
 
-A new R package `diagonals` is now available on CRAN. The package implements several tools for dealing with **fat diagonals** on matrices.
-
-Fat diagonal matrices occur when we combine two dimensions of a data set along one edge of a matrix. For example, trade-flow data in the [decompr](http://cran.r-project.org/package=decompr) and [gvc](http://cran.r-project.org/package=gvc) package have each country-industry combination occur on each edge of the matrix. 
-
-A fat diagonal matrix looks like this.
-
-
-{% highlight r %}
-library(diagonals)
-{% endhighlight %}
-
+A new R package `diagonals` is now available on CRAN. The package implements several tools for dealing with **fat diagonals** on matrices, such as this one:
 
 
 {% highlight text %}
@@ -26,12 +16,6 @@ library(diagonals)
 ##     O N
 ##     A L
 ##         S
-{% endhighlight %}
-
-
-
-{% highlight r %}
-fatdiag(12, steps=3)
 {% endhighlight %}
 
 
@@ -51,6 +35,8 @@ fatdiag(12, steps=3)
 ## [11,]    0    0    0    0    0    0    0    0    1     1     1     1
 ## [12,]    0    0    0    0    0    0    0    0    1     1     1     1
 {% endhighlight %}
+
+Fat diagonal matrices occur when we combine two dimensions of a data set along one edge of a matrix. For example, trade-flow data in the [decompr](http://cran.r-project.org/package=decompr) and [gvc](http://cran.r-project.org/package=gvc) package have each country-industry combination occur on each edge of the matrix. 
 
 The workhorse function of this package is the `fatdiag` function, which tries behave similarly to the `diag` function from the `base` package, but then with diagonals being **fat**.
 
@@ -154,7 +140,9 @@ fatdiag(12, size=c(3,4) )
 ##  [9,]    0    0    0    0    0    0    0    0    1     1     1     1
 {% endhighlight %}
 
-The [diagonals packge](http://cran.r-project.org/?package=diagonals) is now [available on CRAN](/diagonals-cran) and can therefore be install directly from inside `R` using:
+Installation
+--------------
+The [diagonals packge](http://cran.r-project.org/?package=diagonals) is now [available on CRAN](/diagonals-cran) and can therefore be installed directly from inside `R` using:
 
 
 {% highlight r %}
@@ -179,4 +167,50 @@ vignette("fatdiag")
 browseVignettes(package = "diagonals")
 {% endhighlight %}
 
-For more information on the package and its development please see yesterday's post [diagonals on CRAN](/diagonals-cran).
+
+Development
+-------------
+[![CRAN Version](http://www.r-pkg.org/badges/version/diagonals)](http://cran.r-project.org/?package=diagonals)
+[![Travis-CI Build Status](https://travis-ci.org/bquast/diagonals.svg?branch=master)](https://travis-ci.org/bquast/diagonals) 
+[![Coverage Status](https://img.shields.io/coveralls/bquast/diagonals.svg)](https://coveralls.io/r/bquast/diagonals?branch=master)
+
+The development version, to be used **at your peril**, can be installed using:
+
+
+{% highlight r %}
+if (!require('devtools')) install.packages('devtools')
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Loading required package: devtools
+{% endhighlight %}
+
+
+
+{% highlight r %}
+devtools::install_github("bquast/decompr")
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Downloading GitHub repo bquast/decompr@master
+## Installing decompr
+## '/Library/Frameworks/R.framework/Resources/bin/R' --no-site-file  \
+##   --no-environ --no-save --no-restore CMD INSTALL  \
+##   '/private/var/folders/zz/3q_q_tr97vl8rmhkc4bjn7c40000gp/T/RtmpUPqDRW/devtools3d58184d11d9/bquast-decompr-9f026d8'  \
+##   --library='/Library/Frameworks/R.framework/Versions/3.2/Resources/library'  \
+##   --install-tests
+{% endhighlight %}
+
+Development takes place on the GitHub page.
+
+http://github.com/bquast/diagonals
+
+Bugs can be filed on the issues page on GitHub.
+
+https://github.com/bquast/diagonals/issues
+
+
