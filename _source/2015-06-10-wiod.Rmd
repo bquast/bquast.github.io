@@ -78,10 +78,5 @@ if (!require('devtools')) install.packages('devtools')
 devtools::install_github("bquast/wiod")
 ```
 
-Development takes place on the GitHub page.
-
-# https://github.com/bquast/wiod
-
-Bugs can be filed on the GitHub issues page.
-
-# https://github.com/bquast/wiod/issues.
+Development takes place on the [GitHub page](https://github.com/bquast/wiod),
+bugs can be filed on the [Issues page](https://github.com/bquast/wiod/issues).
