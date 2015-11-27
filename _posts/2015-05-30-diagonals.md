@@ -10,17 +10,6 @@ A new R package `diagonals` is now available on CRAN. The package implements sev
 
 
 {% highlight text %}
-## 
-## D I
-## A G
-##     O N
-##     A L
-##         S
-{% endhighlight %}
-
-
-
-{% highlight text %}
 ##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10] [,11] [,12]
 ##  [1,]    1    1    1    1    0    0    0    0    0     0     0     0
 ##  [2,]    1    1    1    1    0    0    0    0    0     0     0     0
@@ -179,38 +168,8 @@ The development version, to be used **at your peril**, can be installed using:
 
 {% highlight r %}
 if (!require('devtools')) install.packages('devtools')
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Loading required package: devtools
-{% endhighlight %}
-
-
-
-{% highlight r %}
 devtools::install_github("bquast/decompr")
 {% endhighlight %}
 
-
-
-{% highlight text %}
-## Downloading GitHub repo bquast/decompr@master
-## Installing decompr
-## '/Library/Frameworks/R.framework/Resources/bin/R' --no-site-file  \
-##   --no-environ --no-save --no-restore CMD INSTALL  \
-##   '/private/var/folders/zz/3q_q_tr97vl8rmhkc4bjn7c40000gp/T/RtmpUPqDRW/devtools3d58184d11d9/bquast-decompr-9f026d8'  \
-##   --library='/Library/Frameworks/R.framework/Versions/3.2/Resources/library'  \
-##   --install-tests
-{% endhighlight %}
-
-Development takes place on the GitHub page.
-
-http://github.com/bquast/diagonals
-
-Bugs can be filed on the issues page on GitHub.
-
-https://github.com/bquast/diagonals/issues
-
-
+Development takes place on the [GitHub page](http://github.com/bquast/diagonals),
+bugs can be filed on the [issues page](https://github.com/bquast/diagonals/issues).

@@ -8,7 +8,7 @@ published: true
 
 A new R package `diagonals` is now available on CRAN. The package implements several tools for dealing with **fat diagonals** on matrices, such as this one:
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE}
 library(diagonals)
 fatdiag(12, steps=3)
 ```
@@ -78,17 +78,10 @@ Development
 
 The development version, to be used **at your peril**, can be installed using:
 
-```{r devel}
+```{r devel, eval=FALSE}
 if (!require('devtools')) install.packages('devtools')
 devtools::install_github("bquast/decompr")
 ```
 
-Development takes place on the GitHub page.
-
-http://github.com/bquast/diagonals
-
-Bugs can be filed on the issues page on GitHub.
-
-https://github.com/bquast/diagonals/issues
-
-
+Development takes place on the [GitHub page](http://github.com/bquast/diagonals),
+bugs can be filed on the [issues page](https://github.com/bquast/diagonals/issues).
