@@ -2,7 +2,7 @@
 title: "Making the Next Billion Demand Access"
 output: html_document
 permalink: internet-demand
-tags: [internet, ]
+tags: [internet demand, internet access]
 ---
 
 ## The Local-Content Effect of `google.co.za` in Setswana
