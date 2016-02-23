@@ -3,10 +3,9 @@ title: "Making the Next Billion Demand Access"
 output: html_document
 permalink: internet-demand
 tags: [internet demand, internet access]
-published: true
 ---
 
-## The Local-Content Effect of `google.co.za` in Setswana
+The Local-Content Effect of `google.co.za` in Setswana
 
 ## Abstract
 
@@ -16,8 +15,8 @@ The full paper is [available here](https://github.com/bquast/Making-Next-Billion
 
 The full `git` repository is available at:
 
-> https://github.com/bquast/Making-Next-Billion-Demand-Access/
+https://github.com/bquast/Making-Next-Billion-Demand-Access/
 
 and can be cloned using:
 
-> git clone https://github.com/bquast/Making-Next-Billion-Demand-Access.git
+git clone https://github.com/bquast/Making-Next-Billion-Demand-Access.git
