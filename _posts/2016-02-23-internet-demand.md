@@ -6,7 +6,7 @@ permalink: internet-demand
 tags: [internet demand, internet access]
 ---
 
-## The Local-Content Effect of `google.co.za` in Setswana
+The Local-Content Effect of `google.co.za` in Setswana
 
 ## Abstract
 
