@@ -3,7 +3,6 @@ title: "Linear Model and Neural Network"
 output: pdf_document
 permalink: linear-model-neural-network
 tags: [R, linear model, neural network, machine learning]
-published: false
 ---
 
 In this short post I want to quickly demonstrate how the most basic neural network (no hidden layer) gives us the same results as the linear model.

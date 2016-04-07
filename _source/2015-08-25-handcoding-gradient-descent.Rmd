@@ -3,7 +3,6 @@ layout: post
 title: "Hand Coding Gradient Descent"
 tags: [R, neural network, gradient, descent, machine learning]
 permalink: handcoding-gradient-descent
-published: false
 ---
 
 Andrew Trask wrote an amazing post at [I am Trask](http://iamtrask.github.io/) called:

@@ -3,7 +3,6 @@ layout: post
 title: "Hand Coding the Power of a Test"
 tags: [R, hand coding, linear model, power, test, hypthesis]
 permalink: handcoding-power-test
-published: false
 ---
 
 We want to test if our population average is different from twenty.

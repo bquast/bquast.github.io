@@ -3,7 +3,6 @@ title: "Handcoding a Panel Model"
 output: html_document
 permalink: handcoding-panel-model
 tags: [R, linear model, panel model, panel data]
-published: false
 ---
 
 

@@ -3,7 +3,6 @@ layout: post
 title: "Hand Coding Hilton's Dropout"
 tags: [R, neural network, hilton, dropout, machine learning]
 permalink: handcoding-dropout
-published: false
 ---
 
 Andrew Trask wrote an amazing post at [I am Trask](http://iamtrask.github.io/) called:

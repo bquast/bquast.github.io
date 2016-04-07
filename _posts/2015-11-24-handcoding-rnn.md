@@ -3,7 +3,6 @@ title: "Handcoding a Recurrent Neural Network"
 output: html_document
 permalink: handcoding-rnn
 tags: [R, recurrent neural network, RNN]
-published: false
 ---
 
 

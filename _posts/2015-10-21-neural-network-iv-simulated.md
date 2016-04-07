@@ -3,7 +3,6 @@ title: "Neural Network IV with Simulated Data"
 output: html_document
 permalink: neural-network-iv-simulated
 tags: [R, linear model, neural network]
-published: false
 ---
 
 Some simulated data, borrowed from [this post](http://jacobsimmering.com/2014/01/10/InstrumentalVariables.html).
