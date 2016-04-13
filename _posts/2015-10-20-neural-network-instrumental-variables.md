@@ -1,6 +1,6 @@
 ---
+layout: post
 title: "Neural Network Instrumental Variables"
-output: pdf_document
 permalink: neural-network-instrumental-variables
 tags: [R, linear model, neural network, machine learning]
 ---

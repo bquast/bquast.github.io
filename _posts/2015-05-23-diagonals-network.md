@@ -3,7 +3,6 @@ layout: post
 title: diagonals in a network
 tags: [R, diagonals, network, social]
 permalink: diagonals-network
-published: true
 ---
 
 A typical example in which `diagonals` can be helpful is Social Network
@@ -21,9 +20,9 @@ m
 
 {% highlight text %}
 ##      [,1] [,2] [,3]
-## [1,]    1    0    1
-## [2,]    0    0    0
-## [3,]    0    1    1
+## [1,]    1    1    1
+## [2,]    1    1    0
+## [3,]    0    1    0
 {% endhighlight %}
 
 Let says that we want to look at second-order connections (i.e. friends
@@ -44,15 +43,15 @@ M
 
 {% highlight text %}
 ##       [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9]
-##  [1,]    1    0    1    0    0    0    1    0    1
-##  [2,]    0    0    0    0    0    0    0    0    0
-##  [3,]    0    1    1    0    0    0    0    1    1
-##  [4,]    0    0    0    0    0    0    0    0    0
-##  [5,]    0    0    0    0    0    0    0    0    0
-##  [6,]    0    0    0    0    0    0    0    0    0
-##  [7,]    0    0    0    1    0    1    1    0    1
-##  [8,]    0    0    0    0    0    0    0    0    0
-##  [9,]    0    0    0    0    1    1    0    1    1
+##  [1,]    1    1    1    1    1    1    1    1    1
+##  [2,]    1    1    0    1    1    0    1    1    0
+##  [3,]    0    1    0    0    1    0    0    1    0
+##  [4,]    1    1    1    1    1    1    0    0    0
+##  [5,]    1    1    0    1    1    0    0    0    0
+##  [6,]    0    1    0    0    1    0    0    0    0
+##  [7,]    0    0    0    1    1    1    0    0    0
+##  [8,]    0    0    0    1    1    0    0    0    0
+##  [9,]    0    0    0    0    1    0    0    0    0
 {% endhighlight %}
 
 Feelings of friendship towards oneself aren't always particularly

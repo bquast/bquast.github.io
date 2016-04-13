@@ -1,6 +1,6 @@
 ---
+layout: post
 title: "Linear Model and Neural Network"
-output: pdf_document
 permalink: linear-model-neural-network
 tags: [R, linear model, neural network, machine learning]
 ---

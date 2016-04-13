@@ -1,6 +1,6 @@
 ---
+layout: post
 title: "Neural Network IV with Simulated Data"
-output: html_document
 permalink: neural-network-iv-simulated
 tags: [R, linear model, neural network]
 ---

@@ -1,6 +1,6 @@
 ---
+layout: post
 title: "Handcoding a Logit Model"
-output: html_document
 permalink: handcoding-logit
 tags: [R, logit model. glm model]
 ---

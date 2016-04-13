@@ -1,6 +1,6 @@
 ---
+layout: post
 title: "Handcoding a Difference in Differences"
-output: html_document
 permalink: handcoding-difference-in-differences
 tags: [R, linear model, panel model, panel data, DiD]
 ---

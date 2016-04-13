@@ -1,6 +1,6 @@
 ---
+layout: post
 title: "Linear Model and Neural Network"
-output: pdf_document
 permalink: linear-model-neural-network
 tags: [R, linear model, neural network, machine learning]
 ---
@@ -81,7 +81,7 @@ nn1 <- nnet(formula=m1, data=swiss, size=0, skip=TRUE, linout=TRUE)
 
 {% highlight text %}
 ## # weights:  6
-## initial  value 151023.931697 
+## initial  value 66124.628241 
 ## iter  10 value 2105.042930
 ## iter  10 value 2105.042930
 ## iter  10 value 2105.042930
