@@ -5,6 +5,9 @@ permalink: handcoding-panel-model
 tags: [R, linear model, panel model, panel data]
 ---
 
+The most basic panel estimation is the Pooled OLS model,
+this model combines all data across indices and performs a regular Ordinary Least Squares Estimation.
+
 
 {% highlight r %}
 # load the PLM library for panel estimation
@@ -12,9 +15,6 @@ library(plm)
 # load the Crime data set
 data(Crime)
 {% endhighlight %}
-
-The most basic panel estimation is the Pooled OLS model,
-this model combines all data across indices and performs a regular Ordinary Least Squares Estimation.
 
 
 {% highlight r %}

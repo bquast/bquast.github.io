@@ -2,7 +2,7 @@
 title: "Handcoding a Difference in Differences"
 output: html_document
 permalink: handcoding-difference-in-differences
-tags: [R, linear model, panel model, panel data]
+tags: [R, linear model, panel model, panel data, DiD]
 ---
 
 In this post we will discuss how to manually implement a Difference-in-Differences (DiD) estimator in R,
