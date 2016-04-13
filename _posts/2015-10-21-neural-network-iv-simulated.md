@@ -224,6 +224,6 @@ library(ggplot2)
 qplot(lms2$fitted.values - nns2$fitted.values)
 {% endhighlight %}
 
-![plot of chunk qplot](/images/source/2015-10-21-neural-network-iv-simulated/qplot-1.png) 
+![plot of chunk qplot](/images/source/2015-10-21-neural-network-iv-simulated/qplot-1.png)
 
 Now redo using a non-linearity

@@ -81,7 +81,7 @@ nn1 <- nnet(formula=m1, data=swiss, size=0, skip=TRUE, linout=TRUE)
 
 {% highlight text %}
 ## # weights:  6
-## initial  value 237223.967388 
+## initial  value 151023.931697 
 ## iter  10 value 2105.042930
 ## iter  10 value 2105.042930
 ## iter  10 value 2105.042930
@@ -142,6 +142,11 @@ library(neuralnet)
 
 {% highlight text %}
 ## Loading required package: grid
+{% endhighlight %}
+
+
+
+{% highlight text %}
 ## Loading required package: MASS
 {% endhighlight %}
 
@@ -152,7 +157,7 @@ nn1a <- neuralnet(formula=m1, data=swiss, hidden=0, linear.output=TRUE)
 plot(nn1a, rep='best')
 {% endhighlight %}
 
-![plot of chunk neuralnet](/images/source/2015-08-28-linear-model-neural-network/neuralnet-1.png) 
+![plot of chunk neuralnet](/images/source/2015-08-28-linear-model-neural-network/neuralnet-1.png)
 
 Of course it only becomes interesting if we include a hidden layer.
 
@@ -162,4 +167,4 @@ nn2a <- neuralnet(formula=m1, data=swiss, hidden=2)
 plot(nn2a, rep='best')
 {% endhighlight %}
 
-![plot of chunk hidden](/images/source/2015-08-28-linear-model-neural-network/hidden-1.png) 
+![plot of chunk hidden](/images/source/2015-08-28-linear-model-neural-network/hidden-1.png)

@@ -3,7 +3,6 @@ layout: post
 title: "Hand Coding the Linear Model"
 tags: [R, hand coding, linear model, lm, ols]
 permalink: handcoding-lm
-published: false
 ---
 
 > In order to understand statistics, you have to do the calculations yourself!

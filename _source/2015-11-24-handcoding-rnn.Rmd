@@ -5,6 +5,8 @@ permalink: handcoding-rnn
 tags: [R, recurrent neural network, RNN]
 ---
 
+This is an example of how to build a Recurrent Neural Network in R.
+
 ```{r data}
 # no importing here
 # set.seed(0)

@@ -81,15 +81,27 @@ library(dplyr)
 {% highlight text %}
 ## 
 ## Attaching package: 'dplyr'
-## 
+{% endhighlight %}
+
+
+
+{% highlight text %}
 ## The following object is masked from 'package:plm':
 ## 
 ##     between
-## 
+{% endhighlight %}
+
+
+
+{% highlight text %}
 ## The following objects are masked from 'package:stats':
 ## 
 ##     filter, lag
-## 
+{% endhighlight %}
+
+
+
+{% highlight text %}
 ## The following objects are masked from 'package:base':
 ## 
 ##     intersect, setdiff, setequal, union

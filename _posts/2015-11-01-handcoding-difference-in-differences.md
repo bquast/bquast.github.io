@@ -127,7 +127,7 @@ df %>%
     geom_abline(intercept=10, slope=10, colour="red", linetype=2) # assumed common trend
 {% endhighlight %}
 
-![plot of chunk plot](/images/source/2015-11-01-handcoding-difference-in-differences/plot-1.png) 
+![plot of chunk plot](/images/source/2015-11-01-handcoding-difference-in-differences/plot-1.png)
 
 Compute the DiD estimator.
 

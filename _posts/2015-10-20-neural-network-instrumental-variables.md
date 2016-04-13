@@ -156,4 +156,4 @@ library(ggplot2)
 qplot(lms2$fitted.values - nns2$fitted.values)
 {% endhighlight %}
 
-![plot of chunk qplot](/images/source/2015-10-20-neural-network-instrumental-variables/qplot-1.png) 
+![plot of chunk qplot](/images/source/2015-10-20-neural-network-instrumental-variables/qplot-1.png)
