@@ -5,6 +5,8 @@ permalink: handcoding-logit
 tags: [R, logit model. glm model]
 ---
 
+Below is an example of how to handcode a logit model.
+
 ```{r data}
 set.seed(123)
 n=100
