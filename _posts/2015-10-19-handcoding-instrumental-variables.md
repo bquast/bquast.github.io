@@ -131,7 +131,8 @@ ivreg(packs ~ rprice | tdiff)
 ##     219.576       -1.019
 {% endhighlight %}
 
-When we compare this estimate to the estimate from the linear model, we find that the effect of the price is significantly overestimated there.
+When we compare this estimate to the estimate from the linear model,
+we find that the effect of the price is significantly overestimated there.
 
 
 {% highlight r %}

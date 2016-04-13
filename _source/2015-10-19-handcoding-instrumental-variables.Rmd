@@ -77,7 +77,8 @@ Now compare this to the results using `ivreg()` fucntion from the `AER` package.
 ivreg(packs ~ rprice | tdiff)
 ```
 
-When we compare this estimate to the estimate from the linear model, we find that the effect of the price is significantly overestimated there.
+When we compare this estimate to the estimate from the linear model,
+we find that the effect of the price is significantly overestimated there.
 
 ```{r}
 lm(packs ~ rprice)
