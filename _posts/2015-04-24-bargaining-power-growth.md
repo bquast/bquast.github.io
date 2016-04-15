@@ -10,7 +10,7 @@ Increased male bargaining power in households causes greater expenditure on food
 
 ## Full Paper
 
-The full paper is [available here](https://github.com/bquast/MaleFemale-Bargaining-Power-Child-Growth/raw/master/man/MakingNextBillionDemandAccess.pdf).
+The full paper is [available here](https://github.com/bquast/MaleFemale-Bargaining-Power-Child-Growth/raw/master/man/MaleFemaleBargainingPowerChildGrowth.pdf).
 
 ## Code
 
