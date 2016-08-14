@@ -1,0 +1,52 @@
+---
+layout: post
+title: "sigmoid package"
+tags: [R, neural network, sigmoid]
+permalink: sigmoid
+---
+
+The [sigmoid package ](http://cran.r-project.org/package=sigmoid) makes it easy to become familiar with the way neural networks work by demonstrating the key concepts using straightforward code examples.
+
+Installation
+--------------
+The package can now be installed from [CRAN](http://cran.r-project.org/) using:
+
+```{r, eval=FALSE}
+install.packages('sigmoid') # case sensitive!
+```
+
+Usage
+---------
+After installation, the package can be loaded using:
+
+```{r}
+library(sigmoid)
+```
+
+For information on using the package, please refer to the help files.
+
+```{r}
+help('sigmoid')
+help(package = 'sigmoid')
+```
+
+Additional Information
+-----------------------
+An overview of the changes is available in the NEWS file.
+
+```{r}
+news(package='sigmoid')
+```
+
+
+Development
+-------------
+A development version can be installed **at your own peril**, using:
+
+```{r, eval=FALSE}
+if (!require('devtools')) install.packages('devtools')
+devtools::install_github("bquast/sigmoid")
+```
+
+Development takes place on the [GitHub page](https://github.com/bquast/sigmoid),
+bugs can be filed on the [Issues page](https://github.com/bquast/sigmoid/issues).
