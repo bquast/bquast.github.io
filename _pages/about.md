@@ -2,7 +2,7 @@
 layout: single
 title: About me
 permalink: about
-comments: false
+author_profile: true
 ---
 
 Bastiaan Quast, from The Netherlands, living in Geneva, 29 years old.

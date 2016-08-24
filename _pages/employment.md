@@ -2,6 +2,7 @@
 layout: single
 title: Research
 permalink: research
+author_profile: true
 image:
   feature: sample-image-3.jpg
   credit: WeGraphics
