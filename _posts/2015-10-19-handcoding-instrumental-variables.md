@@ -1,6 +1,6 @@
 ---
-layout: post
-title: "Hand Coding Instumental Vairables"
+layout: single
+title: "Hand Coding Instumental Variables"
 tags: [R, hand coding, linear model, lm, iv, instumental variables, 2sls, tsls]
 permalink: handcoding-instrumental-variables
 ---
@@ -122,10 +122,10 @@ ivreg(packs ~ rprice | tdiff)
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## ivreg(formula = packs ~ rprice | tdiff)
-## 
+##
 ## Coefficients:
 ## (Intercept)       rprice  
 ##     219.576       -1.019
@@ -142,10 +142,10 @@ lm(packs ~ rprice)
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = packs ~ rprice)
-## 
+##
 ## Coefficients:
 ## (Intercept)       rprice  
 ##     222.209       -1.044
@@ -165,10 +165,10 @@ lm(packs ~ s1$fitted.values)
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = packs ~ s1$fitted.values)
-## 
+##
 ## Coefficients:
 ##      (Intercept)  s1$fitted.values  
 ##          219.576            -1.019
@@ -188,10 +188,10 @@ lm(packs ~ Xhat)
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = packs ~ Xhat)
-## 
+##
 ## Coefficients:
 ## (Intercept)         Xhat  
 ##     219.576       -1.019
@@ -199,4 +199,4 @@ lm(packs ~ Xhat)
 
 Note that if you estimate a TSLS using the `lm` function,
 that you can **only** use the coefficients,
-the error terms will be **wrong**. 
+the error terms will be **wrong**.

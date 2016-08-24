@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Handcoding a Panel Model"
 permalink: handcoding-panel-model
 tags: [R, linear model, panel model, panel data]
@@ -32,10 +32,10 @@ lm(formula = m1,
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = m1, data = Crime)
-## 
+##
 ## Coefficients:
 ## (Intercept)       prbarr      prbconv        polpc  
 ##    0.043643    -0.050993    -0.003251     3.055626
@@ -53,11 +53,11 @@ plm(formula = m1,
 
 
 {% highlight text %}
-## 
+##
 ## Model Formula: crmrte ~ prbarr + prbconv + polpc
-## 
+##
 ## Coefficients:
-## (Intercept)      prbarr     prbconv       polpc 
+## (Intercept)      prbarr     prbconv       polpc
 ##    0.043643   -0.050993   -0.003251    3.055626
 {% endhighlight %}
 
@@ -79,7 +79,7 @@ library(dplyr)
 
 
 {% highlight text %}
-## 
+##
 ## Attaching package: 'dplyr'
 {% endhighlight %}
 
@@ -87,7 +87,7 @@ library(dplyr)
 
 {% highlight text %}
 ## The following object is masked from 'package:plm':
-## 
+##
 ##     between
 {% endhighlight %}
 
@@ -95,7 +95,7 @@ library(dplyr)
 
 {% highlight text %}
 ## The following objects are masked from 'package:stats':
-## 
+##
 ##     filter, lag
 {% endhighlight %}
 
@@ -103,7 +103,7 @@ library(dplyr)
 
 {% highlight text %}
 ## The following objects are masked from 'package:base':
-## 
+##
 ##     intersect, setdiff, setequal, union
 {% endhighlight %}
 
@@ -125,10 +125,10 @@ lm (formula = m1,
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = m1, data = Crime8182FD)
-## 
+##
 ## Coefficients:
 ## (Intercept)       prbarr      prbconv        polpc  
 ##  -6.133e-05   -1.965e-02   -1.537e-03    3.358e+00
@@ -146,11 +146,11 @@ plm(formula = m1,
 
 
 {% highlight text %}
-## 
+##
 ## Model Formula: crmrte ~ prbarr + prbconv + polpc
-## 
+##
 ## Coefficients:
-## (intercept)      prbarr     prbconv       polpc 
+## (intercept)      prbarr     prbconv       polpc
 ## -6.1332e-05 -1.9645e-02 -1.5365e-03  3.3584e+00
 {% endhighlight %}
 
@@ -169,7 +169,7 @@ fe$coefficients[2:4]
 
 
 {% highlight text %}
-##       prbarr      prbconv        polpc 
+##       prbarr      prbconv        polpc
 ## -0.008008440 -0.001010476  2.029003066
 {% endhighlight %}
 
@@ -184,10 +184,10 @@ fe$coefficients[2:4]
 
 
 {% highlight text %}
-## 
+##
 ## Model Formula: crmrte ~ prbarr + prbconv + polpc
-## 
+##
 ## Coefficients:
-##     prbarr    prbconv      polpc 
+##     prbarr    prbconv      polpc
 ## -0.0080084 -0.0010105  2.0290031
 {% endhighlight %}

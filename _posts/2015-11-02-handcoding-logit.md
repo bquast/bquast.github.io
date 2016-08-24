@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Handcoding a Logit Model"
 permalink: handcoding-logit
 tags: [R, logit model. glm model]
@@ -85,15 +85,15 @@ glm(pass ~ hours, family = binomial)
 
 
 {% highlight text %}
-## 
+##
 ## Call:  glm(formula = pass ~ hours, family = binomial)
-## 
+##
 ## Coefficients:
 ## (Intercept)        hours  
 ##      -4.078        1.505  
-## 
+##
 ## Degrees of Freedom: 19 Total (i.e. Null);  18 Residual
-## Null Deviance:	    27.73 
+## Null Deviance:	    27.73
 ## Residual Deviance: 16.06 	AIC: 20.06
 {% endhighlight %}
 
@@ -126,18 +126,18 @@ glm(admit~gre+gpa+as.factor(rank), family=binomial, data=binary)
 
 
 {% highlight text %}
-## 
-## Call:  glm(formula = admit ~ gre + gpa + as.factor(rank), family = binomial, 
+##
+## Call:  glm(formula = admit ~ gre + gpa + as.factor(rank), family = binomial,
 ##     data = binary)
-## 
+##
 ## Coefficients:
 ##      (Intercept)               gre               gpa  
 ##        -3.989979          0.002264          0.804038  
 ## as.factor(rank)2  as.factor(rank)3  as.factor(rank)4  
 ##        -0.675443         -1.340204         -1.551464  
-## 
+##
 ## Degrees of Freedom: 399 Total (i.e. Null);  394 Residual
-## Null Deviance:	    500 
+## Null Deviance:	    500
 ## Residual Deviance: 458.5 	AIC: 470.5
 {% endhighlight %}
 
@@ -173,14 +173,14 @@ mle.logreg = function(fmla, data)
 
     # Obtain regression coefficients
     beta = mle$par
- 
+
     # Calculate the Information matrix
     # The variance of a Bernouilli distribution is given by p(1-p)
     p = 1/(1+exp(-x%*%beta))
     V = array(0,dim=c(dim(x)[1],dim(x)[1]))
     diag(V) = p*(1-p)
     IB = t(x)%*%V%*%x
- 
+
     # Return estimates
     out = list(beta=beta,vcov=solve(IB),dev=2*mle$value)
 }
@@ -195,11 +195,11 @@ mylogit
 
 {% highlight text %}
 ## $beta
-##  (Intercept)          gre          gpa        rank2        rank3 
-## -1.452667967  0.001346342 -0.130762174  0.719615014 -0.217101795 
-##        rank4 
-## -0.010104814 
-## 
+##  (Intercept)          gre          gpa        rank2        rank3
+## -1.452667967  0.001346342 -0.130762174  0.719615014 -0.217101795
+##        rank4
+## -0.010104814
+##
 ## $vcov
 ##               (Intercept)           gre           gpa         rank2
 ## (Intercept)  1.2042376637 -2.685639e-04 -0.2751006299 -1.187537e-01
@@ -215,7 +215,7 @@ mylogit
 ## rank2        8.732829e-02  8.826868e-02
 ## rank3        1.384753e-01  8.797479e-02
 ## rank4        8.797479e-02  1.701939e-01
-## 
+##
 ## $dev
 ## [1] 497.3367
 {% endhighlight %}

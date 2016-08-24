@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: introducing diagonals
 tags: [R, diagonals, matrix, package]
 permalink: diagonals
@@ -24,7 +24,7 @@ A new R package `diagonals` is now available on CRAN. The package implements sev
 ## [12,]    0    0    0    0    0    0    0    0    1     1     1     1
 {% endhighlight %}
 
-Fat diagonal matrices occur when we combine two dimensions of a data set along one edge of a matrix. For example, trade-flow data in the [decompr](http://cran.r-project.org/package=decompr) and [gvc](http://cran.r-project.org/package=gvc) package have each country-industry combination occur on each edge of the matrix. 
+Fat diagonal matrices occur when we combine two dimensions of a data set along one edge of a matrix. For example, trade-flow data in the [decompr](http://cran.r-project.org/package=decompr) and [gvc](http://cran.r-project.org/package=gvc) package have each country-industry combination occur on each edge of the matrix.
 
 The workhorse function of this package is the `fatdiag` function, which tries behave similarly to the `diag` function from the `base` package, but then with diagonals being **fat**.
 
@@ -159,7 +159,7 @@ browseVignettes(package = "diagonals")
 Development
 -------------
 [![CRAN Version](http://www.r-pkg.org/badges/version/diagonals)](http://cran.r-project.org/?package=diagonals)
-[![Travis-CI Build Status](https://travis-ci.org/bquast/diagonals.svg?branch=master)](https://travis-ci.org/bquast/diagonals) 
+[![Travis-CI Build Status](https://travis-ci.org/bquast/diagonals.svg?branch=master)](https://travis-ci.org/bquast/diagonals)
 [![Coverage Status](https://img.shields.io/coveralls/bquast/diagonals.svg)](https://coveralls.io/r/bquast/diagonals?branch=master)
 
 The development version, to be used **at your peril**, can be installed using:

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Data Science Specialisation
 tags: [R, data science, mooc]
 permalink: data-science-specialisation

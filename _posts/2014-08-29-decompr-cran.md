@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: decompr on CRAN
 tags: [R, decompr, gvc, cran, package]
 permalink: decompr-cran

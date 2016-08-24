@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: ggvis, shiny, and HTML5 slides
 tags: [R, ggvis, shiny, html5, slides]
 permalink: ggvis-shiny-html5-slides

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: diagonals in a network
 tags: [R, diagonals, network, social]
 permalink: diagonals-network
@@ -66,7 +66,7 @@ library(diagonals)
 
 
 {% highlight text %}
-## 
+##
 ## D I
 ## A G
 ##     O N

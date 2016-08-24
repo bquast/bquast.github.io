@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Hand Coding a Linear Model function"
 tags: [R, linear model, lm, ols, function, programming]
 permalink: handcoding-lm-function
@@ -95,7 +95,7 @@ It is now time to apply these insights to our linear model. The first step is to
 
 {% highlight r %}
 linear_model <- function (y, X) {
-  
+
 }
 {% endhighlight %}
 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Neural Network Instrumental Variables"
 permalink: neural-network-instrumental-variables
 tags: [R, linear model, neural network, machine learning]
@@ -26,10 +26,10 @@ lm(packs ~ rprice)
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = packs ~ rprice)
-## 
+##
 ## Coefficients:
 ## (Intercept)       rprice  
 ##     222.209       -1.044
@@ -45,10 +45,10 @@ ivreg(packs ~ rprice | tdiff)
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## ivreg(formula = packs ~ rprice | tdiff)
-## 
+##
 ## Coefficients:
 ## (Intercept)       rprice  
 ##     219.576       -1.019
@@ -71,10 +71,10 @@ lmXhat <- lms1$coefficients[2]*tdiff + lms1$coefficients[1]
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = packs ~ lmXhat)
-## 
+##
 ## Coefficients:
 ## (Intercept)       lmXhat  
 ##     219.576       -1.019
@@ -95,8 +95,8 @@ nns1 <- nnet(rprice ~ tdiff, size=0, skip=TRUE, linout=TRUE)
 
 {% highlight text %}
 ## # weights:  2
-## initial  value 1123401.708750 
-## final  value 14467.562948 
+## initial  value 1123401.708750
+## final  value 14467.562948
 ## converged
 {% endhighlight %}
 
@@ -114,8 +114,8 @@ nns2 <- nnet(packs ~ nnXhat, size=0, skip=TRUE, linout=TRUE)
 
 {% highlight text %}
 ## # weights:  2
-## initial  value 335265.176965 
-## final  value 48851.806790 
+## initial  value 335265.176965
+## final  value 48851.806790
 ## converged
 {% endhighlight %}
 
@@ -129,8 +129,8 @@ summary(nns2)
 
 {% highlight text %}
 ## a 1-0-1 network with 2 weights
-## options were - skip-layer connections  linear output units 
-##   b->o  i1->o 
+## options were - skip-layer connections  linear output units
+##   b->o  i1->o
 ## 219.58  -1.02
 {% endhighlight %}
 
@@ -144,7 +144,7 @@ lms2$coefficients - nns2$wts
 
 
 {% highlight text %}
-##   (Intercept)        lmXhat 
+##   (Intercept)        lmXhat
 ##  4.880515e-05 -4.206591e-07
 {% endhighlight %}
 

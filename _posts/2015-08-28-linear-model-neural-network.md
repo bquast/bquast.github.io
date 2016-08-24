@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Linear Model and Neural Network"
 permalink: linear-model-neural-network
 tags: [R, linear model, neural network, machine learning]
@@ -45,27 +45,27 @@ summary(lm1)
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = m1, data = swiss)
-## 
+##
 ## Residuals:
-##      Min       1Q   Median       3Q      Max 
-## -15.2743  -5.2617   0.5032   4.1198  15.3213 
-## 
+##      Min       1Q   Median       3Q      Max
+## -15.2743  -5.2617   0.5032   4.1198  15.3213
+##
 ## Coefficients:
 ##                  Estimate Std. Error t value Pr(>|t|)    
 ## (Intercept)      66.91518   10.70604   6.250 1.91e-07 ***
 ## Agriculture      -0.17211    0.07030  -2.448  0.01873 *  
 ## Examination      -0.25801    0.25388  -1.016  0.31546    
 ## Education        -0.87094    0.18303  -4.758 2.43e-05 ***
-## Catholic          0.10412    0.03526   2.953  0.00519 ** 
-## Infant.Mortality  1.07705    0.38172   2.822  0.00734 ** 
+## Catholic          0.10412    0.03526   2.953  0.00519 **
+## Infant.Mortality  1.07705    0.38172   2.822  0.00734 **
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-## 
+##
 ## Residual standard error: 7.165 on 41 degrees of freedom
-## Multiple R-squared:  0.7067,	Adjusted R-squared:  0.671 
+## Multiple R-squared:  0.7067,	Adjusted R-squared:  0.671
 ## F-statistic: 19.76 on 5 and 41 DF,  p-value: 5.594e-10
 {% endhighlight %}
 
@@ -81,11 +81,11 @@ nn1 <- nnet(formula=m1, data=swiss, size=0, skip=TRUE, linout=TRUE)
 
 {% highlight text %}
 ## # weights:  6
-## initial  value 66124.628241 
+## initial  value 66124.628241
 ## iter  10 value 2105.042930
 ## iter  10 value 2105.042930
 ## iter  10 value 2105.042930
-## final  value 2105.042930 
+## final  value 2105.042930
 ## converged
 {% endhighlight %}
 
@@ -99,8 +99,8 @@ summary(nn1)
 
 {% highlight text %}
 ## a 5-0-1 network with 6 weights
-## options were - skip-layer connections  linear output units 
-##  b->o i1->o i2->o i3->o i4->o i5->o 
+## options were - skip-layer connections  linear output units
+##  b->o i1->o i2->o i3->o i4->o i5->o
 ## 66.92 -0.17 -0.26 -0.87  0.10  1.08
 {% endhighlight %}
 
@@ -115,19 +115,19 @@ summary(nn1)
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = m1, data = swiss)
-## 
+##
 ## Coefficients:
 ##      (Intercept)       Agriculture       Examination  
 ##          66.9152           -0.1721           -0.2580  
 ##        Education          Catholic  Infant.Mortality  
 ##          -0.8709            0.1041            1.0770  
-## 
+##
 ## a 5-0-1 network with 6 weights
-## options were - skip-layer connections  linear output units 
-##  b->o i1->o i2->o i3->o i4->o i5->o 
+## options were - skip-layer connections  linear output units
+##  b->o i1->o i2->o i3->o i4->o i5->o
 ## 66.92 -0.17 -0.26 -0.87  0.10  1.08
 {% endhighlight %}
 

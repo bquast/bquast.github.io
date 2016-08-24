@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Handcoding a Difference in Differences"
 permalink: handcoding-difference-in-differences
 tags: [R, linear model, panel model, panel data, DiD]
@@ -122,8 +122,8 @@ library(dplyr)
 df %>%
   group_by(time, treated) %>%
   summarise(y=mean(y)) %>%
-  ggplot(aes(x=time)) + 
-    geom_line(aes(y=y, colour=treated)) + 
+  ggplot(aes(x=time)) +
+    geom_line(aes(y=y, colour=treated)) +
     geom_abline(intercept=10, slope=10, colour="red", linetype=2) # assumed common trend
 {% endhighlight %}
 
@@ -139,10 +139,10 @@ lm(y ~ x + post + interaction, data=df)
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = y ~ x + post + interaction, data = df)
-## 
+##
 ## Coefficients:
 ## (Intercept)            x     postTRUE  interaction  
 ##      12.116        1.746        7.706       -6.005

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Hand Coding Categorical Variables"
 tags: [R, linear model, lm, ols, categorical variable, dummy variable]
 permalink: handcoding-categorical-lm
@@ -50,7 +50,7 @@ In our study we want to look at the effect of religion on fertility.
 hist(Fertility)
 {% endhighlight %}
 
-![plot of chunk hist_Fertility](/images/source/2015-06-3-handcoding-categorical-lm/hist_Fertility-1.png) 
+![plot of chunk hist_Fertility](/images/source/2015-06-3-handcoding-categorical-lm/hist_Fertility-1.png)
 
 As we're dealing with Switzerland in the 19th certury,
 there are essentially only two religions, Protestant and Roman-Catholic.
@@ -61,7 +61,7 @@ As the predominantly protestant authorities in the cities are generally suspicio
 hist(Catholic)
 {% endhighlight %}
 
-![plot of chunk hist_Catholic](/images/source/2015-06-3-handcoding-categorical-lm/hist_Catholic-1.png) 
+![plot of chunk hist_Catholic](/images/source/2015-06-3-handcoding-categorical-lm/hist_Catholic-1.png)
 
 
 Dichotonomous Categorical Variables
@@ -89,7 +89,7 @@ table(Catholic_D)
 
 {% highlight text %}
 ## Catholic_D
-##  0  1 
+##  0  1
 ## 29 18
 {% endhighlight %}
 
@@ -133,10 +133,10 @@ lm(Fertility ~ Catholic_D)
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = Fertility ~ Catholic_D)
-## 
+##
 ## Coefficients:
 ## (Intercept)   Catholic_D  
 ##       66.22        10.24
@@ -175,7 +175,7 @@ table(Religion)
 
 {% highlight text %}
 ## Religion
-##   Catholic Protestant 
+##   Catholic Protestant
 ##         18         29
 {% endhighlight %}
 
@@ -230,7 +230,7 @@ table(Religion)
 
 {% highlight text %}
 ## Religion
-##   Catholic   Orthodox Protestant 
+##   Catholic   Orthodox Protestant
 ##         17          1         29
 {% endhighlight %}
 
@@ -366,10 +366,10 @@ lm(Fertility ~ Religion_D)
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = Fertility ~ Religion_D)
-## 
+##
 ## Coefficients:
 ##          (Intercept)  Religion_DCatholic_D  Religion_DOrthodox_D  
 ##               66.221                 9.891                16.179

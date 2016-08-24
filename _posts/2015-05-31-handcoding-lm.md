@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Hand Coding the Linear Model"
 tags: [R, hand coding, linear model, lm, ols]
 permalink: handcoding-lm
@@ -61,7 +61,7 @@ summary(iris)
 ##  virginica :50  
 ##                 
 ##                 
-## 
+##
 {% endhighlight %}
 
 Assign our variables to objects (in the global environment)
@@ -79,7 +79,7 @@ We can now estimate the slope parameter:
 x_m <- mean(x) # x bar in our equation
 y_m <- mean(y) # y bar in our equation
 numerator   <- sum( (x-x_m) * (y-y_m) )
-denominator <- sum( (x-x_m)*(x-x_m) ) 
+denominator <- sum( (x-x_m)*(x-x_m) )
 ( beta1_hat   <- numerator / denominator )
 {% endhighlight %}
 
@@ -112,10 +112,10 @@ lm( y ~ x )
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = y ~ x)
-## 
+##
 ## Coefficients:
 ## (Intercept)            x  
 ##       1.084        2.230
@@ -151,10 +151,10 @@ lm( y ~ x -1 ) # the -1 ensures that we don't have an intercept
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = y ~ x - 1)
-## 
+##
 ## Coefficients:
 ##     x  
 ## 2.875
@@ -184,10 +184,10 @@ lm( y ~ x )
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = y ~ x)
-## 
+##
 ## Coefficients:
 ## (Intercept)            x  
 ##       1.084        2.230
@@ -288,10 +288,10 @@ lm(y ~ XI -1 )
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = y ~ XI - 1)
-## 
+##
 ## Coefficients:
 ##   XIx     XI  
 ## 2.230  1.084

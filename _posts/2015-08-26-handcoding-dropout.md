@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Hand Coding Hilton's Dropout"
 tags: [R, neural network, hilton, dropout, machine learning]
 permalink: handcoding-dropout

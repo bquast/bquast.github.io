@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Hand Coding Gradient Descent"
 tags: [R, neural network, gradient, descent, machine learning]
 permalink: handcoding-gradient-descent
@@ -94,7 +94,7 @@ X = matrix(c(0,0,1,
              1,0,1,
              1,1,1), nrow=4, byrow=TRUE)
 
-# output dataset 
+# output dataset
 y = matrix(c(0,1,1,0), nrow=4)
 
 # seed random number to make calculation
@@ -105,22 +105,22 @@ set.seed(1)
 synapse_0 = matrix(runif(n = 3, min=-1, max=1), nrow=3)
 
 for (iter in 1:10000) {
-  
+
   # forward propagation
   layer_0 = X
   layer_1 = sigmoid(layer_0%*%synapse_0)
-  
+
   # how much did we miss?
   layer_1_error = layer_1 - y
-  
+
   # multiply how much we missed by the
   # slope of the sigmoid at the values in layer_1
   layer_1_delta = layer_1_error * signmoid_output_to_derivative(layer_1)
   syanpse_0_derivative = t(layer_0) %*% layer_1_delta
-  
+
   # update weights
   synapse_0 = synapse_0 + t(layer_0)%*%layer_1_delta                     }
-  
+
 print("Output After Training:")
 print(layer_1)
 {% endhighlight %}
@@ -158,7 +158,7 @@ X = matrix(c(0,0,1,
              1,0,1,
              1,1,1), nrow=4, byrow=TRUE)
 
-# output dataset 
+# output dataset
 y = matrix(c(0,
              1,
              1,
@@ -168,35 +168,35 @@ for (alpha in alphas) {
   # print "\nTraining With Alpha:" + str(alpha)
   print(paste("Training With Alpha", alpha))
   set.seed(1)
-  
+
   # randomly initialize our weights with mean 0
   synapse_0 = matrix(runif(n = 3*hiddenSize, min=-1, max=1), nrow=3)
   synapse_1 = matrix(runif(n = hiddenSize,   min=-1, max=1), ncol=1)
-  
+
   for (j in 1:60000) {
-    
+
     # Feed forward through layers 0, 1, and 2
     layer_0 = X
     layer_1 = sigmoid(layer_0%*%synapse_0)
     layer_2 = sigmoid(layer_1%*%synapse_1)
-    
+
     # how much did we miss the target value?
     layer_2_error = layer_2 - y
-    
+
     if (j %% 10000 == 0)
       print(paste("Error after", j, "iterations:", mean(abs(layer_2_error))))
-    
+
     # in what direction is the target value?
     # were we really sure? if so, don't change too much.
     layer_2_delta = layer_2_error * signmoid_output_to_derivative(layer_2)
-    
+
     # how much did each l1 value contribute to the l2 error (according to the weights)?
     layer_1_error = layer_2_delta %*% t(synapse_1)
-    
+
     # in what direction is the target l1?
     # were we really sure? if so, don't change too much.
     layer_1_delta = layer_1_error * signmoid_output_to_derivative(layer_1)
-    
+
     syanpse_1 = synapse_1 - alpha * ( t(layer_1) %*% layer_2_delta )
     synapse_0 = synapse_0 - alpha * ( t(layer_0)%*%layer_1_delta   )                   }  }
 {% endhighlight %}

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Hand Coding the Power of a Test"
 tags: [R, hand coding, linear model, power, test, hypthesis]
 permalink: handcoding-power-test
@@ -27,7 +27,7 @@ Accepting
 {% highlight r %}
 mu <- 40
 sd <- 8
-n  <- 20 
+n  <- 20
 ci <- qnorm(0.975)*sd/sqrt(n)
 (left <- mu - ci)
 {% endhighlight %}

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Male/Female Bargaining Power and Child Growth"
 output: html_document
 permalink: bargaining-power-growth

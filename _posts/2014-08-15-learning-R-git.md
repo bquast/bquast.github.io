@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Learning R and Git
 tags: [R, learning, education]
 permalink: learning-R-git

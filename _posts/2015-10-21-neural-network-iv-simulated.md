@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Neural Network IV with Simulated Data"
 permalink: neural-network-iv-simulated
 tags: [R, linear model, neural network]
@@ -75,10 +75,10 @@ lm(y ~ x + c)
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = y ~ x + c)
-## 
+##
 ## Coefficients:
 ## (Intercept)            x            c  
 ##      0.9079       1.0156       0.9955
@@ -94,10 +94,10 @@ lm(y ~ x)
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = y ~ x)
-## 
+##
 ## Coefficients:
 ## (Intercept)            x  
 ##      13.787        1.226
@@ -114,10 +114,10 @@ ivreg(y ~ x | z)
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## ivreg(formula = y ~ x | z)
-## 
+##
 ## Coefficients:
 ## (Intercept)            x  
 ##      15.949        1.008
@@ -140,10 +140,10 @@ lmXhat <- lms1$coefficients[2]*z + lms1$coefficients[1]
 
 
 {% highlight text %}
-## 
+##
 ## Call:
 ## lm(formula = y ~ lmXhat)
-## 
+##
 ## Coefficients:
 ## (Intercept)       lmXhat  
 ##      15.949        1.008
@@ -163,8 +163,8 @@ nns1 <- nnet(x ~ z, size=0, skip=TRUE, linout=TRUE)
 
 {% highlight text %}
 ## # weights:  2
-## initial  value 100832.781903 
-## final  value 924.804075 
+## initial  value 100832.781903
+## final  value 924.804075
 ## converged
 {% endhighlight %}
 
@@ -182,8 +182,8 @@ nns2 <- nnet(y ~ nnXhat, size=0, skip=TRUE, linout=TRUE)
 
 {% highlight text %}
 ## # weights:  2
-## initial  value 528901.038261 
-## final  value 4019.409973 
+## initial  value 528901.038261
+## final  value 4019.409973
 ## converged
 {% endhighlight %}
 
@@ -197,8 +197,8 @@ summary(nns2)
 
 {% highlight text %}
 ## a 1-0-1 network with 2 weights
-## options were - skip-layer connections  linear output units 
-##  b->o i1->o 
+## options were - skip-layer connections  linear output units
+##  b->o i1->o
 ## 15.95  1.01
 {% endhighlight %}
 
@@ -212,7 +212,7 @@ lms2$coefficients - nns2$wts
 
 
 {% highlight text %}
-##   (Intercept)        lmXhat 
+##   (Intercept)        lmXhat
 ## -1.749729e-10 -2.814797e-09
 {% endhighlight %}
 
