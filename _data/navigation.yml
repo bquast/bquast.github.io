@@ -1,5 +1,5 @@
-# Site navigation links
-
+# main links links
+main:
 - title: Blog
   url: /posts/
 
@@ -8,16 +8,15 @@
 
 - title: Software
   url: /software/
-  
+
 - title: Publications
   url: /publications/
-  
+
 - title: Teaching
   url: /teaching/
-   
+
 - title: Employment
   url: /employment/
 
 - title: About Me
   url: /about/
-  
