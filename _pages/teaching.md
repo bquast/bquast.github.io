@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Teaching
-permalink: teaching
+permalink: /teaching/
 author_profile: true
 image:
   feature: sample-image-3.jpg

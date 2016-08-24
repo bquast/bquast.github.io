@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Software
-permalink: software
+permalink: /software/
 author_profile: true
 image:
   feature: energy.jpg

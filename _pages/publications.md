@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Publications
-permalink: publications
+permalink: /publications/
 author_profile: true
 image:
   feature: sample-image-3.jpg
