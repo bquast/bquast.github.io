@@ -1,7 +1,7 @@
 ---
 layout: single
-title: Research
-permalink: research
+title: Employment
+permalink: /employment/
 author_profile: true
 image:
   feature: sample-image-3.jpg
