@@ -3,6 +3,8 @@ layout: single
 title: "Hand Coding a Neural Network"
 tags: [R, neural network, machine learning]
 permalink: handcoding-neural-network
+categories:
+  - neural-networks
 ---
 
 Andrew Trask wrote an amazing post at [I am Trask](http://iamtrask.github.io/) called:
