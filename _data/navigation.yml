@@ -3,11 +3,14 @@ main:
 - title: Blog
   url: /blog
 
-- title: Research
-  url: /research
+- title: About Me
+  url: /about
 
 - title: Software
   url: /software
+  
+- title: Research
+  url: /research
 
 - title: Publications
   url: /publications
@@ -17,6 +20,3 @@ main:
 
 - title: Employment
   url: /employment
-
-- title: About Me
-  url: /about
