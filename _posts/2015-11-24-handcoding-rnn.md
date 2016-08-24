@@ -3,6 +3,8 @@ layout: single
 title: "Handcoding a Recurrent Neural Network"
 permalink: handcoding-rnn
 tags: [R, recurrent neural network, RNN]
+categories:
+  - neural-networks
 ---
 
 This is an example of how to build a Recurrent Neural Network in R.

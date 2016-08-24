@@ -3,6 +3,8 @@ layout: single
 title: "Neural Network Instrumental Variables"
 permalink: neural-network-instrumental-variables
 tags: [R, linear model, neural network, machine learning]
+categories:
+  - neural-networks
 ---
 
 A simple example
