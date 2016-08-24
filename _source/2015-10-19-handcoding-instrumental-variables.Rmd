@@ -1,6 +1,6 @@
 ---
-layout: post
-title: "Hand Coding Instumental Vairables"
+layout: single
+title: "Hand Coding Instumental Variables"
 tags: [R, hand coding, linear model, lm, iv, instumental variables, 2sls, tsls]
 permalink: handcoding-instrumental-variables
 ---
@@ -106,4 +106,4 @@ lm(packs ~ Xhat)
 
 Note that if you estimate a TSLS using the `lm` function,
 that you can **only** use the coefficients,
-the error terms will be **wrong**. 
+the error terms will be **wrong**.
