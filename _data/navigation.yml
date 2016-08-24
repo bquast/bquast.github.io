@@ -1,22 +1,22 @@
 # main links links
 main:
 - title: Blog
-  url: /posts/
+  url: /posts
 
 - title: Research
-  url: /research/
+  url: /research
 
 - title: Software
-  url: /software/
+  url: /software
 
 - title: Publications
-  url: /publications/
+  url: /publications
 
 - title: Teaching
-  url: /teaching/
+  url: /teaching
 
 - title: Employment
-  url: /employment/
+  url: /employment
 
 - title: About Me
-  url: /about/
+  url: /about
