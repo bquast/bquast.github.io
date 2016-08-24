@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: single
 title: About me
-modified: 2015-05-22T15:10:07.573882-04:00
+permalink: about
 comments: false
 ---
 

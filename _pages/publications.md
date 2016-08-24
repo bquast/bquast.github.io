@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: single
 title: Publications
+permalink: publications
 image:
   feature: sample-image-3.jpg
   credit: WeGraphics
@@ -85,7 +86,7 @@ Enfin, cette nouvelle édition innove en proposant une palette de questions sur 
 polices municipales, notamment les attentes des résidents envers ce partenaire de plus
 en plus sollicité.
 Les résultats sont résumés ci-dessous en 95 points et suivent la structure du rapport
-afin que le lecteur puisse aisément se reporter à l’analyse complète. 
+afin que le lecteur puisse aisément se reporter à l’analyse complète.
 
 [download the full report](http://www.geneve.ch/police/doc/statistiques/diagnostic-local-securite-2013.pdf)
 
@@ -93,7 +94,7 @@ afin que le lecteur puisse aisément se reporter à l’analyse complète.
 On the Relation Between PE Funds' Environmental, Social, and Governance Management and their Financial Performance
 ----------------------------------
 This study attempts to show relation (covariates) between Private Equity funds'
-Environmental, Social, and Governance (ESG) management, and their financial performance. 
+Environmental, Social, and Governance (ESG) management, and their financial performance.
 For this study we used data from the investments of two European Development Finance Institutes
 and answers from a questionnaire sent to the invested-in funds.
 We find that there are some aspects of ESG management which have a covariation with financial performance.

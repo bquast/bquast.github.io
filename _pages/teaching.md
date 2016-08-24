@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: single
 title: Teaching
-modified: 2015-05-22T15:07:02.362000-04:00
+permalink: teaching
 image:
   feature: sample-image-3.jpg
   credit: WeGraphics

@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: single
 title: Software
+permalink: software
 image:
   feature: energy.jpg
   credit: Bastiaan Quast

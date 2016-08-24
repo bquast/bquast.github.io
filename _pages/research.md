@@ -1,7 +1,7 @@
 ---
-layout: page
+layout: single
 title: Research
-modified: 2015-05-22T15:07:02.362000-04:00
+permalink: research
 image:
   feature: ebola.jpg
   credit: Bastiaan Quast
