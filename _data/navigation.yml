@@ -1,14 +1,14 @@
 # main links links
 main:
 - title: Blog
-  url: /blog
+  url: /
 
 - title: About Me
   url: /about
 
 - title: Software
   url: /software
-  
+
 - title: Research
   url: /research
 
