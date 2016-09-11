@@ -1,7 +1,6 @@
 ---
 layout: single
 title: "Making the Next Billion Demand Access"
-output: html_document
 permalink: internet-access
 tags: [internet demand, internet access]
 ---
