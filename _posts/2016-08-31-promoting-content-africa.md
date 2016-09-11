@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Making the Next Billion Demand Access"
+title: "Promoting Content in Africa"
 permalink: promoting-content-africa
 tags: [promoting content, internet, africa, local content]
 ---
