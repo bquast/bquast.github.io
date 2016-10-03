@@ -7,7 +7,7 @@ tags: [internet demand, internet access]
 
 The Local-Content Effect of `google.co.za` in Setswana
 
-> I am presenting this paper at [EEA 2016 in Geneva](http://www.eea-esem-congresses.org/)
+> I presented this paper at [EEA 2016 in Geneva](https://editorialexpress.com/conference/EEAESEM2016/program/EEAESEM2016.html#156)
 
 ## Abstract
 
