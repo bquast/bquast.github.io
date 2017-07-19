@@ -9,7 +9,15 @@ image:
   creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 ---
 
-I am currently working on the second phase field study of the impact of the
+I am an economist at the [International Telecommunications Union](http://www.itu.int/) in Genva.
+My work revolves around analysing the progress made towards the ITU's strategic targets, in it [Connect 2020 Agenda](http://www.itu.int/en/connect2020/)
+and coming up with recommendations for adjustments and other targets.
+
+Previously I worked at the [Internet Society](http://www.internetsociety.org/) in Geneva, together with the Chief Economist [Michael Kende](https://www.internetsociety.org/who-we-are/people/mr-michael-kende), primarily on content locationisation and local content creation in Africa.
+
+I have worked at the [United Nations Conference on Trade and Development](http://www.unctad.org/), on the gender impact of Free Trade Agreements in the [East African Community](http://www.eac.int/) ([wikipedia](https://en.wikipedia.org/wiki/East_African_Community) using [Computational General Equilibrium](https://en.wikipedia.org/wiki/Computable_general_equilibrium) models.
+
+I have worked on the second phase field study of the impact of the
 [Initiative Nationale pour le Développement Humain (Moroccan National Initiative for Human Development)](http://www.indh.gov.ma/index.php/en/)
 on social cohesion in supported communes.
 Together with [CFD Director](http://graduateinstitute.ch/home/research/centresandprogrammes/cfd.html)
