@@ -5,20 +5,19 @@ permalink: about
 author_profile: true
 ---
 
-Bastiaan Quast, from The Netherlands, living in Geneva, 29 years old.
+Bastiaan Quast, Economist at the [ITU](http://www.itu.int) in Geneva, from the Netherlands.
+PhD in [Development Economics](http://graduateinstitute.ch/home/study/academicdepartments/international-economics/studying-economics/PhD_dvlpm_economics.html) from [The Graduate Institute, Geneva](http://graduateinstitute.ch/).
+Author of the R-language deep learning framework [RNN](https://cran.r-project.org/web/packages/rnn/index.html) (>600 downloads a month).
+Interested in AI/deep learning, both on the applied side (e.g. using aerial imagery) and on the economic impact.
 
 You can [download my Curriculum Vitae here](https://github.com/bquast/Curriculum-Vitae/raw/master/CurriculumVitaeQuast.pdf).
-
-- PhD [Development Economics](http://graduateinstitute.ch/home/study/academicdepartments/international-economics/studying-economics/PhD_dvlpm_economics.html), [The Graduate Institute, Geneva](http://graduateinstitute.ch/)
-- Research Assistant, [Centre for Finance and Development, Geneva](http://graduateinstitute.ch/home/research/centresandprogrammes/cfd/about-us/research-team.html)
-- Research Assistant, [Centre on Conflict, Development, and Peacebuilding](http://graduateinstitute.ch/home/research/centresandprogrammes/ccdp/who-we-are/staff/bastiaan-quast.html)
 
 [...more employment](/employment)
 
 
 Research
 -----------------
-I am currently working on the second phase field study of the impact of the
+I worked on the second phase field study of the impact of the 
 [Initiative Nationale pour le Developpement Humain (Moroccan National Initiative for Human Development)](http://www.indh.gov.ma/index.php/en/)
 on social cohesion in supported communes.
 Together with [CFD Director](http://graduateinstitute.ch/home/research/centresandprogrammes/cfd.html)
@@ -41,8 +40,9 @@ Formerly a Teaching Assitant at The Graduate Institute, teaching statistics in w
 
 Software
 -----------------
-I have developed the R packages [decompr](https://qua.st/decompr) ([CRAN](http://cran.r-project.org/web/packages/decompr/)) and gvc ([CRAN](http://cran.r-project.org/web/packages/gvc/index.html)) which can be used for the **Wang-Wei-Zhu** and **Leontief decomposition** algorithms and futher analysis of Global Value chains.
 
+I have developed the R packages [decompr](https://qua.st/decompr) ([CRAN](http://cran.r-project.org/web/packages/decompr/)) and gvc ([CRAN](http://cran.r-project.org/web/packages/gvc/index.html)) which can be used for the **Wang-Wei-Zhu** and **Leontief decomposition** algorithms and futher analysis of Global Value chains.
+Author of the R-language deep learning framework [RNN](https://cran.r-project.org/web/packages/rnn/index.html) (>600 downloads a month).
 [...more software](/software)
 
 
