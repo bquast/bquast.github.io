@@ -12,7 +12,7 @@ locale                   : "en"
 title                    : "qua.st"
 title_separator          : "-"
 name                     : "Bastiaan Quast"
-description              : "Peronsal blog and site"
+description              : "Personal blog and site"
 url                      : http://qua.st
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : bquast/bquast.github.io
