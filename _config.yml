@@ -9,10 +9,10 @@ minimal_mistakes_skin    : "default" # "air", "contrast", "dark", "dirt", "mint"
 
 # Site Settings
 locale                   : "en"
-title                    : "qua.st"
+title                    : "qua.st | in God we trust, all others show code"
 title_separator          : "-"
 name                     : "Bastiaan Quast"
-description              : "Personal blog and site"
+description              : "qua.st"
 url                      : http://qua.st
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : bquast/bquast.github.io
