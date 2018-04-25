@@ -5,6 +5,10 @@ permalink: backpropagation-by-hand
 tags: [machine learning, neural network]
 ---
 
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 > doing backpropagation using pen and paper
 
 We begin with a simple problem, we have two guys, Joris and Carl, who both want to be tall.
