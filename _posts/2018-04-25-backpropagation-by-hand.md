@@ -3,6 +3,7 @@ layout: single
 title: "Backpropagation by Hand"
 permalink: backpropagation-by-hand
 tags: [machine learning, neural network]
+mathjax: true
 ---
 
 <script type="text/javascript" async
