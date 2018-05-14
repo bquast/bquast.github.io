@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Backpropagation: the simplest form"
-permalink: backpropagation-simplest form
+permalink: backpropagation-simplest-form
 tags: [machine learning, neural network]
 mathjax: true
 ---
