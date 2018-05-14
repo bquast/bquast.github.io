@@ -34,10 +34,8 @@ We can now compute by how much the network's prediction missed the true values u
 
 $$ \delta_1 $$ = \` [[-1],[1]] \`
 
-We now use $$ \delta_1 $$ to update our weights: $$ w_2 = w_1 - \delta_1 $$, which gives: \` [[1],[0]] \`
-{: .kdmath}, this is the backpropagation.
+We now use $$ \delta_1 $$ to update our weights: $$ w_2 = w_1 - \delta_1 $$, which gives: \` [[1],[0]] \`, this is the backpropagation.
 
-We can now make a new prediction using $$ X * w_2 = \hat{y}_2 $$, which gives \` [[1],[0]] \`
-{: .kdmath}, which is equal to the true values.
+We can now make a new prediction using $$ X * w_2 = \hat{y}_2 $$, which gives \` [[1],[0]] \`, which is equal to the true values.
 
 The network has now learned through backpropagation that drinking milk helps one grow tall, but eating swedish meatballs with jam does not.
