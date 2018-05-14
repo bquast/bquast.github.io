@@ -16,7 +16,7 @@ Carl is Swedish and so he eat meatballs with jam to grow tall.
 
 We can represent this in a matrix: 
 
-\` [[1,0],[0,1]] \`
+\`X = [[1,0],[0,1]] \`
 {: .kdmath}
 
 It turns out that Joris' plan worked and Carl's didn't, so out output matrix \` y \` is \` [[1],[0]] \`,
