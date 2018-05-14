@@ -32,9 +32,13 @@ but eating swedish meatballs with jam will. Using \` X * w_1 = hat y_1 \`, we ge
 
 We can now compute by how much the network's prediction missed the true values using \` hat y_1 - y \`, which gives us our 
 
-\` delta_1 = [[-1],[1]] \`
+\` [[0],[1]] - [[1],[0]] = [[-1],[1]] = delta_1\`
 
-We now use \` delta_1 \` to update our weights: \` w_2 = w_1 - delta_1 \`, which gives: \` [[1],[0]] \`, this is the backpropagation.
+We now use \` delta_1 \` to update our weights: \` w_2 = w_1 - delta_1 \`:
+
+\` [[0],[1]] - [[-1],[1]] = [[1],[0]] \`
+
+This is the backpropagation.
 
 We can now make a new prediction using \` X * w_2 = hat y_2 \`, which gives
 
