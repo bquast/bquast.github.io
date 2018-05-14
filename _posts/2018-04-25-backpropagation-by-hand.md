@@ -1,7 +1,7 @@
 ---
 layout: single
-title: "Backpropagation by Hand"
-permalink: backpropagation-by-hand
+title: "Backpropagation: the simplest form"
+permalink: backpropagation-simplest form
 tags: [machine learning, neural network]
 mathjax: true
 ---
@@ -18,6 +18,8 @@ We can represent this in a matrix:
 
 \`X = [[1,0],[0,1]] \`
 {: .kdmath}
+
+Where the first line is what Joris consumes, the second line is what Carl consumes, and the first column is pints of milk per day and the second column is plates of meatballs with jam per day.
 
 It turns out that Joris' plan worked and Carl's didn't, so out output matrix \` y \` is \` [[1],[0]] \`,
 where Joris gets a 1 for being tall and Carl gets a 0 for being short.
