@@ -34,9 +34,9 @@ We can now compute by how much the network's prediction missed the true values u
 
 \` [[0],[1]] - [[1],[0]] = [[-1],[1]] = delta_1\`
 
-We now use \` delta_1 \` to update our weights: \` w_2 = w_1 - delta_1 \`:
+We now use \` delta_1 \` to update our weights: \` w_1 - delta_1 = w_2\`:
 
-\` [[0],[1]] - [[-1],[1]] = [[1],[0]] \`
+\` [[0],[1]] - [[-1],[1]] = [[1],[0]] = w_2 \`
 
 This is the backpropagation.
 
