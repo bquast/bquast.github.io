@@ -5,4 +5,10 @@
   "display": "standalone",
   "background_color": "#fff",
   "description": "Bastiaan Quast Personal Blog as a webapp"
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
 }
