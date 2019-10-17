@@ -13,7 +13,7 @@ title                    : "qua.st | in God we trust, all others show code"
 title_separator          : "-"
 name                     : "Bastiaan Quast"
 description              : "qua.st"
-url                      : http://qua.st
+url                      : https://qua.st
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : bquast/bquast.github.io
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
