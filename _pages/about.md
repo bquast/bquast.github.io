@@ -7,7 +7,7 @@ author_profile: true
 
 Economist at the [ITU](http://www.itu.int) in Geneva, from the Netherlands.
 PhD in [Development Economics](http://graduateinstitute.ch/home/study/academicdepartments/international-economics/studying-economics/PhD_dvlpm_economics.html) from [The Graduate Institute, Geneva](http://graduateinstitute.ch/).
-Author of the R-language deep learning framework [RNN](https://cran.r-project.org/web/packages/rnn/index.html) (>600 downloads a month).
+Author of the R-language deep learning framework [RNN](https://cran.r-project.org/web/packages/rnn/index.html) (>10,00 downloads / month, > 50K total).
 Interested in AI/deep learning, both on the applied side (e.g. using aerial imagery) and on the economic impact.
 
 You can [download my Curriculum Vitae here](https://github.com/bquast/Curriculum-Vitae/raw/master/CurriculumVitaeQuast.pdf).
