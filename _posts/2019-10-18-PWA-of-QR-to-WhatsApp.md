@@ -3,7 +3,7 @@ layout: single
 title: "PWA of QR code to WhatsApp"
 output: html_document
 permalink: PWA-QR-WhatsApp 
-tags: [homomorphic encryption]
+tags: [qr, PWA, WhatsApp]
 categories:
   - qr
 ---
