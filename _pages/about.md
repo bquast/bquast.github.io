@@ -42,7 +42,7 @@ Software
 -----------------
 
 I have developed the R packages [decompr](https://qua.st/decompr) ([CRAN](http://cran.r-project.org/web/packages/decompr/)) and gvc ([CRAN](http://cran.r-project.org/web/packages/gvc/index.html)) which can be used for the **Wang-Wei-Zhu** and **Leontief decomposition** algorithms and futher analysis of Global Value chains.
-Author of the R-language deep learning framework [RNN](https://cran.r-project.org/web/packages/rnn/index.html) (>600 downloads a month).
+Author of the R-language deep learning framework [RNN](https://cran.r-project.org/web/packages/rnn/index.html) (>1,000 downloads a month).
 [...more software](/software)
 
 
