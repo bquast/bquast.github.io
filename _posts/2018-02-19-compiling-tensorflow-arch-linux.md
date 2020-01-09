@@ -7,17 +7,17 @@ tags: [TensorFlow, Arch Linux, deep learning]
 
 > Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
 
-The above notification keep popping up whenever you use TensorFlow to remind you that your models could be training faster if you used a binary compiled with the right configuration.
+The above notification keep popping up whenever you use TensorFlow to remind you that your models could be training faster if you used binaries compiled with the right configuration.
 
 When TensorFlow first came out, it was available as a package, it became available to Arch Linux users as a [package in the Arch User Repository](https://aur.archlinux.org/packages/python-tensorflow-git/), meaning that it was compiled on your local system.
 
 Although this process is time consuming, the fact that the binaries are compiled on your local system, means that they can make full use of the instructions of your processor.
 
-Around the time that TensorFlow 1.0 came out, it became available as a pre-compiled binary in the [community repository](https://www.archlinux.org/packages/community/x86_64/python-tensorflow/), the advantage of this is that installation is a matter of seconds.
+Around the time that TensorFlow 1.0 came out, it became available as pre-compiled binaries in the [community repository](https://www.archlinux.org/packages/community/x86_64/python-tensorflow/), the advantage of this is that installation is a matter of seconds.
 
-However, I keep getting the above notification on TensorFlow not using the instructions that my processor supports (I have an Asus UX370U](), which came out last year.
+However, I keep getting the above notification on TensorFlow not using the instructions that my processor supports (I have an Asus [UX370U](https://www.asus.com/us/2-in-1-PCs/ASUS-ZenBook-Flip-S-UX370UA/)), which came out last year.
 
-Since computing power is a bottleneck machine learning, it makes little sense not to use optimised software, I therefore went to the [Installing TensorFlow from Sources](https://www.tensorflow.org/install/install_sources) page, which describes he process.
+Since computing power is a bottleneck machine learning, it makes little sense not to use optimised software, I therefore went to the [Installing TensorFlow from Sources](https://www.tensorflow.org/install/install_sources) page, which describes the process.
 
 Since you will be installing TensorFlow using [pip](https://pip.pypa.io/en/stable/), make sure that you first remove the current installation of TensorFlow.
 
