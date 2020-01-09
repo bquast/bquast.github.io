@@ -15,7 +15,7 @@ Although this process is time consuming, the fact that the binaries are compiled
 
 Around the time that TensorFlow 1.0 came out, it became available as pre-compiled binaries in the [community repository](https://www.archlinux.org/packages/community/x86_64/python-tensorflow/), the advantage of this is that installation is a matter of seconds.
 
-However, I keep getting the above notification on TensorFlow not using the instructions that my processor supports (I have an Asus [UX370U](https://www.asus.com/us/2-in-1-PCs/ASUS-ZenBook-Flip-S-UX370UA/)), which came out last year.
+However, I keep getting the above notification on TensorFlow not using the instructions that my processor supports (I have an Asus [UX370UA](https://www.asus.com/us/2-in-1-PCs/ASUS-ZenBook-Flip-S-UX370UA/)), which came out last year.
 
 Since computing power is a bottleneck machine learning, it makes little sense not to use optimised software, I therefore went to the [Installing TensorFlow from Sources](https://www.tensorflow.org/install/install_sources) page, which describes the process.
 
