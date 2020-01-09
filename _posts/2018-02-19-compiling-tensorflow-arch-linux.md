@@ -54,7 +54,7 @@ $ bazel build --config=opt --cxxopt="-D_GLIBCXX_USE_CXX11_ABI=0" //tensorflow/to
 
 ```
 
-Building will take some time (up to several hours). After this you need to create the pip package, .
+Building will take some time (up to several hours). After this you need to create the pip package.
 
 ```
 $ bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
