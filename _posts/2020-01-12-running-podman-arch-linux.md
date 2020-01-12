@@ -19,7 +19,7 @@ In [this comment](https://github.com/containers/libpod/issues/2542#issuecomment-
 
 Kill any podman related processes
 
-Run (note that this *deletes stuff*):
+Run (note that this **deletes stuff**):
 
 ```
 sudo rm -rf ~/.{config,local/share}/containers /run/user/$(id -u)/{libpod,runc,vfs-*}
