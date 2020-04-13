@@ -2,7 +2,7 @@
 layout: single
 title: "Handcoding a Logit Model"
 permalink: handcoding-logit
-tags: [R, logit model. glm model]
+tags: [R, logit model, glm model]
 ---
 
 Below is an example of how to handcode a logit model.
