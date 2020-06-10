@@ -15,5 +15,5 @@ The slides from my presentation are available here:
 
 The live demo spreadsheet is available here:
 
-<https://docs.google.com/spreadsheets/d/1j1dXgZ_9RzvBdKFyA1Goii6IzPniNWSLs14D-kN_RNo/upd>
+<https://docs.google.com/spreadsheets/d/1j1dXgZ_9RzvBdKFyA1Goii6IzPniNWSLs14D-kN_RNo/>
 
