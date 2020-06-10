@@ -2,7 +2,7 @@
 layout: single
 title: "Tech Talks"
 permalink: tech-talks 
-tags: [tech talks, UN Innovation Network]
+tags: [Tech Learn Talks, UN Innovation Network, presentation]
 ---
 
 Today I gave a presentation at the [UN Innovation Network](https://www.uninnovation.network/techlearntalks) ([archived](https://web.archive.org/web/20200610135556/https://www.uninnovation.network/techlearntalks)):
