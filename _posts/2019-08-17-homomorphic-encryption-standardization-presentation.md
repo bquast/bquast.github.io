@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Tech Talks"
+title: "Slides Homomorphic Encryption Standardization"
 permalink: homomorphic-encryption-standardization-presentation 
 tags: [homomorphic encryption, standardization, presentation]
 ---
