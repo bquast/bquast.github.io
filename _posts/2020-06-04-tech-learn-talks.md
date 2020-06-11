@@ -17,7 +17,7 @@ The live demo spreadsheet is available here:
 
 <https://docs.google.com/spreadsheets/d/1j1dXgZ_9RzvBdKFyA1Goii6IzPniNWSLs14D-kN_RNo/>
 
-EDIT due to popular demand I am turning the spreadsheet into a somewhat more formal product:
+EDIT (2020-06-11): due to popular demand I am turning the spreadsheet into a somewhat more formal product:
 
 <http://spreadsheet.network/> a neural network in a spreadsheet
 
