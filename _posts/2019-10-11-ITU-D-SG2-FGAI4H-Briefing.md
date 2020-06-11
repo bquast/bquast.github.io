@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "Slides 2nd Homomorphic Encryption Standardization Presentation"
-permalink: 2nd-homomorphic-encryption-standardization-presentation 
-tags: [homomorphic encryption, standardization, presentation]
+title: "ITU-D SG2 Briefing on FG-AI4H"
+permalink: ITU-D-SG-Briefing-FG-AI4H
+tags: [health, standardization, presentation]
 ---
 
 The slides from my briefing on the ITU-WHO Focus Group on Artificial Intelligence for Health to Study Group 2 of the ITU Development Sector:
