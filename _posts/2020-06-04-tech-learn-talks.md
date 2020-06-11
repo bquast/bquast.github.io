@@ -19,7 +19,7 @@ The live demo spreadsheet is available here:
 
 EDIT due to popular demand I am turning the spreadsheet into a somewhat more formal product:
 
-<http:spreadsheet.network/> a neural network in a spreadsheet
+<http//:spreadsheet.network/> a neural network in a spreadsheet
 
 With a [FAQ](https://docs.google.com/document/d/1j5d_uGMVWAq3JVEUMRZ2Oa4DiUcnJJt9emjY9Sv-F4A/). [Paper](https://github.com/bquast/spreadsheet.network) to follow.
 
