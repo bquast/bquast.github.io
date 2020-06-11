@@ -28,7 +28,7 @@ The file [RonGrahamsGame.py](https://github.com/bquast/WHO-Academy-Challenge-Rou
 
 It will first prompt you if you wish to level up (play against the optimiser), you can chose to do so, simply by pressing `Enter` (since it is the default option).
 
-![demonstration](demo.gif)
+![demonstration](https://github.com/bquast/WHO-Academy-Challenge-Round-1-Ron-Grahams-Game/blob/master/demo.gif)
 
 
 ## Troubleshooting
