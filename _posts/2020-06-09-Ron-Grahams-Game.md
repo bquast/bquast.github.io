@@ -18,7 +18,7 @@ In the [Journal of Recreational Mathematics](https://en.m.wikipedia.org/wiki/Jou
 
 > Ron Graham's Game uses the standard 3x3 Tic-Tac-Toe board. Instead of calling the players X and O, we call them Odd and Even. Odd gets the numbers 1, 3, 5, 7, and 9, while Even gets the numbers 2, 4, 6, and 8. Odd goes first, after which the players take turns placing one of their numbers in the empty cells of the standard Tic-Tac-Toe board. Numbers may be used only once. The object of the game is to be the player who completes a line that sums to 15. As in Tic-Tac-Toe, a line is a row, column, or diagonal. Completing a line means putting the final number in the line so it sums to 15. Players are allowed to use numbers placed by the opponent to reach the sum of 15. Once a line contains two numbers whose sum is 15 or greater there is no way to complete that line, although filling in the remaining cell might be necessary to complete a different line. The setup for playing Graham's Game is quite simple. Start out with a piece of paper which has the familiar Tic-Tac-Toe board on it. To one side write a row with the numbers 1 3 5 7 9 in it and below it write a row with the numbers 2 4 6 8 in it. As the players use the numbers they must cross them off. Figure 1 shows the setup for playing Graham's Game. Before you read the analyses of Graham's Game, I recommend that you play it several times so you can form your own opinion about the best strategy.
 
-![Figure 1](https://github.com/bquast/WHO-Academy-Challenge-Round-1-Ron-Grahams-Game/blob/master/Numeric-TicTacToe-Figure-1.png)
+![Figure 1](https://github.com/bquast/WHO-Academy-Challenge-Round-1-Ron-Grahams-Game/raw/master/Numeric-TicTacToe-Figure-1.png)
 
 ## Usage
 
@@ -28,7 +28,7 @@ The file [RonGrahamsGame.py](https://github.com/bquast/WHO-Academy-Challenge-Rou
 
 It will first prompt you if you wish to level up (play against the optimiser), you can chose to do so, simply by pressing `Enter` (since it is the default option).
 
-![demonstration](https://github.com/bquast/WHO-Academy-Challenge-Round-1-Ron-Grahams-Game/blob/master/demo.gif)
+![demonstration](https://github.com/bquast/WHO-Academy-Challenge-Round-1-Ron-Grahams-Game/raw/master/demo.gif)
 
 
 ## Troubleshooting
