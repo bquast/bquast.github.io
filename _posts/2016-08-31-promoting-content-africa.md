@@ -2,10 +2,10 @@
 layout: single
 title: "Promoting Content in Africa"
 permalink: promoting-content-africa
-tags: [promoting content, internet, africa, local content]
+tags: [promoting content, internet, africa, local content, presentation]
 ---
 
-> In the keynote at [African Peering Forum (AfPIF) 2016](http://www.eea-esem-congresses.org/) I presented the [Promoting Content in Africa report]() written together with [Michael Kende](https://www.internetsociety.org/who-we-are/people/mr-michael-kende), [these are the slides](www.slideshare.net/InternetSociety/keynote-speech-1-promoting-content-in-africa).
+> In the keynote at [African Peering Forum (AfPIF) 2016](http://www.eea-esem-congresses.org/) I presented the [Promoting Content in Africa report]() written together with [Michael Kende](https://www.internetsociety.org/who-we-are/people/mr-michael-kende), [these are the slides](https://www.slideshare.net/InternetSociety/keynote-speech-1-promoting-content-in-africa). or otherwise here: <https://drive.google.com/file/d/11uHhY4yLrvBbmf4N2aZm0SE1aUyoDhWt/>
 
 ## Blog posts
 
