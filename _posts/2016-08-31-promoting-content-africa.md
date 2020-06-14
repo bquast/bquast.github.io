@@ -5,7 +5,13 @@ permalink: promoting-content-africa
 tags: [promoting content, internet, africa, local content, presentation]
 ---
 
-> In the keynote at [African Peering Forum (AfPIF) 2016](http://www.eea-esem-congresses.org/) I presented the [Promoting Content in Africa report]() written together with [Michael Kende](https://www.internetsociety.org/who-we-are/people/mr-michael-kende), [these are the slides](https://www.slideshare.net/InternetSociety/keynote-speech-1-promoting-content-in-africa). or otherwise here: <https://drive.google.com/file/d/11uHhY4yLrvBbmf4N2aZm0SE1aUyoDhWt/>
+In the keynote at [African Peering Forum (AfPIF) 2016](http://www.eea-esem-congresses.org/) I presented the [Promoting Content in Africa report]() written together with [Michael Kende](https://www.internetsociety.org/who-we-are/people/mr-michael-kende), [these are the slides](https://www.slideshare.net/InternetSociety/keynote-speech-1-promoting-content-in-africa). or otherwise here: <https://drive.google.com/file/d/11uHhY4yLrvBbmf4N2aZm0SE1aUyoDhWt/>
+
+The recording is available here ([archived](https://web.archive.org/web/20200614160041/https://livestream.com/internetsociety/afpif2016)):
+
+<iframe id="ls_embed_1592150342" src="https://livestream.com/accounts/686369/events/6040448/player?width=640&height=360&enableInfoAndActivity=true&defaultDrawer=&autoPlay=true&mute=false" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen> </iframe>
+
+
 
 ## Blog posts
 
