@@ -34,3 +34,16 @@ The full paper is [available here](http://www.internetsociety.org/doc/promoting-
 ## En français
 
 [L'édition française est disponible ici](http://www.internetsociety.org/fr/doc/susciter-l%E2%80%99int%C3%A9r%C3%AAt-pour-les-donn%C3%A9es-en-afrique).
+
+## Links
+
+Report:
+<https://www.internetsociety.org/resources/doc/2016/promoting-content-in-africa/> 
+
+Event page:
+<https://www.afpif.org/afpif2016/>
+
+Photos:
+<https://www.flickr.com/photos/83703735@N08/sets/72157670753291384/>
+
+All links on archived on: archive.org
