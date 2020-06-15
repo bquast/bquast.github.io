@@ -5,7 +5,7 @@ permalink: tech-learn-talks
 tags: [Tech Learn Talks, UN Innovation Network, presentation]
 ---
 
-Today I gave a presentation at the [UN Innovation Network](https://www.uninnovation.network/)'s [TechLearnTalks](https://www.uninnovation.network/techlearntalks) ([archived](https://web.archive.org/web/20200610135556/https://www.uninnovation.network/techlearntalks)):
+Today I gave a presentation at the [UN Innovation Network](https://www.uninnovation.network/)'s [TechLearnTalks](https://www.uninnovation.network/techlearntalks) ([archived](https://web.archive.org/web/20200610135556/https://www.uninnovation.network/techlearntalks), [backup](https://photos.app.goo.gl/GaiS1LerYAjP3KBq9)):
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u1iAFjnj8w4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
