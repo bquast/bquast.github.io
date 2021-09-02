@@ -1,1 +1,1 @@
-# [qua.st.](https://qua.st/)
+# [qua.st](https://qua.st/)
