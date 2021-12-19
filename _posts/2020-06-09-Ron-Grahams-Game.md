@@ -5,7 +5,7 @@ permalink: ron-grahams-game
 tags: [Artificial Intelligence]
 ---
 
-For a job interview at WHO I was asked by build a numeric version of Noughts and Cross (Tic-Tac-Toe to some), this is called [Ron Graham](https://en.m.wikipedia.org/wiki/Ronald_Graham)'s Game ([repo](https://github.com/bquast/WHO-Academy-Challenge-Round-1-Ron-Grahams-Game/)).
+For a job interview at WHO I was asked by build a numeric version of Noughts and Crosses (Tic-Tac-Toe to some), this is called [Ron Graham](https://en.m.wikipedia.org/wiki/Ronald_Graham)'s Game ([repo](https://github.com/bquast/WHO-Academy-Challenge-Round-1-Ron-Grahams-Game/)).
 
 # Ron Graham's Game
 
