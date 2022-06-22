@@ -5,7 +5,7 @@ permalink: attention-in-R
 tags: [R, machine learning]
 ---
 
-I translated a post on attention in Python by Stefania Cristina (University of Malta): 
+I translated a post on attention in Python by [Stefania Cristina](https://scholar.google.com/citations?user=ncHZ0mwAAAAJ&hl=en) [https://www.um.edu.mt/profile/stefaniacristina](University of Malta): 
 
 <https://machinelearningmastery.com/the-attention-mechanism-from-scratch/>
 
