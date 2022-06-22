@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Attention in R"
+title: "Self-Attention from Scratch in R"
 permalink: attention-in-R 
 tags: [R, attention, self-attention, transformers, machine learning]
 ---
