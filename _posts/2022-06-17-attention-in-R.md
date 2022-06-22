@@ -5,7 +5,7 @@ permalink: attention-in-R
 tags: [R, attention, self-attention, transformers, machine learning]
 ---
 
-This post describes how to implement the [attention mechanism](https://en.m.wikipedia.org/wiki/Attention_(machine_learning)) that forms the basis of [transformers](https://en.m.wikipedia.org/wiki/Transformer_(machine_learning_model)) in the [R language](https://en.m.wikipedia.org/wiki/R_(programming_language)).
+This post describes how to implement the [attention mechanism](https://en.m.wikipedia.org/wiki/Attention_(machine_learning)) - that forms the basis of [transformers](https://en.m.wikipedia.org/wiki/Transformer_(machine_learning_model)) - in the [R language](https://en.m.wikipedia.org/wiki/R_(programming_language)).
 
 The code is translated from the [Python](https://www.python.org/) original by [Stefania Cristina](https://scholar.google.com/citations?user=ncHZ0mwAAAAJ&hl=en) ([University of Malta](https://www.um.edu.mt/profile/stefaniacristina)) in her post [The Attention Mechanism from Scratch](https://machinelearningmastery.com/the-attention-mechanism-from-scratch/)
 
