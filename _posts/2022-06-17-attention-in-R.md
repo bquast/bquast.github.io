@@ -90,7 +90,7 @@ We now calculate the maximum value for each row, and preserve the structure (i.e
 maxs = as.matrix(rowMaxs(scores))
 ```
 
-The weights matrix will be populated using a `for loop` (see `help('for')`). Since the loop does not edit the dimensions of the matrix, we generate zero matrix (i.e. a values are set to 0) beforehand, which we then populate using the `for loop`.
+The weights matrix will be populated using a `for loop` (see `help('for')`). Since the loop does not edit the dimensions of the matrix, we generate zero matrix (i.e. a values are set to `0`) beforehand, which we then populate using the `for loop`.
 ```
 # initialive weights matrix
 weights = matrix(0, nrow=4, ncol=4)
