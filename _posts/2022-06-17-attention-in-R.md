@@ -19,7 +19,7 @@ word_3 = matrix(c(1,1,0), nrow=1)
 word_4 = matrix(c(0,0,1), nrow=1)
 ```
 
-Next we stack the word embeddings into a single array (in this case a matrix).
+Next, we stack the word embeddings into a single array (in this case a matrix).
 ```
 # stacking the word embeddings into a single array
 words = rbind(word_1,
@@ -28,7 +28,7 @@ words = rbind(word_1,
               word_4)
 ```
 
-Next we generate random integers on the domain [0,3].
+Next, we generate random integers on the domain [0,3].
 ```
 # generating the weight matrices
 set.seed(0)
@@ -60,7 +60,7 @@ W_V = matrix(c(1,1,0,
              byrow = TRUE)
 ```
 
-Next we generate the Queries (Q), Keys (K), and Values (V). The `%*%` operator performs the matrix multiplication. You can view the R help page using `help('%*%')`
+Next, we generate the Queries (Q), Keys (K), and Values (V). The `%*%` operator performs the matrix multiplication. You can view the R help page using `help('%*%')`
 ```
 # generating the queries, keys and values
 Q = words %*% W_Q
@@ -74,9 +74,9 @@ Following this, we score the Queries (Q) against the Key (K) vectors.
 scores = Q %*% t(K)
 ```
 
-We now need to find the maximum value for each row of the `scores` matrix. The easiest way to do this, is using the `rowMaxs()` function from the [matrixStats](https://cran.r-project.org/package=matrixStats) package (for an implementation without any additional packages see the bottom of this article).
+We now need to find the maximum value for each row of the `scores` matrix. The easiest way to do this is using the `rowMaxs()` function from the [matrixStats](https://cran.r-project.org/package=matrixStats) package (for an implementation without any additional packages see the bottom of this article).
 
-The next code block checks if the `matrixStats` package is already installed, if it is not, it will install the package. Next the package is loaded.
+The next code block checks if the `matrixStats` package is already installed, if it is not, it will install the package. Next, the package is loaded.
 ```
 # check if the matrixStats package needs to be install, if so, do so
 # then load the package (to be used for rowMaxs
@@ -84,13 +84,13 @@ if (!require('matrixStats')) install.packages('matrixStats')
 library(matrixStats)
 ```
 
-We now calculate the maximum value for each row, and preserve the structure (i.e. the 4 rows, now with only one column which contains the maximum value for the corresponding row).
+We now calculate the maximum value for each row and preserve the structure (i.e. the 4 rows, now with only one column which contains the maximum value for the corresponding row).
 ```
 # calculate the max for each row of the scores matrix
 maxs = as.matrix(rowMaxs(scores))
 ```
 
-The weights matrix will be populated using a `for loop` (see `help('for')`). Since the loop does not edit the dimensions of the matrix, we generate zero matrix (i.e. a values are set to `0`) beforehand, which we then populate using the `for loop`.
+The weights matrix will be populated using a `for loop` (see `help('for')`). Since the loop does not edit the dimensions of the matrix, we generate a zero matrix (i.e. a values are set to `0`) beforehand, which we then populate using the `for loop`.
 ```
 # initialize weights matrix
 weights = matrix(0, nrow=4, ncol=4)
