@@ -131,7 +131,7 @@ The complete code is also available as a Gist on [GitHub](https://gist.github.co
 ## row maximum using base R
 The row maxima can be calculated without the `matrixStats` package, using only `base` `R` with:
 ```
-rowMax <- function (colData) {	
+rowMax <- function (scores) {	
   apply(scores, MARGIN=c(1), max)	
 }	
 maxs = as.matrix(rowMax())
