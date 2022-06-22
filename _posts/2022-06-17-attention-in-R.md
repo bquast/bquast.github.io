@@ -74,7 +74,7 @@ Following this, we score the Queries (Q) against the Key (K) vectors.
 scores = Q %*% t(K)
 ```
 
-We now need to find the maximum value for each row of the `scores` matrix. The easiest way to do this, is using the `rowMaxs()` function from the [matrixStats](https://cran.r-project.org/package=matrixStats) package.
+We now need to find the maximum value for each row of the `scores` matrix. The easiest way to do this, is using the `rowMaxs()` function from the [matrixStats](https://cran.r-project.org/package=matrixStats) package (for an implementation without any additional packages see the bottom of this article).
 
 The next code block checks if the `matrixStats` package is already installed, if it is not, it will install the package. Next the package is loaded.
 ```
@@ -127,4 +127,13 @@ This gives:
 As you can see, these are the same values as those computed in Python in the original post. 
 
 The complete code is also available as a Gist on [GitHub](https://gist.github.com/bquast/169c42090e4337c5f4023ac46ce694f2).
+
+## row maximum using base R
+The row maxima can be calculated without the `matrixStats` package, using only `base` `R` with:
+```
+rowMax <- function (colData) {	
+  apply(scores, MARGIN=c(1), max)	
+}	
+maxs = as.matrix(rowMax())
+```
 
