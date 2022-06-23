@@ -99,12 +99,6 @@ print(maxs)
 
 As you can see, the value for each row in `maxs` is the maximum value of the corresponding row in `scores`.
 
-We now calculate the maximum value for each row and preserve the structure (i.e. the 4 rows, now with only one column which contains the maximum value for the corresponding row).
-```
-# calculate the max for each row of the scores matrix
-maxs = as.matrix(rowMaxs(scores))
-```
-
 The weights matrix will be populated using a `for loop` (see `help('for')`). Since the loop does not edit the dimensions of the matrix, we generate a zero matrix (i.e. a values are set to `0`) beforehand, which we then populate using the `for loop`.
 ```
 # initialize weights matrix
