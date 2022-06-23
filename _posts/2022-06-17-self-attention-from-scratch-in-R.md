@@ -72,17 +72,32 @@ Following this, we score the Queries (Q) against the Key (K) vectors.
 ```
 # scoring the query vectors against all key vectors
 scores = Q %*% t(K)
+print(scores)
 ```
 
-We now need to find the maximum value for each row of the `scores` matrix. The easiest way to do this is using the `rowMaxs()` function from the [matrixStats](https://cran.r-project.org/package=matrixStats) package (for an implementation without any additional packages see the bottom of this article).
+```
+     [,1] [,2] [,3] [,4]
+[1,]    8    2   10    2
+[2,]    4    0    4    0
+[3,]   12    2   14    2
+[4,]   10    4   14    3
+```
 
-The next code block checks if the `matrixStats` package is already installed, if it is not, it will install the package. Next, the package is loaded.
+We now need to find the maximum value for each row of the `scores` matrix. We can do this by using the `apply()` (see `help('apply')`) with the `max()` function on `margin=1` (i.e. rows). Don't worry too much about how this works, the key take-away is that we find the maximum for each row (and using the wrapping in `as.matrix()` we keep the maxima on their corresponding rows in the new `maxs` matrix.
 ```
-# check if the matrixStats package needs to be install, if so, do so
-# then load the package (to be used for rowMaxs
-if (!require('matrixStats')) install.packages('matrixStats')
-library(matrixStats)
+maxs = as.matrix(apply(scores, margin=1, max))
+print(maxs)
 ```
+
+```
+     [,1]
+[1,]   10
+[2,]    4
+[3,]   14
+[4,]   14
+```
+
+As you can see, the value for each row in `maxs` is the maximum value of the corresponding row in `scores`.
 
 We now calculate the maximum value for each row and preserve the structure (i.e. the 4 rows, now with only one column which contains the maximum value for the corresponding row).
 ```
@@ -127,10 +142,4 @@ This gives:
 As you can see, these are the same values as those computed in Python in the original post. 
 
 The complete code is also available as a Gist on [GitHub](https://gist.github.com/bquast/169c42090e4337c5f4023ac46ce694f2).
-
-## row maximum using base R
-The row maxima can be calculated without the `matrixStats` package, using only `base` `R` with:
-```
-maxs = as.matrix(apply(scores, MARGIN=c(1), max))
-```
 
