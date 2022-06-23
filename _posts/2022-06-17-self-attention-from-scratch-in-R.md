@@ -28,7 +28,7 @@ words = rbind(word_1,
               word_4)
 ```
 
-Next, we generate random integers on the domain [0,3].
+Next, we generate random integers on the domain `[0,3]`.
 ```
 # generating the weight matrices
 set.seed(0)
