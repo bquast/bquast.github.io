@@ -60,7 +60,7 @@ W_V = matrix(c(1,1,0,
              byrow = TRUE)
 ```
 
-Next, we generate the Queries (`Q`), Keys (`K`), and Values (`V`). The `%*%` operator performs the matrix multiplication. You can view the `R` help page using `help('%*%')`
+Next, we generate the Queries (`Q`), Keys (`K`), and Values (`V`). The `%*%` operator performs the matrix multiplication. You can view the `R` help page using `help('%*%')`.
 ```
 # generating the queries, keys and values
 Q = words %*% W_Q
