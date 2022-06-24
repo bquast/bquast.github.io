@@ -111,10 +111,10 @@ author:
   email            : bquast@gmail.com
   links:
     - label: "Wikipedia"
-      icon: "fas fa-fw fa-link"
+      icon:  "fas fa-fw fa-wikipedia-w"
       url: "https://en.m.wikipedia.org/wiki/Bastiaan_Quast"
     - label: "Twitter"
-      icon: "fab fa-fw fa-wikipedia-w"
+      icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/baquast"
     - label: "ORCID"
       icon: "fas fa-fw fa-orcid"
