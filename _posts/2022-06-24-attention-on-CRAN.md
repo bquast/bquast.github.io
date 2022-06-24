@@ -45,5 +45,5 @@ You can also file any bugs reports there:
 
 <https://github.com/bquast/attention/issues>
 
-The code is based to a large extend on last week's post [Self-Attention from Scratch in R](/attention-in-R).
+The code is based to a large extent on last week's post: [Self-Attention from Scratch in R](/attention-in-R).
 
