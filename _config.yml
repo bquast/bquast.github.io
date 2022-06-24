@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Bastiaan Quast"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "https://gravatar.com/avatar/9f979d814c18db7e759b64ca8a52953d?s=400"
   bio              : Husband, dad, wannabe dog owner
   location         : "Geneva"
   email            : bquast@gmail.com
