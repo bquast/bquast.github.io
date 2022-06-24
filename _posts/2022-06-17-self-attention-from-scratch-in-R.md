@@ -83,7 +83,7 @@ print(scores)
 [4,]   10    4   14    3
 ```
 
-We now need to find the maximum value for each row of the `scores` matrix. We can do this by using the `apply()` (see `help('apply')`) with the `max()` function on `margin=1` (i.e. rows). Don't worry too much about how this works, the key take-away is that we find the maximum for each row (and using the wrapping in `as.matrix()` we keep the maxima on their corresponding rows in the new `maxs` matrix.
+We now need to find the maximum value for each row of the `scores` matrix. We can do this by using the `apply()` (see `help('apply')`) with the `max()` function on `margin=1` (i.e. rows). Don't worry too much about how this works, the key takeaway is that we find the maximum for each row (and using the wrapping in `as.matrix()` we keep the maxima on their corresponding rows in the new `maxs` matrix.
 ```
 maxs = as.matrix(apply(scores, margin=1, max))
 print(maxs)
@@ -99,7 +99,7 @@ print(maxs)
 
 As you can see, the value for each row in `maxs` is the maximum value of the corresponding row in `scores`.
 
-The weights matrix will be populated using a `for loop` (see `help('for')`). Since the loop does not edit the dimensions of the matrix, we generate a zero matrix (i.e. a values are set to `0`) beforehand, which we then populate using the `for loop`.
+The weights matrix will be populated using a `for loop` (see `help('for')`). Since the loop does not edit the dimensions of the matrix, we generate a zero matrix (i.e. all values are set to `0`) beforehand, which we then populate using the `for loop`.
 ```
 # initialize weights matrix
 weights = matrix(0, nrow=4, ncol=4)
