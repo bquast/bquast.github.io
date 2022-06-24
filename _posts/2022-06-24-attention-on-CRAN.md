@@ -31,7 +31,7 @@ The suggested way to work through this is to start with `simple_attention`, whic
 vignette('simple_attention')
 ```
 
-After having worked through the vignette, you can then dive a bit deeping into the same example with `complete_attention` using:
+After having worked through the vignette, you can then dive a bit deeper into the same example with `complete_attention` using:
 
 ```
 vignette('complete_attention')
