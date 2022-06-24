@@ -110,9 +110,9 @@ author:
   location         : "Geneva"
   email            : bquast@gmail.com
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:bquast@.com"
+    # - label: "Email"
+    #  icon: "fas fa-fw fa-envelope-square"
+    #  url: "mailto:bquast@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://qua.st"
@@ -125,9 +125,9 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/bquast"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/baquast"
+    # - label: "Instagram"
+    #  icon: "fab fa-fw fa-instagram"
+    #  url: "https://instagram.com/baquast"
 
 # Site Footer
 footer:
