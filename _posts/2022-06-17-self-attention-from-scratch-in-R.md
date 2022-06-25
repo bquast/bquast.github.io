@@ -4,6 +4,14 @@ title: "Self-Attention from Scratch in R"
 permalink: attention-in-R 
 tags: [R, attention, self-attention, transformers, machine learning]
 ---
+*EDIT*: this code is now available (with helper functions) in the `R` package [attention](https://cran.r-project.org/package=attention), which is on CRAN. You can install it simply using:
+```
+install.packages('attention')
+```
+
+See also the post [attentino on CRAN](/attention). The development takes place on [GitHub](https://github.com/bquast/attention).
+\hline
+
 
 This post describes how to implement the [attention mechanism](https://en.m.wikipedia.org/wiki/Attention_(machine_learning)) - which forms the basis of [transformers](https://en.m.wikipedia.org/wiki/Transformer_(machine_learning_model)) - in the [R language](https://en.m.wikipedia.org/wiki/R_(programming_language)).
 
