@@ -4,7 +4,7 @@ title: "Self-Attention from Scratch in R"
 permalink: attention-in-R 
 tags: [R, attention, self-attention, transformers, machine learning]
 ---
-**EDIT**: this code is now available (with helper functions) in the `R` package [attention](https://cran.r-project.org/package=attention), which is on CRAN. You can install it simply using:
+**EDIT 2022-06-24**: this code is now available (with helper functions) in the `R` package [attention](https://cran.r-project.org/package=attention), which is on [CRAN](https://cran.r-project.org/package=attention). You can install it simply using:
 ```
 install.packages('attention')
 ```
