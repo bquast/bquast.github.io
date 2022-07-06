@@ -39,8 +39,8 @@ sigmoid_output_to_derivative = function(output)
 binary_dim = 8
 
 largest_number = 2^binary_dim
-int2binary = function(x) {
-  tail(rev(as.integer(intToBits(x))), binary_dim) }
+# int2binary = function(x)
+  tail(rev(as.integer(intToBits(x))), binary_dim)
 # for (i in 1:largest_number) {
 #  int2binary[i] = binary[i]   }
 {% endhighlight %}
