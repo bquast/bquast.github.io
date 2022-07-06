@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Coding a Recurrent Neural Network from Scratch in R"
-permalink: handcoding-rnn
+permalink: rnn-from-scratch-in-R
 tags: [R, recurrent neural network, RNN, scratch]
 categories:
   - neural-networks
