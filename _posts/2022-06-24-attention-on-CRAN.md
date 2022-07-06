@@ -41,6 +41,19 @@ Development takes place on GitHub:
 
 <https://github.com/bquast/attention>
 
+## Development
+Development takes place on GitHub:
+
+<https://github.com/bquast/rnn>
+
+The *development* version, to be used *at your peril*, can be installed from GitHub using the `remotes` package:
+
+```
+if (!require('remotes')) install.packages('remotes')
+remotes::install_github('bquast/attention')
+```
+
+## Bugs
 You can also file any bugs reports there:
 
 <https://github.com/bquast/attention/issues>
