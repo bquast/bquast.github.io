@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "Hand Coding a Neural Network"
+title: "Coding a Neural Network from Scratch in R"
 tags: [R, neural network, machine learning]
-permalink: handcoding-neural-network
+permalink: coding-neural-network-from-scratch-in-R
 categories:
   - neural-networks
 ---
