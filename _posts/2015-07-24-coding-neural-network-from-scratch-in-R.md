@@ -13,7 +13,7 @@ Andrew Trask wrote an amazing post at [I am Trask](http://iamtrask.github.io/) c
 
 Below I've translated the original `python` code used in the post to `R`.
 The original post has an excellent explanation of what each line does.
-I've tried to stay as close quto the original code as possible,
+I've tried to stay as close to the original code as possible,
 all lines and comments correspond directly to the original code.
 
 The code for the Neural Network in 11 lines of R is:
@@ -121,7 +121,7 @@ print(l1)
 ## [4,]  0.5
 ```
 
-Finally a more legible version of the 11 lines model is developed, the `R` equivalent of this model is:
+Finally, a more legible version of the 11 lines model is developed, the `R` equivalent of this model is:
 
 
 ```
