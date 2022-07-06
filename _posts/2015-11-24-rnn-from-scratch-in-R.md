@@ -61,10 +61,9 @@ From that, we compute the maximum value to be `255` (i.e. the range of possible 
 binary_dim = 8
 
 largest_number = 2^binary_dim
-# int2binary = function(x)
+
+int2binary = function(x)
   tail(rev(as.integer(intToBits(x))), binary_dim)
-# for (i in 1:largest_number) {
-#  int2binary[i] = binary[i]   }
 ```
 
 We now define a series of [hyperparameters](https://en.m.wikipedia.org/wiki/Hyperparameter_(machine_learning)) that are needed for the training of the model.
