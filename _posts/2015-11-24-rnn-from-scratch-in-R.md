@@ -13,17 +13,27 @@ This is an example of how to build a Recurrent Neural Network in R.
 {% highlight r %}
 # Set the seed to obtain identical random values
 # set.seed(0)
+{% endhighlight %}
 
 
+
+{% highlight r %}
 # compute sigmoid nonlinearity
 sigmoid = function(x)
 	1 / (1+exp(-x))
+{% endhighlight %}
 
+
+
+{% highlight r %}
 # convert output of sigmoid function to its derivative
 sigmoid_output_to_derivative = function(output)
   output*(1-output)
+{% endhighlight %}
 
 
+
+{% highlight r %}
 # training dataset generation
 # int2binary =
 binary_dim = 8
@@ -33,15 +43,21 @@ int2binary = function(x) {
   tail(rev(as.integer(intToBits(x))), binary_dim) }
 # for (i in 1:largest_number) {
 #  int2binary[i] = binary[i]   }
+{% endhighlight %}
 
 
+
+{% highlight r %}
 # input variables
 alpha = 0.1
 input_dim = 2
 hidden_dim = 16
 output_dim = 1
+{% endhighlight %}
 
 
+
+{% highlight r %}
 # initialize neural network weights
 synapse_0 = matrix(runif(n = input_dim*hidden_dim, min=-1, max=1), nrow=input_dim)
 synapse_1 = matrix(runif(n = hidden_dim*output_dim, min=-1, max=1), nrow=hidden_dim)
@@ -50,7 +66,11 @@ synapse_h = matrix(runif(n = hidden_dim*hidden_dim, min=-1, max=1), nrow=hidden_
 synapse_0_update = matrix(0, nrow = input_dim, ncol = hidden_dim)
 synapse_1_update = matrix(0, nrow = hidden_dim, ncol = output_dim)
 synapse_h_update = matrix(0, nrow = hidden_dim, ncol = hidden_dim)
+{% endhighlight %}
 
+
+
+{% highlight r %}
 # training logic
 for (j in 1:10000) {
 
