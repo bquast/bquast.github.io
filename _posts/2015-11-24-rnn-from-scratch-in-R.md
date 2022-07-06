@@ -26,35 +26,35 @@ such as the one we built in the post [Coding a Neural Network from Scratch in R]
 
 We beginning by setting the seed the the psuedo-random number generator, so that all 'random' values generated can be replicated by you on your own machine.
 
-{% highlight r %}
+```
 # Set the seed to obtain identical random values
 set.seed(0)
-{% endhighlight %}
+```
 
 We now define a [sigmoid function](https://en.m.wikipedia.org/wiki/Sigmoid_function), 
 to be used as an [activation function](https://en.m.wikipedia.org/wiki/Activation_function). 
 In this case we define the [logistic function](https://en.m.wikipedia.org/wiki/Logistic_function). 
 We will simply call this function `sigmoid`.
 
-{% highlight r %}
+```
 # compute sigmoid nonlinearity
 sigmoid = function(x)
 	1 / (1+exp(-x))
-{% endhighlight %}
+```
 
 Next we definte a function that takes the output of the logistic sigmoid function (which we called `sigmoid`) and takes its derivative.
 We will call this second function `sigmoid_out_to_derivate`.
 
-{% highlight r %}
+```
 # convert output of sigmoid function to its derivative
 sigmoid_output_to_derivative = function(output)
   output*(1-output)
-{% endhighlight %}
+```
 
 Next we define the length of the binary encoding to be `8` bits in `binary_dim`.
 From that we compute the maximum value to be `255` (i.e. the range of possible values wil be `0`-`255`).
 
-{% highlight r %}
+```
 # training dataset generation
 # int2binary =
 binary_dim = 8
@@ -64,22 +64,22 @@ largest_number = 2^binary_dim
   tail(rev(as.integer(intToBits(x))), binary_dim)
 # for (i in 1:largest_number) {
 #  int2binary[i] = binary[i]   }
-{% endhighlight %}
+```
 
 We now define a series of [hyperparameters](https://en.m.wikipedia.org/wiki/Hyperparameter_(machine_learning)) that are needed for the training of the model.
 
-{% highlight r %}
+```
 # define the hyperparameters
 alpha = 0.1
 input_dim = 2
 hidden_dim = 16
 output_dim = 1
-{% endhighlight %}
+```
 
 Next we initialize the weights of the neural network using random values 
 (which will be identical in replication due to the use of `set.seed(0)` at the beginning of this post).
 
-{% highlight r %}
+```
 # initialize neural network weights
 synapse_0 = matrix(runif(n = input_dim*hidden_dim, min=-1, max=1), nrow=input_dim)
 synapse_1 = matrix(runif(n = hidden_dim*output_dim, min=-1, max=1), nrow=hidden_dim)
@@ -88,11 +88,11 @@ synapse_h = matrix(runif(n = hidden_dim*hidden_dim, min=-1, max=1), nrow=hidden_
 synapse_0_update = matrix(0, nrow = input_dim, ncol = hidden_dim)
 synapse_1_update = matrix(0, nrow = hidden_dim, ncol = output_dim)
 synapse_h_update = matrix(0, nrow = hidden_dim, ncol = hidden_dim)
-{% endhighlight %}
+```
 
 Now we run the training logic.
 
-{% highlight r %}
+```
 # training logic
 for (j in 1:10000) {
 
@@ -179,11 +179,11 @@ for (j in 1:10000) {
       out[x] = rev(d)[x]*2^(x-1) }
     print(paste(a_int, "+", b_int, "=", sum(out)))
     print("----------------")                     }             }
-{% endhighlight %}
+```
 
 This gives the following output.
 
-{% highlight text %}
+```
 ## [1] "Error: 3.81649822582355"
 ## [1] "Pred: 1 1 1 1 1 1 1 1"
 ## [1] "True: 1 1 0 1 1 0 0 1"
@@ -234,4 +234,4 @@ This gives the following output.
 ## [1] "True: 0 1 1 0 0 1 0 1"
 ## [1] "37 + 64 = 101"
 ## [1] "----------------"
-{% endhighlight %}
+```
