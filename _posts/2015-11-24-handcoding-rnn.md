@@ -1,8 +1,8 @@
 ---
 layout: single
-title: "Handcoding a Recurrent Neural Network"
+title: "Coding a Recurrent Neural Network from Scratch in R"
 permalink: handcoding-rnn
-tags: [R, recurrent neural network, RNN]
+tags: [R, recurrent neural network, RNN, scratch]
 categories:
   - neural-networks
 ---
@@ -11,17 +11,17 @@ This is an example of how to build a Recurrent Neural Network in R.
 
 
 {% highlight r %}
-# no importing here
+# Set the seed to obtain identical random values
 # set.seed(0)
 
+
 # compute sigmoid nonlinearity
-sigmoid = function(x) {
-  output = 1 / (1+exp(-x))
-  return(output)            }
+sigmoid = function(x)
+	1 / (1+exp(-x))
 
 # convert output of sigmoid function to its derivative
-sigmoid_output_to_derivative = function(output) {
-  return( output*(1-output) )                      }
+sigmoid_output_to_derivative = function(output)
+  output*(1-output)
 
 
 # training dataset generation
