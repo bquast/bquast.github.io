@@ -23,7 +23,7 @@ Following installation, you can load the package using:
 library(attention)
 ```
 
-The package contains two `HTML` vignettes: `simple_attention` and `complete_attention`. Both packages implement the `attention` algorithm identically. However, `simple_attention` uses a number of helper functions included in the `attention` package, in order to present the algorithm in an accessible form. The `complete_attention` vignette does not use any helper functions, and simply uses `base` `R` functions.
+The package contains two `HTML` vignettes: `simple_attention` and `complete_attention`. Both vignettes implement the `attention` algorithm identically. However, `simple_attention` uses a number of helper functions included in the `attention` package, in order to present the algorithm in an accessible form. The `complete_attention` vignette does not use any helper functions, and simply uses `base` `R` functions.
 
 The suggested way to work through this is to start with `simple_attention`, which you can load using:
 
