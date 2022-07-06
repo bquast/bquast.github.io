@@ -18,8 +18,7 @@ all lines and comments correspond directly to the original code.
 
 The code for the Neural Network in 11 lines of R is:
 
-
-{% highlight r %}
+```
 X = matrix(c(0,0,1,0,1,1,1,0,1,1,1,1), nrow=4, byrow=TRUE)
 y = matrix(c(0,1,1,0),nrow=4)
 syn0 = matrix(runif(n = 12, min=-1, max=1), nrow=3)
@@ -31,19 +30,18 @@ for (j in 1:60000) {
   l1_delta = (l2_delta %*% t(syn1)) * (l1 * (1-l1))
   syn1 = syn1 + t(l1) %*% l2_delta
   syn0 = syn0 + t(X) %*% l1_delta                         }
-{% endhighlight %}
+```
 
 The output of this is:
 
-
-{% highlight r %}
+```
 syn0
 syn1
-{% endhighlight %}
+```
 
 
 
-{% highlight text %}
+```
 ##           [,1]        [,2]       [,3]      [,4]
 ## [1,]  6.646488  4.03637200  4.4586682  5.708943
 ## [2,] -4.362702 -1.61649721  4.6813254 -7.354098
@@ -53,13 +51,13 @@ syn1
 ## [2,] -3.653207
 ## [3,]  6.740129
 ## [4,] 11.972215
-{% endhighlight %}
+```
 
 After showing the 11 lines, Andrew builds a more simplistic version of this model in order to explain the workings,
 the `R` version of this code is:
 
 
-{% highlight r %}
+```
 # no importing here
 
 # sigmoid function
@@ -102,23 +100,23 @@ for (iter in 1:10000) {
 
 print("Output After Training:")
 print(l1)
-{% endhighlight %}
+```
 
 
 
-{% highlight text %}
+```
 ## [1] "Output After Training:"
 ##      [,1]
 ## [1,]  0.5
 ## [2,]  0.5
 ## [3,]  0.5
 ## [4,]  0.5
-{% endhighlight %}
+```
 
 Finally a more legible version of the 11 lines model is developed, the `R` equivalent of this model is:
 
 
-{% highlight r %}
+```
 # no importing here
 
 nonlin = function(x,deriv=FALSE) {
@@ -171,46 +169,46 @@ for (j in 1:60000) {
 
   syn1 = syn1 + t(l1) %*% l2_delta
   syn0 = syn0 + t(l0) %*% l1_delta                     }
-{% endhighlight %}
+```
 
 
 
-{% highlight text %}
+```
 ## [1] "Error: 0.0105538166393651"
 ## [1] "Error: 0.00729252475321203"
 ## [1] "Error: 0.0058973637409426"
 ## [1] "Error: 0.00507859874667397"
 ## [1] "Error: 0.00452508690333462"
 ## [1] "Error: 0.00411914123908981"
-{% endhighlight %}
+```
 
 
 
-{% highlight r %}
+```
 print("Output After Training:")
-{% endhighlight %}
+```
 
 
 
-{% highlight text %}
+```
 ## [1] "Output After Training:"
-{% endhighlight %}
+```
 
 
 
-{% highlight r %}
+```
 print(l1)
-{% endhighlight %}
+```
 
 
 
-{% highlight text %}
+```
 ##              [,1]       [,2]      [,3]         [,4]
 ## [1,] 0.2458599375 0.88914038 0.3675612 0.4370393632
 ## [2,] 0.0002438464 0.03235284 0.9803207 0.0272840721
 ## [3,] 0.9516103977 0.99993716 0.9855892 0.0186708858
 ## [4,] 0.0144994169 0.98514792 0.9998294 0.0006869615
-{% endhighlight %}
+```
 
 Andrew concludes his article with a number of helpful links, as well as the suggestion:
 
