@@ -58,30 +58,38 @@ the `R` version of this code is:
 
 
 ```
-# no importing here
-
 # sigmoid function
 nonlin = function(x,deriv=FALSE) {
   if(deriv==TRUE)
     return( x*(1-x) )
   return( 1/(1+exp(-x)) )         }
+```
 
+```
 # input dataset
 X = matrix(c(0,0,1,
              0,1,1,
              1,0,1,
              1,1,1), nrow=4, byrow=TRUE)
+```
 
+```
 # output dataset
 y = matrix(c(0,1,1,0), nrow=4)
+```
 
+```
 # seed random number to make calculation
 # deterministic (just a good practice)
 set.seed(1)
+```
 
+```
 # initialize weights randomly with mean 0
 syn0 = matrix(runif(n = 3, min=-1, max=1), nrow=3)
+```
 
+```
 for (iter in 1:10000) {
 
   # forward propagation
@@ -117,32 +125,40 @@ Finally a more legible version of the 11 lines model is developed, the `R` equiv
 
 
 ```
-# no importing here
-
 nonlin = function(x,deriv=FALSE) {
   if(deriv==TRUE)
     return( x*(1-x) )
 
   return( 1/(1+exp(-x)) )
 }
+```
 
+```
 X = matrix(c(0,0,1,
              0,1,1,
              1,0,1,
              1,1,1), nrow=4, byrow=TRUE)
+```
 
+```
 y = matrix(c(0,
              1,
              1,
              0),
            nrow=4)
+```
 
+```
 set.seed(1)
+```
 
+```
 # initialize weights randomly with mean 0
 syn0 = matrix(runif(n = 12, min=-1, max=1), nrow=3)
 syn1 = matrix(runif(n =  4, min=-1, max=1), nrow=4)
+```
 
+```
 for (j in 1:60000) {
 
   # Feed forward through layers 0, 1, and 2
