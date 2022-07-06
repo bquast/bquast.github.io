@@ -70,10 +70,10 @@ We now define a series of [hyperparameters](https://en.m.wikipedia.org/wiki/Hype
 
 ```
 # define the hyperparameters
-alpha = 0.1
-input_dim = 2
-hidden_dim = 16
-output_dim = 1
+alpha       =  0.1
+input_dim   =  2
+hidden_dim  = 16
+output_dim  =  1
 ```
 
 Next, we initialize the weights of the neural network using random values 
