@@ -15,16 +15,17 @@ We then convert `a` and `b` into 8-bit binary values.
 E.g. `5` becomes: `0 0 0 0 0 1 0 1`.
 We then sum the binary formatted `a` and `b`, bit by bit (i.e. column by column).
 
-If we are summing to bits which are both of value `1`, then the result will be `0`,
+If we are summing to bits which are both of value: `1`, then the result will be `0`,
 with a `1` carried over to the next column (i.e. the column *on to the left*).
 
 It is this step of **carrying the `1`**,
 that requires a memory state.
 This is the recurrent component of the *recurrent* neural network,
-which is what sets it apart from a tradition feed-forward neural network,
+which is what sets it apart from a traditional feed-forward neural network,
 such as the one we built in the post [Coding a Neural Network from Scratch in R](/coding-neural-network-from-scratch-in-R). 
 
-We beginning by setting the seed the the psuedo-random number generator, so that all 'random' values generated can be replicated by you on your own machine.
+We begin by setting the seed of the psuedo-random number generator, 
+so that all 'random' values generated can be replicated by you on your own machine.
 
 ```
 # Set the seed to obtain identical random values
@@ -33,7 +34,7 @@ set.seed(0)
 
 We now define a [sigmoid function](https://en.m.wikipedia.org/wiki/Sigmoid_function), 
 to be used as an [activation function](https://en.m.wikipedia.org/wiki/Activation_function). 
-In this case we define the [logistic function](https://en.m.wikipedia.org/wiki/Logistic_function). 
+In this case, we define the [logistic function](https://en.m.wikipedia.org/wiki/Logistic_function). 
 We will simply call this function `sigmoid`.
 
 ```
@@ -42,7 +43,7 @@ sigmoid = function(x)
 	1 / (1+exp(-x))
 ```
 
-Next we definte a function that takes the output of the logistic sigmoid function (which we called `sigmoid`) and takes its derivative.
+Next, we definte a function that takes the output of the logistic sigmoid function (which we called `sigmoid`) and takes its derivative.
 We will call this second function `sigmoid_out_to_derivate`.
 
 ```
@@ -51,8 +52,8 @@ sigmoid_output_to_derivative = function(output)
   output*(1-output)
 ```
 
-Next we define the length of the binary encoding to be `8` bits in `binary_dim`.
-From that we compute the maximum value to be `255` (i.e. the range of possible values wil be `0`-`255`).
+Next, we define the length of the binary encoding to be `8` bits in `binary_dim`.
+From that, we compute the maximum value to be `255` (i.e. the range of possible values will be `0`-`255`).
 
 ```
 # training dataset generation
@@ -76,7 +77,7 @@ hidden_dim = 16
 output_dim = 1
 ```
 
-Next we initialize the weights of the neural network using random values 
+Next, we initialize the weights of the neural network using random values 
 (which will be identical in replication due to the use of `set.seed(0)` at the beginning of this post).
 
 ```
