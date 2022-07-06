@@ -12,7 +12,7 @@ This is an example of how to build a Recurrent Neural Network in R.
 
 {% highlight r %}
 # Set the seed to obtain identical random values
-# set.seed(0)
+set.seed(0)
 {% endhighlight %}
 
 
