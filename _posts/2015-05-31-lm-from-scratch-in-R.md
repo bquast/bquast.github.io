@@ -1,20 +1,11 @@
 ---
 layout: single
-title: "Hand Coding the Linear Model"
-tags: [R, hand coding, linear model, lm, ols]
-permalink: handcoding-lm
+title: "The Linear Model from Scratch in R"
+tags: [R, scratch, linear model, lm, ols]
+permalink: lm-from-scratch-in-R
 ---
 
-> In order to understand statistics, you have to do the calculations yourself!
-
-Warnings such as these are often given in statistics courses and for good reason too!
-Doing the work yourself really cements the understanding of statistics.
-
-Yet when it comes to econometrics, the main take aways from the workshops are primarily in terms of the **syntax** of yet another computer program.
-
-In this series of post titled: **handcoded**, I show how many workhorses of the econometrician's toolbox can be implemented in a very simple manner.
-This manual implementation greatly helps in keeping an understanding of what actually happens when we call e.g. `MCMC..` with a few parameters.
-
+When it comes to econometrics, the main take aways from the workshops are primarily in terms of the **syntax** of yet another computer program.
 
 The Linear Model
 ----------------------
