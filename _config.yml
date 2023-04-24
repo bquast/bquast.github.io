@@ -21,7 +21,7 @@ title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Bastiaan Quast"
 description              : "Machine Learning from Scatch in R and more"
-url                      : https://qua.st
+url                      : https://bastiaanquast.com
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : bquast/bquast.github.io
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
