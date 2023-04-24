@@ -1,1 +1,1 @@
-# [qua.st](https://qua.st/)
+<https://bastiaan.quast.com>
