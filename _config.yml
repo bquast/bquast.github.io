@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "qua.st"
+title                    : "Bastiaan Quast"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : Machine learning researcher # site tagline that appears below site title in masthead
 name                     : "Bastiaan Quast"
 description              : "Machine Learning from Scatch in R and more"
 url                      : https://bastiaanquast.com
