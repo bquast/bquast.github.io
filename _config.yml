@@ -112,7 +112,7 @@ author:
   links:
     - label: "Wikipedia"
       icon:  "fab fa-fw fa-wikipedia-w"
-      url:   "https://en.m.wikipedia.org/wiki/Bastiaan_Quast"
+      url:   "https://en.wikipedia.org/wiki/Bastiaan_Quast"
     - label: "Twitter"
       icon:  "fab fa-fw fa-twitter-square"
       url:   "https://twitter.com/baquast"
