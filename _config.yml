@@ -92,9 +92,12 @@ author:
     - label: "Python"
       icon:  "fab fa-fw fa-python"
       url:   "https://pypi.org/user/bquast/"
-    - label: "R"
+    - label: "R project"
       icon:  "fab fa-fw fa-r-project"
       url:   "https://cran.r-project.org/web/checks/check_results_bquast_at_gmail.com.html"
+    - label: "Linkedin"
+      icon:  "fab fa-fw fa-linkedin"
+      url:   "https://www.linkedin.com/in/baquast/
     - label: "Twitter"
       icon:  "fab fa-fw fa-twitter-square"
       url:   "https://twitter.com/baquast"
