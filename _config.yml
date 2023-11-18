@@ -76,7 +76,7 @@ analytics:
 author:
   name             : "Bastiaan Quast"
   avatar           : "https://gravatar.com/avatar/9f979d814c18db7e759b64ca8a52953d?s=400"
-  bio              : "Machine Learning Researcher"
+  bio              : 
   location         : "San Jose"
   email            : "bquast@gmail.com"
   links:
@@ -98,9 +98,6 @@ author:
     - label: "Linkedin"
       icon:  "fab fa-fw fa-linkedin"
       url:   "https://www.linkedin.com/in/baquast/"
-    - label: "Twitter"
-      icon:  "fab fa-fw fa-twitter-square"
-      url:   "https://twitter.com/baquast"
     - label: "ORCID"
       icon:  "fab fa-fw fa-orcid"
       url:   "https://orcid.org/0000-0002-2951-3577"
