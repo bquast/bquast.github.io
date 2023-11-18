@@ -82,7 +82,7 @@ author:
   links:
     - label: "Wikipedia"
       icon:  "fab fa-fw fa-wikipedia-w"
-      url:   "https://en.wikipedia.org/wiki/Bastiaan_Quast"
+      url:   "https://en.m.wikipedia.org/wiki/Bastiaan_Quast"
     - label: "Github"
       icon:  "fab fa-fw fa-github"
       url:   "https://github.com/bquast"
