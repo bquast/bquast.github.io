@@ -80,6 +80,7 @@ author:
   location         : "San Jose"
   email            : "bquast@gmail.com"
   linkedin         : "baquast"
+  stackoverflow    : "1328355/bastiaan-quast"
   links:
     - label: "Wikipedia"
       icon:  "fab fa-fw fa-wikipedia-w"
