@@ -9,7 +9,7 @@ image:
   creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 ---
 
-In the first semester of the academic year 2013-2014 I was a teaching assitant at The Graduate Institute in Geneva.
+In the first semester of the academic year 2013-2014 I was a teaching assistant at The Graduate Institute in Geneva.
 
 The main duty in this position was to teach a weekly statistics seminar to a group of thirty master students.
 
