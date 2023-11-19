@@ -13,7 +13,7 @@ In the first semester of the academic year 2013-2014 I was a teaching assistant 
 
 The main duty in this position was to teach a weekly statistics seminar to a group of thirty master students.
 
-Furthermore, I supervised a group of three master students in their semester long [Applied Research Seminar](http://graduateinstitute.ch/home/study/courses/cours-2014-2015/masters-interdisciplinaires/mia/ia064---applied-research-seminar.html).
+Furthermore, I supervised a group of three master students in their semester long **Applied Research Seminar**.
 
 In addition to this, I was the Teaching Assistant in the course Gender and Sustainabiliy.
 
