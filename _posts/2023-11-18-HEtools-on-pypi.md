@@ -10,7 +10,7 @@ My new Python package **HEtools** is now on the Python Package Index (PyPI):
 The package implements functions for Fully Homomorphic Encryption 
 Development takes place on Github:
 
-<https://github.com/py-HEtools/libactivation>
+<https://github.com/bquast/py-HEtools>
 
 Bugs can also be filed on Github:
 
