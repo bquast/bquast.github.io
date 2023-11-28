@@ -1,12 +1,14 @@
 # main links
 # main links
 main:
-  - title: Blog
-    url: /
+  - title: Python
+    url: /python
+  - title: R
+    url: /software
+  - title: Julia
+    url: /julia
   - title: About Me
     url: /about
-  - title: Software
-    url: /software
   - title: Research
     url: /research
   - title: Publications
