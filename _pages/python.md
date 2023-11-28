@@ -12,3 +12,8 @@ Below is a list of the Pytho packages that I authored, an overview is available 
 
 <https://pypi.org/user/bquast/>
 
+# HEtools
+
+HEtools (Homomorphic Encryption tool) is a library that implements a collection of homomorphic encryption primitives like the coefficient modulo (coefmod), as well as primitives for the generation of keys.
+
+<https://pypi.org/project/HEtools/>
