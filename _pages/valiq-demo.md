@@ -1,6 +1,6 @@
 ---
 layout: single
-title: ValiQ dmeo
+title: ValiQ demo
 permalink: valiq-demo
 author_profile: true
 ---
