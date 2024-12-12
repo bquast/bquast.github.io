@@ -20,7 +20,7 @@ title                    : "Bastiaan Quast"
 title_separator          : "-"
 subtitle                 : "ML and Cryptography in Python and R"
 name                     : "Bastiaan Quast"
-description              : "Personal blog from Bastiaan Quast on ML in Python, R, Julia, and git"
+description              : "Personal blog from Bastiaan Quast on ML and cryptography in Python & R"
 url                      : https://bastiaanquast.com
 repository               : bquast/bquast.github.io
 
@@ -76,7 +76,7 @@ analytics:
 author:
   name             : "Bastiaan Quast"
   avatar           : "https://gravatar.com/avatar/9f979d814c18db7e759b64ca8a52953d?s=400"
-  bio              : "Machine Learning Researcher"
+  bio              : "Information Theory Research"
   location         : "Zurich"
   email            : "bquast@gmail.com"
   linkedin         : "baquast"
